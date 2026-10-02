@@ -107,6 +107,9 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 ## Pairing and interconnection
 
 - Pairing appears under both Setup and Troubleshooting.
+- Setup Pairing covers connecting alarms.
+- Troubleshooting Pairing covers checking whether alarms are paired to each other and then giving the appropriate re-pairing steps.
+- Setup and Troubleshooting therefore use separate Pairing pages, while sharing common steps where appropriate.
 - Pairing procedures differ by brand, not by model, for the alarms covered by the app. Do not add a model-selection screen.
 - Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
 - The current brief confuses two Ranger manuals. EP-RANG-10 is the non-RF manual; the pairing procedure reviewed in the follow-up is from the official EP-RANG-RF-10 manual. Remove the brief's current “resolved” explanation when rewriting it. This correction does not add model selection to the app.
