@@ -1,398 +1,491 @@
 # APM Alarms: Product Brief
 
-This file records everything decided in the product interview. It is updated after each answer, so nothing gets lost.
+This is the brief for version 1. It is the description to build from.
+
+## What it is
+
+A personal quick-reference cheat sheet for a smoke alarm technician. It answers questions about the brand and the unit in the technician's hand. It is not about the property, and it is not about the job.
+
+The alarms in this work are interconnected. Pairing and testing matter. The app does not model the whole network of alarms.
+
+On a job, the technician needs two outcomes: every alarm works, and testing shows that every alarm is interconnected. The existing work system records that the job is done. The app does not.
+
+The app does not include:
+
+- Site records, site types, job tracking, completion checklists, or booking workflows
+- A way to pick a model or a series
+- Sources, manual links, or source records
+- Editing inside the app
 
 ## Who it's for
 
-- A smoke alarm technician (the owner of this project) who works on site with many alarm brands.
-- It's built for one person first, but it should be easy to share with other techs at work later.
+- The owner, a smoke alarm technician in Queensland, Australia.
+- One person first. It should be easy to share with other technicians later.
 - Work phones are iPhones.
-- Works in Queensland, Australia.
 
-## What it does
+It is a website saved to the iPhone home screen. It opens like an app, with no sign-in and no welcome screen.
 
-A quick reference for job sites. You pick the alarm you're working on and get clear instructions with photos.
+## Brands in version 1
 
-In short:
+Version 1 covers these brands:
 
-- It's saved to the iPhone home screen and opens straight to a grid of brand logos, in alphabetical order.
-- You tap the brand, then the unit in your hand (Wired, Wireless, and Remote or RF module where the brand has them), then Setup or Troubleshooting, then the topic.
-- Each topic is one page with every step on it, each step showing a photo, the light or sound to expect, and any tips. Buttons at the bottom switch to the same topic for the brand's other units.
-- Troubleshooting starts with "What's that light or sound?", and some pages end in "Report as faulty".
-- Everything except videos works with no signal. It reopens where you left off.
-- Content comes from manufacturer PDFs and websites, and an AI agent adds or changes it when needed.
+- Anka
+- Brooks
+- Cavius
+- Clipsal
+- Detector Inspector
+- Emerald
+- GT
+- Legrand
+- Lifesaver
+- Matelec
+- Red
+- Siterwell
 
-## How you find what you need
+The owner may add more brands later. Version 1 is complete only when all twelve have owner-approved content.
 
-The latest structure (replaces earlier versions):
+## How the app is organised
 
-1. **Brand.** Tap the brand of alarm.
-2. **What's in your hand.** Tap one:
-   - Wired
-   - Wireless
-   - Remote (only for brands that have one)
-   - RF module, the radio add-on that slots into a wired alarm (only for brands that have one)
-3. **Setup or Troubleshooting.** Tap one.
-4. **Topic.** Tap what you need.
+Everything on screen follows from these pieces. A button exists only when approved content sits behind it. That one rule decides which brands, units, and topics are shown.
 
-Topics under **Setup** (putting in a new alarm):
+### Brand
 
-- Placement: where the alarm can go, with key distances from walls, fans and lights.
-- Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
-- Opening wired alarms: releasing the alarm from its mounting plate, either on its hinge or by sliding it off, to get to the battery and the label. Also closing it back up, and the light that confirms it's back on mains power. The mounting plate stays on the ceiling, wired to mains. **Decided:** no extra photo or explanation of the label dates.
-- Turning wireless alarms on and off, including power cycling: turning it off and back on to check it's working, and the light that confirms it's back on.
-- Fitting an RF module into a wired alarm. (RF module only.)
-- Pairing, including the lights and sounds you'll see and hear along the way.
-- Testing: setting the alarm off, checking every interconnected alarm goes off too, and how long to wait afterwards for any other sounds.
+The company that makes the alarm, such as Emerald. The technician picks the brand by looking at the alarm. The app never asks for a model or a series.
 
-Topics under **Troubleshooting** (an alarm that's already up and has a problem):
+### Unit
 
-- What's that light or sound? Every light and sound for that alarm in one list, each pointing to the topic that deals with it. **Decided.** Shown first, because a chirp or a light is usually why you're troubleshooting.
-- Cleaning.
-- Finding which alarm is causing false alarms.
-- Wireless alarms that won't turn on.
-- Mounting, opening wired alarms, turning wireless alarms on and off, pairing and testing, the same pages as under Setup.
+The thing in the technician's hand. Each unit belongs to one brand. The four units are:
 
-Rules:
+- **Wired alarm.** On mains power, with a backup battery. [Power Cycle](#power-cycle) treats a removable backup battery and a built-in lithium backup battery differently.
+- **Wireless alarm.** Runs on its own battery, with no mains wires, and interconnects by radio.
+- **RF module.** A separate radio add-on that slots into a wired alarm. Show this choice only for a brand that uses a separate module. Fitting one is rare.
+- **Remote.** Show this choice only for a brand that has a remote.
 
-- **Decided:** Lights and sounds don't get their own pages. They're mixed into every topic where they matter. For example, the mounting page says which light or sound confirms it's seated correctly.
-- Only topics that apply to what's in your hand are shown. For example, "Opening wired alarms" only appears for wired, and "Turning on and off" only for wireless.
-- At the bottom of every topic page, buttons switch to the same topic for the other types. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps.
-- **Decided:** No factory reset. Techs never do it, so it isn't an option.
-- **Decided:** No battery-swap steps. Techs do swap wired alarm batteries when they find a faulty one, but that's already on their job list. Remote batteries are never replaced; a faulty remote is replaced with a new one.
-- You choose by the thing in your hand right now, not the whole site. There's no "Both" option.
-- **Decided: the three kinds of site.**
-  1. **All wired.** Interconnected by wire already. No pairing.
-  2. **Wired and wireless.** Every wired alarm has an RF module (already in, or fitted on the day), and every alarm gets paired.
-  3. **All wireless.** No RF modules. Every alarm gets paired.
-- The Wired pairing page is only used on the second kind of site. **Decided:** the page doesn't say so, because every tech already knows. The "Wireless" switch button at the bottom takes you to the wireless pairing page.
-- **Rule of thumb:** leave out anything every tech already knows. The app is for what's different between brands and units.
-- You don't pick a model number. You identify the brand by checking the alarm itself on site.
-- **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
+There is no "both" choice. The technician picks the unit in hand right now.
 
-### Which topics apply to which unit
+### Setup and Troubleshooting
 
-**Decided:** Techs never do electrical work. Wired alarms can't be turned off, and anything involving mains wiring needs an electrician. For wired alarms, techs only troubleshoot, pair and replace batteries.
+After the unit, the technician picks one:
 
-Table (confirmed, except where marked **Check**):
+- **Setup**, for putting in a new alarm, remote, or RF module.
+- **Troubleshooting**, for looking something up on an alarm or remote that is already up.
 
-| Topic | Wired | Wireless | Remote | RF module |
+Troubleshooting is a lookup. The technician opens whichever topic helps with the problem in front of them. The app does not force a fixed sequence, track progress, or ask them to identify the alarm inside the app first.
+
+The RF module choice has no Troubleshooting, because it has no troubleshooting content.
+
+### Topic
+
+One item under Setup or Troubleshooting, such as Pairing. The [topic map](#topic-map) is the list of which topics exist for which unit.
+
+### Instruction page
+
+What the technician reads: one brand, one unit, and one topic.
+
+A page is one of two kinds:
+
+- **Shared.** Setup and Troubleshooting both open the same page, because the instructions are the same. The page still remembers which list opened it.
+- **Separate.** Setup and Troubleshooting each have their own page, even when the topic name is the same. The two pages may reuse common steps. They must not be two drifting copies of the same words.
+
+### Step
+
+One instruction on a page. It has the instruction text and, only where they help, a photo or diagram, the light or sound to expect, and a tip. A step does not need all of those.
+
+When a step names a button, it uses the name printed on the unit.
+
+### Signal
+
+A light, a sound, or both together, and what it means. Each signal is written once, on the unit it belongs to. A topic page shows the signals that matter to that step from that same list, so two pages can never disagree. Timing differs between units, which is why the list belongs to the unit and not to the brand.
+
+## Topic map
+
+A dash means that topic is not used for that unit. The map is what is allowed. A topic is still shown only when that brand has approved content for it. A remote has no mounting topic: mounting one is too simple to include.
+
+| Topic | Wired alarm | Wireless alarm | RF module | Remote |
 |---|---|---|---|---|
-| Placement | No, electrician's work | Yes | No (assumed, because remotes aren't mounted) | No |
-| Mounting | No, covered by Opening | Yes | No | No |
-| Opening | Yes, including closing it back up | No | No | No |
-| Turning on and off | No, can't be turned off | Yes | Turning it on | No |
-| Fitting | No | No | No | Yes |
-| Pairing | Yes, through its RF module | Yes | Yes | No, lives under Wired |
-| Testing | Yes | Yes | Yes | No |
-| Cleaning | Yes | Yes | No | No |
-| Finding the false alarm | Yes | Yes | No | No |
-| Won't turn on | Yes, ends in "report as faulty" | Yes | Yes, ends in "report as faulty" | No |
-| What's that light or sound? | Yes | Yes | Yes | No |
+| Placement | Setup | Setup | — | — |
+| Opening | Setup and Troubleshooting, one shared page | — | — | — |
+| Mounting | — | Setup and Troubleshooting, separate pages | — | — |
+| Activation | — | Setup | — | Setup and Troubleshooting, one shared page |
+| Fitting | — | — | Setup | — |
+| Pairing | Setup and Troubleshooting, separate pages | Setup and Troubleshooting, separate pages | — | Setup and Troubleshooting, separate pages |
+| Testing | Setup and Troubleshooting, one shared page | Setup and Troubleshooting, one shared page | — | — |
+| What's that light or sound? | Troubleshooting, shown first | Troubleshooting, shown first | — | Troubleshooting, shown first |
+| Power Cycle | Troubleshooting | Troubleshooting | — | — |
+| Cleaning | Troubleshooting | Troubleshooting | — | — |
+| Use | — | — | — | Setup and Troubleshooting, one shared page |
+| Locate | — | — | — | Troubleshooting, where the brand supports it |
 
-**Decided: some troubleshooting ends in "report as faulty".** Techs work out what's wrong, but some fixes aren't theirs to do. When that's where the steps lead, the page ends with a clear "Report as faulty" outcome, and what gets booked depends on the unit:
+There is no separate "Won't turn on" topic. A unit that will not start is covered inside the other troubleshooting pages, including Power Cycle.
 
-- **Wired:** a replacement and an electrician.
-- **Remote:** a replacement.
-- **Wireless:** a replacement (assumed).
+Wired alarms and wireless alarms have no "Finding the false alarm" topic. The technician uses the other troubleshooting topics to work out which alarm it is. Locate, on a remote, is the only exception.
 
-### How the structure changed
+Show the topics in this order.
 
-- First version: brand, then job, then wired or wireless. The job came first because sites often mix wired and wireless.
-- Then Lights and Sounds were added as their own jobs, and Remote and RF module were added next to wired and wireless.
-- **Current version:** brand, then what's in your hand, then Setup or Troubleshooting, then the topic. Lights and sounds are now part of each topic instead of separate pages.
-- Testing was earlier left out as its own button, but it's now a topic.
-- **Decided:** The top-level choice is called "Setup", not "Installing", because "installing" was also used for fitting an alarm onto its mounting plate. That's now called "Mounting". See the word list below.
-- **Decided:** Remote and RF module sit next to wired and wireless, because you choose by the thing in your hand, and only for brands that have them.
+**Setup**
 
-## How the pieces fit together
+- Wired alarm: Placement, Opening, Pairing, Testing
+- Wireless alarm: Placement, Mounting, Activation, Pairing, Testing
+- RF module: Fitting
+- Remote: Activation, Pairing, Use
 
-This is the map of everything the app knows about, how the pieces connect, and what it must never allow. Every screen and rule in this file should follow from it.
+**Troubleshooting**
 
-### The pieces
+- Wired alarm: What's that light or sound?, Opening, Pairing, Testing, Power Cycle, Cleaning
+- Wireless alarm: What's that light or sound?, Mounting, Pairing, Testing, Power Cycle, Cleaning
+- Remote: What's that light or sound?, Activation, Pairing, Use, then Locate where the brand supports it
 
-- **Brand.** Emerald, for example. Each brand has one or more units.
-- **Unit.** The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Each unit belongs to one brand and has a few facts about it:
-  - How it's powered: mains with a backup battery, or battery only.
-  - How it's interconnected: wired alarms by wire, and also by radio once an RF module is fitted. Wireless alarms by radio.
-  - Which other units it can pair with. For example, the Emerald remote pairs with Emerald wireless alarms and with wired alarms that have an RF module.
-- **Every wired alarm has a backup battery.** The law requires alarms to keep working in a power outage.
-- **Every alarm is interconnected.** Queensland law requires every alarm in a home to be interconnected: if one alarm goes off, they all go off. Some alarms *can* work on their own, but on your jobs they're always interconnected.
-- **Topic.** A fixed list: placement, mounting, opening, turning on and off, pairing, testing, cleaning, finding the false alarm, won't turn on, and what's that light or sound. Each topic is marked as Setup, Troubleshooting, or both.
-- **Page.** One brand, plus one unit, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
-- **Step.** One instruction on a page, with its photo, any tips and warnings, and the light or sound you should see or hear at that point.
-- **Signal.** A light, a sound, or both together that means something. For example, "a chirp every 40 seconds *and* a red flash at the same time means low battery". Each signal belongs to one unit and says what it means and which topic deals with it.
-- **Source.** The manual, web page or tech a page came from, with its date, so it's clear where every instruction came from and when it needs updating.
+The path for an RF module is Brand, then RF module, then Setup, then Fitting. That screen shows Setup only.
 
-### Rules that fall out of the map
+## Topics
 
-- **A page only exists if there's something to say.** The app shows a button only when there's a page behind it. So the Remote button only appears for brands with a remote, "Opening" only appears for wired, and "Turning on and off" only for wireless. These aren't separate rules to remember; they all come from that one rule.
-- **A page is written once.** Mounting, pairing and testing appear under both Setup and Troubleshooting, but there's one copy of each page. Two copies would drift apart.
-- **A signal is written once.** "What's that light or sound?" is the full list for that unit, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between units (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per unit keeps them from ever disagreeing.
-- **The switch buttons at the bottom of a page** go to the same topic for the brand's other units, but only where that page exists.
-- **Pairing a wired alarm means pairing it through its RF module.** On a wired-and-wireless site, every wired alarm has an RF module, so pairing lives under Wired. The RF module's own page covers fitting it. On an all-wired site, nothing is paired.
+### Placement
 
-### Things the app must never allow
+Where a smoke alarm can go. The same instructions are used for every brand.
 
-- A button that leads to an empty page.
-- The same instruction or signal written two different ways in two places.
-- Pairing steps for a unit that can't pair.
-- An instruction without a source.
+Where practical, a smoke alarm goes on the ceiling. Do not place one:
 
-### A gap the map exposed
+1. within 300 mm of a corner where the ceiling meets a wall
+2. within 300 mm of a light fitting
+3. within 400 mm of an air-conditioning vent
+4. within 400 mm of the blades of a ceiling fan
 
-The EP-RANG-10 manual says "stand alone unit", which looked like an alarm that can't be interconnected.
+### Opening
 
-**Resolved:** It *can* work on its own, but on your jobs it's always interconnected, because Queensland law requires it. So "Wireless" always means an alarm interconnected by radio, and there's no look-alike problem. The EP-RANG-10 manual has no pairing steps, so those will come from the RF module and remote manuals, which both describe pairing Emerald alarms, and should be checked on a real alarm.
+For a wired alarm: attaching it to its existing base, and taking it off that base.
 
-## Word list
+Installing a wired base is electrician work, so the app does not include it. That is why a wired alarm has no Mounting topic.
 
-Every word below means one thing only, in this file and in the app. Words in the "Not" column are what the manuals or earlier answers used for the same thing; the app won't use them, so nothing gets mixed up. Items marked **Check** are open for review.
+Opening does not include a photo or an explanation of the dates on the label. Battery testing and replacement are not part of Opening. They sit inside [Wired Power Cycle](#wired-power-cycle).
 
-One rule sits above the list: **when a step names a button, it uses the name printed on the unit.** If the Emerald alarm's button says "Test/Hush", the step says "press the Test/Hush button", even though the action is called Silence.
+### Mounting
 
-### The things you work with
+For a wireless alarm. A technician may install a wireless mounting plate when it is needed.
+
+- **Setup** covers installing the mount.
+- **Troubleshooting** covers checking that the mount is fixed to the ceiling properly and that the alarm attaches to it properly.
+
+Where the owner has confirmed a light or other signal that shows the alarm is attached and switched on correctly, include it. Do not invent one.
+
+### Activation
+
+Getting a new unit ready.
+
+- **Wireless alarm.** Turning it on for the first time. When attaching the alarm to its mount is what switches it on, Activation points the technician to the Mounting instructions instead of repeating them.
+- **Remote.** Getting a new or replacement remote ready to pair. One shared page under Setup and Troubleshooting.
+
+Setup Activation and Troubleshooting Power Cycle are different topics. Do not merge them.
+
+### Fitting
+
+For an RF module only. How to fit the module and which way round it goes. Setup only.
+
+### Pairing
+
+Connecting units by radio. The steps differ by brand and by unit: Wired alarm, Wireless alarm, or Remote. They do not differ by model.
+
+Setup and Troubleshooting each have their own Pairing page. The two pages share steps where the steps are actually the same.
+
+**Wired alarm and wireless alarm**
+
+- **Setup** covers connecting the alarms, then links to the shared Testing page to confirm the new setup.
+- **Troubleshooting** starts with a link to the shared Testing page, to test one alarm and confirm that every interconnected alarm sounds. Back from Testing returns to Pairing. If they do not all sound, Pairing continues with the re-pairing steps for that brand, then links to Testing again.
+
+Pairing a wired alarm through its RF module lives on the wired alarm's Pairing page, not under the RF module choice.
+
+Some brands do not let one replacement or added alarm be paired on its own. For those brands, both Pairing pages explain putting one alarm into pairing mode and pairing every alarm again.
+
+Do not build a general compatibility list. A note inside Setup Pairing is added only for a combination the owner confirms later.
+
+**Remote**
+
+- **Setup** covers connecting a new remote to the alarms.
+- **Troubleshooting** is a separate page. If the remote has lost its connection but still works, pair it again. If the remote itself is faulty, the page ends at [Report as faulty](#report-as-faulty).
+
+A remote has no Testing topic, so remote Pairing does not link to Testing.
+
+### Testing
+
+How to run the test for the selected brand and unit, and how to confirm during the test that every interconnected alarm sounds. Include the sounds and the waiting periods that belong to that brand.
+
+One shared page. Setup uses it to confirm a unit just set up. Troubleshooting uses it to test a unit already up. The Cavius wait in [Confirmed differences between brands](#confirmed-differences-between-brands) belongs on this page.
+
+### Power Cycle
+
+A Troubleshooting topic for a wired alarm or a wireless alarm that is chirping, not responding, or not behaving correctly. Wired and wireless alarms use different steps. Each brand has its own page, because the button names and any confirmation light belong to that brand.
+
+Battery testing and replacement stay inside Wired Power Cycle. They are not their own topic.
+
+#### Wired Power Cycle
+
+**Removable backup battery**
+
+1. Remove the alarm from its base.
+2. Test the battery and replace it if required.
+3. With the battery removed, hold TEST to drain residual power.
+4. Reinsert the battery and attach the alarm to its base.
+5. Wait at least 2 minutes for another chirp.
+6. If the chirp returns or the original problem remains, end at [Report as faulty](#report-as-faulty).
+
+**Built-in lithium backup battery**
+
+Do not attempt the removable-battery steps. End at [Report as faulty](#report-as-faulty).
+
+#### Wireless Power Cycle
+
+1. Remove it from the mount.
+2. Make sure it is off.
+3. Press TEST to drain residual power.
+4. Refit it to the mount. Many alarms power on as they twist on.
+5. Where the alarm has a power-on light, confirm the correct one.
+6. Wait at least 2 minutes for another chirp.
+7. If the chirp returns or the original problem remains, end at [Report as faulty](#report-as-faulty), because the sealed lithium battery cannot be replaced.
+
+On the page, TEST is written as the name printed on that unit.
+
+### Cleaning
+
+The same method for wired and wireless alarms: vacuum or blow the outside vents. The same instructions are used for every brand.
+
+- A wired alarm stays on its base while it is cleaned.
+- A wireless alarm may come off its mount when that is easier.
+
+Do not include a step for isolating mains power. This is only cleaning of the outside vents.
+
+### Use
+
+For a remote. What its controls do and how to use them. One shared page under Setup and Troubleshooting.
+
+The meanings of the remote's lights and sounds live in What's that light or sound?, not on this page.
+
+### Locate
+
+For a remote, and only for a brand whose remote can do this. How to identify the alarm that triggered. This is the only topic whose job is finding that alarm.
+
+### What's that light or sound?
+
+The full list of signals for the selected unit, in the style of a manual: each light or sound, and what it means.
+
+The list is Troubleshooting only, and it is the first topic there. Setup has no copy of the list. Setup steps still show the particular light or sound expected at that step.
+
+In version 1, a meaning can be tapped when there is a useful troubleshooting page to open. The action reads **View fix →**, and Back returns to the same place in the list. When there is no useful page to open, the entry is plain text.
+
+## Rules for every instruction
+
+### Steps, photos, and tips
+
+- All steps for a topic sit on one scrolling page.
+- Each step is a card: a large step number and the instruction. Add the light or sound to expect, a tip, and a photo or diagram only when that step has one.
+- A clear diagram from a manual may be used when no real photo exists.
+- A practical note that is specific to the brand sits inside the step it belongs to, as a highlighted **Tip**. The exact look of a Tip is settled during design.
+- An early layout try is in [mockups/steps-layout.html](../mockups/steps-layout.html). It only shows how a step card could look. Where it disagrees with this brief, follow this brief.
+
+For a flashing light, show a short visual demonstration and write the real interval in large text. Do not make the technician wait through a 40-second or 48-second animation.
+
+### Chirp waits
+
+Any Troubleshooting instruction meant to resolve chirping ends with a wait of at least 2 minutes, to confirm the chirp does not come back. Wired and Wireless Power Cycle already include this wait.
+
+That wait is separate from the extra Cavius wait after a test. The Cavius wait does not replace it or add to it.
+
+### Report as faulty
+
+The last step on a Troubleshooting page when the fix is not the technician's to do. It is not its own topic.
+
+What gets arranged depends on the unit, and it is arranged through the existing work system:
+
+- **Wireless alarm or remote:** replace the unit. A remote with a low battery is replaced as a whole unit.
+- **Wired alarm:** arrange a replacement and an electrician.
+
+### Leave out
+
+- Basic consumer advice, and how often a household should test an alarm.
+- Factory reset.
+- Clearing all pairings.
+- Battery replacement as its own topic. The only battery steps in the app are the ones inside Wired Power Cycle.
+- Remote battery replacement. Never include those steps.
+- Anything in [Left for later](#left-for-later).
+
+## Confirmed differences between brands
+
+**Emerald wireless pairing.** The pairing used in the field starts by pressing TEST three times quickly, within 2 seconds. Emerald wireless instructions include only behaviour the owner has confirmed. They do not name a Ranger model, and they do not carry the earlier Ranger manual discussion.
+
+**Emerald, wired and wireless together.** When a wired Emerald alarm needs to connect to wireless alarms, every wired alarm gets an RF module. Most of those modules are already fitted. The confirmation after that pairing is not confirmed yet. It is in [Left for later](#left-for-later).
+
+**Cavius, after a test.** Cavius alarms normally chirp for about 2 minutes after a test. Wait for that chirping to finish, then wait another 2 minutes for any further chirp. This belongs to the shared Testing page, including when Pairing links to Testing.
+
+## Getting around
+
+The path is:
+
+1. Brand
+2. Unit
+3. Setup or Troubleshooting
+4. Topic
+5. The instruction page
+
+Size every tap target for one-handed use on an iPhone SE (3rd generation). Technicians do not wear gloves, so there are no glove-specific requirements. Text must be readable at arm's length. Leave clear space between buttons.
+
+### Brand screen
+
+The home screen. Square buttons in a grid, each showing the brand's logo, in alphabetical order. Large squares, because a long list is awkward in one hand. If the brands do not fit on one screen, the rest are reached by scrolling.
+
+### Unit screen
+
+Large buttons with a small picture: Wired alarm, Wireless alarm, and Remote or RF module where that brand has them. The brand stays visible at the top.
+
+### Setup or Troubleshooting screen
+
+Two large buttons. For an RF module, this screen shows Setup only.
+
+### Topic screen
+
+Large buttons, one per topic, in the [topic map](#topic-map) order. Only topics that apply to this unit are shown.
+
+This is the only screen with shortcuts. Show at most these two, and only when they apply. Each one opens the other topic list. Neither one jumps straight to an instruction page.
+
+- Switch between Setup and Troubleshooting for the current unit. Show it only when that unit has both.
+- Switch between Wired alarm and Wireless alarm for the current brand, staying in the current Setup or Troubleshooting. Show it only when the brand has both and the current unit is one of those two.
+
+Do not show a shortcut that jumps to Remote or to RF module.
+
+The final wording of these shortcuts is not decided. Examples such as **Troubleshoot this alarm**, **Set up this alarm**, **View Wired alarm**, and **View Wireless alarm** are for design review. They are not the labels to build.
+
+### Instruction screen
+
+A line at the top shows the route: **Brand → Unit → Setup or Troubleshooting → Topic**.
+
+- **Brand** opens that brand's units.
+- **Unit** opens Setup or Troubleshooting for that unit.
+- **Setup or Troubleshooting** opens that topic list.
+- **Topic** is the name of the current page. It is not a button.
+
+The labels show the route taken, including on a shared page.
+
+The steps scroll on one page. Photos open with the iPhone's normal image viewing, as described under [How the phone behaves](#how-the-phone-behaves).
+
+Instruction pages do not have buttons that jump to the same topic for another unit.
+
+### Back and Home
+
+Back and Home sit in a bar fixed to the bottom of every screen except the brand screen, where they are hidden because the technician is already home. The bar stays put while the page scrolls. On an instruction page the bar contains only Back and Home. Links inside the page, such as **View fix →**, are still allowed.
+
+- **Back**, on the left, returns to the actual previous page and the scroll position the technician left it at. On a shared page, that previous page is the Setup or Troubleshooting list that opened it.
+- **Home**, on the right, returns to the brand screen.
+
+Both are large enough to hit without looking, and they always sit in the same place.
+
+The app needs its own Back button. Saved to the home screen, the iPhone hides Safari's back button, and swiping back is not reliable.
+
+## If you leave and come back
+
+Start a 15-minute timer when the app is no longer visible. That includes the phone locking, and the technician switching to another app. Moving between pages inside the app does not start the timer.
+
+- Coming back within 15 minutes reopens the same page and the same scroll position, and stops the timer.
+- Leaving again starts a fresh 15-minute timer.
+- Coming back after 15 minutes opens the brand screen.
+- The first time the app is opened, there is nothing to restore, so it opens the brand screen.
+
+## How the phone behaves
+
+- Use the iPhone's normal screen locking. Do not keep the screen awake.
+- Follow the iPhone's light or dark setting. When the phone is in dark mode, use a strong dark design. Do not add an in-app theme switch now.
+- Use the iPhone's normal image viewing.
+
+## Working without a connection
+
+On the first opening with Wi-Fi or mobile data, show the approved content straight away and download every approved page and image in the background. Do not wait for the technician to open each page. Do not put a download or a setup screen in front of the first use.
+
+If that first download is interrupted, resume it automatically the next time the app is online. If a page has not been saved yet and there is no connection, say that a connection is needed for that page, and keep Back and Home available.
+
+Once a complete copy is on the phone, keep using it while each later version downloads in the background. Switch to the new version only after every required page and image has downloaded. If an update is interrupted, incomplete, or missing a required file, keep using the previous complete version.
+
+Do not show a "Ready offline" status.
+
+## How content is added
+
+There is no editing inside the app. Sign-ins, permissions, and upload screens are a lot to build and look after when content changes only now and then. An AI agent prepares additions and changes. Revisit in-app editing only if many technicians want to add their own tips regularly.
+
+The owner may supply manuals and field information. Look up an official manual only when the owner explicitly asks during the build. When the owner's confirmed field information disagrees with a manual, the owner's version is the one to use.
+
+Version 1 uses text, photos, and diagrams.
+
+Nothing is shown until the owner has approved it. That includes changes prepared by the AI agent. This is what decides which buttons exist, as described in [How the app is organised](#how-the-app-is-organised).
+
+## Words
+
+Each word below means one thing, in this brief and in the app. The "Not" column lists words that must not be used for the same thing.
+
+### The things in your hand
 
 | Word | Means | Not |
 |---|---|---|
-| Brand | The company that makes the alarm, like Emerald. | Manufacturer |
-| Series | A family of alarms within a brand, like Emerald's Vulcan (wired) or Ranger (wireless). Not picked in the app, but mentioned where it matters. | |
-| Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
-| Unit | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Rarely on screen, because the buttons say Wired, Wireless, Remote and RF module. Used in step wording, like "release the unit from the mounting plate", and in this file. | Device, type |
-| Alarm | A wired or wireless smoke alarm. Not a remote or an RF module. | Detector, smoke alarm |
-| Wired | An alarm connected to mains power, with a backup battery. Every wired alarm has one, because the law requires alarms to keep working in a power outage. | Hard-wired, 240V |
-| Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
-| RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
-| Remote | The wall-mounted unit that tests, silences and locates interconnected alarms. | Controller |
-| Mounting plate | The part screwed to the ceiling that the alarm attaches to. On a wired alarm, it's also the part wired to mains, and it stays put. | Base, bracket, backing plate, mount |
-| Label | The sticker on a wired alarm with the installed date and replace-by date, seen once it's opened. | |
-| Installed date | The date the alarm was put in. | |
-| Replace-by date | The date the alarm must be replaced. | Expiry date |
+| Brand | The company that makes the alarm, such as Emerald. | Manufacturer |
+| Unit | The thing in the technician's hand: a Wired alarm, a Wireless alarm, a Remote, or an RF module. | Device, model |
+| Alarm | A wired or wireless smoke alarm. Not a remote and not an RF module. | Detector |
+| Wired alarm | An alarm on mains power, with a backup battery. | Hard-wired, 240V |
+| Wireless alarm | An alarm that runs on its battery alone, with no mains wires, and interconnects by radio. | Battery alarm |
+| RF module | The radio add-on that slots into a wired alarm. "RF" on its own means this module. | Add-on, radio module |
+| Remote | The wall-mounted unit used with a brand's alarms. | Controller |
+| Base | The part of a wired alarm that stays fixed and is wired to mains. The alarm attaches to it and comes off it. | Mount, bracket |
+| Mount | The plate a wireless alarm attaches to. A technician may install it. | Base |
 
 ### How alarms work together
 
 | Word | Means | Not |
 |---|---|---|
-| Interconnected | If one alarm goes off, they all go off. By wire or by radio. Required by Queensland law, so every alarm is interconnected. | Linked |
-| Pairing | Interconnecting units by radio: wireless alarms with each other, wired alarms (through their RF module) with wireless alarms, or a remote with alarms. On an all-wired site, nothing is paired; the wire interconnects them. | |
-| Master | The unit you put into pairing mode first. Any unit can be the master; every unit after it connects to it. On Emerald, you press the master once more at the end to finish. | First alarm, main alarm |
-| Pairing mode | The state a unit is put in so it's ready to pair, usually by pressing the test button a set number of times. | |
+| Interconnected | If one alarm sounds, the alarms interconnected with it sound too. By wire or by radio. | Linked |
+| Pairing | Connecting units by radio. | |
 
-### How the app is organised
+### Names for the screens
 
 | Word | Means | Not |
 |---|---|---|
-| Setup | The top-level choice for putting in a new alarm or RF module: placement, mounting, opening, fitting, turning on, pairing and testing. | Installing, installation |
-| Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
-| Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
-| Page | What you read: one brand, one unit and one topic, like "Emerald, Wireless, Pairing". | Instructions |
-| Step | One instruction on a page, with its photo, tips, warnings, and the light or sound to expect. | |
-| Tip | Advice from techs' experience, shown in a bright box inside the step it belongs to. | Gotcha |
-| Warning | A safety warning from the manufacturer. | Caution |
-| Source | Where a page came from, like a manual or a tech, with its date. | |
-| Job | A site visit. Never used for anything inside the app. | |
+| Setup | The choice for putting in a new alarm, remote, or RF module. | Installing, installation |
+| Troubleshooting | The choice for looking up a problem. A lookup, not a guided workflow. | |
+| Topic | One item under Setup or Troubleshooting, such as Pairing. | Job, option |
+| Instruction page | The page for one brand, one unit, and one topic. | |
+| Step | One instruction on that page. | |
+| Tip | A practical note inside the step it belongs to. | Gotcha |
+| Signal | A light, a sound, or both together, and what it means. | Indication |
 
 ### The topics
 
 | Word | Means | Not |
 |---|---|---|
-| Placement | Where on the ceiling an alarm can go, and how far from walls, fans, lights and vents. Setup only. | Position, location |
-| Mounting | Fitting an alarm onto its mounting plate or removing it, and the light or sound that confirms it's seated. | Installing, securing |
-| Opening | Releasing a wired alarm from its mounting plate, on its hinge or by sliding it off, to get to the battery and the label, and closing it back up. Wired only. For wired alarms this replaces Mounting, because it's the same action. | Front plate, mounting |
-| Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
-| Turn off | Switching a wireless alarm off, usually as part of a power cycle. Wired alarms can't be turned off. | Deactivate |
-| Power cycle | Turning a unit off and back on to check it's working, watching the light as it comes back on. Part of the "Turning on and off" topic. | Reset, restart |
-| Fitting | Putting an RF module into a wired alarm. RF module only, Setup only. | Installing |
-| Testing | Setting the alarm off, checking every interconnected alarm goes off too, and waiting for any other sounds afterwards. | |
-| Cleaning | Cleaning an alarm. Troubleshooting only. | Maintenance |
-| Finding the false alarm | Working out which alarm is causing false alarms. Troubleshooting only. | |
-| Won't turn on | A wireless alarm that won't start. Troubleshooting only. | |
-| What's that light or sound? | Every signal for that unit in one list. Troubleshooting only, shown first. | Lights, Sounds |
+| Placement | Where a smoke alarm can go. | Position, location |
+| Opening | Taking a wired alarm off its base and putting it back. | Mounting |
+| Mounting | Installing a wireless mount, or checking that mount and how the alarm sits on it. | Installing |
+| Activation | Getting a new wireless alarm or remote ready. | Turn on |
+| Fitting | Putting an RF module into a wired alarm, the right way round. | Installing |
+| Power Cycle | The troubleshooting steps that take power off an alarm and bring it back, then wait to see if the problem returns. | Reset, factory reset, restart |
+| Testing | Setting an alarm off and checking that the interconnected alarms sound too. | |
+| Cleaning | Cleaning the outside vents of an alarm. | Maintenance |
+| Use | What a remote's controls do and how to use them. | |
+| Locate | Using a remote to identify the alarm that triggered. | Finding the false alarm |
+| What's that light or sound? | The full list of signals for one unit. | |
+| Report as faulty | The last step on a troubleshooting page when the fix is not the technician's to do. | |
+| Faulty | A unit that needs replacing. | Defective |
 
 ### Lights and sounds
 
 | Word | Means | Not |
 |---|---|---|
-| Signal | A light, a sound, or both together that means something. | Indication |
-| Light | A coloured light on the unit, described by its colour and how often it flashes. | LED |
-| Chirp | A short sound that repeats on a timer, like every 40 seconds. | |
-| Beep | One short sound that confirms something worked, like turning on or pairing. | |
-| Alarm sound | The full, loud, continuous sound. | Siren |
-| Silence | Quieting a sounding alarm for about 8 minutes. | Hush |
-| Test | Pressing the test button so the alarm, and every alarm interconnected with it, sound. | |
-| False alarm | An alarm going off with no fire, for example from cooking. | Nuisance alarm |
-| Fault | The alarm reporting a problem with itself, usually with a chirp. | Fault mode |
-| Low battery | The alarm reporting its battery is running out, usually with a chirp and a light together. | |
-| Faulty | A unit that needs replacing. | Defective |
-| Report as faulty | The end of a troubleshooting page when the fix isn't the tech's to do. For wired, a replacement and an electrician get booked; for a remote, a replacement. | |
+| Light | A light on the unit, described by its colour and how it flashes. | LED |
+| Chirp | A short sound that repeats on a timer. | |
+| View fix → | The action on a signal that opens the troubleshooting page for it. | |
 
-### A clash the map exposed (resolved)
+## Left for later
 
-Pairing a wired alarm to wireless ones could have lived under RF module or under Wired. **Resolved:** on a wired-and-wireless site, every wired alarm has an RF module, so the pairing steps live under **Wired**. The **RF module** covers fitting the module. See "the three kinds of site" above.
+None of these block version 1.
 
-## What each instructions page shows
-
-- Simple written steps with photos.
-- Tips that techs have learned from experience.
-- Videos, where the manufacturer has them.
-
-## Where the content comes from
-
-- **Main source:** PDFs from the company, one for each brand or alarm. These get turned into simple steps.
-- **Extra photos and videos:** taken from the manufacturers' websites or elsewhere online, where they exist.
-- **Your own tips and photos:** added later.
-
-### What a sample manual showed
-
-The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-VC-240-10-User-Manual.pdf) (2 pages, dated November 2024) was reviewed. Findings:
-
-- **Lights and Sounds overlap.** Several meanings depend on a light and a sound together. For example, a chirp every 40 seconds means a fault, but a chirp every 40 seconds *with* a red flash at the same time means a low battery. Lights and sounds are now mixed into each topic, so each combination is explained wherever it shows up.
-- **What the lights and sounds mean on this model:**
-  - Steady green light: mains power is on.
-  - Red flash every 40 seconds: working normally.
-  - Red flash every second, plus a loud alarm: smoke detected.
-  - Red flash every 8 seconds: silenced, for about 8 minutes after the hush button is pressed.
-  - Chirp every 40 seconds: fault.
-  - Chirp and red flash together every 40 seconds: low battery.
-- **Silencing:** press and release the Test/Hush button. The alarm stays quieter for about 8 minutes, then goes back to normal.
-- **Testing:** press the Test/Hush button. Holding it for 5 seconds tests every alarm interconnected with it. A test after installing is required before the job is complete.
-- **Battery:** 10-year replaceable 9V lithium (EVE CR9V-P). Battery-swap steps aren't needed in the app, because they're covered by the techs' job list.
-- **Gotchas for the mount section:**
-  - The alarm won't clip onto its mounting plate without a battery in it.
-  - Ceiling mount only, not walls.
-  - At least 30 cm from the wall.
-- **Wired install details:** wire colours and terminals, strip lengths, up to 40 alarms on one circuit, and up to 150 m of wire between alarms. Must be done by a licensed electrician.
-- **Placement rules:** where to put alarms in a home, and places to avoid, like near bathrooms, kitchens, vents and air conditioners.
-- **Wireless isn't covered in this manual.** This alarm is wired. It can be interconnected by radio with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF.
-- **Model differences.** Manuals are written for one model. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in. See the wireless manual below for a real example.
-
-### What the Emerald wireless manual showed
-
-The [Emerald EP-RANG-10 manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-RANG-10-User-Manual.pdf) (2 pages, dated February 2025) was reviewed. You gave this one as Emerald's wireless alarm. Findings:
-
-- **The manual calls it a "stand alone unit".** It can work on its own, but on your jobs it's always interconnected, as Queensland law requires. The manual has no pairing steps.
-- **The battery can't be replaced.** It's a 10-year built-in battery. When the battery runs low, the whole alarm gets replaced. That's different from the wired Emerald, where you swap the battery.
-- **Same brand, different timing.** On this model the red light flashes and the low-battery chirp happens every 48 seconds. On the wired Emerald it's every 40 seconds. There's also no green light, because there's no mains power. So the light and sound details need to be separate for wired and wireless.
-- **Turning it on:** hold the test button for 3 seconds until the light comes on, then let go within 2 seconds. It beeps to show it's working.
-- **Turning it off for good:** press the test button 6 times within 3 seconds, and it chirps once. This is only for throwing the alarm away, or stopping a faulty alarm that keeps going off. Worth including, because a faulty alarm sounding on site is a real job.
-- **Mount:** it twists onto the mounting plate to secure it and twists the other way to remove it. Screws, or an optional magnetic mount with 3M sticky pads. Ceiling only.
-- **Silencing:** the same as the wired Emerald. Press and release the hush button, and it's quieter for about 8 minutes while the red light flashes every 8 seconds.
-
-### What the Emerald radio add-on manual showed
-
-The [Emerald EP-VC-RF-MOD manual](https://emeraldalarms.com.au/wp-content/uploads/2024/09/EP-VC-RF-MOD-User-Manual.pdf) is for a small radio add-on that slots into Emerald's wired Vulcan alarms (like the EP-VC-240-10), so they can be interconnected without wires. Findings:
-
-- **"Wireless" means one thing.** A battery alarm interconnected by radio. Every alarm on your jobs is interconnected, as Queensland law requires.
-- **Fitting the add-on:** use a screwdriver to lift off the empty cover, slot the add-on in the right way round (the manual has a right and wrong photo), then put the battery in.
-- **Gotcha:** the add-on must go in *before* the battery.
-- **Pairing:**
-  1. Press the test/hush button 3 times. A flashing red light means it's ready to pair.
-  2. Do the same on each other alarm. A chirp means it paired.
-  3. When they're all paired, press the first alarm (the "master") once to finish.
-- **If pairing won't start:** take the battery out, hold the test button for more than 2 seconds to drain leftover power, put the battery back and try again. A good troubleshooting tip.
-- **Mixed wired and wireless sites:** when wired alarms need to be interconnected with wireless alarms, at least one of the wired alarms must have the add-on. It acts as the bridge. This is the "pairing wired to wireless" case from earlier.
-- **"RF Ranger".** The remote manual says it works with "RF Ranger" alarms. This looked like a separate non-pairing version of the Ranger, but it's resolved: the Ranger can work on its own, and on your jobs it's always interconnected.
-
-### What the Emerald remote manual showed
-
-The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-SA-CONT-RF-User-Manual.pdf) is for a remote that lets you test, silence and find alarms from the ground. Findings:
-
-- **It's a separate unit with its own topics.** It needs to be mounted, turned on and paired, and it has its own lights and troubleshooting.
-- **Buttons:** Test (all interconnected alarms beep for 7 seconds), Silence (all interconnected alarms quiet for 8 minutes), and Locate (silences every alarm except the one that went off, so you can find it).
-- **Lights:**
-  - Red light flashing twice a second: an alarm has gone off.
-  - Yellow light flashing every 8 seconds: the remote's battery is low.
-- **Mounting:** on a wall, 1.4 m above the floor, for the best signal.
-- **Turning it on:** hold Silence for 5 seconds until the red and yellow lights flash together. Only needed the first time.
-- **Pairing:**
-  1. On the alarm, press the test button 3 times within 2 seconds, until the red light flashes.
-  2. On the remote, press Silence 3 times within 2 seconds.
-  3. Repeat for each alarm.
-- **Clearing all pairings:** hold Test and Locate together for 10 seconds, until the red light flashes once.
-- **Battery:** CR2450 coin battery, lasts about 3 years. Not needed in the app, because techs replace a faulty remote instead of changing its battery.
-- **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the connection, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages.
-
-## Adding or changing content
-
-- **Decided:** No editing inside the app for now. When something needs adding or changing, an AI agent updates it.
-- **Why:** Editing inside the app would need sign-ins, rules about who can change what, and screens for uploading photos. That's a lot of extra work to build and look after, when new content will only be added now and then.
-- **Revisit if:** lots of techs want to add their own tips regularly.
-
-## Phone and signal
-
-- It's a website you save to your iPhone home screen. It looks and works like a normal app.
-- You almost always have signal, but it should still work without signal.
-- **Decided:** Steps and photos are saved on the phone, so they work with no signal. Videos only play when you have signal, because they take up a lot of space.
-- The first time you open the app with signal, it saves everything. After that, it picks up updates whenever you're online.
-
-## Making it feel easy to use (recommendations)
-
-These are suggestions from the design review. Items marked **Needs your call** are still open.
-
-### Opening the app
-
-- **Agreed:** It opens straight to the brand list, with no sign-in or welcome screen.
-- **Decided:** It reopens on the last page you were on, for example after you answer a text mid-job. The Home button takes you back to the brand grid.
-
-### Brand screen
-
-- **Decided:** Square buttons, each showing the brand's logo, laid out in a grid. Big squares instead of a long list, because a list is too fiddly one-handed on a ladder.
-- **Decided:** Brands go in alphabetical order. About 12 squares fit on one iPhone screen at a comfortable size. If there are more brands than that, you scroll down to see the rest.
-
-### "What's in your hand" screen
-
-- Big buttons, each with a small picture: wired and wireless, plus remote and RF module where the brand has them.
-- The brand you picked stays at the top, so you always know where you are.
-
-### Setup or Troubleshooting screen
-
-- Two big buttons.
-
-### Topic screen
-
-- Large buttons, one for each topic. Only topics that apply to what's in your hand are shown.
-
-### Instructions page
-
-- A line at the top shows what you picked, like "Emerald, Wired, Setup, Pairing". Tap any part to change just that, without starting over.
-- **Decided:** Clear buttons at the bottom switch to the same topic for the other types (wired, wireless, remote, RF module).
-- The lights and sounds that matter for the topic appear right in the steps.
-- **Decided:** All steps on one page, scrolling to find the one you need. Each step is a card with its photo, a big step number, the instruction, the light or sound to expect, and any tip. Chosen after trying both layouts in the phone mockup (`mockups/steps-layout.html`).
-- Tips and gotchas sit inside the step they belong to, in a bright warning box, so you see them before you make the mistake.
-- Tap a photo to make it fill the screen and zoom in.
-- The screen stays on while you're reading steps.
-- Without signal, videos show a clear "needs signal" label instead of loading forever.
-
-### Getting around
-
-- **Decided:** Back and Home are important, so they sit in a bar fixed to the bottom of every screen, where your thumb already is. It stays put while you scroll.
-  - **Back** on the left goes up one level, for example from the Pairing page to the list of Setup topics.
-  - **Home** on the right goes straight to the brand grid. It replaces the earlier "Next alarm" button.
-  - Both are big (at least the size of a fingertip with a glove on) and always in the same place, so you can tap them without looking.
-  - On the brand grid itself, the bar is hidden, because you're already home.
-- **Why the app needs its own Back button:** once it's saved to the home screen, the iPhone hides Safari's back button, and swiping back doesn't work reliably. Without these buttons, you could get stuck.
-- The buttons along the top (like "Emerald, Wired, Setup, Pairing") let you jump to any earlier level in one tap.
-- The buttons that switch to the same topic for another unit sit at the end of the page, above the bar.
-- Mocked up in `mockups/steps-layout.html`.
-
-### On the job site
-
-- Big buttons with space between them, for gloves and shaky hands.
-- Dark text on a light background, plus a dark version for dim attics that follows your phone's setting.
-- Text big enough to read at arm's length.
-
-### Offline
-
-- A small note like "Saved on your phone. Updated 3 days ago", so you know it'll work before you lose signal.
-
-## Before building
-
-Two checks happen first, each in a new session. Models, skills and prompts are in `docs/next-sessions.md`.
-
-1. **Blind review:** a fresh review of this file, without seeing the interview, to find issues, blind spots and conflicts.
-2. **Premortem:** imagining it's six weeks after launch and nobody's using it, then working out why.
-
-## Open questions
-
-- Does any brand have models that behave differently enough to need separate pages?
-- Which brands do you work with, and can you share their PDFs or links? (asked next)
+- **Emerald wired pairing confirmation.** After pairing a wired Emerald alarm through an RF module, the confirmation is not known yet. The owner's recollection is that it may be a light. Check it on a real unit while preparing that content. Do not write that it chirps.
+- **Shortcut wording.** The topic-screen shortcuts still need their final labels. The examples under [Topic screen](#topic-screen) are not those labels.
+- **Tip appearance.** The exact look of a highlighted Tip is settled during design.
+- **Photo viewing.** A custom full-screen view and zoom is a possible later improvement. Version 1 uses the iPhone's own image viewing.
+- **Videos.** Not in version 1. They may be considered later.
+- **Theme switch.** No in-app theme switch is added now. The app follows the iPhone setting.
+- **Faulty RF modules.** Diagnosing, reporting, or replacing a faulty RF module is out of scope for now.
+- **Cross-brand pairing.** Detector Inspector and Matelec were mentioned only as a possible example, not as a confirmed combination. The rule for this is in [Pairing](#pairing).
+- **More brands.** The owner may add brands beyond the twelve.
+- **Editing inside the app.** Not in version 1. The condition for revisiting it is in [How content is added](#how-content-is-added).
