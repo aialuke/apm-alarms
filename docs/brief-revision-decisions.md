@@ -141,6 +141,10 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Both routes open one identical shared Remote activation/setup instruction page.
 - Remote-use instructions appear under both Setup and Troubleshooting.
 - Both routes open one identical shared Remote Use instruction page.
+- Remote Pairing appears under both Setup and Troubleshooting.
+- Setup Pairing connects a new remote.
+- Troubleshooting determines the problem; if the remote has lost its connection but still works, pair it again, and if the remote itself is faulty, replace it.
+- Setup and Troubleshooting use separate Remote Pairing pages while reusing the same pairing steps where appropriate.
 - Include Locate inside Remote troubleshooting for compatible systems as a way to identify the triggering alarm.
 - Never include remote battery-replacement instructions.
 - A low-battery remote is replaced as a complete unit.
