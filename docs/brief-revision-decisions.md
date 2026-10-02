@@ -108,7 +108,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 - Pairing appears under both Setup and Troubleshooting.
 - Setup Pairing covers connecting alarms.
-- Troubleshooting Pairing covers checking whether alarms are paired to each other and then giving the appropriate re-pairing steps.
+- Troubleshooting Pairing begins by testing one alarm and confirming every interconnected alarm sounds. If they do not, it continues to the appropriate brand-specific re-pairing steps.
 - Setup and Troubleshooting therefore use separate Pairing pages, while sharing common steps where appropriate.
 - Pairing procedures differ by brand, not by model, for the alarms covered by the app. Do not add a model-selection screen.
 - Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
