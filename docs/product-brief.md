@@ -36,6 +36,7 @@ Topics under **Installing**:
 
 Topics under **Troubleshooting**:
 
+- What's that light or sound? Every light and sound for that alarm in one list, each with a link to the topic that deals with it. **Decided.** Shown first, because a chirp or a light is usually why you're troubleshooting.
 - Cleaning.
 - Finding which alarm is causing false alarms.
 - Wireless alarms that won't turn on.
@@ -210,7 +211,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- If you hear a chirp or see a light and don't know what it means, where do you look? (asked next)
+- When you're chasing a chirp or a light, do you already know whether it's coming from a wired or a wireless alarm? You described the path as brand, then troubleshooting, which skips that step. (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
