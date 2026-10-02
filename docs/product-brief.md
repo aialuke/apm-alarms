@@ -32,6 +32,7 @@ Topics under **Setup** (putting in a new alarm):
 - Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
 - Opening wired alarms: releasing the front plate to get to the battery and the label with the installed date and replace-by date. **Decided:** no extra photo or explanation of the label dates.
 - Turning wireless alarms on and off.
+- Fitting an RF module into a wired alarm. (RF module only.)
 - Pairing, including the lights and sounds you'll see and hear along the way.
 - Testing: setting the alarm off, checking every interconnected alarm goes off too, and how long to wait afterwards for any other sounds.
 
@@ -51,7 +52,11 @@ Rules:
 - **Decided:** No factory reset. Techs never do it, so it isn't an option.
 - **Decided:** No battery-swap steps. Techs do swap wired alarm batteries when they find a faulty one, but that's already on their job list. Remote batteries are never replaced; a faulty remote is replaced with a new one.
 - You choose by the thing in your hand right now, not the whole site. There's no "Both" option.
-- Steps for interconnecting a wired alarm with a wireless one go inside the pairing steps for each type, so you'll find them wherever you start.
+- **Decided: the three kinds of site.**
+  1. **All wired.** Interconnected by wire already. No pairing.
+  2. **Wired and wireless.** Every wired alarm has an RF module (already in, or fitted on the day), and every alarm gets paired.
+  3. **All wireless.** No RF modules. Every alarm gets paired.
+- So the Wired pairing page is only for the second kind of site. It starts by saying so: on an all-wired site, there's nothing to pair. The "Wireless" switch button at the bottom takes you to the wireless pairing page.
 - You don't pick a model number. You identify the brand by checking the alarm itself on site.
 - **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
 
@@ -88,7 +93,7 @@ This is the map of everything the app knows about, how the pieces connect, and w
 - **A page is written once.** Mounting, pairing and testing appear under both Setup and Troubleshooting, but there's one copy of each page. Two copies would drift apart.
 - **A signal is written once.** "What's that light or sound?" is the full list for that device, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between devices (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per device keeps them from ever disagreeing.
 - **The switch buttons at the bottom of a page** go to the same topic for the brand's other devices, but only where that page exists.
-- **Pairing only shows for devices that pair.** Wireless alarms, RF modules and remotes pair. A wired alarm on its own doesn't, because it's interconnected by wire; it only pairs once an RF module is fitted, and those steps live under the RF module.
+- **Pairing a wired alarm means pairing it through its RF module.** On a wired-and-wireless site, every wired alarm has an RF module, so pairing lives under Wired. The RF module's own page covers fitting it. On an all-wired site, nothing is paired.
 
 ### Things the app must never allow
 
@@ -133,14 +138,14 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Word | Means | Not |
 |---|---|---|
 | Interconnected | If one alarm goes off, they all go off. By wire or by radio. Required by Queensland law, so every alarm is interconnected. | Linked |
-| Pairing | Interconnecting devices by radio: wireless alarms with each other, an RF module with wireless alarms, or a remote with alarms. Wired alarms aren't paired with each other; the wire interconnects them. | |
+| Pairing | Interconnecting devices by radio: wireless alarms with each other, wired alarms (through their RF module) with wireless alarms, or a remote with alarms. On an all-wired site, nothing is paired; the wire interconnects them. | |
 | Master | The first alarm in a pairing, which you press once more at the end to finish. **Check:** is this a word techs use? | |
 
 ### How the app is organised
 
 | Word | Means | Not |
 |---|---|---|
-| Setup | The top-level choice for putting in a new alarm: placement, mounting, opening, turning on, pairing and testing. | Installing, installation |
+| Setup | The top-level choice for putting in a new alarm or RF module: placement, mounting, opening, fitting, turning on, pairing and testing. | Installing, installation |
 | Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
 | Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
 | Page | What you read: one brand, one device and one topic, like "Emerald, Wireless, Pairing". | Instructions |
@@ -159,6 +164,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Opening | Releasing the front plate of a wired alarm to get to the battery and the label. Wired only. | |
 | Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
 | Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. **Check:** should this be part of the "Turning on and off" topic? | Deactivate |
+| Fitting | Putting an RF module into a wired alarm. RF module only, Setup only. **Check:** new topic. | Installing |
 | Testing | Setting the alarm off, checking every interconnected alarm goes off too, and waiting for any other sounds afterwards. | |
 | Cleaning | Cleaning an alarm. Troubleshooting only. | Maintenance |
 | Finding the false alarm | Working out which alarm is causing false alarms. Troubleshooting only. | |
@@ -181,9 +187,9 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Low battery | The alarm reporting its battery is running out, usually with a chirp and a light together. | |
 | Faulty | A device that needs replacing. | Defective |
 
-### A clash the map exposed
+### A clash the map exposed (resolved)
 
-**Check:** You asked for a "Wireless" switch button at the bottom of the wired pairing page, for pairing wired alarms to wireless ones. But wired alarms only pair by radio once an RF module is fitted, so the map puts those steps on the RF module's pairing page. The question is whether the steps should live under RF module, under Wired, or both.
+Pairing a wired alarm to wireless ones could have lived under RF module or under Wired. **Resolved:** on a wired-and-wireless site, every wired alarm has an RF module, so the pairing steps live under **Wired**. The **RF module** device covers fitting the module. See "the three kinds of site" above.
 
 ## What each instructions page shows
 
