@@ -114,6 +114,10 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Some brands do not allow one replacement or added alarm to be paired by itself; the whole group must be paired again. Explain the correct approach on that brand's Pairing page.
 - Detector Inspector and Matelec were given as a possible cross-brand example, not a confirmed rule. Do not build a general compatibility list. Add a note inside Setup/Pairing only for combinations the owner confirms later.
 
+### Pairing fact still to confirm
+
+- The confirmation after pairing an Emerald wired alarm through an RF module is not confirmed. Do not state that it chirps. The owner's current recollection is that confirmation may be a light signal; check this on a real unit during content preparation.
+
 ## Remote
 
 - Do not include physical remote-mounting instructions; mounting is too simple to warrant a topic.
