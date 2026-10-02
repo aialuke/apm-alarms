@@ -172,7 +172,9 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
 ## Turning alarms off
 
 - Do not describe wireless deactivation as a routine power cycle.
-- Put it in Troubleshooting as **Stop a faulty alarm before replacement**.
+- Wireless Setup contains turning on and initial activation.
+- Wireless Troubleshooting contains restarting the alarm and **Stop a faulty alarm before replacement**.
+- Setup and Troubleshooting use separate context-specific instructions.
 - Include the steps needed to deactivate and, where relevant, reactivate the alarm.
 
 ## Wired troubleshooting
