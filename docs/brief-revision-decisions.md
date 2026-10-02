@@ -89,6 +89,8 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 - Save content and images for offline use in the background.
 - Do not show a visible **Ready offline** status.
+- Download a complete new content version before switching to it.
+- If an update is interrupted, incomplete, or missing a required file, keep using the previous complete version.
 - Videos are not part of version 1.
 
 ## Content and approval
@@ -190,7 +192,3 @@ For a wireless alarm that is chirping or not behaving correctly:
 - Wireless alarm or remote: replace the unit through the existing work system.
 - Wired alarm: arrange replacement and an electrician through the existing work system.
 - Do not add booking or replacement workflow to the app.
-
-## Still to decide
-
-- If a background content update is interrupted or fails, should the app keep the previous complete copy?
