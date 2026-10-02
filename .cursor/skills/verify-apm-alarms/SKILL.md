@@ -7,7 +7,7 @@ description: "Verify apm-alarms checkout identity and (once an app exists) drive
 
 Project-local verification skill for **apm-alarms**. Written for agents reading this cold mid-task.
 
-**Current surface (2026-10-02):** greenfield, pre-build. The repo holds planning documents and agent tooling only: `README.md` (`# apm-alarms`), `AGENTS.md`, `docs/product-brief.md`, `docs/next-sessions.md`, a throwaway static mockup at `mockups/steps-layout.html`, and the pstack skills, agents and model rule under `.cursor/`. There is no web UI, CLI, API, package manifest, or runnable process. The mockup is not the product and is not a verification surface. Until a product surface exists, verification proves **checkout identity** only. When an app appears, re-run `/create-verification-skill` (or extend this skill + feature map) and replace the bootstrap feature with real user paths.
+**Current surface (2026-10-03):** greenfield, pre-build. The live doc is `docs/product-brief.md`. The repo also holds `README.md` (`# apm-alarms`), `AGENTS.md`, a throwaway static mockup at `mockups/steps-layout.html`, and the pstack skills, agents and model rule under `.cursor/`. There is no web UI, CLI, API, package manifest, or runnable process. The mockup is not the product and is not a verification surface. Until a product surface exists, verification proves **checkout identity** only. When an app appears, re-run `/create-verification-skill` (or extend this skill + feature map) and replace the bootstrap feature with real user paths.
 
 ## Launch
 
