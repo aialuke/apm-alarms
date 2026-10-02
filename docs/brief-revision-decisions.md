@@ -249,7 +249,8 @@ For a wireless alarm that is chirping or not behaving correctly:
 ## Lights and sounds
 
 - **What's that light or sound?** is a complete, manual-style list for the selected unit.
-- It appears first in the Troubleshooting topic list.
+- The complete list appears only under Troubleshooting and is the first topic in that list.
+- Setup pages still show the specific light or sound expected inside each relevant step.
 - Show each light or sound and its meaning.
 - Version 1 makes a meaning tappable when there is a useful troubleshooting destination.
 - Use a clear action such as **View fix →**.
