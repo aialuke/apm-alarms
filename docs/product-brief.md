@@ -57,7 +57,7 @@ Rules:
   2. **Wired and wireless.** Every wired alarm has an RF module (already in, or fitted on the day), and every alarm gets paired.
   3. **All wireless.** No RF modules. Every alarm gets paired.
 - The Wired pairing page is only used on the second kind of site. **Decided:** the page doesn't say so, because every tech already knows. The "Wireless" switch button at the bottom takes you to the wireless pairing page.
-- **Rule of thumb:** leave out anything every tech already knows. The app is for what's different between brands and devices.
+- **Rule of thumb:** leave out anything every tech already knows. The app is for what's different between brands and units.
 - You don't pick a model number. You identify the brand by checking the alarm itself on site.
 - **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
 
@@ -76,31 +76,31 @@ This is the map of everything the app knows about, how the pieces connect, and w
 
 ### The pieces
 
-- **Brand.** Emerald, for example. Each brand has one or more devices.
-- **Device.** The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Each device belongs to one brand and has a few facts about it:
+- **Brand.** Emerald, for example. Each brand has one or more units.
+- **Unit.** The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Each unit belongs to one brand and has a few facts about it:
   - How it's powered: mains with a backup battery, or battery only.
   - How it's interconnected: wired alarms by wire, and also by radio once an RF module is fitted. Wireless alarms by radio.
-  - Which other devices it can pair with. For example, the Emerald remote pairs with Emerald wireless alarms and with wired alarms that have an RF module.
+  - Which other units it can pair with. For example, the Emerald remote pairs with Emerald wireless alarms and with wired alarms that have an RF module.
 - **Every alarm is interconnected.** Queensland law requires every alarm in a home to be interconnected: if one alarm goes off, they all go off. Some alarms *can* work on their own, but on your jobs they're always interconnected.
 - **Topic.** A fixed list: placement, mounting, opening, turning on and off, pairing, testing, cleaning, finding the false alarm, won't turn on, and what's that light or sound. Each topic is marked as Setup, Troubleshooting, or both.
-- **Page.** One brand, plus one device, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
+- **Page.** One brand, plus one unit, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
 - **Step.** One instruction on a page, with its photo, any tips and warnings, and the light or sound you should see or hear at that point.
-- **Signal.** A light, a sound, or both together that means something. For example, "a chirp every 40 seconds *and* a red flash at the same time means low battery". Each signal belongs to one device and says what it means and which topic deals with it.
+- **Signal.** A light, a sound, or both together that means something. For example, "a chirp every 40 seconds *and* a red flash at the same time means low battery". Each signal belongs to one unit and says what it means and which topic deals with it.
 - **Source.** The manual, web page or tech a page came from, with its date, so it's clear where every instruction came from and when it needs updating.
 
 ### Rules that fall out of the map
 
 - **A page only exists if there's something to say.** The app shows a button only when there's a page behind it. So the Remote button only appears for brands with a remote, "Opening" only appears for wired, and "Turning on and off" only for wireless. These aren't separate rules to remember; they all come from that one rule.
 - **A page is written once.** Mounting, pairing and testing appear under both Setup and Troubleshooting, but there's one copy of each page. Two copies would drift apart.
-- **A signal is written once.** "What's that light or sound?" is the full list for that device, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between devices (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per device keeps them from ever disagreeing.
-- **The switch buttons at the bottom of a page** go to the same topic for the brand's other devices, but only where that page exists.
+- **A signal is written once.** "What's that light or sound?" is the full list for that unit, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between units (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per unit keeps them from ever disagreeing.
+- **The switch buttons at the bottom of a page** go to the same topic for the brand's other units, but only where that page exists.
 - **Pairing a wired alarm means pairing it through its RF module.** On a wired-and-wireless site, every wired alarm has an RF module, so pairing lives under Wired. The RF module's own page covers fitting it. On an all-wired site, nothing is paired.
 
 ### Things the app must never allow
 
 - A button that leads to an empty page.
 - The same instruction or signal written two different ways in two places.
-- Pairing steps for a device that can't pair.
+- Pairing steps for a unit that can't pair.
 - An instruction without a source.
 
 ### A gap the map exposed
@@ -113,7 +113,7 @@ The EP-RANG-10 manual says "stand alone unit", which looked like an alarm that c
 
 Every word below means one thing only, in this file and in the app. Words in the "Not" column are what the manuals or earlier answers used for the same thing; the app won't use them, so nothing gets mixed up. Items marked **Check** are open for review.
 
-One rule sits above the list: **when a step names a button, it uses the name printed on the device.** If the Emerald alarm's button says "Test/Hush", the step says "press the Test/Hush button", even though the action is called Silence.
+One rule sits above the list: **when a step names a button, it uses the name printed on the unit.** If the Emerald alarm's button says "Test/Hush", the step says "press the Test/Hush button", even though the action is called Silence.
 
 ### The things you work with
 
@@ -122,12 +122,12 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Brand | The company that makes the alarm, like Emerald. | Manufacturer |
 | Series | A family of alarms within a brand, like Emerald's Vulcan (wired) or Ranger (wireless). Not picked in the app, but mentioned where it matters. | |
 | Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
-| Device | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. **Check:** you often say "unit". | Unit, type |
+| Unit | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Rarely on screen, because the buttons say Wired, Wireless, Remote and RF module. Used in step wording, like "release the unit from the mounting plate", and in this file. | Device, type |
 | Alarm | A wired or wireless smoke alarm. Not a remote or an RF module. | Detector, smoke alarm |
 | Wired | An alarm connected to mains power, with a backup battery. **Check:** do all wired alarms have a backup battery? | Hard-wired, 240V |
 | Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
 | RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
-| Remote | The wall-mounted device that tests, silences and locates interconnected alarms. | Controller |
+| Remote | The wall-mounted unit that tests, silences and locates interconnected alarms. | Controller |
 | Mounting plate | The part screwed to the ceiling that the alarm attaches to. | Base, bracket, backing plate, mount |
 | Front plate | The front cover of a wired alarm, which releases to show the battery and the label. | Cover, lid |
 | Label | The sticker behind the front plate with the installed date and replace-by date. | |
@@ -139,7 +139,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Word | Means | Not |
 |---|---|---|
 | Interconnected | If one alarm goes off, they all go off. By wire or by radio. Required by Queensland law, so every alarm is interconnected. | Linked |
-| Pairing | Interconnecting devices by radio: wireless alarms with each other, wired alarms (through their RF module) with wireless alarms, or a remote with alarms. On an all-wired site, nothing is paired; the wire interconnects them. | |
+| Pairing | Interconnecting units by radio: wireless alarms with each other, wired alarms (through their RF module) with wireless alarms, or a remote with alarms. On an all-wired site, nothing is paired; the wire interconnects them. | |
 | Master | The first alarm in a pairing, which you press once more at the end to finish. **Check:** is this a word techs use? | |
 
 ### How the app is organised
@@ -149,7 +149,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Setup | The top-level choice for putting in a new alarm or RF module: placement, mounting, opening, fitting, turning on, pairing and testing. | Installing, installation |
 | Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
 | Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
-| Page | What you read: one brand, one device and one topic, like "Emerald, Wireless, Pairing". | Instructions |
+| Page | What you read: one brand, one unit and one topic, like "Emerald, Wireless, Pairing". | Instructions |
 | Step | One instruction on a page, with its photo, tips, warnings, and the light or sound to expect. | |
 | Tip | Advice from techs' experience, shown in a bright box inside the step it belongs to. | Gotcha |
 | Warning | A safety warning from the manufacturer. | Caution |
@@ -170,14 +170,14 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Cleaning | Cleaning an alarm. Troubleshooting only. | Maintenance |
 | Finding the false alarm | Working out which alarm is causing false alarms. Troubleshooting only. | |
 | Won't turn on | A wireless alarm that won't start. Troubleshooting only. | |
-| What's that light or sound? | Every signal for that device in one list. Troubleshooting only, shown first. | Lights, Sounds |
+| What's that light or sound? | Every signal for that unit in one list. Troubleshooting only, shown first. | Lights, Sounds |
 
 ### Lights and sounds
 
 | Word | Means | Not |
 |---|---|---|
 | Signal | A light, a sound, or both together that means something. | Indication |
-| Light | A coloured light on the device, described by its colour and how often it flashes. | LED |
+| Light | A coloured light on the unit, described by its colour and how often it flashes. | LED |
 | Chirp | A short sound that repeats on a timer, like every 40 seconds. | |
 | Beep | One short sound that confirms something worked, like turning on or pairing. | |
 | Alarm sound | The full, loud, continuous sound. | Siren |
@@ -186,11 +186,11 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | False alarm | An alarm going off with no fire, for example from cooking. | Nuisance alarm |
 | Fault | The alarm reporting a problem with itself, usually with a chirp. | Fault mode |
 | Low battery | The alarm reporting its battery is running out, usually with a chirp and a light together. | |
-| Faulty | A device that needs replacing. | Defective |
+| Faulty | A unit that needs replacing. | Defective |
 
 ### A clash the map exposed (resolved)
 
-Pairing a wired alarm to wireless ones could have lived under RF module or under Wired. **Resolved:** on a wired-and-wireless site, every wired alarm has an RF module, so the pairing steps live under **Wired**. The **RF module** device covers fitting the module. See "the three kinds of site" above.
+Pairing a wired alarm to wireless ones could have lived under RF module or under Wired. **Resolved:** on a wired-and-wireless site, every wired alarm has an RF module, so the pairing steps live under **Wired**. The **RF module** covers fitting the module. See "the three kinds of site" above.
 
 ## What each instructions page shows
 
@@ -259,7 +259,7 @@ The [Emerald EP-VC-RF-MOD manual](https://emeraldalarms.com.au/wp-content/upload
 
 The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-SA-CONT-RF-User-Manual.pdf) is for a remote that lets you test, silence and find alarms from the ground. Findings:
 
-- **It's a separate device with its own jobs.** It needs to be mounted, turned on, paired, and have its battery changed, and it has its own lights and troubleshooting.
+- **It's a separate unit with its own topics.** It needs to be mounted, turned on and paired, and it has its own lights and troubleshooting.
 - **Buttons:** Test (all interconnected alarms beep for 7 seconds), Silence (all interconnected alarms quiet for 8 minutes), and Locate (silences every alarm except the one that went off, so you can find it).
 - **Lights:**
   - Red light flashing twice a second: an alarm has gone off.
