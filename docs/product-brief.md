@@ -31,7 +31,7 @@ Topics under **Setup** (putting in a new alarm):
 - Placement: where the alarm can go, with key distances from walls, fans and lights.
 - Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
 - Opening wired alarms: releasing the front plate to get to the battery and the label with the installed date and replace-by date. **Decided:** no extra photo or explanation of the label dates.
-- Turning wireless alarms on and off.
+- Turning wireless alarms on and off, including power cycling: turning it off and back on to check it's working, and the light that confirms it's back on.
 - Fitting an RF module into a wired alarm. (RF module only.)
 - Pairing, including the lights and sounds you'll see and hear along the way.
 - Testing: setting the alarm off, checking every interconnected alarm goes off too, and how long to wait afterwards for any other sounds.
@@ -166,7 +166,8 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Mounting | Fitting an alarm onto its mounting plate or removing it, and the light or sound that confirms it's seated. | Installing, securing |
 | Opening | Releasing the front plate of a wired alarm to get to the battery and the label. Wired only. | |
 | Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
-| Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. **Check:** should this be part of the "Turning on and off" topic? | Deactivate |
+| Turn off | Switching a wireless alarm off, usually as part of a power cycle. | Deactivate |
+| Power cycle | Turning a unit off and back on to check it's working, watching the light as it comes back on. Part of the "Turning on and off" topic. | Reset, restart |
 | Fitting | Putting an RF module into a wired alarm. RF module only, Setup only. | Installing |
 | Testing | Setting the alarm off, checking every interconnected alarm goes off too, and waiting for any other sounds afterwards. | |
 | Cleaning | Cleaning an alarm. Troubleshooting only. | Maintenance |
@@ -344,7 +345,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
+- Do techs power cycle wired alarms too, and if so, how? (asked next)
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (asked next)
