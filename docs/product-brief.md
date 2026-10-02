@@ -70,8 +70,20 @@ The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/upload
   - At least 30 cm from the wall.
 - **Wired install details:** wire colours and terminals, strip lengths, up to 40 alarms on one circuit, and up to 150 m of wire between alarms. Must be done by a licensed electrician.
 - **Placement rules:** where to put alarms in a home, and places to avoid, like near bathrooms, kitchens, vents and air conditioners.
-- **Wireless isn't covered in this manual.** This alarm is wired. It becomes wireless with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF, and the pairing steps will come from the module's manual.
-- **Model differences.** Manuals are written for one model. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
+- **Wireless isn't covered in this manual.** This alarm is wired. It can link to other alarms by radio with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF.
+- **Model differences.** Manuals are written for one model. See the wireless manual below for a real example.
+
+### What the Emerald wireless manual showed
+
+The [Emerald EP-RANG-10 manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-RANG-10-User-Manual.pdf) (2 pages, dated February 2025) was reviewed. You gave this one as Emerald's wireless alarm. Findings:
+
+- **It doesn't link to other alarms.** The manual lists it as a "stand alone unit" with no connection to other alarms. It's wireless because it runs on its own battery with no wires, not because it talks to other alarms by radio. So there's nothing to pair on this model. **Still open:** what "wireless" means across all the brands (see open questions).
+- **The battery can't be replaced.** It's a 10-year built-in battery. When the battery runs low, the whole alarm gets replaced. That's different from the wired Emerald, where you swap the battery.
+- **Same brand, different timing.** On this model the red light flashes and the low-battery chirp happens every 48 seconds. On the wired Emerald it's every 40 seconds. There's also no green light, because there's no mains power. So the Lights and Sounds pages need to be separate for wired and wireless.
+- **Turning it on:** hold the test button for 3 seconds until the light comes on, then let go within 2 seconds. It beeps to show it's working.
+- **Turning it off for good:** press the test button 6 times within 3 seconds, and it chirps once. This is only for throwing the alarm away, or stopping a faulty alarm that keeps going off. Worth including, because a faulty alarm sounding on site is a real job.
+- **Mount:** it twists onto the mounting plate to secure it and twists the other way to remove it. Screws, or an optional magnetic mount with 3M sticky pads. Ceiling only.
+- **Silencing:** the same as the wired Emerald. Press and release the hush button, and it's quieter for about 8 minutes while the red light flashes every 8 seconds. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
 
 ## Adding or changing content
 
@@ -137,7 +149,9 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Should battery and testing get their own buttons? (asked next)
+- What does "wireless" mean on your jobs: battery alarms with no wires that work on their own, alarms that link to each other by radio, or both? (asked next)
+- Should battery and testing get their own buttons?
+- Should turning an alarm on and off (for example, stopping a faulty alarm that keeps going off) be included, and where?
 - Are Lights and Sounds their own buttons on the job screen, or inside Troubleshooting?
 - Should the app include where to place alarms and places to avoid?
 - Does any brand have models that behave differently enough to need separate pages?
