@@ -229,7 +229,9 @@ For a wireless alarm that is chirping or not behaving correctly:
 ## Chirp timing
 
 - After troubleshooting either a wired or wireless alarm, wait at least 2 minutes to confirm that it does not chirp again.
-- Cavius alarms normally chirp for about 2 minutes after testing. Wait for that normal chirping to finish, then wait an additional 2 minutes for any further chirp.
+- The ordinary 2-minute wait applies to Power Cycle troubleshooting.
+- After an alarm test, Cavius alarms normally chirp for about 2 minutes. Wait for that normal chirping to finish, then wait an additional 2 minutes for any further chirp.
+- The Cavius testing exception does not replace or extend the separate Power Cycle wait.
 
 ## Cleaning
 
