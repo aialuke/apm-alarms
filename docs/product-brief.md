@@ -30,7 +30,7 @@ Topics under **Setup** (putting in a new alarm):
 
 - Placement: where the alarm can go, with key distances from walls, fans and lights.
 - Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
-- Opening wired alarms: releasing the front plate to get to the battery and the label with the installed date and replace-by date. **Decided:** no extra photo or explanation of the label dates.
+- Opening wired alarms: releasing the alarm from its mounting plate, either on its hinge or by sliding it off, to get to the battery and the label. Also closing it back up, and the light that confirms it's back on mains power. The mounting plate stays on the ceiling, wired to mains. **Decided:** no extra photo or explanation of the label dates.
 - Turning wireless alarms on and off, including power cycling: turning it off and back on to check it's working, and the light that confirms it's back on.
 - Fitting an RF module into a wired alarm. (RF module only.)
 - Pairing, including the lights and sounds you'll see and hear along the way.
@@ -70,8 +70,8 @@ Table (confirmed, except where marked **Check**):
 | Topic | Wired | Wireless | Remote | RF module |
 |---|---|---|---|---|
 | Placement | No, electrician's work | Yes | No (assumed, because remotes aren't mounted) | No |
-| Mounting | **Check:** to get to the battery or fit an RF module? | Yes | No | No |
-| Opening | Yes | No | No | No |
+| Mounting | No, covered by Opening | Yes | No | No |
+| Opening | Yes, including closing it back up | No | No | No |
 | Turning on and off | No, can't be turned off | Yes | Turning it on | No |
 | Fitting | No | No | No | Yes |
 | Pairing | Yes, through its RF module | Yes | Yes | No, lives under Wired |
@@ -155,9 +155,8 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
 | RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
 | Remote | The wall-mounted unit that tests, silences and locates interconnected alarms. | Controller |
-| Mounting plate | The part screwed to the ceiling that the alarm attaches to. | Base, bracket, backing plate, mount |
-| Front plate | The front cover of a wired alarm, which releases to show the battery and the label. | Cover, lid |
-| Label | The sticker behind the front plate with the installed date and replace-by date. | |
+| Mounting plate | The part screwed to the ceiling that the alarm attaches to. On a wired alarm, it's also the part wired to mains, and it stays put. | Base, bracket, backing plate, mount |
+| Label | The sticker on a wired alarm with the installed date and replace-by date, seen once it's opened. | |
 | Installed date | The date the alarm was put in. | |
 | Replace-by date | The date the alarm must be replaced. | Expiry date |
 
@@ -190,7 +189,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 |---|---|---|
 | Placement | Where on the ceiling an alarm can go, and how far from walls, fans, lights and vents. Setup only. | Position, location |
 | Mounting | Fitting an alarm onto its mounting plate or removing it, and the light or sound that confirms it's seated. | Installing, securing |
-| Opening | Releasing the front plate of a wired alarm to get to the battery and the label. Wired only. | |
+| Opening | Releasing a wired alarm from its mounting plate, on its hinge or by sliding it off, to get to the battery and the label, and closing it back up. Wired only. For wired alarms this replaces Mounting, because it's the same action. | Front plate, mounting |
 | Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
 | Turn off | Switching a wireless alarm off, usually as part of a power cycle. Wired alarms can't be turned off. | Deactivate |
 | Power cycle | Turning a unit off and back on to check it's working, watching the light as it comes back on. Part of the "Turning on and off" topic. | Reset, restart |
@@ -372,7 +371,6 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- For wired alarms, do techs take the unit off its mounting plate, for example to replace the battery or fit an RF module? (asked next)
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (asked next)
