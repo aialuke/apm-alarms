@@ -201,6 +201,7 @@ For a wireless alarm that is chirping or not behaving correctly:
 
 ## Cleaning
 
+- Cleaning appears under Troubleshooting only, not Setup.
 - Wired and wireless alarms use the same cleaning method: vacuum or blow the external vents.
 - A wired alarm remains attached to its base while cleaning.
 - A wireless alarm may be removed from its mount when that is easier.
