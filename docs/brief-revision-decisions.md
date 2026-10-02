@@ -137,7 +137,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Show the choice only for brands that have a remote.
 - Do not include physical remote-mounting instructions; mounting is too simple to warrant a topic.
 - Include remote activation, connection, pairing, controls, use, light meanings, sound meanings, and troubleshooting.
-- First-time Remote activation appears under Setup only.
+- Remote activation/setup appears under both Setup and Troubleshooting because replacing a faulty remote requires setting up the new one.
 - Remote-use instructions appear under both Setup and Troubleshooting.
 - Both routes open one identical shared Remote Use instruction page.
 - Include Locate inside Remote troubleshooting for compatible systems as a way to identify the triggering alarm.
