@@ -137,6 +137,12 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
   3. within 400 mm of an air-conditioning vent; or
   4. within 400 mm of the blades of a ceiling fan.
 
+## Wired opening and mounting
+
+- Wired alarms do not have a separate Mounting topic.
+- Installing a wired mounting base is electrician-only work.
+- Attaching an alarm to its existing base and removing it from that base belong under **Opening**.
+
 ## Turning alarms off
 
 - Do not describe wireless deactivation as a routine power cycle.
