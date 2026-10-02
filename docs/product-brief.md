@@ -348,7 +348,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 - A line at the top shows what you picked, like "Emerald, Wired, Setup, Pairing". Tap any part to change just that, without starting over.
 - **Decided:** Clear buttons at the bottom switch to the same topic for the other types (wired, wireless, remote, RF module).
 - The lights and sounds that matter for the topic appear right in the steps.
-- **Needs your call:** One step per screen (big photo, big Next button near your thumb, plus a "see all steps" option), or all steps on one page. Both will be mocked up so you can try them on your phone.
+- **Needs your call:** One step per screen (big photo, big Next button near your thumb, plus a "see all steps" option), or all steps on one page. Both are mocked up in `mockups/steps-layout.html`, using Emerald wired pairing, to try on a phone.
 - Tips and gotchas sit inside the step they belong to, in a bright warning box, so you see them before you make the mistake.
 - Tap a photo to make it fill the screen and zoom in.
 - The screen stays on while you're reading steps.
