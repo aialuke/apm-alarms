@@ -65,21 +65,27 @@ Rules:
 
 **Decided:** Techs never do electrical work. Wired alarms can't be turned off, and anything involving mains wiring needs an electrician. For wired alarms, techs only troubleshoot, pair and replace batteries.
 
-Proposed table (**Check**: still to be confirmed; items marked "?" are guesses):
+Table (confirmed, except where marked **Check**):
 
 | Topic | Wired | Wireless | Remote | RF module |
 |---|---|---|---|---|
-| Placement | No, electrician's work | Yes | Yes, on a wall at 1.4 m | No |
-| Mounting | Yes, to get to the battery or fit an RF module ? | Yes | Yes ? | No |
+| Placement | No, electrician's work | Yes | No (assumed, because remotes aren't mounted) | No |
+| Mounting | **Check:** to get to the battery or fit an RF module? | Yes | No | No |
 | Opening | Yes | No | No | No |
-| Turning on and off | No, can't be turned off | Yes | Yes, turning it on the first time ? | No |
+| Turning on and off | No, can't be turned off | Yes | Turning it on | No |
 | Fitting | No | No | No | Yes |
 | Pairing | Yes, through its RF module | Yes | Yes | No, lives under Wired |
 | Testing | Yes | Yes | Yes | No |
-| Cleaning | Yes | Yes | No ? | No |
-| Finding the false alarm | Yes | Yes | No ? | No |
-| Won't turn on | No | Yes | Yes ? | No |
-| What's that light or sound? | Yes | Yes | Yes | No ? |
+| Cleaning | Yes | Yes | No | No |
+| Finding the false alarm | Yes | Yes | No | No |
+| Won't turn on | Yes, ends in "report as faulty" | Yes | Yes, ends in "report as faulty" | No |
+| What's that light or sound? | Yes | Yes | Yes | No |
+
+**Decided: some troubleshooting ends in "report as faulty".** Techs work out what's wrong, but some fixes aren't theirs to do. When that's where the steps lead, the page ends with a clear "Report as faulty" outcome, and what gets booked depends on the unit:
+
+- **Wired:** a replacement and an electrician.
+- **Remote:** a replacement.
+- **Wireless:** a replacement (assumed).
 
 ### How the structure changed
 
@@ -210,6 +216,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Fault | The alarm reporting a problem with itself, usually with a chirp. | Fault mode |
 | Low battery | The alarm reporting its battery is running out, usually with a chirp and a light together. | |
 | Faulty | A unit that needs replacing. | Defective |
+| Report as faulty | The end of a troubleshooting page when the fix isn't the tech's to do. For wired, a replacement and an electrician get booked; for a remote, a replacement. | |
 
 ### A clash the map exposed (resolved)
 
@@ -365,7 +372,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Does the table of which topics apply to which unit look right? (asked next)
+- For wired alarms, do techs take the unit off its mounting plate, for example to replace the battery or fit an RF module? (asked next)
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (asked next)
