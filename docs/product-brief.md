@@ -81,6 +81,7 @@ This is the map of everything the app knows about, how the pieces connect, and w
   - How it's powered: mains with a backup battery, or battery only.
   - How it's interconnected: wired alarms by wire, and also by radio once an RF module is fitted. Wireless alarms by radio.
   - Which other units it can pair with. For example, the Emerald remote pairs with Emerald wireless alarms and with wired alarms that have an RF module.
+- **Every wired alarm has a backup battery.** The law requires alarms to keep working in a power outage.
 - **Every alarm is interconnected.** Queensland law requires every alarm in a home to be interconnected: if one alarm goes off, they all go off. Some alarms *can* work on their own, but on your jobs they're always interconnected.
 - **Topic.** A fixed list: placement, mounting, opening, turning on and off, pairing, testing, cleaning, finding the false alarm, won't turn on, and what's that light or sound. Each topic is marked as Setup, Troubleshooting, or both.
 - **Page.** One brand, plus one unit, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
@@ -124,7 +125,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
 | Unit | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Rarely on screen, because the buttons say Wired, Wireless, Remote and RF module. Used in step wording, like "release the unit from the mounting plate", and in this file. | Device, type |
 | Alarm | A wired or wireless smoke alarm. Not a remote or an RF module. | Detector, smoke alarm |
-| Wired | An alarm connected to mains power, with a backup battery. **Check:** do all wired alarms have a backup battery? | Hard-wired, 240V |
+| Wired | An alarm connected to mains power, with a backup battery. Every wired alarm has one, because the law requires alarms to keep working in a power outage. | Hard-wired, 240V |
 | Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
 | RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
 | Remote | The wall-mounted unit that tests, silences and locates interconnected alarms. | Controller |
