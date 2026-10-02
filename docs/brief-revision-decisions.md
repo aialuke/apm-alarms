@@ -143,6 +143,12 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
 - Installing a wired mounting base is electrician-only work.
 - Attaching an alarm to its existing base and removing it from that base belong under **Opening**.
 
+## Wireless mounting
+
+- Wireless alarms have a separate **Mounting** topic.
+- Technicians may install wireless mounting plates when needed.
+- Include fitting the alarm to the mount, removing it, and checking any light or other confirmation that it switched on correctly.
+
 ## Turning alarms off
 
 - Do not describe wireless deactivation as a routine power cycle.
