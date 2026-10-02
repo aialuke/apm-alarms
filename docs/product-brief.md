@@ -63,6 +63,42 @@ Rules:
 - **Decided:** The top-level choice is called "Setup", not "Installing", because "installing" was also used for fitting an alarm onto its mounting plate. That's now called "Mounting". See the word list below.
 - **To confirm:** Remote and RF module are taken to still sit next to wired and wireless.
 
+## How the pieces fit together
+
+This is the map of everything the app knows about, how the pieces connect, and what it must never allow. Every screen and rule in this file should follow from it.
+
+### The pieces
+
+- **Brand.** Emerald, for example. Each brand has one or more devices.
+- **Device.** The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Each device belongs to one brand and has a few facts about it:
+  - How it's powered: mains with a backup battery, or battery only.
+  - How it links to other alarms: by wire, by radio (RF), or not at all.
+  - Which other devices it can pair with. For example, the Emerald remote pairs with Emerald RF alarms.
+- **Topic.** A fixed list: placement, mounting, opening, turning on and off, pairing, testing, cleaning, finding the false alarm, won't turn on, and what's that light or sound. Each topic is marked as Setup, Troubleshooting, or both.
+- **Page.** One brand, plus one device, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
+- **Step.** One instruction on a page, with its photo, any tips and warnings, and the light or sound you should see or hear at that point.
+- **Signal.** A light, a sound, or both together that means something. For example, "a chirp every 40 seconds *and* a red flash at the same time means low battery". Each signal belongs to one device and says what it means and which topic deals with it.
+- **Source.** The manual, web page or tech a page came from, with its date, so it's clear where every instruction came from and when it needs updating.
+
+### Rules that fall out of the map
+
+- **A page only exists if there's something to say.** The app shows a button only when there's a page behind it. So the Remote button only appears for brands with a remote, "Opening" only appears for wired, and "Turning on and off" only for wireless. These aren't separate rules to remember; they all come from that one rule.
+- **A page is written once.** Mounting, pairing and testing appear under both Setup and Troubleshooting, but there's one copy of each page. Two copies would drift apart.
+- **A signal is written once.** "What's that light or sound?" is the full list for that device, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between devices (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per device keeps them from ever disagreeing.
+- **The switch buttons at the bottom of a page** go to the same topic for the brand's other devices, but only where that page exists.
+- **Pairing only shows for devices that can pair.** A wired alarm can only pair by radio once an RF module is fitted. A wireless alarm can only pair if it's an RF one.
+
+### Things the app must never allow
+
+- A button that leads to an empty page.
+- The same instruction or signal written two different ways in two places.
+- Pairing steps for a device that can't pair.
+- An instruction without a source.
+
+### A gap the map exposed
+
+Emerald appears to sell two wireless Ranger alarms that look alike: one that's RF and can pair, and one that can't (see the manual findings below). If "Emerald, Wireless" covers both, the app would show pairing steps to someone holding the one that can't pair. That breaks the rule above. **Still open** (see open questions).
+
 ## Word list
 
 Every word below means one thing only, in this file and in the app. Words in the "Not" column are what the manuals or earlier answers used for the same thing; the app won't use them, so nothing gets mixed up.
@@ -81,7 +117,10 @@ Every word below means one thing only, in this file and in the app. Words in the
 | Mounting | Fitting an alarm onto its mounting plate, or removing it. | Installing, securing |
 | Setup | The top-level choice for putting in a new alarm: placement, mounting, pairing and testing. | Installing, installation |
 | Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
+| Device | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. | Unit, type |
 | Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
+| Page | What you read: one brand, one device and one topic. | Instructions |
+| Signal | A light, a sound, or both together that means something. | Indication |
 | Job | A site visit. Never used for anything inside the app. | |
 | Linked | Alarms that all go off when one goes off, either by wire or by radio. | Interconnected |
 | Pairing | Setting up a radio link between alarms, or between an alarm and a remote. Wire-linked alarms aren't paired; the wire links them. | Interconnecting |
@@ -250,7 +289,8 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- What does "opening" a wired alarm mean, and does the word list match how you talk on the job? (asked next)
+- If a brand has an RF and a non-RF wireless alarm that look alike, should they be two separate devices? (asked next)
+- What does "opening" a wired alarm mean, and does the word list match how you talk on the job?
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
