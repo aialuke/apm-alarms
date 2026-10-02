@@ -16,20 +16,20 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
 
 1. **Brand.** Tap the brand of alarm.
 2. **Job.** Tap what you need to do:
-   - Taking it off and putting it back on the mount
+   - Installing and removing from the mount
    - Pairing
    - Troubleshooting
-3. **Setup at the site.** Tap one:
-   - Wired only
-   - Wireless only
-   - Wired and wireless together
+   - Possibly more ("etc." in your answer). Still to confirm.
+3. **Wired or wireless.** Tap one.
+
+At the bottom of every instructions page, a button switches to the other type. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps, and the wireless page has a "Wired" button.
 
 Notes:
 
-- The job comes before the setup on purpose. Sites often have both wired and wireless alarms, and that changes the steps, for example pairing a wired alarm to a wireless one of the same brand.
+- The job comes before wired or wireless on purpose. Sites often have both wired and wireless alarms, and that changes the steps, for example pairing a wired alarm to a wireless one of the same brand.
 - You don't pick a model number. Brand plus wired or wireless is enough.
 - You identify the brand by reading or checking the alarm itself on site.
-- These three setups cover every site (confirmed).
+- Earlier, three setups were confirmed: wired only, wireless only, and wired and wireless together. The latest flow has just two choices, wired or wireless. **Still open:** where the "wired and wireless together" steps should go.
 
 ## What each instructions page shows
 
@@ -62,28 +62,29 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ### Opening the app
 
-- It opens straight to the brand list, with no sign-in or welcome screen.
+- **Agreed:** It opens straight to the brand list, with no sign-in or welcome screen.
 - **Needs your call:** Should it reopen on the last page you were on, for example after you answer a text mid-job? The recommendation is yes, with an easy way back to the start.
 
 ### Brand screen
 
-- Big buttons with the brand logo and a photo of a typical alarm, so you can match it by eye.
-- Recently used brands go at the top.
-- A search box only if the brand list gets long. The number of brands will be counted from the PDFs.
+- **Decided:** Square buttons, each showing the brand's logo, laid out in a grid with no scrolling. Scrolling is too fiddly one-handed on a ladder.
+- About 12 squares fit on one iPhone screen at a comfortable size. If there are more brands than that, you'll need to choose which ones go on the first screen. The number of brands will be counted from the PDFs.
+- Recently used brands go first.
 
 ### Job screen
 
-- Three large buttons.
+- Large buttons, one for each job.
 - The brand you picked stays at the top, so you always know where you are.
 
-### Setup screen
+### Wired or wireless screen
 
-- Wired only, wireless only, or both, each with a small picture.
-- This screen is skipped when the setup doesn't change the steps. For example, if taking an alarm off the mount is the same for wired and wireless, you won't be asked.
+- Two big buttons, wired and wireless, each with a small picture.
+- This screen is skipped when wired and wireless use the same steps. For example, if taking an alarm off the mount is the same for both, you won't be asked.
 
 ### Instructions page
 
-- A line at the top shows what you picked, like "Kidde, Pairing, Both". Tap any part to change just that, without starting over.
+- A line at the top shows what you picked, like "Kidde, Pairing, Wired". Tap any part to change just that, without starting over.
+- **Decided:** A clear button at the bottom switches between the wired and wireless steps.
 - **Needs your call:** One step per screen (big photo, big Next button near your thumb, plus a "see all steps" option), or all steps on one page. Both will be mocked up so you can try them on your phone.
 - Tips and gotchas sit inside the step they belong to, in a bright warning box, so you see them before you make the mistake.
 - Tap a photo to make it fill the screen and zoom in.
@@ -107,6 +108,9 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
+- Where should the "wired and wireless together" steps go? (asked next)
+- Are there more jobs than installing and removing from the mount, pairing, and troubleshooting?
+- If there are more than about 12 brands, which go on the first screen?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (see above)
-- How should troubleshooting be organised? (asked next)
+- How should troubleshooting be organised: by the problem you see, by the lights and beeps, or by following the manufacturer's checklist?
