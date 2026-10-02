@@ -61,6 +61,26 @@ Rules:
 - You don't pick a model number. You identify the brand by checking the alarm itself on site.
 - **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
 
+### Which topics apply to which unit
+
+**Decided:** Techs never do electrical work. Wired alarms can't be turned off, and anything involving mains wiring needs an electrician. For wired alarms, techs only troubleshoot, pair and replace batteries.
+
+Proposed table (**Check**: still to be confirmed; items marked "?" are guesses):
+
+| Topic | Wired | Wireless | Remote | RF module |
+|---|---|---|---|---|
+| Placement | No, electrician's work | Yes | Yes, on a wall at 1.4 m | No |
+| Mounting | Yes, to get to the battery or fit an RF module ? | Yes | Yes ? | No |
+| Opening | Yes | No | No | No |
+| Turning on and off | No, can't be turned off | Yes | Yes, turning it on the first time ? | No |
+| Fitting | No | No | No | Yes |
+| Pairing | Yes, through its RF module | Yes | Yes | No, lives under Wired |
+| Testing | Yes | Yes | Yes | No |
+| Cleaning | Yes | Yes | No ? | No |
+| Finding the false alarm | Yes | Yes | No ? | No |
+| Won't turn on | No | Yes | Yes ? | No |
+| What's that light or sound? | Yes | Yes | Yes | No ? |
+
 ### How the structure changed
 
 - First version: brand, then job, then wired or wireless. The job came first because sites often mix wired and wireless.
@@ -166,7 +186,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Mounting | Fitting an alarm onto its mounting plate or removing it, and the light or sound that confirms it's seated. | Installing, securing |
 | Opening | Releasing the front plate of a wired alarm to get to the battery and the label. Wired only. | |
 | Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
-| Turn off | Switching a wireless alarm off, usually as part of a power cycle. | Deactivate |
+| Turn off | Switching a wireless alarm off, usually as part of a power cycle. Wired alarms can't be turned off. | Deactivate |
 | Power cycle | Turning a unit off and back on to check it's working, watching the light as it comes back on. Part of the "Turning on and off" topic. | Reset, restart |
 | Fitting | Putting an RF module into a wired alarm. RF module only, Setup only. | Installing |
 | Testing | Setting the alarm off, checking every interconnected alarm goes off too, and waiting for any other sounds afterwards. | |
@@ -345,7 +365,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Do techs power cycle wired alarms too, and if so, how? (asked next)
+- Does the table of which topics apply to which unit look right? (asked next)
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (asked next)
