@@ -181,11 +181,9 @@ Troubleshooting is a lookup, not a workflow.
 
 ## Turning alarms on and off
 
-- Do not describe wireless deactivation as a routine power cycle.
 - Wireless Setup contains turning on and initial activation.
-- Wireless Troubleshooting contains relevant restart steps.
+- Wireless Troubleshooting contains the brand-specific steps for turning a unit off and back on when power-cycling it.
 - Setup and Troubleshooting use separate context-specific instructions.
-- It is not yet decided whether separate deactivation instructions are still useful anywhere in the app.
 
 ## Wired troubleshooting
 
