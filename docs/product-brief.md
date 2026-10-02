@@ -30,7 +30,7 @@ Topics under **Setup** (putting in a new alarm):
 
 - Placement: where the alarm can go, with key distances from walls, fans and lights.
 - Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
-- Opening wired alarms.
+- Opening wired alarms: releasing the front plate to get to the battery and the label with the installed date and replace-by date.
 - Turning wireless alarms on and off.
 - Pairing, including the lights and sounds you'll see and hear along the way.
 - Testing: setting the alarm off, checking every interconnected alarm goes off too, and how long to wait afterwards for any other sounds.
@@ -62,7 +62,7 @@ Rules:
 - **Current version:** brand, then what's in your hand, then Setup or Troubleshooting, then the topic. Lights and sounds are now part of each topic instead of separate pages.
 - Testing was earlier left out as its own button, but it's now a topic.
 - **Decided:** The top-level choice is called "Setup", not "Installing", because "installing" was also used for fitting an alarm onto its mounting plate. That's now called "Mounting". See the word list below.
-- **To confirm:** Remote and RF module are taken to still sit next to wired and wireless.
+- **Decided:** Remote and RF module sit next to wired and wireless, because you choose by the thing in your hand, and only for brands that have them.
 
 ## How the pieces fit together
 
@@ -140,7 +140,10 @@ Every word below means one thing only, in this file and in the app. Words in the
 | Placement | Where on the ceiling an alarm can go, and how far from walls, fans, lights and vents. | Position, location |
 | Tip | Advice from techs' experience, shown in a bright box inside the step it belongs to. | Gotcha |
 | Warning | A safety warning from the manufacturer. | Caution |
-| Opening (wired alarms) | **Still to confirm** (see open questions). | |
+| Opening | Releasing the front plate of a wired alarm to get to the battery and the label. | |
+| Front plate | The front cover of a wired alarm, which releases to show the battery and the label. | Cover, lid |
+| Installed date | The date the alarm was put in, printed on the label behind the front plate. | |
+| Replace-by date | The date the alarm must be replaced, printed on the label behind the front plate. | Expiry date |
 
 ## What each instructions page shows
 
@@ -292,9 +295,8 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- What does "opening" a wired alarm mean, and does the word list match how you talk on the job? (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
-- One step per screen, or all steps on one page? (see above)
+- One step per screen, or all steps on one page? (asked next)
