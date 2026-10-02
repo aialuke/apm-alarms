@@ -112,7 +112,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Setup and Troubleshooting therefore use separate Pairing pages, while sharing common steps where appropriate.
 - Pairing procedures differ by brand, not by model, for the alarms covered by the app. Do not add a model-selection screen.
 - Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
-- The current brief confuses two Ranger manuals. EP-RANG-10 is the non-RF manual; the pairing procedure reviewed in the follow-up is from the official EP-RANG-RF-10 manual. Remove the brief's current “resolved” explanation when rewriting it. This correction does not add model selection to the app.
+- Remove the current brief's Ranger model and manual discussion when rewriting it. Keep only the owner-confirmed Emerald wireless behaviour, without naming or selecting models.
 - On a mixed Emerald system, every wired alarm gets an RF module if it needs to connect to wireless alarms. Most modules are already fitted.
 - Pairing a wired alarm through its RF module belongs under the Wired alarm's Pairing topic, not under the RF-module choice.
 - For a brand that requires the whole network to be paired again, put one alarm into pairing mode and pair every alarm again.
