@@ -14,37 +14,51 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
 
 ## How you find what you need
 
+The latest structure (replaces earlier versions):
+
 1. **Brand.** Tap the brand of alarm.
-2. **Job.** Tap what you need to do:
-   - Installing and removing from the mount
-   - Pairing
-   - Troubleshooting
-   - Lights: what each light colour and flash pattern means
-   - Sounds: what each chirp and alarm sound means, including how to silence it and clear a false alarm
-   - Low battery is diagnosed under Lights and Sounds, with what to do next.
-3. **What's in your hand.** Tap one:
+2. **What's in your hand.** Tap one:
    - Wired
    - Wireless
    - Remote (only for brands that have one)
    - RF module, the radio add-on that slots into a wired alarm (only for brands that have one)
+3. **Installing or Troubleshooting.** Tap one.
+4. **Topic.** Tap what you need.
 
+Topics under **Installing**:
+
+- Placement: where the alarm can go, with key distances from walls, fans and lights.
+- Mounting: how to put the alarm on and take it off its bracket, including the light or sound that tells you it's seated correctly.
+- Opening wired alarms.
+- Turning wireless alarms on and off.
+- Pairing, including the lights and sounds you'll see and hear along the way.
+- Testing: setting the alarm off, checking every linked alarm goes off too, and how long to wait afterwards for any other sounds.
+
+Topics under **Troubleshooting**:
+
+- Cleaning.
+- Finding which alarm is causing false alarms.
+- Wireless alarms that won't turn on.
+- Mounting, opening wired alarms, turning wireless alarms on and off, pairing and testing, the same pages as under Installing.
+
+Rules:
+
+- **Decided:** Lights and sounds don't get their own pages. They're mixed into every topic where they matter. For example, the mounting page says which light or sound confirms it's seated correctly.
+- Only topics that apply to what's in your hand are shown. For example, "Opening wired alarms" only appears for wired, and "Turning on and off" only for wireless.
+- At the bottom of every topic page, buttons switch to the same topic for the other types. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps.
 - **Decided:** No factory reset. Techs never do it, so it isn't an option.
-- **Decided:** No Battery button and no Testing button. Working out whether the battery is the problem belongs under Lights and Sounds.
-- The quick test that finishes an install stays as the last step of the install instructions. (Assumed. Tell us if it should come out.)
-- **Decided:** Remote batteries are never replaced. A faulty remote is replaced with a new one.
-- **Decided:** No battery-swap steps for wired alarms. Techs do swap them when they find a faulty one, but that's already covered by their job list.
-- Lights and Sounds are read here as their own buttons on the job screen. Still to confirm.
-- **Decided:** Remote and RF module get their own buttons, because you choose by the thing in your hand. They only appear after you pick a brand that has them.
-
-At the bottom of every instructions page, buttons switch to the same job for the other types. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps, and the wireless page has a "Wired" button.
-
-Notes:
-
-- The job comes before wired or wireless on purpose. Sites often have both wired and wireless alarms, and that changes the steps, for example pairing a wired alarm to a wireless one of the same brand.
-- You don't pick a model number. Brand plus wired or wireless is enough.
-- You identify the brand by reading or checking the alarm itself on site.
-- **Decided:** You choose wired or wireless based on the alarm in your hand right now, not the whole site. There's no "Both" option. If the next alarm is the other type, you tap the switch button at the bottom of the steps.
+- **Decided:** No battery-swap steps. Techs do swap wired alarm batteries when they find a faulty one, but that's already on their job list. Remote batteries are never replaced; a faulty remote is replaced with a new one.
+- You choose by the thing in your hand right now, not the whole site. There's no "Both" option.
 - Steps for linking a wired alarm with a wireless one go inside the pairing steps for each type, so you'll find them wherever you start.
+- You don't pick a model number. You identify the brand by checking the alarm itself on site.
+
+### How the structure changed
+
+- First version: brand, then job, then wired or wireless. The job came first because sites often mix wired and wireless.
+- Then Lights and Sounds were added as their own jobs, and Remote and RF module were added next to wired and wireless.
+- **Current version:** brand, then what's in your hand, then Installing or Troubleshooting, then the topic. Lights and sounds are now part of each topic instead of separate pages.
+- Testing was earlier left out as its own button, but it's now a topic.
+- **To confirm:** "Setup" and "Installing" are taken to mean the same thing. Remote and RF module are taken to still sit next to wired and wireless.
 
 ## What each instructions page shows
 
@@ -62,7 +76,7 @@ Notes:
 
 The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-VC-240-10-User-Manual.pdf) (2 pages, dated November 2024) was reviewed. Findings:
 
-- **Lights and Sounds overlap.** Several meanings depend on a light and a sound together. For example, a chirp every 40 seconds means a fault, but a chirp every 40 seconds *with* a red flash at the same time means a low battery. **Recommendation:** list these combinations on both the Lights page and the Sounds page.
+- **Lights and Sounds overlap.** Several meanings depend on a light and a sound together. For example, a chirp every 40 seconds means a fault, but a chirp every 40 seconds *with* a red flash at the same time means a low battery. Lights and sounds are now mixed into each topic, so each combination is explained wherever it shows up.
 - **What the lights and sounds mean on this model:**
   - Steady green light: mains power is on.
   - Red flash every 40 seconds: working normally.
@@ -72,7 +86,7 @@ The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/upload
   - Chirp and red flash together every 40 seconds: low battery.
 - **Silencing:** press and release the Test/Hush button. The alarm stays quieter for about 8 minutes, then goes back to normal.
 - **Testing:** press the Test/Hush button. Holding it for 5 seconds tests every alarm linked to it. A test after installing is required before the job is complete.
-- **Battery:** 10-year replaceable 9V lithium (EVE CR9V-P). Test the alarm after replacing it. Handy to know which battery to carry.
+- **Battery:** 10-year replaceable 9V lithium (EVE CR9V-P). Battery-swap steps aren't needed in the app, because they're covered by the techs' job list.
 - **Gotchas for the mount section:**
   - The alarm won't clip onto its mounting plate without a battery in it.
   - Ceiling mount only, not walls.
@@ -80,7 +94,7 @@ The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/upload
 - **Wired install details:** wire colours and terminals, strip lengths, up to 40 alarms on one circuit, and up to 150 m of wire between alarms. Must be done by a licensed electrician.
 - **Placement rules:** where to put alarms in a home, and places to avoid, like near bathrooms, kitchens, vents and air conditioners.
 - **Wireless isn't covered in this manual.** This alarm is wired. It can link to other alarms by radio with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF.
-- **Model differences.** Manuals are written for one model. See the wireless manual below for a real example.
+- **Model differences.** Manuals are written for one model. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in. See the wireless manual below for a real example.
 
 ### What the Emerald wireless manual showed
 
@@ -88,7 +102,7 @@ The [Emerald EP-RANG-10 manual](https://emeraldalarms.com.au/wp-content/uploads/
 
 - **It doesn't link to other alarms.** The manual lists it as a "stand alone unit" with no connection to other alarms. It's wireless because it runs on its own battery with no wires, not because it talks to other alarms by radio. So there's nothing to pair on this model. **Still open:** what "wireless" means across all the brands (see open questions).
 - **The battery can't be replaced.** It's a 10-year built-in battery. When the battery runs low, the whole alarm gets replaced. That's different from the wired Emerald, where you swap the battery.
-- **Same brand, different timing.** On this model the red light flashes and the low-battery chirp happens every 48 seconds. On the wired Emerald it's every 40 seconds. There's also no green light, because there's no mains power. So the Lights and Sounds pages need to be separate for wired and wireless.
+- **Same brand, different timing.** On this model the red light flashes and the low-battery chirp happens every 48 seconds. On the wired Emerald it's every 40 seconds. There's also no green light, because there's no mains power. So the light and sound details need to be separate for wired and wireless.
 - **Turning it on:** hold the test button for 3 seconds until the light comes on, then let go within 2 seconds. It beeps to show it's working.
 - **Turning it off for good:** press the test button 6 times within 3 seconds, and it chirps once. This is only for throwing the alarm away, or stopping a faulty alarm that keeps going off. Worth including, because a faulty alarm sounding on site is a real job.
 - **Mount:** it twists onto the mounting plate to secure it and twists the other way to remove it. Screws, or an optional magnetic mount with 3M sticky pads. Ceiling only.
@@ -126,7 +140,7 @@ The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploa
   3. Repeat for each alarm.
 - **Clearing all pairings:** hold Test and Locate together for 10 seconds, until the red light flashes once.
 - **Battery:** CR2450 coin battery, lasts about 3 years. Not needed in the app, because techs replace a faulty remote instead of changing its battery.
-- **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the link, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
+- **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the link, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages.
 
 ## Adding or changing content
 
@@ -155,20 +169,24 @@ These are suggestions from the design review. Items marked **Needs your call** a
 - **Decided:** Square buttons, each showing the brand's logo, laid out in a grid. Big squares instead of a long list, because a list is too fiddly one-handed on a ladder.
 - **Decided:** Brands go in alphabetical order. About 12 squares fit on one iPhone screen at a comfortable size. If there are more brands than that, you scroll down to see the rest.
 
-### Job screen
-
-- Large buttons, one for each job.
-- The brand you picked stays at the top, so you always know where you are.
-
 ### "What's in your hand" screen
 
 - Big buttons, each with a small picture: wired and wireless, plus remote and RF module where the brand has them.
-- This screen is skipped when wired and wireless use the same steps. For example, if taking an alarm off the mount is the same for both, you won't be asked.
+- The brand you picked stays at the top, so you always know where you are.
+
+### Installing or Troubleshooting screen
+
+- Two big buttons.
+
+### Topic screen
+
+- Large buttons, one for each topic. Only topics that apply to what's in your hand are shown.
 
 ### Instructions page
 
-- A line at the top shows what you picked, like "Kidde, Pairing, Wired". Tap any part to change just that, without starting over.
-- **Decided:** Clear buttons at the bottom switch to the same job for the other types (wired, wireless, remote, RF module).
+- A line at the top shows what you picked, like "Emerald, Wired, Installing, Pairing". Tap any part to change just that, without starting over.
+- **Decided:** Clear buttons at the bottom switch to the same topic for the other types (wired, wireless, remote, RF module).
+- The lights and sounds that matter for the topic appear right in the steps.
 - **Needs your call:** One step per screen (big photo, big Next button near your thumb, plus a "see all steps" option), or all steps on one page. Both will be mocked up so you can try them on your phone.
 - Tips and gotchas sit inside the step they belong to, in a bright warning box, so you see them before you make the mistake.
 - Tap a photo to make it fill the screen and zoom in.
@@ -192,11 +210,9 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Now that Lights and Sounds cover what the alarm is telling you, what goes under Troubleshooting? (asked next)
+- If you hear a chirp or see a light and don't know what it means, where do you look? (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
-- Should turning an alarm on and off (for example, stopping a faulty alarm that keeps going off) be included, and where?
-- Are Lights and Sounds their own buttons on the job screen, or inside Troubleshooting?
-- Should the app include where to place alarms and places to avoid?
+- Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (see above)
