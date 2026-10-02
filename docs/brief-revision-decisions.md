@@ -129,6 +129,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Keep **RF module** as a separate unit choice after selecting a brand.
 - Show the choice only for brands that use a separate RF module.
 - Installing these modules is rare. This choice contains fitting and orientation instructions only.
+- Fitting appears under Setup only.
 
 ## Remote
 
