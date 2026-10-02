@@ -2,6 +2,8 @@
 
 Two checks happen before any building starts. Run them in order, each in a new session.
 
+First, merge [PR #3](https://github.com/aialuke/apm-alarms/pull/3), which adds the pstack skills to the project. New sessions start from `main`, so they only have the skills once it's merged.
+
 ## 1. Blind review
 
 - **Lead model:** GPT-5.6 Sol (OpenAI), high effort.
