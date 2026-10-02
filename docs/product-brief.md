@@ -22,25 +22,25 @@ The latest structure (replaces earlier versions):
    - Wireless
    - Remote (only for brands that have one)
    - RF module, the radio add-on that slots into a wired alarm (only for brands that have one)
-3. **Installing or Troubleshooting.** Tap one.
+3. **Setup or Troubleshooting.** Tap one.
 4. **Topic.** Tap what you need.
 
-Topics under **Installing**:
+Topics under **Setup** (putting in a new alarm):
 
 - Placement: where the alarm can go, with key distances from walls, fans and lights.
-- Mounting: how to put the alarm on and take it off its bracket, including the light or sound that tells you it's seated correctly.
+- Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
 - Opening wired alarms.
 - Turning wireless alarms on and off.
 - Pairing, including the lights and sounds you'll see and hear along the way.
 - Testing: setting the alarm off, checking every linked alarm goes off too, and how long to wait afterwards for any other sounds.
 
-Topics under **Troubleshooting**:
+Topics under **Troubleshooting** (an alarm that's already up and has a problem):
 
 - What's that light or sound? Every light and sound for that alarm in one list, each with a link to the topic that deals with it. **Decided.** Shown first, because a chirp or a light is usually why you're troubleshooting.
 - Cleaning.
 - Finding which alarm is causing false alarms.
 - Wireless alarms that won't turn on.
-- Mounting, opening wired alarms, turning wireless alarms on and off, pairing and testing, the same pages as under Installing.
+- Mounting, opening wired alarms, turning wireless alarms on and off, pairing and testing, the same pages as under Setup.
 
 Rules:
 
@@ -52,19 +52,58 @@ Rules:
 - You choose by the thing in your hand right now, not the whole site. There's no "Both" option.
 - Steps for linking a wired alarm with a wireless one go inside the pairing steps for each type, so you'll find them wherever you start.
 - You don't pick a model number. You identify the brand by checking the alarm itself on site.
+- **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
 
 ### How the structure changed
 
 - First version: brand, then job, then wired or wireless. The job came first because sites often mix wired and wireless.
 - Then Lights and Sounds were added as their own jobs, and Remote and RF module were added next to wired and wireless.
-- **Current version:** brand, then what's in your hand, then Installing or Troubleshooting, then the topic. Lights and sounds are now part of each topic instead of separate pages.
+- **Current version:** brand, then what's in your hand, then Setup or Troubleshooting, then the topic. Lights and sounds are now part of each topic instead of separate pages.
 - Testing was earlier left out as its own button, but it's now a topic.
-- **To confirm:** "Setup" and "Installing" are taken to mean the same thing. Remote and RF module are taken to still sit next to wired and wireless.
+- **Decided:** The top-level choice is called "Setup", not "Installing", because "installing" was also used for fitting an alarm onto its mounting plate. That's now called "Mounting". See the word list below.
+- **To confirm:** Remote and RF module are taken to still sit next to wired and wireless.
+
+## Word list
+
+Every word below means one thing only, in this file and in the app. Words in the "Not" column are what the manuals or earlier answers used for the same thing; the app won't use them, so nothing gets mixed up.
+
+| Word | Means | Not |
+|---|---|---|
+| Brand | The company that makes the alarm, like Emerald. | |
+| Series | A family of alarms within a brand, like Emerald's Vulcan (wired) or Ranger (wireless). Not picked in the app, but mentioned where it matters. | |
+| Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
+| Wired | An alarm connected to mains power, with a backup battery. | Hard-wired, 240V |
+| Wireless | An alarm that runs on its battery alone, with no mains wires. Some can link by radio and some work on their own. | Battery alarm, stand-alone |
+| RF | Able to link to other alarms by radio. Used as "RF alarm" or "RF module". | Radio, wireless interconnect |
+| RF module | The small radio add-on that slots into a wired alarm so it can link by radio. | Add-on, radio module |
+| Remote | The handheld or wall-mounted device that tests, silences and locates linked alarms. | Controller |
+| Mounting plate | The part screwed to the ceiling that the alarm sits on. | Base, bracket, backing plate, mount |
+| Mounting | Fitting an alarm onto its mounting plate, or removing it. | Installing, securing |
+| Setup | The top-level choice for putting in a new alarm: placement, mounting, pairing and testing. | Installing, installation |
+| Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
+| Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
+| Job | A site visit. Never used for anything inside the app. | |
+| Linked | Alarms that all go off when one goes off, either by wire or by radio. | Interconnected |
+| Pairing | Setting up a radio link between alarms, or between an alarm and a remote. Wire-linked alarms aren't paired; the wire links them. | Interconnecting |
+| Master | The first alarm in a pairing, which you press once more at the end to finish. | |
+| Turn on | Starting an alarm for the first time, usually by holding the test button. | Activate |
+| Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. | Deactivate |
+| Silence | Pressing the button that quiets a sounding alarm for about 8 minutes. | Hush |
+| Test | Pressing the test button so the alarm, and any linked alarms, sound. | |
+| Light | A coloured light on the alarm, described by its colour and how often it flashes. | LED |
+| Chirp | A short beep that repeats on a timer, like every 40 seconds. Usually means a fault or low battery. | |
+| Beep | One short sound that confirms something worked, like turning on. | |
+| Alarm sound | The full, loud, continuous sound. | Siren |
+| False alarm | An alarm going off with no fire, for example from cooking. | Nuisance alarm |
+| Placement | Where on the ceiling an alarm can go, and how far from walls, fans, lights and vents. | Position, location |
+| Tip | Advice from techs' experience, shown in a bright box inside the step it belongs to. | Gotcha |
+| Warning | A safety warning from the manufacturer. | Caution |
+| Opening (wired alarms) | **Still to confirm** (see open questions). | |
 
 ## What each instructions page shows
 
 - Simple written steps with photos.
-- Tips and gotchas that techs have learned from experience.
+- Tips that techs have learned from experience.
 - Videos, where the manufacturer has them.
 
 ## Where the content comes from
@@ -175,7 +214,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 - Big buttons, each with a small picture: wired and wireless, plus remote and RF module where the brand has them.
 - The brand you picked stays at the top, so you always know where you are.
 
-### Installing or Troubleshooting screen
+### Setup or Troubleshooting screen
 
 - Two big buttons.
 
@@ -185,7 +224,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ### Instructions page
 
-- A line at the top shows what you picked, like "Emerald, Wired, Installing, Pairing". Tap any part to change just that, without starting over.
+- A line at the top shows what you picked, like "Emerald, Wired, Setup, Pairing". Tap any part to change just that, without starting over.
 - **Decided:** Clear buttons at the bottom switch to the same topic for the other types (wired, wireless, remote, RF module).
 - The lights and sounds that matter for the topic appear right in the steps.
 - **Needs your call:** One step per screen (big photo, big Next button near your thumb, plus a "see all steps" option), or all steps on one page. Both will be mocked up so you can try them on your phone.
@@ -211,7 +250,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- When you're chasing a chirp or a light, do you already know whether it's coming from a wired or a wireless alarm? You described the path as brand, then troubleshooting, which skips that step. (asked next)
+- What does "opening" a wired alarm mean, and does the word list match how you talk on the job? (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
