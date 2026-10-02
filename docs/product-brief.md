@@ -68,8 +68,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 ### Brand screen
 
 - **Decided:** Square buttons, each showing the brand's logo, laid out in a grid with no scrolling. Scrolling is too fiddly one-handed on a ladder.
-- About 12 squares fit on one iPhone screen at a comfortable size. If there are more brands than that, you'll need to choose which ones go on the first screen. The number of brands will be counted from the PDFs.
-- Recently used brands go first.
+- **Decided:** Brands go in alphabetical order. About 12 squares fit on one iPhone screen at a comfortable size. If there are more brands than that, you scroll down to see the rest.
 
 ### Job screen
 
@@ -108,9 +107,11 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Where should the "wired and wireless together" steps go? (asked next)
+- Where should the "wired and wireless together" steps go? Options shown (asked next):
+  1. A third button, "Both", next to wired and wireless. It only appears for jobs where the steps change, like pairing. **Recommended**, because you know there's a mix the moment you walk in, and a button you can see beats a box you have to scroll to.
+  2. A box near the bottom of the wireless steps: "Wired alarms on this site too? Show me how to pair them together." This keeps it to two buttons, but the box is easy to miss and isn't on the wired page.
+  3. The same box on both the wired and wireless pages. You'll find it either way, but it's still tucked down the page.
 - Are there more jobs than installing and removing from the mount, pairing, and troubleshooting?
-- If there are more than about 12 brands, which go on the first screen?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (see above)
 - How should troubleshooting be organised: by the problem you see, by the lights and beeps, or by following the manufacturer's checklist?
