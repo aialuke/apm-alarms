@@ -19,8 +19,13 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
    - Installing and removing from the mount
    - Pairing
    - Troubleshooting
-   - Possibly more ("etc." in your answer). Still to confirm.
+   - Lights: what each light colour and flash pattern means
+   - Sounds: what each chirp and alarm sound means, including how to silence it and clear a false alarm
+   - Possibly battery and testing. Still to confirm.
 3. **Wired or wireless.** Tap one.
+
+- **Decided:** No factory reset. Techs never do it, so it isn't an option.
+- Lights and Sounds are read here as their own buttons on the job screen. Still to confirm.
 
 At the bottom of every instructions page, a button switches to the other type. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps, and the wireless page has a "Wired" button.
 
@@ -43,6 +48,30 @@ Notes:
 - **Main source:** PDFs from the company, one for each brand or alarm. These get turned into simple steps.
 - **Extra photos and videos:** taken from the manufacturers' websites or elsewhere online, where they exist.
 - **Your own tips and photos:** added later.
+
+### What a sample manual showed
+
+The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-VC-240-10-User-Manual.pdf) (2 pages, dated November 2024) was reviewed. Findings:
+
+- **Lights and Sounds overlap.** Several meanings depend on a light and a sound together. For example, a chirp every 40 seconds means a fault, but a chirp every 40 seconds *with* a red flash at the same time means a low battery. **Recommendation:** list these combinations on both the Lights page and the Sounds page.
+- **What the lights and sounds mean on this model:**
+  - Steady green light: mains power is on.
+  - Red flash every 40 seconds: working normally.
+  - Red flash every second, plus a loud alarm: smoke detected.
+  - Red flash every 8 seconds: silenced, for about 8 minutes after the hush button is pressed.
+  - Chirp every 40 seconds: fault.
+  - Chirp and red flash together every 40 seconds: low battery.
+- **Silencing:** press and release the Test/Hush button. The alarm stays quieter for about 8 minutes, then goes back to normal.
+- **Testing:** press the Test/Hush button. Holding it for 5 seconds tests every alarm linked to it. A test after installing is required before the job is complete.
+- **Battery:** 10-year replaceable 9V lithium (EVE CR9V-P). Test the alarm after replacing it. Handy to know which battery to carry.
+- **Gotchas for the mount section:**
+  - The alarm won't clip onto its mounting plate without a battery in it.
+  - Ceiling mount only, not walls.
+  - At least 30 cm from the wall.
+- **Wired install details:** wire colours and terminals, strip lengths, up to 40 alarms on one circuit, and up to 150 m of wire between alarms. Must be done by a licensed electrician.
+- **Placement rules:** where to put alarms in a home, and places to avoid, like near bathrooms, kitchens, vents and air conditioners.
+- **Wireless isn't covered in this manual.** This alarm is wired. It becomes wireless with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF, and the pairing steps will come from the module's manual.
+- **Model differences.** Manuals are written for one model. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
 
 ## Adding or changing content
 
@@ -68,7 +97,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ### Brand screen
 
-- **Decided:** Square buttons, each showing the brand's logo, laid out in a grid with no scrolling. Scrolling is too fiddly one-handed on a ladder.
+- **Decided:** Square buttons, each showing the brand's logo, laid out in a grid. Big squares instead of a long list, because a list is too fiddly one-handed on a ladder.
 - **Decided:** Brands go in alphabetical order. About 12 squares fit on one iPhone screen at a comfortable size. If there are more brands than that, you scroll down to see the rest.
 
 ### Job screen
@@ -108,7 +137,10 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Are there more jobs than installing and removing from the mount, pairing, and troubleshooting? (asked next)
+- Should battery and testing get their own buttons? (asked next)
+- Are Lights and Sounds their own buttons on the job screen, or inside Troubleshooting?
+- Should the app include where to place alarms and places to avoid?
+- Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (see above)
 - How should troubleshooting be organised: by the problem you see, by the lights and beeps, or by following the manufacturer's checklist?
