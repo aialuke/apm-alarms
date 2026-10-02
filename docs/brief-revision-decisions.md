@@ -1,0 +1,193 @@
+# Product brief revision decisions
+
+This is the temporary, current record of the owner's answers after the blind review. It contains decisions to carry into the next rewrite of `docs/product-brief.md`, not a history of rejected ideas.
+
+When the questioning is complete:
+
+1. Rewrite the product brief by replacing conflicting or outdated text rather than appending corrections.
+2. Check the rewritten brief with the owner.
+3. Remove this temporary file once every decision is represented clearly in the brief.
+
+## Purpose and boundaries
+
+- The app is a personal, quick-reference cheat sheet for a smoke alarm technician.
+- It is about the selected brand and unit, not the property or job site.
+- Do not add site records, site types, job tracking, completion checklists, or booking workflows.
+- The alarms encountered in this work are interconnected. Pairing and testing are essential, but the app does not model the whole network.
+- The technician's two job outcomes are that every alarm works and testing confirms that every alarm is interconnected. Their existing work system records completion.
+
+## Initial brand coverage
+
+Version 1 must support several brands:
+
+- Anka
+- Brooks
+- Cavius
+- Clipsal
+- Detector Inspector
+- Emerald
+- GT
+- Legrand
+- Lifesaver
+- Matelec
+- Red
+- Siterwell
+
+The owner may add more later.
+
+- The owner may supply manuals and field information.
+- Find official manuals only when the owner explicitly asks during the build.
+- Treat the owner's confirmed field information as the final decision when it differs from a manual.
+
+## Navigation
+
+The main path remains:
+
+1. Brand
+2. Unit
+3. Setup or Troubleshooting
+4. Topic
+5. Instructions
+
+- Keep the context labels at the top as tappable shortcuts.
+- Size all tap areas for one-handed use on an iPhone SE (3rd generation).
+- Technicians do not wear gloves. Remove glove-specific requirements.
+- Individual instruction pages have fixed **Back** and **Home** navigation only.
+- Back returns to the actual previous page, including the Setup or Troubleshooting list that opened a shared topic.
+- Home returns to the brand grid.
+- Remove same-topic buttons for other units from instruction pages.
+
+On a Setup or Troubleshooting topic-list page, show no more than these two shortcuts when applicable:
+
+- **Troubleshoot this alarm** or **Set up this alarm**: switch section for the current unit.
+- **View Wired alarm** or **View Wireless alarm**: switch between Wired and Wireless for the current brand while staying in the current Setup or Troubleshooting section.
+
+Do not show generic Remote or RF-module switching shortcuts.
+
+## Reopening the app
+
+- Start a 15-minute timer whenever the app leaves the screen.
+- Returning within 15 minutes reopens the same page and scroll position and stops the timer.
+- Leaving again starts a fresh 15-minute timer.
+- Returning after 15 minutes opens the brand grid.
+- Home always opens the brand grid.
+
+## Phone behaviour and presentation
+
+- Use normal iPhone screen locking. Do not keep the screen awake.
+- Follow the iPhone's light or dark system setting. Prefer a strong dark-mode design, but do not add an in-app theme switch now.
+- Use the phone's normal image viewing initially. Custom full-screen and zoom controls are a possible later improvement.
+- A step may be text-only when an image adds no value.
+- A clear diagram from a manual may be used when no real photo is available.
+- For a flashing light, show a short visual demonstration and write the real interval clearly in large text. Do not make the user wait through a 40- or 48-second animation.
+- Important brand-specific practical notes belong in the relevant step and may use a highlighted **Tip** treatment. Review the exact visual format during design.
+
+## Offline behaviour
+
+- Save content and images for offline use in the background.
+- Do not show a visible **Ready offline** status.
+- An interrupted or failed update must leave the last complete working copy available.
+- Videos are not part of version 1.
+
+## Content and approval
+
+- Sources and manual links stay out of the app.
+- Individual instructions do not need source records.
+- The owner personally confirms content.
+- Any AI-prepared addition or change must wait for the owner's approval before going live.
+- Version 1 uses text, photos, and diagrams. Videos may be considered later.
+- Include only information useful to a technician. Leave out basic consumer advice and routine test frequency.
+
+## Pairing and interconnection
+
+- Pairing procedures differ by brand, not by model, for the alarms covered by the app. Do not add a model-selection screen.
+- Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
+- On a mixed Emerald system, every wired alarm gets an RF module if it needs to connect to wireless alarms. Most modules are already fitted.
+- RF-module content includes both physical fitting/orientation and pairing.
+- Rebuilding a paired network normally means putting one alarm into pairing mode and pairing every alarm again.
+- Do not include clear-all-pairings instructions.
+- Some brands do not allow one replacement or added alarm to be paired by itself; the whole group must be paired again. Explain the correct approach on that brand's Pairing page.
+- Some confirmed brands can interconnect with another brand, such as some Detector Inspector and Matelec products. Do not build a general compatibility list. Add a note inside Setup/Pairing only for combinations the owner confirms later.
+
+## Remote
+
+- Do not include physical remote-mounting instructions; mounting is too simple to warrant a topic.
+- Include remote activation, connection, pairing, controls, use, light meanings, sound meanings, and troubleshooting.
+- Include Locate in false-alarm troubleshooting for compatible systems.
+- Never include remote battery-replacement instructions.
+- A low-battery remote is replaced as a complete unit.
+
+## Turning alarms off
+
+- Do not describe wireless deactivation as a routine power cycle.
+- Put it in Troubleshooting as **Stop a faulty alarm before replacement**.
+- Include the steps needed to deactivate and, where relevant, reactivate the alarm.
+
+## Wired troubleshooting
+
+For a wired alarm that does not respond:
+
+- **Removable backup battery**
+  1. Remove the alarm from its base.
+  2. Test the battery and replace it if required.
+  3. With the battery removed, hold TEST to drain residual power.
+  4. Reinsert the battery and attach the alarm to its base.
+  5. Wait at least 2 minutes for another chirp.
+  6. If the problem remains, end at **Report as faulty**.
+- **Built-in lithium backup battery**
+  - Do not attempt the removable-battery recovery.
+  - End at **Report as faulty**.
+
+Battery replacement belongs only inside relevant wired troubleshooting, not as a separate topic.
+
+## Wireless troubleshooting
+
+For a wireless alarm that is chirping or not behaving correctly:
+
+1. Remove it from the mount.
+2. Make sure it is off.
+3. Press TEST to drain residual power.
+4. Refit it to the mount; many models power on with the twist action.
+5. Where the model provides one, confirm the correct power-on light.
+6. Wait at least 2 minutes for another chirp.
+7. If the chirp returns, end at **Report as faulty** because the sealed lithium battery is not replaceable.
+
+## Chirp timing
+
+- After troubleshooting either a wired or wireless alarm, wait at least 2 minutes to confirm that it does not chirp again.
+- Cavius alarms normally chirp for about 2 minutes after testing. Wait for that normal chirping to finish, then wait an additional 2 minutes for any further chirp.
+
+## Cleaning
+
+- Wired and wireless alarms use the same cleaning method: vacuum or blow the external vents.
+- A wired alarm remains attached to its base while cleaning.
+- A wireless alarm may be removed from its mount when that is easier.
+- Do not include an AC-mains-isolation step for this limited external cleaning procedure.
+
+## Testing
+
+- Explain how to perform the test for the selected brand and unit.
+- Confirm during the test that all interconnected alarms sound.
+- Include any brand-specific sounds and waiting periods.
+- Do not include routine test frequency.
+- Do not add a final job-completion checklist; the existing work system handles it.
+
+## Lights and sounds
+
+- **What's that light or sound?** is a complete, manual-style list for the selected unit.
+- Show each light or sound and its meaning.
+- Version 1 makes a meaning tappable when there is a useful troubleshooting destination.
+- Use a clear action such as **View fix →**.
+- Back returns to the same position in the light-and-sound list.
+- Leave an entry as plain text when there is no useful troubleshooting destination.
+
+## Faulty outcomes
+
+- The app ends at **Report as faulty**.
+- Wireless alarm or remote: replace the unit through the existing work system.
+- Wired alarm: arrange replacement and an electrician through the existing work system.
+- Do not add booking or replacement workflow to the app.
+
+## Still to decide
+
+- When the same topic appears under both Setup and Troubleshooting, should it always use one identical shared instruction page, or may the opening context and outcome differ?
