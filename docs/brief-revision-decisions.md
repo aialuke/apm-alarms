@@ -158,6 +158,8 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
 - Wired alarms do not have a separate Mounting topic.
 - Installing a wired mounting base is electrician-only work.
 - Attaching an alarm to its existing base and removing it from that base belong under **Opening**.
+- Opening appears under both Setup and Troubleshooting.
+- Both routes open one identical shared Opening instruction page.
 
 ## Wireless mounting
 
