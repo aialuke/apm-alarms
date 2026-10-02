@@ -13,6 +13,15 @@ This file records everything decided in the product interview. It is updated aft
 
 A quick reference for job sites. You pick the alarm you're working on and get clear instructions with photos.
 
+In short:
+
+- It's saved to the iPhone home screen and opens straight to a grid of brand logos, in alphabetical order.
+- You tap the brand, then the unit in your hand (Wired, Wireless, and Remote or RF module where the brand has them), then Setup or Troubleshooting, then the topic.
+- Each topic is one page with every step on it, each step showing a photo, the light or sound to expect, and any tips. Buttons at the bottom switch to the same topic for the brand's other units.
+- Troubleshooting starts with "What's that light or sound?", and some pages end in "Report as faulty".
+- Everything except videos works with no signal. It reopens where you left off.
+- Content comes from manufacturer PDFs and websites, and an AI agent adds or changes it when needed.
+
 ## How you find what you need
 
 The latest structure (replaces earlier versions):
@@ -323,7 +332,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 ### Opening the app
 
 - **Agreed:** It opens straight to the brand list, with no sign-in or welcome screen.
-- **Needs your call:** Should it reopen on the last page you were on, for example after you answer a text mid-job? The recommendation is yes, with an easy way back to the start.
+- **Decided:** It reopens on the last page you were on, for example after you answer a text mid-job. The "Next alarm" button takes you back to the brand list.
 
 ### Brand screen
 
@@ -372,4 +381,4 @@ These are suggestions from the design review. Items marked **Needs your call** a
 ## Open questions
 
 - Does any brand have models that behave differently enough to need separate pages?
-- Should the app reopen where you left off? (asked next)
+- Which brands do you work with, and can you share their PDFs or links? (asked next)
