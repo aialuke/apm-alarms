@@ -30,7 +30,7 @@ Topics under **Setup** (putting in a new alarm):
 
 - Placement: where the alarm can go, with key distances from walls, fans and lights.
 - Mounting: fitting the alarm onto its mounting plate and removing it, including the light or sound that tells you it's seated correctly.
-- Opening wired alarms: releasing the front plate to get to the battery and the label with the installed date and replace-by date.
+- Opening wired alarms: releasing the front plate to get to the battery and the label with the installed date and replace-by date. **Decided:** no extra photo or explanation of the label dates.
 - Turning wireless alarms on and off.
 - Pairing, including the lights and sounds you'll see and hear along the way.
 - Testing: setting the alarm off, checking every interconnected alarm goes off too, and how long to wait afterwards for any other sounds.
@@ -105,45 +105,85 @@ The EP-RANG-10 manual says "stand alone unit", which looked like an alarm that c
 
 ## Word list
 
-Every word below means one thing only, in this file and in the app. Words in the "Not" column are what the manuals or earlier answers used for the same thing; the app won't use them, so nothing gets mixed up.
+Every word below means one thing only, in this file and in the app. Words in the "Not" column are what the manuals or earlier answers used for the same thing; the app won't use them, so nothing gets mixed up. Items marked **Check** are open for review.
+
+One rule sits above the list: **when a step names a button, it uses the name printed on the device.** If the Emerald alarm's button says "Test/Hush", the step says "press the Test/Hush button", even though the action is called Silence.
+
+### The things you work with
 
 | Word | Means | Not |
 |---|---|---|
-| Brand | The company that makes the alarm, like Emerald. | |
+| Brand | The company that makes the alarm, like Emerald. | Manufacturer |
 | Series | A family of alarms within a brand, like Emerald's Vulcan (wired) or Ranger (wireless). Not picked in the app, but mentioned where it matters. | |
 | Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
-| Wired | An alarm connected to mains power, with a backup battery. | Hard-wired, 240V |
+| Device | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. **Check:** you often say "unit". | Unit, type |
+| Alarm | A wired or wireless smoke alarm. Not a remote or an RF module. | Detector, smoke alarm |
+| Wired | An alarm connected to mains power, with a backup battery. **Check:** do all wired alarms have a backup battery? | Hard-wired, 240V |
 | Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
 | RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
-| Remote | The handheld or wall-mounted device that tests, silences and locates interconnected alarms. | Controller |
-| Mounting plate | The part screwed to the ceiling that the alarm sits on. | Base, bracket, backing plate, mount |
-| Mounting | Fitting an alarm onto its mounting plate, or removing it. | Installing, securing |
-| Setup | The top-level choice for putting in a new alarm: placement, mounting, pairing and testing. | Installing, installation |
-| Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
-| Device | The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. | Unit, type |
-| Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
-| Page | What you read: one brand, one device and one topic. | Instructions |
-| Signal | A light, a sound, or both together that means something. | Indication |
-| Job | A site visit. Never used for anything inside the app. | |
+| Remote | The wall-mounted device that tests, silences and locates interconnected alarms. | Controller |
+| Mounting plate | The part screwed to the ceiling that the alarm sits on. **Check:** you've also said "bracket", "base" and "mount". | Base, bracket, backing plate, mount |
+| Front plate | The front cover of a wired alarm, which releases to show the battery and the label. | Cover, lid |
+| Label | The sticker behind the front plate with the installed date and replace-by date. | |
+| Installed date | The date the alarm was put in. | |
+| Replace-by date | The date the alarm must be replaced. | Expiry date |
+
+### How alarms work together
+
+| Word | Means | Not |
+|---|---|---|
 | Interconnected | If one alarm goes off, they all go off. By wire or by radio. Required by Queensland law, so every alarm is interconnected. | Linked |
-| Pairing | Interconnecting alarms by radio, or connecting an alarm to a remote. Wired alarms aren't paired; the wire interconnects them. | |
-| Master | The first alarm in a pairing, which you press once more at the end to finish. | |
-| Turn on | Starting an alarm for the first time, usually by holding the test button. | Activate |
-| Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. | Deactivate |
-| Silence | Pressing the button that quiets a sounding alarm for about 8 minutes. | Hush |
-| Test | Pressing the test button so the alarm, and every alarm interconnected with it, sound. | |
-| Light | A coloured light on the alarm, described by its colour and how often it flashes. | LED |
-| Chirp | A short beep that repeats on a timer, like every 40 seconds. Usually means a fault or low battery. | |
-| Beep | One short sound that confirms something worked, like turning on. | |
-| Alarm sound | The full, loud, continuous sound. | Siren |
-| False alarm | An alarm going off with no fire, for example from cooking. | Nuisance alarm |
-| Placement | Where on the ceiling an alarm can go, and how far from walls, fans, lights and vents. | Position, location |
+| Pairing | Interconnecting devices by radio: wireless alarms with each other, an RF module with wireless alarms, or a remote with alarms. Wired alarms aren't paired with each other; the wire interconnects them. | |
+| Master | The first alarm in a pairing, which you press once more at the end to finish. **Check:** is this a word techs use? | |
+
+### How the app is organised
+
+| Word | Means | Not |
+|---|---|---|
+| Setup | The top-level choice for putting in a new alarm: placement, mounting, opening, turning on, pairing and testing. | Installing, installation |
+| Troubleshooting | The top-level choice for an alarm that's already up and has a problem. | |
+| Topic | One item you tap under Setup or Troubleshooting, like Pairing. | Option, job |
+| Page | What you read: one brand, one device and one topic, like "Emerald, Wireless, Pairing". | Instructions |
+| Step | One instruction on a page, with its photo, tips, warnings, and the light or sound to expect. | |
 | Tip | Advice from techs' experience, shown in a bright box inside the step it belongs to. | Gotcha |
 | Warning | A safety warning from the manufacturer. | Caution |
-| Opening | Releasing the front plate of a wired alarm to get to the battery and the label. | |
-| Front plate | The front cover of a wired alarm, which releases to show the battery and the label. | Cover, lid |
-| Installed date | The date the alarm was put in, printed on the label behind the front plate. | |
-| Replace-by date | The date the alarm must be replaced, printed on the label behind the front plate. | Expiry date |
+| Source | Where a page came from, like a manual or a tech, with its date. | |
+| Job | A site visit. Never used for anything inside the app. | |
+
+### The topics
+
+| Word | Means | Not |
+|---|---|---|
+| Placement | Where on the ceiling an alarm can go, and how far from walls, fans, lights and vents. Setup only. | Position, location |
+| Mounting | Fitting an alarm onto its mounting plate or removing it, and the light or sound that confirms it's seated. | Installing, securing |
+| Opening | Releasing the front plate of a wired alarm to get to the battery and the label. Wired only. | |
+| Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
+| Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. **Check:** should this be part of the "Turning on and off" topic? | Deactivate |
+| Testing | Setting the alarm off, checking every interconnected alarm goes off too, and waiting for any other sounds afterwards. | |
+| Cleaning | Cleaning an alarm. Troubleshooting only. | Maintenance |
+| Finding the false alarm | Working out which alarm is causing false alarms. Troubleshooting only. | |
+| Won't turn on | A wireless alarm that won't start. Troubleshooting only. | |
+| What's that light or sound? | Every signal for that device in one list. Troubleshooting only, shown first. | Lights, Sounds |
+
+### Lights and sounds
+
+| Word | Means | Not |
+|---|---|---|
+| Signal | A light, a sound, or both together that means something. | Indication |
+| Light | A coloured light on the device, described by its colour and how often it flashes. | LED |
+| Chirp | A short sound that repeats on a timer, like every 40 seconds. | |
+| Beep | One short sound that confirms something worked, like turning on or pairing. | |
+| Alarm sound | The full, loud, continuous sound. | Siren |
+| Silence | Quieting a sounding alarm for about 8 minutes. | Hush |
+| Test | Pressing the test button so the alarm, and every alarm interconnected with it, sound. | |
+| False alarm | An alarm going off with no fire, for example from cooking. | Nuisance alarm |
+| Fault | The alarm reporting a problem with itself, usually with a chirp. | Fault mode |
+| Low battery | The alarm reporting its battery is running out, usually with a chirp and a light together. | |
+| Faulty | A device that needs replacing. | Defective |
+
+### A clash the map exposed
+
+**Check:** You asked for a "Wireless" switch button at the bottom of the wired pairing page, for pairing wired alarms to wireless ones. But wired alarms only pair by radio once an RF module is fitted, so the map puts those steps on the RF module's pairing page. The question is whether the steps should live under RF module, under Wired, or both.
 
 ## What each instructions page shows
 
