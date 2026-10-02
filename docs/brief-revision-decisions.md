@@ -193,12 +193,13 @@ Troubleshooting is a lookup, not a workflow.
 ## Turning alarms on and off
 
 - Wireless Setup contains turning on and initial activation.
-- Wireless Troubleshooting contains the brand-specific steps for turning a unit off and back on when power-cycling it.
-- Setup and Troubleshooting use separate context-specific instructions.
+- **Power Cycle** is a Troubleshooting topic for both Wired and Wireless.
+- Wired and Wireless use separate brand-specific Power Cycle instructions.
+- Setup activation and Troubleshooting Power Cycle are separate context-specific topics.
 
-## Wired troubleshooting
+## Wired Power Cycle
 
-For a wired alarm that does not respond:
+For a wired alarm that is chirping or does not respond:
 
 - **Removable backup battery**
   1. Remove the alarm from its base.
@@ -206,14 +207,14 @@ For a wired alarm that does not respond:
   3. With the battery removed, hold TEST to drain residual power.
   4. Reinsert the battery and attach the alarm to its base.
   5. Wait at least 2 minutes for another chirp.
-  6. If the problem remains, end at **Report as faulty**.
+  6. If the chirp returns or the original problem remains, end at **Report as faulty**.
 - **Built-in lithium backup battery**
   - Do not attempt the removable-battery recovery.
   - End at **Report as faulty**.
 
-Battery replacement belongs only inside relevant wired troubleshooting, not as a separate topic.
+Battery testing and replacement remain steps inside Wired Power Cycle, not separate topics.
 
-## Wireless troubleshooting
+## Wireless Power Cycle
 
 For a wireless alarm that is chirping or not behaving correctly:
 
@@ -223,7 +224,7 @@ For a wireless alarm that is chirping or not behaving correctly:
 4. Refit it to the mount; many models power on with the twist action.
 5. Where the model provides one, confirm the correct power-on light.
 6. Wait at least 2 minutes for another chirp.
-7. If the chirp returns, end at **Report as faulty** because the sealed lithium battery is not replaceable.
+7. If the chirp returns or the original problem remains, end at **Report as faulty** because the sealed lithium battery is not replaceable.
 
 ## Chirp timing
 
