@@ -129,6 +129,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Fitting appears under Setup only.
 - The path is **Brand → RF module → Setup → Fitting**.
 - Do not show Troubleshooting for the RF-module choice because it has no troubleshooting content.
+- Diagnosing, reporting, or replacing a faulty RF module is out of scope for now.
 
 ## Remote
 
