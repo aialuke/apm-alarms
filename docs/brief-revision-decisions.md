@@ -137,7 +137,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Do not include physical remote-mounting instructions; mounting is too simple to warrant a topic.
 - Include remote activation, connection, pairing, controls, use, light meanings, sound meanings, and troubleshooting.
 - Remote-use instructions appear under both Setup and Troubleshooting.
-- Include Locate in false-alarm troubleshooting for compatible systems.
+- Include Locate inside Remote troubleshooting for compatible systems as a way to identify the triggering alarm.
 - Never include remote battery-replacement instructions.
 - A low-battery remote is replaced as a complete unit.
 
@@ -176,6 +176,7 @@ Troubleshooting is a lookup, not a workflow.
 - Do not force the technician through a fixed sequence, track progress, or require them to identify the alarm inside the app first.
 - Provide direct reference topics for lights, sounds, pairing, mounting, common issues, relevant fixes, and faulty outcomes.
 - **Won't turn on** is one lookup topic within Troubleshooting.
+- Do not add a separate **Finding the false alarm** topic; technicians use the other Troubleshooting references to identify it.
 - The technician chooses whichever topic helps diagnose the reported problem.
 - Do not describe Troubleshooting as “stopping a faulty alarm.”
 
