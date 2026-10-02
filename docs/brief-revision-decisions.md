@@ -232,6 +232,7 @@ For a wireless alarm that is chirping or not behaving correctly:
 ## Testing
 
 - Testing appears under both Setup and Troubleshooting.
+- Both routes open one identical shared Testing instruction page.
 - Explain how to perform the test for the selected brand and unit.
 - Confirm during the test that all interconnected alarms sound.
 - Include any brand-specific sounds and waiting periods.
