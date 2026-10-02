@@ -4,7 +4,7 @@ alwaysApply: true
 ---
 # pstack model configuration. One line per role. Delete a line to fall back to the skill default.
 # `inherit-parent` or `auto` as a value: the role runs on the parent chat model (omit Task `model`). Alias entries in a panel list still count toward its fan-out.
-# This project rule stands in for `~/.cursor/rules/pstack-models.mdc`. Skills that point at that path read these lines.
+# This project rule stands in for `~/.cursor/rules/pstack-models.mdc`. Skills that point at that path read these lines. `/setup-pstack` writes to that home path, so copy its output here.
 # budget: medium (high)
 feature, refactoring: grok-4.7-high
 bug-fix: grok-4.7-high
