@@ -72,8 +72,9 @@ This is the map of everything the app knows about, how the pieces connect, and w
 - **Brand.** Emerald, for example. Each brand has one or more devices.
 - **Device.** The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Each device belongs to one brand and has a few facts about it:
   - How it's powered: mains with a backup battery, or battery only.
-  - How it links to other alarms: by wire, by radio (RF), or not at all.
-  - Which other devices it can pair with. For example, the Emerald remote pairs with Emerald RF alarms.
+  - How it links to other alarms: wired alarms link by wire, and also by radio once an RF module is fitted. Wireless alarms link by radio.
+  - Which other devices it can pair with. For example, the Emerald remote pairs with Emerald wireless alarms and with wired alarms that have an RF module.
+- **Every alarm is linked.** The law requires all alarms in a home to be linked so they all go off together. There's no such thing as an alarm that works on its own on your jobs.
 - **Topic.** A fixed list: placement, mounting, opening, turning on and off, pairing, testing, cleaning, finding the false alarm, won't turn on, and what's that light or sound. Each topic is marked as Setup, Troubleshooting, or both.
 - **Page.** One brand, plus one device, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
 - **Step.** One instruction on a page, with its photo, any tips and warnings, and the light or sound you should see or hear at that point.
@@ -86,7 +87,7 @@ This is the map of everything the app knows about, how the pieces connect, and w
 - **A page is written once.** Mounting, pairing and testing appear under both Setup and Troubleshooting, but there's one copy of each page. Two copies would drift apart.
 - **A signal is written once.** "What's that light or sound?" is the full list for that device, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between devices (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per device keeps them from ever disagreeing.
 - **The switch buttons at the bottom of a page** go to the same topic for the brand's other devices, but only where that page exists.
-- **Pairing only shows for devices that can pair.** A wired alarm can only pair by radio once an RF module is fitted. A wireless alarm can only pair if it's an RF one.
+- **Pairing only shows for devices that pair.** Wireless alarms, RF modules and remotes pair. A wired alarm on its own doesn't, because the wire links it; it only pairs once an RF module is fitted, and those steps live under the RF module.
 
 ### Things the app must never allow
 
@@ -97,7 +98,9 @@ This is the map of everything the app knows about, how the pieces connect, and w
 
 ### A gap the map exposed
 
-Emerald appears to sell two wireless Ranger alarms that look alike: one that's RF and can pair, and one that can't (see the manual findings below). If "Emerald, Wireless" covers both, the app would show pairing steps to someone holding the one that can't pair. That breaks the rule above. **Still open** (see open questions).
+Emerald appears to sell two wireless Ranger alarms that look alike: one that links by radio, and one that works on its own (see the manual findings below).
+
+**Resolved:** Because the law requires every alarm to be linked, the one that works on its own isn't something you install, so "Wireless" always means an alarm that links by radio. **But:** the wireless manual reviewed so far (EP-RANG-10) is the one that works on its own. The pairing steps need the manual for the radio version (see open questions).
 
 ## Word list
 
@@ -109,9 +112,8 @@ Every word below means one thing only, in this file and in the app. Words in the
 | Series | A family of alarms within a brand, like Emerald's Vulcan (wired) or Ranger (wireless). Not picked in the app, but mentioned where it matters. | |
 | Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
 | Wired | An alarm connected to mains power, with a backup battery. | Hard-wired, 240V |
-| Wireless | An alarm that runs on its battery alone, with no mains wires. Some can link by radio and some work on their own. | Battery alarm, stand-alone |
-| RF | Able to link to other alarms by radio. Used as "RF alarm" or "RF module". | Radio, wireless interconnect |
-| RF module | The small radio add-on that slots into a wired alarm so it can link by radio. | Add-on, radio module |
+| Wireless | An alarm that runs on its battery alone, with no mains wires, and links to other alarms by radio. | Battery alarm, RF alarm |
+| RF module | The small radio add-on that slots into a wired alarm so it can link by radio. "RF" on its own always means this module. | RF, add-on, radio module |
 | Remote | The handheld or wall-mounted device that tests, silences and locates linked alarms. | Controller |
 | Mounting plate | The part screwed to the ceiling that the alarm sits on. | Base, bracket, backing plate, mount |
 | Mounting | Fitting an alarm onto its mounting plate, or removing it. | Installing, securing |
@@ -122,7 +124,7 @@ Every word below means one thing only, in this file and in the app. Words in the
 | Page | What you read: one brand, one device and one topic. | Instructions |
 | Signal | A light, a sound, or both together that means something. | Indication |
 | Job | A site visit. Never used for anything inside the app. | |
-| Linked | Alarms that all go off when one goes off, either by wire or by radio. | Interconnected |
+| Linked | Alarms that all go off when one goes off, either by wire or by radio. Required by law, so every alarm is linked. | Interconnected |
 | Pairing | Setting up a radio link between alarms, or between an alarm and a remote. Wire-linked alarms aren't paired; the wire links them. | Interconnecting |
 | Master | The first alarm in a pairing, which you press once more at the end to finish. | |
 | Turn on | Starting an alarm for the first time, usually by holding the test button. | Activate |
@@ -289,7 +291,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- If a brand has an RF and a non-RF wireless alarm that look alike, should they be two separate devices? (asked next)
+- Is the Emerald wireless alarm you install the radio version of the Ranger? If so, its manual is needed, because EP-RANG-10 doesn't link. (asked next)
 - What does "opening" a wired alarm mean, and does the word list match how you talk on the job?
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
