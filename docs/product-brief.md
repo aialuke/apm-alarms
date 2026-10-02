@@ -141,7 +141,8 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 |---|---|---|
 | Interconnected | If one alarm goes off, they all go off. By wire or by radio. Required by Queensland law, so every alarm is interconnected. | Linked |
 | Pairing | Interconnecting units by radio: wireless alarms with each other, wired alarms (through their RF module) with wireless alarms, or a remote with alarms. On an all-wired site, nothing is paired; the wire interconnects them. | |
-| Master | The first alarm in a pairing, which you press once more at the end to finish. **Check:** is this a word techs use? | |
+| Master | The unit you put into pairing mode first. Any unit can be the master; every unit after it connects to it. On Emerald, you press the master once more at the end to finish. | First alarm, main alarm |
+| Pairing mode | The state a unit is put in so it's ready to pair, usually by pressing the test button a set number of times. | |
 
 ### How the app is organised
 
