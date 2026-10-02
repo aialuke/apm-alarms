@@ -169,13 +169,25 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
 - Troubleshooting Mounting covers checking that the mount is secured correctly to the ceiling and that the alarm attaches to it correctly.
 - Include any light or other confirmation that the alarm switched on correctly where relevant.
 
-## Turning alarms off
+## Troubleshooting purpose
+
+Troubleshooting is a diagnosis flow:
+
+1. Identify which alarm is causing the issue.
+2. Identify what the issue is.
+3. Resolve the issue where possible.
+4. If it cannot be resolved, determine that the unit is faulty.
+
+- **Won't turn on** is one issue within Troubleshooting.
+- Do not describe Troubleshooting as “stopping a faulty alarm.”
+
+## Turning alarms on and off
 
 - Do not describe wireless deactivation as a routine power cycle.
 - Wireless Setup contains turning on and initial activation.
-- Wireless Troubleshooting contains restarting the alarm and **Stop a faulty alarm before replacement**.
+- Wireless Troubleshooting contains relevant restart steps.
 - Setup and Troubleshooting use separate context-specific instructions.
-- Include the steps needed to deactivate and, where relevant, reactivate the alarm.
+- It is not yet decided whether separate deactivation instructions are still useful anywhere in the app.
 
 ## Wired troubleshooting
 
