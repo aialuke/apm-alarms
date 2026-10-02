@@ -22,12 +22,17 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
    - Lights: what each light colour and flash pattern means
    - Sounds: what each chirp and alarm sound means, including how to silence it and clear a false alarm
    - Possibly battery and testing. Still to confirm.
-3. **Wired or wireless.** Tap one.
+3. **What's in your hand.** Tap one:
+   - Wired
+   - Wireless
+   - Remote (only for brands that have one)
+   - RF module, the radio add-on that slots into a wired alarm (only for brands that have one)
 
 - **Decided:** No factory reset. Techs never do it, so it isn't an option.
 - Lights and Sounds are read here as their own buttons on the job screen. Still to confirm.
+- **Decided:** Remote and RF module get their own buttons, because you choose by the thing in your hand. They only appear after you pick a brand that has them.
 
-At the bottom of every instructions page, a button switches to the other type. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps, and the wireless page has a "Wired" button.
+At the bottom of every instructions page, buttons switch to the same job for the other types. For example, on wired pairing, a "Wireless" button takes you to the wireless pairing steps, and the wireless page has a "Wired" button.
 
 Notes:
 
@@ -151,15 +156,15 @@ These are suggestions from the design review. Items marked **Needs your call** a
 - Large buttons, one for each job.
 - The brand you picked stays at the top, so you always know where you are.
 
-### Wired or wireless screen
+### "What's in your hand" screen
 
-- Two big buttons, wired and wireless, each with a small picture.
+- Big buttons, each with a small picture: wired and wireless, plus remote and RF module where the brand has them.
 - This screen is skipped when wired and wireless use the same steps. For example, if taking an alarm off the mount is the same for both, you won't be asked.
 
 ### Instructions page
 
 - A line at the top shows what you picked, like "Kidde, Pairing, Wired". Tap any part to change just that, without starting over.
-- **Decided:** A clear button at the bottom switches between the wired and wireless steps.
+- **Decided:** Clear buttons at the bottom switch to the same job for the other types (wired, wireless, remote, RF module).
 - **Needs your call:** One step per screen (big photo, big Next button near your thumb, plus a "see all steps" option), or all steps on one page. Both will be mocked up so you can try them on your phone.
 - Tips and gotchas sit inside the step they belong to, in a bright warning box, so you see them before you make the mistake.
 - Tap a photo to make it fill the screen and zoom in.
@@ -183,9 +188,8 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Where do remotes go in the app? (asked next)
+- Should battery and testing get their own buttons? (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
-- Should battery and testing get their own buttons?
 - Should turning an alarm on and off (for example, stopping a faulty alarm that keeps going off) be included, and where?
 - Are Lights and Sounds their own buttons on the job screen, or inside Troubleshooting?
 - Should the app include where to place alarms and places to avoid?
