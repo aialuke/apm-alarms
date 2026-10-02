@@ -83,7 +83,41 @@ The [Emerald EP-RANG-10 manual](https://emeraldalarms.com.au/wp-content/uploads/
 - **Turning it on:** hold the test button for 3 seconds until the light comes on, then let go within 2 seconds. It beeps to show it's working.
 - **Turning it off for good:** press the test button 6 times within 3 seconds, and it chirps once. This is only for throwing the alarm away, or stopping a faulty alarm that keeps going off. Worth including, because a faulty alarm sounding on site is a real job.
 - **Mount:** it twists onto the mounting plate to secure it and twists the other way to remove it. Screws, or an optional magnetic mount with 3M sticky pads. Ceiling only.
-- **Silencing:** the same as the wired Emerald. Press and release the hush button, and it's quieter for about 8 minutes while the red light flashes every 8 seconds. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
+- **Silencing:** the same as the wired Emerald. Press and release the hush button, and it's quieter for about 8 minutes while the red light flashes every 8 seconds.
+
+### What the Emerald radio add-on manual showed
+
+The [Emerald EP-VC-RF-MOD manual](https://emeraldalarms.com.au/wp-content/uploads/2024/09/EP-VC-RF-MOD-User-Manual.pdf) is for a small radio add-on that slots into Emerald's wired Vulcan alarms (like the EP-VC-240-10), so they can link to other alarms without wires. Findings:
+
+- **"Wireless" means two things.** Your answer confirmed you see both kinds: battery alarms that work on their own (like the EP-RANG-10), and alarms that link to each other by radio (with the add-on, or radio versions of the battery alarms).
+- **Fitting the add-on:** use a screwdriver to lift off the empty cover, slot the add-on in the right way round (the manual has a right and wrong photo), then put the battery in.
+- **Gotcha:** the add-on must go in *before* the battery.
+- **Pairing:**
+  1. Press the test/hush button 3 times. A flashing red light means it's ready to pair.
+  2. Do the same on each other alarm. A chirp means it paired.
+  3. When they're all paired, press the first alarm (the "master") once to finish.
+- **If pairing won't start:** take the battery out, hold the test button for more than 2 seconds to drain leftover power, put the battery back and try again. A good troubleshooting tip.
+- **Mixed wired and wireless sites:** when wired alarms need to link with battery radio alarms, at least one of the wired alarms must have the add-on. It acts as the bridge. This is the "pairing wired to wireless" case from earlier.
+- **Same name, different abilities.** The remote manual says it works with "RF Ranger" alarms, so there seem to be radio and non-radio versions of the Ranger battery alarm. They may look alike, but only one can pair. **Recommendation:** the wireless pairing page starts with a quick "how to tell if yours can pair" check, so you don't waste time trying to pair one that can't.
+
+### What the Emerald remote manual showed
+
+The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-SA-CONT-RF-User-Manual.pdf) is for a remote that lets you test, silence and find alarms from the ground. Findings:
+
+- **It's a separate device with its own jobs.** It needs to be mounted, turned on, paired, and have its battery changed, and it has its own lights and troubleshooting.
+- **Buttons:** Test (all linked alarms beep for 7 seconds), Silence (all linked alarms quiet for 8 minutes), and Locate (silences every alarm except the one that went off, so you can find it).
+- **Lights:**
+  - Red light flashing twice a second: an alarm has gone off.
+  - Yellow light flashing every 8 seconds: the remote's battery is low.
+- **Mounting:** on a wall, 1.4 m above the floor, for the best signal.
+- **Turning it on:** hold Silence for 5 seconds until the red and yellow lights flash together. Only needed the first time.
+- **Pairing:**
+  1. On the alarm, press the test button 3 times within 2 seconds, until the red light flashes.
+  2. On the remote, press Silence 3 times within 2 seconds.
+  3. Repeat for each alarm.
+- **Clearing all pairings:** hold Test and Locate together for 10 seconds, until the red light flashes once.
+- **Battery:** CR2450 coin battery, lasts about 3 years. Undo two screws, twist the back off, swap the battery, then twist it back on and tighten the screws.
+- **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the link, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
 
 ## Adding or changing content
 
@@ -149,7 +183,8 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- What does "wireless" mean on your jobs: battery alarms with no wires that work on their own, alarms that link to each other by radio, or both? (asked next)
+- Where do remotes go in the app? (asked next)
+- How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should battery and testing get their own buttons?
 - Should turning an alarm on and off (for example, stopping a faulty alarm that keeps going off) be included, and where?
 - Are Lights and Sounds their own buttons on the job screen, or inside Troubleshooting?
