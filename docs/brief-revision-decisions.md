@@ -56,7 +56,9 @@ The main path remains:
 - Back returns to the actual previous page, including the Setup or Troubleshooting list that opened a shared topic.
 - Home returns to the brand grid.
 - Remove same-topic buttons for other units from instruction pages.
-- When the same topic appears under both Setup and Troubleshooting, both routes open one identical shared instruction page. Back returns to the Setup or Troubleshooting list that opened it.
+- When a topic's instructions are genuinely identical under Setup and Troubleshooting, both routes open one shared instruction page.
+- When the purpose or instructions differ by section, use separate Setup and Troubleshooting pages even when they have the same topic name.
+- Back always returns to the Setup or Troubleshooting list that opened the page.
 
 On a Setup or Troubleshooting topic-list page, show no more than these two shortcuts when applicable:
 
@@ -158,7 +160,9 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
 
 - Wireless alarms have a separate **Mounting** topic.
 - Technicians may install wireless mounting plates when needed.
-- Include fitting the alarm to the mount, removing it, and checking any light or other confirmation that it switched on correctly.
+- Setup Mounting covers installing the wireless mount.
+- Troubleshooting Mounting covers checking that the mount is secured correctly to the ceiling and that the alarm attaches to it correctly.
+- Include any light or other confirmation that the alarm switched on correctly where relevant.
 
 ## Turning alarms off
 
