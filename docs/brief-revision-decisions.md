@@ -56,6 +56,7 @@ The main path remains:
 - Back returns to the actual previous page, including the Setup or Troubleshooting list that opened a shared topic.
 - Home returns to the brand grid.
 - Remove same-topic buttons for other units from instruction pages.
+- When the same topic appears under both Setup and Troubleshooting, both routes open one identical shared instruction page. Back returns to the Setup or Troubleshooting list that opened it.
 
 On a Setup or Troubleshooting topic-list page, show no more than these two shortcuts when applicable:
 
@@ -192,5 +193,4 @@ For a wireless alarm that is chirping or not behaving correctly:
 
 ## Still to decide
 
-- When the same topic appears under both Setup and Troubleshooting, should it always use one identical shared instruction page, or may the opening context and outcome differ?
 - If a background content update is interrupted or fails, should the app keep the previous complete copy?
