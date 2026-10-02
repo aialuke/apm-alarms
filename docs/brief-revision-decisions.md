@@ -108,7 +108,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
 - The current brief confuses two Ranger manuals. EP-RANG-10 is the non-RF manual; the pairing procedure reviewed in the follow-up is from the official EP-RANG-RF-10 manual. Remove the brief's current “resolved” explanation when rewriting it. This correction does not add model selection to the app.
 - On a mixed Emerald system, every wired alarm gets an RF module if it needs to connect to wireless alarms. Most modules are already fitted.
-- RF-module content includes both physical fitting/orientation and pairing.
+- Pairing a wired alarm through its RF module belongs under the Wired alarm's Pairing topic, not under the RF-module choice.
 - For a brand that requires the whole network to be paired again, put one alarm into pairing mode and pair every alarm again.
 - Do not include clear-all-pairings instructions.
 - Some brands do not allow one replacement or added alarm to be paired by itself; the whole group must be paired again. Explain the correct approach on that brand's Pairing page.
@@ -122,12 +122,15 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 - Keep **RF module** as a separate unit choice after selecting a brand.
 - Show the choice only for brands that use a separate RF module.
-- Installing these modules is rare, but the reference must include both fitting/orientation and pairing.
+- Installing these modules is rare. This choice contains fitting and orientation instructions only.
 
 ## Remote
 
+- Keep **Remote** as a separate unit choice after selecting a brand.
+- Show the choice only for brands that have a remote.
 - Do not include physical remote-mounting instructions; mounting is too simple to warrant a topic.
 - Include remote activation, connection, pairing, controls, use, light meanings, sound meanings, and troubleshooting.
+- Remote-use instructions appear under both Setup and Troubleshooting.
 - Include Locate in false-alarm troubleshooting for compatible systems.
 - Never include remote battery-replacement instructions.
 - A low-battery remote is replaced as a complete unit.
