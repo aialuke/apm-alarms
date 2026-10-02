@@ -118,6 +118,12 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 - The confirmation after pairing an Emerald wired alarm through an RF module is not confirmed. Do not state that it chirps. The owner's current recollection is that confirmation may be a light signal; check this on a real unit during content preparation.
 
+## RF module
+
+- Keep **RF module** as a separate unit choice after selecting a brand.
+- Show the choice only for brands that use a separate RF module.
+- Installing these modules is rare, but the reference must include both fitting/orientation and pairing.
+
 ## Remote
 
 - Do not include physical remote-mounting instructions; mounting is too simple to warrant a topic.
