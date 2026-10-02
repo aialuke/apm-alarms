@@ -175,7 +175,7 @@ Troubleshooting is a lookup, not a workflow.
 
 - Do not force the technician through a fixed sequence, track progress, or require them to identify the alarm inside the app first.
 - Provide direct reference topics for lights, sounds, pairing, mounting, common issues, relevant fixes, and faulty outcomes.
-- **Won't turn on** is one lookup topic within Troubleshooting.
+- Do not add a separate **Won't turn on** topic; include those checks inside other relevant troubleshooting pages.
 - Do not add a separate **Finding the false alarm** topic; technicians use the other Troubleshooting references to identify it.
 - The technician chooses whichever topic helps diagnose the reported problem.
 - Do not describe Troubleshooting as “stopping a faulty alarm.”
