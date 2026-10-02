@@ -7,6 +7,7 @@ This file records everything decided in the product interview. It is updated aft
 - A smoke alarm technician (the owner of this project) who works on site with many alarm brands.
 - It's built for one person first, but it should be easy to share with other techs at work later.
 - Work phones are iPhones.
+- Works in Queensland, Australia.
 
 ## What it does
 
@@ -32,11 +33,11 @@ Topics under **Setup** (putting in a new alarm):
 - Opening wired alarms.
 - Turning wireless alarms on and off.
 - Pairing, including the lights and sounds you'll see and hear along the way.
-- Testing: setting the alarm off, checking every linked alarm goes off too, and how long to wait afterwards for any other sounds.
+- Testing: setting the alarm off, checking every interconnected alarm goes off too, and how long to wait afterwards for any other sounds.
 
 Topics under **Troubleshooting** (an alarm that's already up and has a problem):
 
-- What's that light or sound? Every light and sound for that alarm in one list, each with a link to the topic that deals with it. **Decided.** Shown first, because a chirp or a light is usually why you're troubleshooting.
+- What's that light or sound? Every light and sound for that alarm in one list, each pointing to the topic that deals with it. **Decided.** Shown first, because a chirp or a light is usually why you're troubleshooting.
 - Cleaning.
 - Finding which alarm is causing false alarms.
 - Wireless alarms that won't turn on.
@@ -50,7 +51,7 @@ Rules:
 - **Decided:** No factory reset. Techs never do it, so it isn't an option.
 - **Decided:** No battery-swap steps. Techs do swap wired alarm batteries when they find a faulty one, but that's already on their job list. Remote batteries are never replaced; a faulty remote is replaced with a new one.
 - You choose by the thing in your hand right now, not the whole site. There's no "Both" option.
-- Steps for linking a wired alarm with a wireless one go inside the pairing steps for each type, so you'll find them wherever you start.
+- Steps for interconnecting a wired alarm with a wireless one go inside the pairing steps for each type, so you'll find them wherever you start.
 - You don't pick a model number. You identify the brand by checking the alarm itself on site.
 - **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
 
@@ -72,9 +73,9 @@ This is the map of everything the app knows about, how the pieces connect, and w
 - **Brand.** Emerald, for example. Each brand has one or more devices.
 - **Device.** The thing in your hand: a wired alarm, a wireless alarm, a remote, or an RF module. Each device belongs to one brand and has a few facts about it:
   - How it's powered: mains with a backup battery, or battery only.
-  - How it links to other alarms: wired alarms link by wire, and also by radio once an RF module is fitted. Wireless alarms link by radio.
+  - How it's interconnected: wired alarms by wire, and also by radio once an RF module is fitted. Wireless alarms by radio.
   - Which other devices it can pair with. For example, the Emerald remote pairs with Emerald wireless alarms and with wired alarms that have an RF module.
-- **Every alarm is linked.** The law requires all alarms in a home to be linked so they all go off together. There's no such thing as an alarm that works on its own on your jobs.
+- **Every alarm is interconnected.** Queensland law requires every alarm in a home to be interconnected: if one alarm goes off, they all go off. Some alarms *can* work on their own, but on your jobs they're always interconnected.
 - **Topic.** A fixed list: placement, mounting, opening, turning on and off, pairing, testing, cleaning, finding the false alarm, won't turn on, and what's that light or sound. Each topic is marked as Setup, Troubleshooting, or both.
 - **Page.** One brand, plus one device, plus one topic. For example, "Emerald, Wired, Pairing". This is what you actually read.
 - **Step.** One instruction on a page, with its photo, any tips and warnings, and the light or sound you should see or hear at that point.
@@ -87,7 +88,7 @@ This is the map of everything the app knows about, how the pieces connect, and w
 - **A page is written once.** Mounting, pairing and testing appear under both Setup and Troubleshooting, but there's one copy of each page. Two copies would drift apart.
 - **A signal is written once.** "What's that light or sound?" is the full list for that device, and each topic page shows the signals that matter to it, pulled from the same list. Because the timing differs between devices (every 40 seconds on the wired Emerald, every 48 on the wireless one), one list per device keeps them from ever disagreeing.
 - **The switch buttons at the bottom of a page** go to the same topic for the brand's other devices, but only where that page exists.
-- **Pairing only shows for devices that pair.** Wireless alarms, RF modules and remotes pair. A wired alarm on its own doesn't, because the wire links it; it only pairs once an RF module is fitted, and those steps live under the RF module.
+- **Pairing only shows for devices that pair.** Wireless alarms, RF modules and remotes pair. A wired alarm on its own doesn't, because it's interconnected by wire; it only pairs once an RF module is fitted, and those steps live under the RF module.
 
 ### Things the app must never allow
 
@@ -98,9 +99,9 @@ This is the map of everything the app knows about, how the pieces connect, and w
 
 ### A gap the map exposed
 
-Emerald appears to sell two wireless Ranger alarms that look alike: one that links by radio, and one that works on its own (see the manual findings below).
+The EP-RANG-10 manual says "stand alone unit", which looked like an alarm that can't be interconnected.
 
-**Resolved:** Because the law requires every alarm to be linked, the one that works on its own isn't something you install, so "Wireless" always means an alarm that links by radio. **But:** the wireless manual reviewed so far (EP-RANG-10) is the one that works on its own. The pairing steps need the manual for the radio version (see open questions).
+**Resolved:** It *can* work on its own, but on your jobs it's always interconnected, because Queensland law requires it. So "Wireless" always means an alarm interconnected by radio, and there's no look-alike problem. The EP-RANG-10 manual has no pairing steps, so those will come from the RF module and remote manuals, which both describe pairing Emerald alarms, and should be checked on a real alarm.
 
 ## Word list
 
@@ -112,9 +113,9 @@ Every word below means one thing only, in this file and in the app. Words in the
 | Series | A family of alarms within a brand, like Emerald's Vulcan (wired) or Ranger (wireless). Not picked in the app, but mentioned where it matters. | |
 | Model | One exact alarm, like EP-VC-240-10. Not picked in the app. | |
 | Wired | An alarm connected to mains power, with a backup battery. | Hard-wired, 240V |
-| Wireless | An alarm that runs on its battery alone, with no mains wires, and links to other alarms by radio. | Battery alarm, RF alarm |
-| RF module | The small radio add-on that slots into a wired alarm so it can link by radio. "RF" on its own always means this module. | RF, add-on, radio module |
-| Remote | The handheld or wall-mounted device that tests, silences and locates linked alarms. | Controller |
+| Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
+| RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
+| Remote | The handheld or wall-mounted device that tests, silences and locates interconnected alarms. | Controller |
 | Mounting plate | The part screwed to the ceiling that the alarm sits on. | Base, bracket, backing plate, mount |
 | Mounting | Fitting an alarm onto its mounting plate, or removing it. | Installing, securing |
 | Setup | The top-level choice for putting in a new alarm: placement, mounting, pairing and testing. | Installing, installation |
@@ -124,13 +125,13 @@ Every word below means one thing only, in this file and in the app. Words in the
 | Page | What you read: one brand, one device and one topic. | Instructions |
 | Signal | A light, a sound, or both together that means something. | Indication |
 | Job | A site visit. Never used for anything inside the app. | |
-| Linked | Alarms that all go off when one goes off, either by wire or by radio. Required by law, so every alarm is linked. | Interconnected |
-| Pairing | Setting up a radio link between alarms, or between an alarm and a remote. Wire-linked alarms aren't paired; the wire links them. | Interconnecting |
+| Interconnected | If one alarm goes off, they all go off. By wire or by radio. Required by Queensland law, so every alarm is interconnected. | Linked |
+| Pairing | Interconnecting alarms by radio, or connecting an alarm to a remote. Wired alarms aren't paired; the wire interconnects them. | |
 | Master | The first alarm in a pairing, which you press once more at the end to finish. | |
 | Turn on | Starting an alarm for the first time, usually by holding the test button. | Activate |
 | Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. | Deactivate |
 | Silence | Pressing the button that quiets a sounding alarm for about 8 minutes. | Hush |
-| Test | Pressing the test button so the alarm, and any linked alarms, sound. | |
+| Test | Pressing the test button so the alarm, and every alarm interconnected with it, sound. | |
 | Light | A coloured light on the alarm, described by its colour and how often it flashes. | LED |
 | Chirp | A short beep that repeats on a timer, like every 40 seconds. Usually means a fault or low battery. | |
 | Beep | One short sound that confirms something worked, like turning on. | |
@@ -166,7 +167,7 @@ The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/upload
   - Chirp every 40 seconds: fault.
   - Chirp and red flash together every 40 seconds: low battery.
 - **Silencing:** press and release the Test/Hush button. The alarm stays quieter for about 8 minutes, then goes back to normal.
-- **Testing:** press the Test/Hush button. Holding it for 5 seconds tests every alarm linked to it. A test after installing is required before the job is complete.
+- **Testing:** press the Test/Hush button. Holding it for 5 seconds tests every alarm interconnected with it. A test after installing is required before the job is complete.
 - **Battery:** 10-year replaceable 9V lithium (EVE CR9V-P). Battery-swap steps aren't needed in the app, because they're covered by the techs' job list.
 - **Gotchas for the mount section:**
   - The alarm won't clip onto its mounting plate without a battery in it.
@@ -174,14 +175,14 @@ The [Emerald EP-VC-240-10 manual](https://emeraldalarms.com.au/wp-content/upload
   - At least 30 cm from the wall.
 - **Wired install details:** wire colours and terminals, strip lengths, up to 40 alarms on one circuit, and up to 150 m of wire between alarms. Must be done by a licensed electrician.
 - **Placement rules:** where to put alarms in a home, and places to avoid, like near bathrooms, kitchens, vents and air conditioners.
-- **Wireless isn't covered in this manual.** This alarm is wired. It can link to other alarms by radio with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF.
+- **Wireless isn't covered in this manual.** This alarm is wired. It can be interconnected by radio with a separate plug-in module (EP-VC-RF-MOD), which has its own manual. So one brand may need more than one PDF.
 - **Model differences.** Manuals are written for one model. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in. See the wireless manual below for a real example.
 
 ### What the Emerald wireless manual showed
 
 The [Emerald EP-RANG-10 manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-RANG-10-User-Manual.pdf) (2 pages, dated February 2025) was reviewed. You gave this one as Emerald's wireless alarm. Findings:
 
-- **It doesn't link to other alarms.** The manual lists it as a "stand alone unit" with no connection to other alarms. It's wireless because it runs on its own battery with no wires, not because it talks to other alarms by radio. So there's nothing to pair on this model. **Still open:** what "wireless" means across all the brands (see open questions).
+- **The manual calls it a "stand alone unit".** It can work on its own, but on your jobs it's always interconnected, as Queensland law requires. The manual has no pairing steps.
 - **The battery can't be replaced.** It's a 10-year built-in battery. When the battery runs low, the whole alarm gets replaced. That's different from the wired Emerald, where you swap the battery.
 - **Same brand, different timing.** On this model the red light flashes and the low-battery chirp happens every 48 seconds. On the wired Emerald it's every 40 seconds. There's also no green light, because there's no mains power. So the light and sound details need to be separate for wired and wireless.
 - **Turning it on:** hold the test button for 3 seconds until the light comes on, then let go within 2 seconds. It beeps to show it's working.
@@ -191,9 +192,9 @@ The [Emerald EP-RANG-10 manual](https://emeraldalarms.com.au/wp-content/uploads/
 
 ### What the Emerald radio add-on manual showed
 
-The [Emerald EP-VC-RF-MOD manual](https://emeraldalarms.com.au/wp-content/uploads/2024/09/EP-VC-RF-MOD-User-Manual.pdf) is for a small radio add-on that slots into Emerald's wired Vulcan alarms (like the EP-VC-240-10), so they can link to other alarms without wires. Findings:
+The [Emerald EP-VC-RF-MOD manual](https://emeraldalarms.com.au/wp-content/uploads/2024/09/EP-VC-RF-MOD-User-Manual.pdf) is for a small radio add-on that slots into Emerald's wired Vulcan alarms (like the EP-VC-240-10), so they can be interconnected without wires. Findings:
 
-- **"Wireless" means two things.** Your answer confirmed you see both kinds: battery alarms that work on their own (like the EP-RANG-10), and alarms that link to each other by radio (with the add-on, or radio versions of the battery alarms).
+- **"Wireless" means one thing.** A battery alarm interconnected by radio. Every alarm on your jobs is interconnected, as Queensland law requires.
 - **Fitting the add-on:** use a screwdriver to lift off the empty cover, slot the add-on in the right way round (the manual has a right and wrong photo), then put the battery in.
 - **Gotcha:** the add-on must go in *before* the battery.
 - **Pairing:**
@@ -201,15 +202,15 @@ The [Emerald EP-VC-RF-MOD manual](https://emeraldalarms.com.au/wp-content/upload
   2. Do the same on each other alarm. A chirp means it paired.
   3. When they're all paired, press the first alarm (the "master") once to finish.
 - **If pairing won't start:** take the battery out, hold the test button for more than 2 seconds to drain leftover power, put the battery back and try again. A good troubleshooting tip.
-- **Mixed wired and wireless sites:** when wired alarms need to link with battery radio alarms, at least one of the wired alarms must have the add-on. It acts as the bridge. This is the "pairing wired to wireless" case from earlier.
-- **Same name, different abilities.** The remote manual says it works with "RF Ranger" alarms, so there seem to be radio and non-radio versions of the Ranger battery alarm. They may look alike, but only one can pair. **Recommendation:** the wireless pairing page starts with a quick "how to tell if yours can pair" check, so you don't waste time trying to pair one that can't.
+- **Mixed wired and wireless sites:** when wired alarms need to be interconnected with wireless alarms, at least one of the wired alarms must have the add-on. It acts as the bridge. This is the "pairing wired to wireless" case from earlier.
+- **"RF Ranger".** The remote manual says it works with "RF Ranger" alarms. This looked like a separate non-pairing version of the Ranger, but it's resolved: the Ranger can work on its own, and on your jobs it's always interconnected.
 
 ### What the Emerald remote manual showed
 
 The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploads/2025/02/20250205-EP-SA-CONT-RF-User-Manual.pdf) is for a remote that lets you test, silence and find alarms from the ground. Findings:
 
 - **It's a separate device with its own jobs.** It needs to be mounted, turned on, paired, and have its battery changed, and it has its own lights and troubleshooting.
-- **Buttons:** Test (all linked alarms beep for 7 seconds), Silence (all linked alarms quiet for 8 minutes), and Locate (silences every alarm except the one that went off, so you can find it).
+- **Buttons:** Test (all interconnected alarms beep for 7 seconds), Silence (all interconnected alarms quiet for 8 minutes), and Locate (silences every alarm except the one that went off, so you can find it).
 - **Lights:**
   - Red light flashing twice a second: an alarm has gone off.
   - Yellow light flashing every 8 seconds: the remote's battery is low.
@@ -221,7 +222,7 @@ The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploa
   3. Repeat for each alarm.
 - **Clearing all pairings:** hold Test and Locate together for 10 seconds, until the red light flashes once.
 - **Battery:** CR2450 coin battery, lasts about 3 years. Not needed in the app, because techs replace a faulty remote instead of changing its battery.
-- **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the link, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages.
+- **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the connection, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages.
 
 ## Adding or changing content
 
@@ -291,8 +292,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Is the Emerald wireless alarm you install the radio version of the Ranger? If so, its manual is needed, because EP-RANG-10 doesn't link. (asked next)
-- What does "opening" a wired alarm mean, and does the word list match how you talk on the job?
+- What does "opening" a wired alarm mean, and does the word list match how you talk on the job? (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
