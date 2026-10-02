@@ -89,7 +89,8 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 ## Offline behaviour
 
-- Save content and images for offline use in the background.
+- On the first online opening, automatically download every approved page and image for offline use. Do not wait for the technician to open each page individually.
+- Save later content and image updates for offline use in the background.
 - Do not show a visible **Ready offline** status.
 - Download a complete new content version before switching to it.
 - If an update is interrupted, incomplete, or missing a required file, keep using the previous complete version.
