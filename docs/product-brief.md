@@ -32,7 +32,7 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
 - **Decided:** No Battery button and no Testing button. Working out whether the battery is the problem belongs under Lights and Sounds.
 - The quick test that finishes an install stays as the last step of the install instructions. (Assumed. Tell us if it should come out.)
 - **Decided:** Remote batteries are never replaced. A faulty remote is replaced with a new one.
-- **Still open:** whether techs ever swap batteries in wired alarms that allow it, like the wired Emerald.
+- **Decided:** No battery-swap steps for wired alarms. Techs do swap them when they find a faulty one, but that's already covered by their job list.
 - Lights and Sounds are read here as their own buttons on the job screen. Still to confirm.
 - **Decided:** Remote and RF module get their own buttons, because you choose by the thing in your hand. They only appear after you pick a brand that has them.
 
