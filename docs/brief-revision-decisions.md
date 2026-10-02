@@ -52,13 +52,12 @@ The main path remains:
 - Keep the context labels at the top as tappable shortcuts.
 - Size all tap areas for one-handed use on an iPhone SE (3rd generation).
 - Technicians do not wear gloves. Remove glove-specific requirements.
-- Individual instruction pages have fixed **Back** and **Home** navigation only.
+- The fixed bottom navigation on individual instruction pages contains only **Back** and **Home**. Tappable context labels at the top and useful in-content links such as **View fix →** are still allowed.
 - Back returns to the actual previous page, including the Setup or Troubleshooting list that opened a shared topic.
 - Home returns to the brand grid.
 - Remove same-topic buttons for other units from instruction pages.
 - When a topic's instructions are genuinely identical under Setup and Troubleshooting, both routes open one shared instruction page.
-- When the purpose or instructions differ by section, use separate Setup and Troubleshooting pages even when they have the same topic name.
-- Back always returns to the Setup or Troubleshooting list that opened the page.
+- When the instructions differ by section, use separate Setup and Troubleshooting pages even when they have the same topic name.
 
 On a Setup or Troubleshooting topic-list page, show no more than these two shortcuts when applicable:
 
@@ -90,6 +89,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 ## Offline behaviour
 
 - On the first online opening, automatically download every approved page and image for offline use. Do not wait for the technician to open each page individually.
+- While connected to the mobile network, show the live content immediately and save the complete offline copy in the background. Do not block first use behind a download or setup screen.
 - Save later content and image updates for offline use in the background.
 - Do not show a visible **Ready offline** status.
 - Download a complete new content version before switching to it.
@@ -109,7 +109,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 - Pairing appears under both Setup and Troubleshooting.
 - Setup Pairing covers connecting alarms.
-- Troubleshooting Pairing begins by testing one alarm and confirming every interconnected alarm sounds. If they do not, it continues to the appropriate brand-specific re-pairing steps.
+- Troubleshooting Pairing begins by using the shared Testing instructions to test one alarm and confirm every interconnected alarm sounds. It links to or reuses that test rather than duplicating it. If all alarms do not sound, Pairing continues to the appropriate brand-specific re-pairing steps.
 - Setup and Troubleshooting therefore use separate Pairing pages, while sharing common steps where appropriate.
 - Pairing procedures differ by brand, not by model, for the alarms covered by the app. Do not add a model-selection screen.
 - Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
