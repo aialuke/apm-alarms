@@ -56,7 +56,8 @@ Rules:
   1. **All wired.** Interconnected by wire already. No pairing.
   2. **Wired and wireless.** Every wired alarm has an RF module (already in, or fitted on the day), and every alarm gets paired.
   3. **All wireless.** No RF modules. Every alarm gets paired.
-- So the Wired pairing page is only for the second kind of site. It starts by saying so: on an all-wired site, there's nothing to pair. The "Wireless" switch button at the bottom takes you to the wireless pairing page.
+- The Wired pairing page is only used on the second kind of site. **Decided:** the page doesn't say so, because every tech already knows. The "Wireless" switch button at the bottom takes you to the wireless pairing page.
+- **Rule of thumb:** leave out anything every tech already knows. The app is for what's different between brands and devices.
 - You don't pick a model number. You identify the brand by checking the alarm itself on site.
 - **Decided:** When chasing a chirp or a light, you find which alarm is causing it before opening the app. So you'll always know whether it's wired or wireless, and that step stays.
 
@@ -127,7 +128,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Wireless | An alarm that runs on its battery alone, with no mains wires, and is interconnected with other alarms by radio. | Battery alarm, RF alarm |
 | RF module | The small radio add-on that slots into a wired alarm so it can be interconnected by radio. "RF" on its own always means this module. | RF, add-on, radio module |
 | Remote | The wall-mounted device that tests, silences and locates interconnected alarms. | Controller |
-| Mounting plate | The part screwed to the ceiling that the alarm sits on. **Check:** you've also said "bracket", "base" and "mount". | Base, bracket, backing plate, mount |
+| Mounting plate | The part screwed to the ceiling that the alarm attaches to. | Base, bracket, backing plate, mount |
 | Front plate | The front cover of a wired alarm, which releases to show the battery and the label. | Cover, lid |
 | Label | The sticker behind the front plate with the installed date and replace-by date. | |
 | Installed date | The date the alarm was put in. | |
@@ -164,7 +165,7 @@ One rule sits above the list: **when a step names a button, it uses the name pri
 | Opening | Releasing the front plate of a wired alarm to get to the battery and the label. Wired only. | |
 | Turn on | Starting a wireless alarm for the first time, usually by holding the test button. | Activate |
 | Turn off | Stopping a wireless alarm for good, for example to throw it away or stop a faulty one going off. **Check:** should this be part of the "Turning on and off" topic? | Deactivate |
-| Fitting | Putting an RF module into a wired alarm. RF module only, Setup only. **Check:** new topic. | Installing |
+| Fitting | Putting an RF module into a wired alarm. RF module only, Setup only. | Installing |
 | Testing | Setting the alarm off, checking every interconnected alarm goes off too, and waiting for any other sounds afterwards. | |
 | Cleaning | Cleaning an alarm. Troubleshooting only. | Maintenance |
 | Finding the false alarm | Working out which alarm is causing false alarms. Troubleshooting only. | |
