@@ -385,6 +385,13 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 - A small note like "Saved on your phone. Updated 3 days ago", so you know it'll work before you lose signal.
 
+## Before building
+
+Two checks happen first, each in a new session. Models, skills and prompts are in `docs/next-sessions.md`.
+
+1. **Blind review:** a fresh review of this file, without seeing the interview, to find issues, blind spots and conflicts.
+2. **Premortem:** imagining it's six weeks after launch and nobody's using it, then working out why.
+
 ## Open questions
 
 - Does any brand have models that behave differently enough to need separate pages?
