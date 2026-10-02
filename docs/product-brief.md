@@ -21,7 +21,7 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
    - Troubleshooting
    - Lights: what each light colour and flash pattern means
    - Sounds: what each chirp and alarm sound means, including how to silence it and clear a false alarm
-   - Possibly battery and testing. Still to confirm.
+   - Low battery is diagnosed under Lights and Sounds, with what to do next.
 3. **What's in your hand.** Tap one:
    - Wired
    - Wireless
@@ -29,6 +29,10 @@ A quick reference for job sites. You pick the alarm you're working on and get cl
    - RF module, the radio add-on that slots into a wired alarm (only for brands that have one)
 
 - **Decided:** No factory reset. Techs never do it, so it isn't an option.
+- **Decided:** No Battery button and no Testing button. Working out whether the battery is the problem belongs under Lights and Sounds.
+- The quick test that finishes an install stays as the last step of the install instructions. (Assumed. Tell us if it should come out.)
+- **Decided:** Remote batteries are never replaced. A faulty remote is replaced with a new one.
+- **Still open:** whether techs ever swap batteries in wired alarms that allow it, like the wired Emerald.
 - Lights and Sounds are read here as their own buttons on the job screen. Still to confirm.
 - **Decided:** Remote and RF module get their own buttons, because you choose by the thing in your hand. They only appear after you pick a brand that has them.
 
@@ -121,7 +125,7 @@ The [Emerald EP-SA-CONT-RF manual](https://emeraldalarms.com.au/wp-content/uploa
   2. On the remote, press Silence 3 times within 2 seconds.
   3. Repeat for each alarm.
 - **Clearing all pairings:** hold Test and Locate together for 10 seconds, until the red light flashes once.
-- **Battery:** CR2450 coin battery, lasts about 3 years. Undo two screws, twist the back off, swap the battery, then twist it back on and tighten the screws.
+- **Battery:** CR2450 coin battery, lasts about 3 years. Not needed in the app, because techs replace a faulty remote instead of changing its battery.
 - **It has a ready-made troubleshooting table.** For example: if the alarm's light flashes but it won't sound when tested from the remote, check the link, then pair and test again. If it still fails, check the alarm has a radio add-on, or move closer. Manufacturer tables like this can be used directly for the Troubleshooting pages. If a brand has two wired models that behave differently, brand plus wired or wireless might not be enough. To check when all the PDFs are in.
 
 ## Adding or changing content
@@ -188,7 +192,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Should battery and testing get their own buttons? (asked next)
+- Now that Lights and Sounds cover what the alarm is telling you, what goes under Troubleshooting? (asked next)
 - How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning an alarm on and off (for example, stopping a faulty alarm that keeps going off) be included, and where?
 - Are Lights and Sounds their own buttons on the job screen, or inside Troubleshooting?
@@ -196,4 +200,3 @@ These are suggestions from the design review. Items marked **Needs your call** a
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (see above)
-- How should troubleshooting be organised: by the problem you see, by the lights and beeps, or by following the manufacturer's checklist?
