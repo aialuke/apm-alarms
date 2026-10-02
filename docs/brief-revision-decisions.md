@@ -126,6 +126,17 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Never include remote battery-replacement instructions.
 - A low-battery remote is replaced as a complete unit.
 
+## Placement
+
+Placement applies to all smoke alarms, including wired and wireless alarms.
+
+- Where practical, smoke alarms must be placed on the ceiling.
+- Do not place a smoke alarm:
+  1. within 300 mm of a corner where the ceiling meets a wall;
+  2. within 300 mm of a light fitting;
+  3. within 400 mm of an air-conditioning vent; or
+  4. within 400 mm of the blades of a ceiling fan.
+
 ## Turning alarms off
 
 - Do not describe wireless deactivation as a routine power cycle.
