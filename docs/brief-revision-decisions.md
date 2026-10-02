@@ -171,14 +171,12 @@ Placement applies to all smoke alarms, including wired and wireless alarms.
 
 ## Troubleshooting purpose
 
-Troubleshooting is a diagnosis flow:
+Troubleshooting is a lookup, not a workflow.
 
-1. Identify which alarm is causing the issue.
-2. Identify what the issue is.
-3. Resolve the issue where possible.
-4. If it cannot be resolved, determine that the unit is faulty.
-
-- **Won't turn on** is one issue within Troubleshooting.
+- Do not force the technician through a fixed sequence, track progress, or require them to identify the alarm inside the app first.
+- Provide direct reference topics for lights, sounds, pairing, mounting, common issues, relevant fixes, and faulty outcomes.
+- **Won't turn on** is one lookup topic within Troubleshooting.
+- The technician chooses whichever topic helps diagnose the reported problem.
 - Do not describe Troubleshooting as “stopping a faulty alarm.”
 
 ## Turning alarms on and off
