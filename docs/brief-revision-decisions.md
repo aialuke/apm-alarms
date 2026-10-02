@@ -130,6 +130,8 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 - Show the choice only for brands that use a separate RF module.
 - Installing these modules is rare. This choice contains fitting and orientation instructions only.
 - Fitting appears under Setup only.
+- The path is **Brand → RF module → Setup → Fitting**.
+- Do not show Troubleshooting for the RF-module choice because it has no troubleshooting content.
 
 ## Remote
 
