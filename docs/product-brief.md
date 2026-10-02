@@ -29,7 +29,8 @@ Notes:
 - The job comes before wired or wireless on purpose. Sites often have both wired and wireless alarms, and that changes the steps, for example pairing a wired alarm to a wireless one of the same brand.
 - You don't pick a model number. Brand plus wired or wireless is enough.
 - You identify the brand by reading or checking the alarm itself on site.
-- Earlier, three setups were confirmed: wired only, wireless only, and wired and wireless together. The latest flow has just two choices, wired or wireless. **Still open:** where the "wired and wireless together" steps should go.
+- **Decided:** You choose wired or wireless based on the alarm in your hand right now, not the whole site. There's no "Both" option. If the next alarm is the other type, you tap the switch button at the bottom of the steps.
+- Steps for linking a wired alarm with a wireless one go inside the pairing steps for each type, so you'll find them wherever you start.
 
 ## What each instructions page shows
 
@@ -107,11 +108,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- Where should the "wired and wireless together" steps go? Options shown (asked next):
-  1. A third button, "Both", next to wired and wireless. It only appears for jobs where the steps change, like pairing. **Recommended**, because you know there's a mix the moment you walk in, and a button you can see beats a box you have to scroll to.
-  2. A box near the bottom of the wireless steps: "Wired alarms on this site too? Show me how to pair them together." This keeps it to two buttons, but the box is easy to miss and isn't on the wired page.
-  3. The same box on both the wired and wireless pages. You'll find it either way, but it's still tucked down the page.
-- Are there more jobs than installing and removing from the mount, pairing, and troubleshooting?
+- Are there more jobs than installing and removing from the mount, pairing, and troubleshooting? (asked next)
 - Should the app reopen where you left off? (see above)
 - One step per screen, or all steps on one page? (see above)
 - How should troubleshooting be organised: by the problem you see, by the lights and beeps, or by following the manufacturer's checklist?
