@@ -332,7 +332,7 @@ These are suggestions from the design review. Items marked **Needs your call** a
 ### Opening the app
 
 - **Agreed:** It opens straight to the brand list, with no sign-in or welcome screen.
-- **Decided:** It reopens on the last page you were on, for example after you answer a text mid-job. The "Next alarm" button takes you back to the brand list.
+- **Decided:** It reopens on the last page you were on, for example after you answer a text mid-job. The Home button takes you back to the brand grid.
 
 ### Brand screen
 
@@ -365,8 +365,15 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ### Getting around
 
-- A back button at the bottom, plus the usual iPhone swipe to go back.
-- A "next alarm" button on every page that goes straight back to the brand list.
+- **Decided:** Back and Home are important, so they sit in a bar fixed to the bottom of every screen, where your thumb already is. It stays put while you scroll.
+  - **Back** on the left goes up one level, for example from the Pairing page to the list of Setup topics.
+  - **Home** on the right goes straight to the brand grid. It replaces the earlier "Next alarm" button.
+  - Both are big (at least the size of a fingertip with a glove on) and always in the same place, so you can tap them without looking.
+  - On the brand grid itself, the bar is hidden, because you're already home.
+- **Why the app needs its own Back button:** once it's saved to the home screen, the iPhone hides Safari's back button, and swiping back doesn't work reliably. Without these buttons, you could get stuck.
+- The buttons along the top (like "Emerald, Wired, Setup, Pairing") let you jump to any earlier level in one tap.
+- The buttons that switch to the same topic for another unit sit at the end of the page, above the bar.
+- Mocked up in `mockups/steps-layout.html`.
 
 ### On the job site
 

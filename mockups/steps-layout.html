@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0f6b5c">
-<title>APM Alarms mockup: step layouts</title>
+<title>APM Alarms mockup: steps page with Back and Home</title>
 <style>
   :root {
     --bg: #f6f7f8;
@@ -44,19 +44,10 @@
   }
   button { font: inherit; color: inherit; }
 
-  .picker {
-    position: sticky; top: 0; z-index: 5;
-    background: var(--brand); color: var(--brand-ink);
-    padding: calc(10px + env(safe-area-inset-top)) 14px 12px;
+  .top {
+    background: var(--brand); color: var(--brand-ink); font-size: 15px;
+    padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
   }
-  .picker p { margin: 0 0 8px; font-size: 15px; opacity: .9; }
-  .picker .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: rgba(0,0,0,.18); padding: 4px; border-radius: 14px; }
-  .picker .seg button {
-    border: 0; border-radius: 10px; padding: 12px 6px; background: transparent;
-    color: var(--brand-ink); font-weight: 600; font-size: 16px; min-height: 48px;
-  }
-  .picker .seg button[aria-pressed="true"] { background: var(--card); color: var(--text); }
-
   .crumbs { display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 16px 4px; }
   .crumbs span {
     background: var(--card); border: 1px solid var(--line); border-radius: 999px;
@@ -86,20 +77,10 @@
   .dot { width: 18px; height: 18px; border-radius: 50%; background: #e53935; flex: none; animation: blink 1s steps(2, start) infinite; }
   @keyframes blink { to { visibility: hidden; } }
 
-  /* Layout A: one step per screen */
-  #a { flex: 1; display: flex; flex-direction: column; padding: 0 16px; }
-  #a .count { font-size: 16px; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
-  #a .text { font-size: 24px; line-height: 1.35; font-weight: 600; margin-top: 14px; }
-  #a .spacer { flex: 1; min-height: 16px; }
-  #a .nav { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; padding: 12px 0 10px; }
   .big {
     min-height: 64px; border-radius: 16px; border: 2px solid var(--line);
     background: var(--card); font-size: 20px; font-weight: 700;
   }
-  .big.primary { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
-  .big:disabled { opacity: .35; }
-  .link { background: none; border: 0; color: var(--brand); font-weight: 700; padding: 10px 0; text-align: center; width: 100%; min-height: 48px; }
-
   /* Layout B: all steps on one page */
   #b { padding: 0 16px; }
   #b ol { list-style: none; margin: 0; padding: 0; counter-reset: step; }
@@ -118,20 +99,32 @@
   .bottom { padding: 6px 16px 18px; border-top: 1px solid var(--line); margin-top: 8px; }
   .bottom p { margin: 10px 0 8px; font-size: 15px; color: var(--muted); font-weight: 600; }
   .switch { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .next-alarm { width: 100%; margin-top: 10px; }
   .note { font-size: 13px; color: var(--muted); text-align: center; padding: 6px 16px 14px; }
+  body { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+  .bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: var(--card); border-top: 1px solid var(--line);
+    box-shadow: 0 -4px 16px rgba(0,0,0,.08);
+  }
+  .barbtn {
+    min-height: 64px; border-radius: 16px; border: 2px solid var(--brand);
+    background: var(--card); color: var(--brand); font-size: 20px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .barbtn .ico { font-size: 28px; line-height: 1; }
+  .toast {
+    position: fixed; left: 16px; right: 16px; bottom: calc(96px + env(safe-area-inset-bottom));
+    background: var(--text); color: var(--bg); border-radius: 12px; padding: 12px 14px;
+    font-size: 16px; font-weight: 600; z-index: 11; text-align: center;
+  }
   [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 
-<div class="picker">
-  <p>Mockup. Try both, then tell me which feels better on a ladder.</p>
-  <div class="seg" role="group" aria-label="Layout">
-    <button id="pickA" aria-pressed="true">A: One step per screen</button>
-    <button id="pickB" aria-pressed="false">B: All steps on one page</button>
-  </div>
-</div>
+<div class="top">Mockup: tap Back or Home at the bottom. They stay put while you scroll.</div>
 
 <div class="crumbs" aria-label="What you picked">
   <span>Emerald</span><span>Wired</span><span>Setup</span><span>Pairing</span>
@@ -139,21 +132,7 @@
 <h1>Pairing</h1>
 
 <main>
-  <section id="a" aria-live="polite">
-    <div class="count" id="aCount"></div>
-    <div class="photo" id="aPhoto"></div>
-    <div class="caption" id="aCaption"></div>
-    <div class="text" id="aText"></div>
-    <div id="aExtra"></div>
-    <div class="spacer"></div>
-    <button class="link" id="seeAll">See all steps</button>
-    <div class="nav">
-      <button class="big" id="back">Back</button>
-      <button class="big primary" id="next">Next</button>
-    </div>
-  </section>
-
-  <section id="b" hidden>
+  <section id="b">
     <ol id="bList"></ol>
   </section>
 </main>
@@ -164,9 +143,14 @@
     <button class="big">Wireless</button>
     <button class="big">Remote</button>
   </div>
-  <button class="big next-alarm">Next alarm</button>
 </div>
 <div class="note">Steps taken from the Emerald RF module and remote manuals. Not yet checked on a real unit.</div>
+
+<nav class="bar" aria-label="Navigation">
+  <button class="barbtn" id="backBtn"><span class="ico" aria-hidden="true">&#8249;</span>Back</button>
+  <button class="barbtn" id="homeBtn"><span class="ico" aria-hidden="true">&#8962;</span>Home</button>
+</nav>
+<div class="toast" id="toast" hidden></div>
 
 <script>
   const alarm = (extra) => `
@@ -222,18 +206,7 @@
     (s.signal ? `<div class="signal"><span class="dot"></span>${s.signal}</div>` : "") +
     (s.tip ? `<div class="tip"><strong>Tip</strong>${s.tip}</div>` : "");
 
-  let i = 0;
   const $ = (id) => document.getElementById(id);
-  function renderA() {
-    const s = steps[i];
-    $("aCount").textContent = `Step ${i + 1} of ${steps.length}`;
-    $("aPhoto").innerHTML = s.photo;
-    $("aCaption").textContent = s.caption;
-    $("aText").textContent = s.text;
-    $("aExtra").innerHTML = extra(s);
-    $("back").disabled = i === 0;
-    $("next").textContent = i === steps.length - 1 ? "Done" : "Next";
-  }
   $("bList").innerHTML = steps.map((s, n) => `
     <li>
       <div class="photo">${s.photo}</div>
@@ -242,19 +215,12 @@
       ${extra(s)}
     </li>`).join("");
 
-  function show(layout) {
-    $("a").hidden = layout !== "a";
-    $("b").hidden = layout !== "b";
-    $("pickA").setAttribute("aria-pressed", layout === "a");
-    $("pickB").setAttribute("aria-pressed", layout === "b");
-    window.scrollTo({ top: 0 });
-  }
-  $("pickA").onclick = () => show("a");
-  $("pickB").onclick = () => show("b");
-  $("seeAll").onclick = () => show("b");
-  $("next").onclick = () => { if (i < steps.length - 1) { i++; renderA(); } else { i = 0; renderA(); } };
-  $("back").onclick = () => { if (i > 0) { i--; renderA(); } };
-  renderA();
+  const toast = (msg) => {
+    const t = $("toast"); t.textContent = msg; t.hidden = false;
+    clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 1800);
+  };
+  $("backBtn").onclick = () => toast("Back: goes to the Setup topics for Emerald, Wired");
+  $("homeBtn").onclick = () => toast("Home: goes to the brand grid");
 </script>
 </body>
 </html>
