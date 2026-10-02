@@ -2,8 +2,6 @@
 
 Two checks happen before any building starts. Run them in order, each in a new session.
 
-First, merge [PR #3](https://github.com/aialuke/apm-alarms/pull/3), which adds the pstack skills to the project. New sessions start from `main`, so they only have the skills once it's merged.
-
 ## 1. Blind review
 
 - **Lead model:** GPT-5.6 Sol (OpenAI), high effort.
@@ -18,7 +16,7 @@ Prompt:
 
 Blind review of a product brief. You haven't seen the conversation that produced it, on purpose: judge only what's written.
 
-Repo: aialuke/apm-alarms, branch cursor/product-brief-f965 (draft PR #2). Read:
+Repo: aialuke/apm-alarms, branch main. Read:
 - docs/product-brief.md: the brief.
 - mockups/steps-layout.html: a throwaway phone mockup of one topic page.
 - The Emerald manuals linked in the brief. They're PDFs made mostly of images, so render the pages to images to read them.
@@ -57,7 +55,7 @@ Prompt:
 
 Premortem. It's six weeks after APM Alarms was finished. The technician it was built for has stopped opening it, and the other techs at work never started. Work out what went wrong.
 
-Repo: aialuke/apm-alarms, branch cursor/product-brief-f965 (draft PR #2). Read docs/product-brief.md, docs/blind-review.md (an earlier review; assume its "Act on" items were fixed), and mockups/steps-layout.html.
+Repo: aialuke/apm-alarms, branch main. Read docs/product-brief.md, docs/blind-review.md (an earlier review; assume its "Act on" items were fixed), and mockups/steps-layout.html.
 
 Context: The owner is a smoke alarm technician in Queensland, Australia, and isn't technical. They work across many alarm brands, on ladders, often one-handed. The app is a web app saved to the iPhone home screen, for quick reference on job sites. An AI agent adds and updates content when asked; there's no editing inside the app.
 
