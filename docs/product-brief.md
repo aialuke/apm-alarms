@@ -295,7 +295,6 @@ These are suggestions from the design review. Items marked **Needs your call** a
 
 ## Open questions
 
-- How do you tell on site whether a battery alarm can pair (for example, radio and non-radio versions of the same alarm)?
 - Should turning a wireless alarm off for good (for example, stopping a faulty alarm that keeps going off) be part of "Turning on and off"?
 - Does any brand have models that behave differently enough to need separate pages?
 - Should the app reopen where you left off? (see above)
