@@ -43,6 +43,8 @@ Then report to me in plain, non-technical language (use /bro if you start soundi
 
 ## 2. Premortem
 
+First, merge the blind review's pull request. The premortem reads `docs/blind-review.md` from `main`.
+
 - **Model:** Claude Opus 5.5, high effort.
 - **Skills:** `/principle-experience-first`, `/principle-attack-the-premise`.
 - **Why a new session:** The interview session made and defended every decision, so it's anchored to them. A fresh session judges the brief as written. Running it after the blind review means it focuses on real-world use, instead of finding the same document problems again.
