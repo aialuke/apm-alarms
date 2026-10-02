@@ -59,10 +59,12 @@ The main path remains:
 
 On a Setup or Troubleshooting topic-list page, show no more than these two shortcuts when applicable:
 
-- **Troubleshoot this alarm** or **Set up this alarm**: switch section for the current unit.
-- **View Wired alarm** or **View Wireless alarm**: switch between Wired and Wireless for the current brand while staying in the current Setup or Troubleshooting section.
+- Switch section for the current unit.
+- Switch between Wired and Wireless for the current brand while staying in the current Setup or Troubleshooting section.
 
 Do not show generic Remote or RF-module switching shortcuts.
+
+The final shortcut wording is not decided. Examples such as **Troubleshoot this alarm**, **Set up this alarm**, **View Wired alarm**, and **View Wireless alarm** must be reviewed during design rather than treated as final labels.
 
 ## Reopening the app
 
@@ -86,7 +88,6 @@ Do not show generic Remote or RF-module switching shortcuts.
 
 - Save content and images for offline use in the background.
 - Do not show a visible **Ready offline** status.
-- An interrupted or failed update must leave the last complete working copy available.
 - Videos are not part of version 1.
 
 ## Content and approval
@@ -102,12 +103,13 @@ Do not show generic Remote or RF-module switching shortcuts.
 
 - Pairing procedures differ by brand, not by model, for the alarms covered by the app. Do not add a model-selection screen.
 - Emerald wireless pairing used in the field starts by pressing TEST three times quickly within 2 seconds.
+- The current brief confuses two Ranger manuals. EP-RANG-10 is the non-RF manual; the pairing procedure reviewed in the follow-up is from the official EP-RANG-RF-10 manual. Remove the brief's current “resolved” explanation when rewriting it. This correction does not add model selection to the app.
 - On a mixed Emerald system, every wired alarm gets an RF module if it needs to connect to wireless alarms. Most modules are already fitted.
 - RF-module content includes both physical fitting/orientation and pairing.
-- Rebuilding a paired network normally means putting one alarm into pairing mode and pairing every alarm again.
+- For a brand that requires the whole network to be paired again, put one alarm into pairing mode and pair every alarm again.
 - Do not include clear-all-pairings instructions.
 - Some brands do not allow one replacement or added alarm to be paired by itself; the whole group must be paired again. Explain the correct approach on that brand's Pairing page.
-- Some confirmed brands can interconnect with another brand, such as some Detector Inspector and Matelec products. Do not build a general compatibility list. Add a note inside Setup/Pairing only for combinations the owner confirms later.
+- Detector Inspector and Matelec were given as a possible cross-brand example, not a confirmed rule. Do not build a general compatibility list. Add a note inside Setup/Pairing only for combinations the owner confirms later.
 
 ## Remote
 
@@ -191,3 +193,4 @@ For a wireless alarm that is chirping or not behaving correctly:
 ## Still to decide
 
 - When the same topic appears under both Setup and Troubleshooting, should it always use one identical shared instruction page, or may the opening context and outcome differ?
+- If a background content update is interrupted or fails, should the app keep the previous complete copy?
