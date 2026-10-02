@@ -139,6 +139,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 
 Placement applies to all smoke alarms, including wired and wireless alarms.
 
+- Placement appears under Setup only, not Troubleshooting.
 - Where practical, smoke alarms must be placed on the ceiling.
 - Do not place a smoke alarm:
   1. within 300 mm of a corner where the ceiling meets a wall;
