@@ -8,7 +8,7 @@ The Emerald manuals also expose several specific conflicts. Most importantly, th
 
 ### Scope and method
 
-- Examined 2 of 2 requested repository files in full: `docs/product-brief.md` and `mockups/steps-layout.html`.
+- Examined `docs/product-brief.md` and the old green step-page mockup. That mockup file has since been removed. It is not the live look.
 - Rendered and examined all 8 pages from all 4 linked Emerald manuals:
   - EP-VC-240-10, pages 1–2
   - EP-RANG-10, pages 1–2
@@ -151,7 +151,7 @@ The Ranger manual's six-press action is a deactivation for disposal or for stopp
 
 **Brief sections:** the word-list definition of Master and the Emerald pairing findings ([product brief lines 177–179](product-brief.md#L177-L179), [lines 288–291](product-brief.md#L288-L291), [lines 307–311](product-brief.md#L307-L311))
 
-**Mockup:** Pairing steps and source note ([mockup lines 146–147](../mockups/steps-layout.html#L146-L147), [lines 180–201](../mockups/steps-layout.html#L180-L201))
+**Mockup:** Pairing steps and source note in the removed green mockup
 
 **Raised by:** GPT and Grok
 
@@ -197,7 +197,7 @@ The current lists disagree:
 
 **Brief sections:** Source, “must never allow,” content sources, and “Adding or changing content” ([product brief lines 123–140](product-brief.md#L123-L140), [lines 238–243](product-brief.md#L238-L243), [lines 315–318](product-brief.md#L315-L318))
 
-**Mockup:** The source note says the procedure is not checked on a real unit ([mockup line 147](../mockups/steps-layout.html#L147))
+**Mockup:** The source note in the removed green mockup said the procedure was not checked on a real unit
 
 **Raised by:** GPT and Grok
 
@@ -263,7 +263,7 @@ The EP-VC-240-10 manual contradicts itself. Page 1 gives battery-replacement ins
 
 **Brief sections:** “A page is written once” and “Getting around” ([product brief lines 130–132](product-brief.md#L130-L132), [lines 366–375](product-brief.md#L366-L375))
 
-**Mockup:** Back always returns to Setup ([mockup line 222](../mockups/steps-layout.html#L222))
+**Mockup:** Back always returned to Setup in the removed green mockup
 
 **Raised by:** GPT and Grok
 
@@ -297,7 +297,7 @@ The app both opens straight to brands and reopens on the last page. It does not 
 
 **Brief sections:** Instructions page, Getting around, and On the job site ([product brief lines 353–364](product-brief.md#L353-L364), [lines 366–382](product-brief.md#L366-L382))
 
-**Mockup:** Breadcrumb styling and unit switches ([mockup lines 51–54](../mockups/steps-layout.html#L51-L54), [lines 140–145](../mockups/steps-layout.html#L140-L145))
+**Mockup:** Breadcrumb styling and unit switches in the removed green mockup
 
 **Raised by:** GPT and Grok
 
@@ -315,7 +315,7 @@ Back and Home are large, but the proposed tappable breadcrumbs use 15-pixel text
 
 **Brief section:** “Lights and sounds” ([product brief lines 213–226](product-brief.md#L213-L226))
 
-**Mockup:** The red dot always blinks once per second ([mockup line 77](../mockups/steps-layout.html#L77))
+**Mockup:** The red dot always blinked once per second in the removed green mockup
 
 **Raised by:** GPT and Grok
 

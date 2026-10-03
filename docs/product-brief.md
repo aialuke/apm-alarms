@@ -404,7 +404,6 @@ For a remote, and only for a brand whose remote can do this. How to identify the
 - When a step names a button, it uses the name printed on the unit.
 - A clear diagram from a manual may be used when no real photo exists. Photos open with the iPhone's normal image viewing.
 - A practical note that is specific to the brand sits inside the step it belongs to, as a highlighted **Tip**. Which alarm pairing starts with is not a per-brand tip. It is on the Pairing page. The exact look of a Tip is in [Left for later](#left-for-later).
-- An early layout try is in [mockups/steps-layout.html](../mockups/steps-layout.html). It only shows how a step card could look. Where it disagrees with this brief, follow this brief.
 
 ### Flashing lights
 
