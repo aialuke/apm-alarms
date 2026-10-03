@@ -57,6 +57,40 @@ if grep -q "Wireless alarm" "$south"; then
   echo "South shows a wireless unit the map does not allow" >&2
   exit 1
 fi
+wireless_setup="$site/north/wireless/setup/index.html"
+south_setup="$site/south/wired/setup/index.html"
+if ! grep -q "Troubleshoot this alarm" "$setup"; then
+  echo "North wired setup is missing the troubleshooting shortcut" >&2
+  exit 1
+fi
+if ! grep -q "View Wireless alarm" "$setup"; then
+  echo "North wired setup is missing the wireless shortcut" >&2
+  exit 1
+fi
+if ! grep -q "Set up this alarm" "$trouble"; then
+  echo "North wired troubleshooting is missing the setup shortcut" >&2
+  exit 1
+fi
+if grep -q "View Wireless alarm" "$trouble"; then
+  echo "North wired troubleshooting links to a wireless list that has no steps" >&2
+  exit 1
+fi
+if ! grep -q "View Wired alarm" "$wireless_setup"; then
+  echo "North wireless setup is missing the wired shortcut" >&2
+  exit 1
+fi
+if grep -q "Troubleshoot this alarm" "$wireless_setup"; then
+  echo "North wireless setup offers troubleshooting it does not have" >&2
+  exit 1
+fi
+if grep -q "View Wireless alarm" "$south_setup"; then
+  echo "South offers a wireless shortcut the brand does not have" >&2
+  exit 1
+fi
+if grep -q "Troubleshoot this alarm" "$south_setup"; then
+  echo "South wired setup offers troubleshooting it does not have" >&2
+  exit 1
+fi
 if grep -q 'id="back"' "$site/index.html"; then
   echo "brand screen shows Back" >&2
   exit 1

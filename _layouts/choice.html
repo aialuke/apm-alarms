@@ -9,16 +9,16 @@ layout: default
 <h1>{{ page.unit_name }}</h1>
 <div class="pairs">
   {% for list in page.lists %}
-    <a class="tile" href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: list | append: '/' | relative_url }}">
+    <a class="tile" href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: list.id | append: '/' | relative_url }}">
       <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
-        {% if list == "setup" %}
+        {% if list.id == "setup" %}
         <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         {% else %}
         <circle cx="10" cy="10" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
         <path d="M14.2 14.2L19 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         {% endif %}
       </svg>
-      {% if list == "setup" %}Setup{% else %}Troubleshooting{% endif %}
+      {{ list.label }}
     </a>
   {% endfor %}
 </div>

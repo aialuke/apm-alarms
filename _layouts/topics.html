@@ -10,37 +10,12 @@ layout: default
 </nav>
 <h1>{{ page.list_name }}</h1>
 <div class="stack">
-  {% for topic_id in page.topic_ids %}
-    {% for item in site.pages %}
-      {% if item.layout == "instruction" and item.brand == page.brand and item.unit == page.unit and item.list == page.list and item.topic == topic_id %}
-        <a class="choice" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-      {% endif %}
-    {% endfor %}
+  {% for topic in page.topics %}
+    <a class="choice" href="{{ topic.href | relative_url }}">{{ topic.title }}</a>
   {% endfor %}
 </div>
 <div class="shortcuts">
-  {% if page.list == "setup" %}
-    {% assign other_list = "troubleshooting" %}
-    {% assign other_label = "Troubleshoot this alarm" %}
-  {% else %}
-    {% assign other_list = "setup" %}
-    {% assign other_label = "Set up this alarm" %}
-  {% endif %}
-  {% for item in site.pages %}
-    {% if item.layout == "topics" and item.brand == page.brand and item.unit == page.unit and item.list == other_list %}
-      <a class="shortcut" href="{{ item.url | relative_url }}">{{ other_label }}</a>
-    {% endif %}
+  {% for shortcut in page.shortcuts %}
+    <a class="shortcut" href="{{ shortcut.href | relative_url }}">{{ shortcut.label }}</a>
   {% endfor %}
-  {% if page.unit == "wired" or page.unit == "wireless" %}
-    {% if page.unit == "wired" %}
-      {% assign other_unit = "wireless" %}
-    {% else %}
-      {% assign other_unit = "wired" %}
-    {% endif %}
-    {% for item in site.pages %}
-      {% if item.layout == "topics" and item.brand == page.brand and item.unit == other_unit and item.list == page.list %}
-        <a class="shortcut" href="{{ item.url | relative_url }}">View {{ item.unit_name }}</a>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
 </div>

@@ -1,5 +1,24 @@
 # A topic is a button only when its id is listed for that unit and list.
 # A missing id is a dash. The lists below are the button order.
+# A unit shortcut exists only as a row here. Remote and RF module have none.
+lists:
+  setup:
+    label: Setup
+    other: troubleshooting
+    switch_label: Troubleshoot this alarm
+  troubleshooting:
+    label: Troubleshooting
+    other: setup
+    switch_label: Set up this alarm
+
+switches:
+  - from: wired
+    to: wireless
+    label: View Wireless alarm
+  - from: wireless
+    to: wired
+    label: View Wired alarm
+
 units:
   wired:
     label: Wired alarm
