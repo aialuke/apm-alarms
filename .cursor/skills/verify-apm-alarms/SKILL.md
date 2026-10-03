@@ -7,7 +7,7 @@ description: "Verify apm-alarms checkout identity and (once an app exists) drive
 
 Project-local verification skill for **apm-alarms**. Written for agents reading this cold mid-task.
 
-**Current surface (2026-10-03):** the phone site is the Jekyll pages styled by `assets/site.css` (dark only, glass-trial look). The live doc is `docs/product-brief.md`. The repo also holds `README.md` (`# apm-alarms`), `AGENTS.md`, and the pstack skills, agents and model rule under `.cursor/`. This skill still proves checkout identity only. When user paths are added to the feature map, re-run `/create-verification-skill` (or extend this skill + feature map) and replace the bootstrap feature with those paths.
+**Current surface (2026-10-03):** the phone site is the Jekyll pages styled by `assets/site.css` (dark only). The live doc is `docs/product-brief.md`. The repo also holds `README.md` (`# apm-alarms`), `AGENTS.md`, and the pstack skills, agents and model rule under `.cursor/`. This skill still proves checkout identity only. When user paths are added to the feature map, re-run `/create-verification-skill` (or extend this skill + feature map) and replace the bootstrap feature with those paths.
 
 ## Launch
 
