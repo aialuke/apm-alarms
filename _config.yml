@@ -18,3 +18,4 @@ exclude:
   - mockups
   - .cursor
   - .github
+  - scratch

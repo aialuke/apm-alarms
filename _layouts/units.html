@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<p class="brand-name">{{ page.brand_name }}</p>
+<nav class="route" aria-label="What you picked">
+  <span>{{ page.brand_name }}</span>
+</nav>
 <h1>Unit</h1>
 <div class="stack">
   {% for item in site.pages %}

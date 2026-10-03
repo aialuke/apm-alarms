@@ -6,6 +6,6 @@ permalink: /manifest.webmanifest
   "short_name": "APM Alarms",
   "display": "standalone",
   "start_url": "{{ '/' | relative_url }}",
-  "background_color": "#f6f7f8",
-  "theme_color": "#0f6b5c"
+  "background_color": "#120e0c",
+  "theme_color": "#120e0c"
 }

@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<p class="brand-name">{{ page.brand_name }} · {{ page.unit_name }}</p>
+<nav class="route" aria-label="What you picked">
+  <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span>{{ page.list_name }}</span>
+</nav>
 <h1>{{ page.list_name }}</h1>
 <div class="stack">
   {% for topic_id in page.topic_ids %}
