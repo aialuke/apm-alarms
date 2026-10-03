@@ -14,6 +14,8 @@ exclude:
   - script
   - vendor
   - README.md
+  - PRODUCT.md
   - docs
   - .cursor
   - .github
+  - .impeccable
