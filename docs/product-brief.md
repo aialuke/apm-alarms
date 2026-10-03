@@ -59,7 +59,7 @@ After the unit, the technician picks Setup or Troubleshooting.
 
 ### Brand screen
 
-The home screen. The brand names sit in a grid, three across, in alphabetical order. Large squares, because a long list is awkward in one hand. If the brands do not fit on one screen, the rest are reached by scrolling. There are no logos.
+The home screen. The brand names sit in a grid, three across, in alphabetical order. Large rounded buttons, because a long list is awkward in one hand. If the brands do not fit on one screen, the rest are reached by scrolling. There are no logos.
 
 The technician picks the brand by looking at the alarm.
 
@@ -75,7 +75,7 @@ Full-width rows, not a side-by-side pair. An RF module has no Troubleshooting. T
 
 ### Topic screen
 
-Large buttons, one per topic, in the list order under the [topic map](#topic-map). The table does not set that order. Only topics that apply to this unit are shown.
+Tall rows, one per topic, in the list order under the [topic map](#topic-map). The table does not set that order. Only topics that apply to this unit are shown. A grey line separates the rows. There is no box around the list.
 
 This is the only screen with shortcuts. Show at most these two, and only when they apply. Each one opens the other topic list. Neither one opens an instruction page.
 
@@ -515,7 +515,7 @@ None of these block version 1. Do not invent alarm facts to fill them.
 - **Emerald wired pairing confirmation.** After pairing a wired Emerald alarm that uses an RF module, the confirmation is not known. Do not write it, and do not write that the alarm chirps.
 - **Red flash interval.** The real interval for the flashing-red meaning is not confirmed. Do not invent one.
 - **Shortcut wording.** Version 1 uses the labels under [Topic screen](#topic-screen). The final wording may change later.
-- **Tip appearance.** The exact look of a highlighted Tip is settled during design.
+- **Tip appearance.** A Tip is a rounded inset note in the reading flow.
 - **Photo viewing.** A custom full-screen view and zoom is a possible later improvement. Version 1 uses the iPhone's own image viewing.
 - **Videos.** Not in version 1. They may be considered later.
 - **Theme switch.** No in-app theme switch. The app is dark only. It does not follow the iPhone setting.

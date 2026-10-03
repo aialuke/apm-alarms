@@ -75,9 +75,7 @@ Each word in the brief's word list means one thing. Do not use the names in its 
 
 The app is dark only. It does not follow the phone's light or dark setting. There is no theme switch. The brand screen has no logos.
 
-Brand names stay large buttons, three across. Back and Home stay on every screen after Brands. The font, colours, and styling in `assets/site.css` are a stand-in, not a locked look.
-
-The exact look of a highlighted Tip is not settled.
+The look is a dark iPhone screen. The type is the iPhone system font. The ground is near-black. Brand names are large rounded buttons, three across, big enough to hit with one hand. Each button has a dark face, a white name, and a tight blue edge. The top of each screen is a navigation bar. After Brands, Back and Home sit in a bar at the bottom, Back on the left and Home on the right, with the same tight blue edge. Unit, Setup or Troubleshooting, and topic choices are tall rows on the black page, with only a grey line between them. A blue icon marks each unit, Setup, Troubleshooting, and each shortcut. Topic rows have no icon. An instruction page reads like notes. A Tip is a rounded inset note with the same tight blue edge as a brand button.
 
 ## Evidence on Hand
 

@@ -1,0 +1,31 @@
+<svg class="row-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  {% case include.kind %}
+  {% when "wired" %}
+    <path d="M8 9.5h8v6H8z"/>
+    <path d="M12 6.5v3"/>
+    <path d="M6.5 18.5h11"/>
+  {% when "wireless" %}
+    <path d="M7 10h7v6H7z"/>
+    <path d="M10.5 7.5v2.5"/>
+    <path d="M16.5 10.5a2.5 2.5 0 0 1 0 5"/>
+    <path d="M18.2 8.8a5 5 0 0 1 0 8.4"/>
+  {% when "remote" %}
+    <rect x="8" y="4" width="8" height="16" rx="2"/>
+    <circle cx="12" cy="9" r="1"/>
+    <circle cx="12" cy="13.5" r="1"/>
+  {% when "rf" %}
+    <rect x="7" y="8" width="10" height="8" rx="1.5"/>
+    <path d="M9.5 8V5.5M12 8V5.5M14.5 8V5.5"/>
+  {% when "setup" %}
+    <circle cx="12" cy="12" r="7"/>
+    <path d="M12 8.5v7M8.5 12h7"/>
+  {% when "troubleshooting" %}
+    <circle cx="11" cy="11" r="5.5"/>
+    <path d="M15.2 15.2 19 19"/>
+  {% when "switch" %}
+    <path d="M7 9h10"/>
+    <path d="M14 6.5 17 9l-3 2.5"/>
+    <path d="M17 15H7"/>
+    <path d="M10 12.5 7 15l3 2.5"/>
+  {% endcase %}
+</svg>

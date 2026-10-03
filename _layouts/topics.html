@@ -1,23 +1,32 @@
 ---
 layout: default
 ---
-<nav class="route" aria-label="What you picked">
-  <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
-  <span class="sep" aria-hidden="true">›</span>
-  <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
-  <span class="sep" aria-hidden="true">›</span>
-  <span>{{ page.list_name }}</span>
-</nav>
-<h1>{{ page.list_name }}</h1>
+<header class="nav">
+  <nav class="route" aria-label="What you picked">
+    <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
+    <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
+    <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
+    <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
+    <span>{{ page.list_name }}</span>
+  </nav>
+  <h1>{{ page.list_name }}</h1>
+</header>
 <div class="choices">
   {% for topic in page.topics %}
-    <a href="{{ topic.href | relative_url }}">{{ topic.title }}</a>
+    <a href="{{ topic.href | relative_url }}">
+      <span class="row-label">{{ topic.title }}</span>
+      {% include chevron.html %}
+    </a>
   {% endfor %}
 </div>
 {% if page.shortcuts.size > 0 %}
 <div class="shortcuts">
   {% for shortcut in page.shortcuts %}
-    <a href="{{ shortcut.href | relative_url }}">{{ shortcut.label }}</a>
+    <a href="{{ shortcut.href | relative_url }}">
+      {% include row-icon.html kind="switch" %}
+      <span class="row-label">{{ shortcut.label }}</span>
+      {% include chevron.html %}
+    </a>
   {% endfor %}
 </div>
 {% endif %}

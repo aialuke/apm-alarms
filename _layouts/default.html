@@ -4,15 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#141a22">
+  <meta name="theme-color" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="APM Alarms">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 </head>
 <body class="{% if page.hide_bar %}is-home{% endif %}" data-home="{{ '/' | relative_url }}">
-  {{ content }}
+  <div class="frame">
+    {{ content }}
+  </div>
   {% unless page.hide_bar %}
     {% include bar.html %}
   {% endunless %}
