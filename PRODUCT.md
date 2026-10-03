@@ -75,7 +75,7 @@ Each word in the brief's word list means one thing. Do not use the names in its 
 
 The app is dark only. It does not follow the phone's light or dark setting. There is no theme switch. The brand screen has no logos.
 
-The live look stays as it is: Atkinson Hyperlegible, paper `#141a22`, ink `#f3f6fa`, a three-across brand grid, full-width choice rows, a one-line path on every screen after Brands, and a Back and Home strip fixed to the bottom. Do not bring back the timber hallway, the frosted pills, the orange capsules, or a light appearance.
+Brand names stay large buttons, three across. Back and Home stay on every screen after Brands. The font, colours, and styling in `assets/site.css` are a stand-in, not a locked look.
 
 The exact look of a highlighted Tip is not settled.
 
