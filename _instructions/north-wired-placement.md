@@ -6,4 +6,4 @@ lists: [setup]
 title: Placement
 ---
 
-Sample placement step. This is not a real alarm instruction.
+{% include setup-placement.html %}

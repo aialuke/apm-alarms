@@ -61,19 +61,19 @@ After the unit, the technician picks Setup or Troubleshooting.
 
 ### Brand screen
 
-The home screen. Square buttons in a grid, each showing the brand's logo, in alphabetical order. Large squares, because a long list is awkward in one hand. If the brands do not fit on one screen, the rest are reached by scrolling.
+The home screen. The brand names sit in a grid, three across, in alphabetical order. Large squares, because a long list is awkward in one hand. If the brands do not fit on one screen, the rest are reached by scrolling. There are no logos.
 
 The technician picks the brand by looking at the alarm.
 
 ### Unit screen
 
-Large buttons with a small picture. The brand stays visible at the top. The buttons are Wired alarm, Wireless alarm, and Remote or RF module where that brand has them.
+Full-width rows, one name on each row. No small picture. The brand stays visible at the top. The rows are Wired alarm, Wireless alarm, and Remote or RF module where that brand has them.
 
 There is no "both" choice. The technician picks the unit in hand right now.
 
 ### Setup or Troubleshooting screen
 
-Two large buttons. An RF module has no Troubleshooting. This screen shows Setup only. The path is Brand, then RF module, then Setup, then Fitting.
+Full-width rows, not a side-by-side pair. An RF module has no Troubleshooting. This screen shows Setup only. The path is Brand, then RF module, then Setup, then Fitting.
 
 ### Topic screen
 
@@ -399,7 +399,7 @@ For a remote, and only for a brand whose remote can do this. How to identify the
 ### Steps, photos, and tips
 
 - All steps for a topic sit on one scrolling page.
-- Each step is a card: a large step number and the instruction. Add the light or sound to expect, a tip, and a photo or diagram only when that step has one.
+- Each step is a large step number with the words. Not a card. Add the light or sound to expect, a tip, and a photo or diagram only when that step has one.
 - A step does not need all of those.
 - When a step names a button, it uses the name printed on the unit.
 - A clear diagram from a manual may be used when no real photo exists. Photos open with the iPhone's normal image viewing.
@@ -435,7 +435,7 @@ That wait is separate from the Cavius wait after a test. The Cavius wait does no
 ## How the phone behaves
 
 - Use the iPhone's normal screen locking. Do not keep the screen awake.
-- Follow the iPhone's light or dark setting. When the phone is in dark mode, use a strong dark design.
+- The app is dark only. It does not follow the iPhone’s light or dark setting.
 - Use the iPhone's normal image viewing.
 
 ## Working without a connection
@@ -530,7 +530,7 @@ None of these block version 1. Do not invent alarm facts to fill them.
 - **Tip appearance.** The exact look of a highlighted Tip is settled during design.
 - **Photo viewing.** A custom full-screen view and zoom is a possible later improvement. Version 1 uses the iPhone's own image viewing.
 - **Videos.** Not in version 1. They may be considered later.
-- **Theme switch.** No in-app theme switch. The app follows the iPhone setting.
+- **Theme switch.** No in-app theme switch. The app is dark only. It does not follow the iPhone setting.
 - **Faulty RF modules.** Diagnosing, reporting, or replacing a faulty RF module is out of scope for now.
 - **Cross-brand pairing.** Detector Inspector and Matelec were mentioned only as a possible example, not as a confirmed combination. The rule is in [Pairing](#pairing).
 - **More brands.** The owner may add brands beyond the twelve.

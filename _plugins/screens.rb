@@ -48,7 +48,8 @@ module APM
             "title" => doc.data["title"] || topics.dig(topic_id, "title") || topic_id
           }
           dir = File.join(brand["id"], unit_id, list, topic_id)
-          html = converter.convert(doc.content)
+          html = converter.convert(render_instruction(site, doc))
+          html = number_steps(html) unless topic_id == "placement"
           site.pages << Screen.new(site, dir, "instruction", data, html)
           published << data
         end
@@ -134,6 +135,25 @@ module APM
 
     def place_path(*parts)
       "/" + parts.join("/") + "/"
+    end
+
+    def render_instruction(site, doc)
+      info = { registers: { site: site, page: doc } }
+      site.liquid_renderer.file(doc.path).parse(doc.content.to_s).render!(site.site_payload, info)
+    end
+
+    def number_steps(html)
+      count = 0
+      html.gsub(%r{<p\b([^>]*)>(.*?)</p>}m) do
+        attrs = Regexp.last_match(1).to_s
+        body = Regexp.last_match(2)
+        if attrs.include?("note")
+          "<p#{attrs}>#{body}</p>"
+        else
+          count += 1
+          "<p#{attrs}><span class=\"step-num\">#{count}</span>#{body}</p>"
+        end
+      end
     end
 
     def lists_for(doc, unit, topic_id, list_ids)

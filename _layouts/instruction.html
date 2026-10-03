@@ -1,18 +1,16 @@
 ---
 layout: default
 ---
-<article class="sheet">
-  <nav class="route" aria-label="What you picked">
-    <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
-    <span class="sep" aria-hidden="true">›</span>
-    <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
-    <span class="sep" aria-hidden="true">›</span>
-    <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/' | relative_url }}">{{ page.list_name }}</a>
-    <span class="sep" aria-hidden="true">›</span>
-    <span>{{ page.title }}</span>
-  </nav>
-  <h1>{{ page.title }}</h1>
-  <main class="instruction">
-    {{ content }}
-  </main>
-</article>
+<nav class="route" aria-label="What you picked">
+  <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/' | relative_url }}">{{ page.list_name }}</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span>{{ page.title }}</span>
+</nav>
+<h1>{{ page.title }}</h1>
+<main class="instruction{% if page.topic == 'placement' %} list{% else %} sequence{% endif %}">
+  {{ content }}
+</main>

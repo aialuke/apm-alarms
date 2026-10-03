@@ -5,27 +5,10 @@ layout: default
   <span>{{ page.brand_name }}</span>
 </nav>
 <h1>Unit</h1>
-<div class="pairs">
+<div class="choices">
   {% for item in site.pages %}
     {% if item.layout == "choice" and item.brand == page.brand %}
-      <a class="tile unit" href="{{ item.url | relative_url }}">
-        <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
-          {% case item.unit %}
-          {% when "wired" %}
-          <circle cx="12" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M12 14.5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          {% when "wireless" %}
-          <circle cx="9" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          <path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          {% when "rf" %}
-          <circle cx="8" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          <rect x="14" y="8" width="6" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          {% when "remote" %}
-          <rect x="3" y="8" width="18" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          {% endcase %}
-        </svg>
-        {{ item.unit_name }}
-      </a>
+      <a href="{{ item.url | relative_url }}">{{ item.unit_name }}</a>
     {% endif %}
   {% endfor %}
 </div>

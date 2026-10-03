@@ -80,7 +80,7 @@ The final shortcut wording is not decided. Examples such as **Troubleshoot this 
 ## Phone behaviour and presentation
 
 - Use normal iPhone screen locking. Do not keep the screen awake.
-- Follow the iPhone's light or dark system setting. Prefer a strong dark-mode design, but do not add an in-app theme switch now.
+- The app is dark only. It does not follow the iPhone’s light or dark setting, and it does not add an in-app theme switch.
 - Use the phone's normal image viewing initially. Custom full-screen and zoom controls are a possible later improvement.
 - A step may be text-only when an image adds no value.
 - A clear diagram from a manual may be used when no real photo is available.

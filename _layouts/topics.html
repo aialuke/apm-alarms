@@ -9,13 +9,15 @@ layout: default
   <span>{{ page.list_name }}</span>
 </nav>
 <h1>{{ page.list_name }}</h1>
-<div class="stack">
+<div class="choices">
   {% for topic in page.topics %}
-    <a class="choice" href="{{ topic.href | relative_url }}">{{ topic.title }}</a>
+    <a href="{{ topic.href | relative_url }}">{{ topic.title }}</a>
   {% endfor %}
 </div>
+{% if page.shortcuts.size > 0 %}
 <div class="shortcuts">
   {% for shortcut in page.shortcuts %}
-    <a class="shortcut" href="{{ shortcut.href | relative_url }}">{{ shortcut.label }}</a>
+    <a href="{{ shortcut.href | relative_url }}">{{ shortcut.label }}</a>
   {% endfor %}
 </div>
+{% endif %}

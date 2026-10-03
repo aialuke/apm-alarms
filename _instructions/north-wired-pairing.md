@@ -8,7 +8,7 @@ title: Pairing
 
 Sample pairing step. This is not a real alarm instruction.
 
-The same words open from Setup and from Troubleshooting.
+<p class="note">The same words open from Setup and from Troubleshooting.</p>
 
 Scroll line 1. Sample pairing step stays on this page.
 
