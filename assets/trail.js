@@ -166,6 +166,19 @@
     write(markHidden(read(), Date.now(), here(), scrollY || 0));
   });
 
+  function fitRoute() {
+    var routes = document.querySelectorAll(".route");
+    for (var i = 0; i < routes.length; i++) {
+      var nav = routes[i];
+      var overflow = nav.scrollWidth > nav.clientWidth + 1;
+      nav.classList.toggle("is-overflow", overflow);
+      if (overflow) nav.scrollLeft = nav.scrollWidth;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", fitRoute);
+  window.addEventListener("resize", fitRoute);
+
   document.addEventListener("DOMContentLoaded", function () {
     var back = document.getElementById("back");
     var homeButton = document.getElementById("home");

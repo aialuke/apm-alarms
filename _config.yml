@@ -15,5 +15,6 @@ exclude:
   - vendor
   - README.md
   - docs
+  - mockups
   - .cursor
   - .github
