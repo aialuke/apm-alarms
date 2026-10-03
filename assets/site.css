@@ -3,7 +3,7 @@
   --muted: #636366;
   --accent: #eb5e28;
   --ink: #1d1d1f;
-  --bar-ink: #eb5e28;
+  --bar-ink: #1d1d1f;
   --fill: linear-gradient(180deg, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0.62) 100%);
   --fill-border: 1px solid rgba(255, 255, 255, 0.92);
   --fill-shadow: inset 0 1px 0 #fff, inset 0 14px 18px rgba(255, 255, 255, 0.45), 0 10px 24px rgba(0, 0, 0, 0.08);
@@ -11,8 +11,8 @@
   --bar-bg: rgba(255, 255, 255, 0.72);
   --bar-blur: saturate(180%) blur(20px);
   --bar-border: rgba(0, 0, 0, 0.08);
-  --bar-button-bg: #ffffff;
-  --photo: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.26)), url("timber.png") center / cover no-repeat;
+  --bar-button-bg: #eb5e28;
+  --photo: linear-gradient(rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.14) 38%, rgba(0, 0, 0, 0.35) 100%), url("timber.png") center / cover no-repeat;
   --page: #120e0c;
 }
 
@@ -22,14 +22,14 @@
     --muted: #c7c7cc;
     --accent: #ff8c42;
     --ink: #f5f5f7;
-    --bar-ink: #f5f5f7;
-    --fill: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(20, 20, 22, 0.42) 100%);
+    --bar-ink: #1d1d1f;
+    --fill: linear-gradient(180deg, rgba(36, 30, 26, 0.78) 0%, rgba(16, 14, 12, 0.88) 100%);
     --fill-border: 1px solid rgba(255, 255, 255, 0.28);
     --fill-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 -10px 18px rgba(0, 0, 0, 0.22), 0 12px 28px rgba(0, 0, 0, 0.35);
     --bar-bg: rgba(20, 20, 22, 0.55);
     --bar-border: rgba(255, 255, 255, 0.14);
-    --bar-button-bg: #2c2c2e;
-    --photo: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.38)), url("timber.png") center / cover no-repeat;
+    --bar-button-bg: #ff8c42;
+    --photo: linear-gradient(rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.24) 38%, rgba(0, 0, 0, 0.45) 100%), url("timber.png") center / cover no-repeat;
   }
 }
 
@@ -79,7 +79,7 @@ body::before {
 }
 
 body:not(.is-home) {
-  padding-bottom: calc(108px + env(safe-area-inset-bottom));
+  padding-bottom: calc(94px + env(safe-area-inset-bottom));
 }
 
 h1 {
@@ -95,6 +95,13 @@ h1 {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 0 16px 24px;
+}
+
+.pairs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   padding: 0 16px 24px;
 }
@@ -156,28 +163,47 @@ h1 {
 .tile {
   aspect-ratio: 1;
   min-height: 0;
+  flex-direction: column;
+  gap: 8px;
   padding: 10px;
   border-radius: 28px;
   font-size: 18px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -10px 18px rgba(0, 0, 0, 0.22), 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
+.tile .mark {
+  width: 64px;
+  height: 64px;
+  flex: none;
+}
+
+.tile.unit .mark {
+  width: 88px;
+  height: 88px;
+}
+
 .choice,
 .shortcut,
 .bar button {
   border-radius: 999px;
+  gap: 8px;
+  min-height: 50px;
+  padding: 0 16px;
+  font-size: 20px;
+}
+
+.choice .mark,
+.bar button .mark {
+  width: 22px;
+  height: 22px;
+  flex: none;
 }
 
 .choice {
-  min-height: 88px;
-  font-size: 22px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -10px 18px rgba(0, 0, 0, 0.22), 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .shortcut {
-  min-height: 72px;
-  font-size: 20px;
-  color: var(--accent);
   border: 2px solid var(--accent);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -10px 18px rgba(0, 0, 0, 0.22), 0 12px 28px rgba(0, 0, 0, 0.28);
 }
@@ -218,7 +244,7 @@ h1 {
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2;
-  color: rgba(255, 255, 255, 0.78);
+  color: #fff;
   text-decoration: none;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
   white-space: nowrap;
@@ -319,7 +345,7 @@ h1 {
 }
 
 .bar button {
-  min-height: 64px;
+  min-height: 50px;
   border: 2px solid var(--accent);
   background: var(--bar-button-bg);
   color: var(--bar-ink);
@@ -337,10 +363,24 @@ h1 {
 }
 
 @media (prefers-reduced-transparency: reduce) {
+  :root {
+    --fill: #f4f1ee;
+    --fill-blur: none;
+    --bar-blur: none;
+  }
+
   .sheet {
     background: #1c1614;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @media (prefers-reduced-transparency: reduce) {
+    :root {
+      --fill: #1c1614;
+    }
   }
 }
 
