@@ -52,8 +52,6 @@ The path is:
 4. Topic
 5. The instruction page
 
-Size every tap target for one-handed use on an iPhone SE (3rd generation). Technicians do not wear gloves, so there are no glove-specific requirements. Text must be readable at arm's length. Leave clear space between buttons.
-
 After the unit, the technician picks Setup or Troubleshooting.
 
 - **Setup** is for putting in a new alarm, remote, or RF module. The topics are the jobs, such as Pairing.
@@ -110,7 +108,7 @@ Back and Home sit in a bar fixed to the bottom of every screen except the brand 
 - **Back**, on the left, returns to the previous page and the scroll position the technician left.
 - **Home**, on the right, returns to the brand screen.
 
-Both are large enough to hit without looking, and they always sit in the same place.
+Both always sit in the same place.
 
 The app needs its own Back button. Saved to the home screen, the iPhone hides Safari's back button, and swiping back is not reliable.
 
@@ -437,16 +435,6 @@ That wait is separate from the Cavius wait after a test. The Cavius wait does no
 - Use the iPhone's normal screen locking. Do not keep the screen awake.
 - The app is dark only. It does not follow the iPhone’s light or dark setting.
 - Use the iPhone's normal image viewing.
-
-## Working without a connection
-
-On the first opening with Wi-Fi or mobile data, show the approved content straight away and download every approved page and image in the background. Do not wait for the technician to open each page. Do not put a download or a setup screen in front of the first use.
-
-If that first download is interrupted, resume it automatically the next time the app is online. If a page has not been saved yet and there is no connection, say that a connection is needed for that page.
-
-Once a complete copy is on the phone, keep using it while each later version downloads in the background. Switch to the new version only after every required page and image has downloaded. If an update is interrupted, incomplete, or missing a required file, keep using the previous complete version.
-
-Do not show a "Ready offline" status.
 
 ## How content is added
 
