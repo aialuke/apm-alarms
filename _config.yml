@@ -1,0 +1,20 @@
+title: APM Alarms
+url: https://aialuke.github.io
+baseurl: /apm-alarms
+markdown: kramdown
+permalink: pretty
+
+collections:
+  instructions:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - script
+  - vendor
+  - README.md
+  - docs
+  - mockups
+  - .cursor
+  - .github

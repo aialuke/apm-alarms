@@ -1,0 +1,49 @@
+# A topic is a button only when its id is listed for that unit and list.
+# A missing id is a dash. The lists below are the button order.
+units:
+  wired:
+    label: Wired alarm
+    setup: [placement, opening, pairing, testing]
+    troubleshooting: [signal, power, quiet, false-alarms, placement, pairing]
+  wireless:
+    label: Wireless alarm
+    setup: [placement, mounting, activation, pairing, testing]
+    troubleshooting: [signal, power, quiet, false-alarms, placement, pairing]
+  rf:
+    label: RF module
+    setup: [fitting]
+    troubleshooting: []
+  remote:
+    label: Remote
+    setup: [activation, pairing, use]
+    troubleshooting: [signal, remote-dead, pairing, locate]
+
+topics:
+  placement:
+    title: Placement
+  opening:
+    title: Opening
+  pairing:
+    title: Pairing
+  testing:
+    title: Testing
+  mounting:
+    title: Mounting
+  activation:
+    title: Activation
+  fitting:
+    title: Fitting
+  use:
+    title: Use
+  signal:
+    title: What's that light or sound?
+  power:
+    title: Won't power on.
+  quiet:
+    title: Not going off when other alarms go off.
+  false-alarms:
+    title: Customer reports false alarms.
+  remote-dead:
+    title: Remote won't work.
+  locate:
+    title: Locate

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<h1>Brands</h1>
+<div class="grid">
+  {% for brand in site.data.brands %}
+    {% assign has_unit = false %}
+    {% for item in site.pages %}
+      {% if item.layout == "choice" and item.brand == brand.id %}
+        {% assign has_unit = true %}
+      {% endif %}
+    {% endfor %}
+    {% if has_unit %}
+      <a class="tile" href="{{ '/' | append: brand.id | append: '/' | relative_url }}">{{ brand.name }}</a>
+    {% endif %}
+  {% endfor %}
+</div>

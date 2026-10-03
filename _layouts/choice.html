@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<p class="brand-name">{{ page.brand_name }}</p>
+<h1>{{ page.unit_name }}</h1>
+<div class="stack">
+  {% for list in page.lists %}
+    <a class="choice" href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: list | append: '/' | relative_url }}">
+      {% if list == "setup" %}Setup{% else %}Troubleshooting{% endif %}
+    </a>
+  {% endfor %}
+</div>

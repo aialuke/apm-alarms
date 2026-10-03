@@ -1,0 +1,6 @@
+- id: north
+  name: North
+  units: [wired, wireless]
+- id: south
+  name: South
+  units: [wired]

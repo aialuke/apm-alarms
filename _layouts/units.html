@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<p class="brand-name">{{ page.brand_name }}</p>
+<h1>Unit</h1>
+<div class="stack">
+  {% for item in site.pages %}
+    {% if item.layout == "choice" and item.brand == page.brand %}
+      <a class="choice" href="{{ item.url | relative_url }}">{{ item.unit_name }}</a>
+    {% endif %}
+  {% endfor %}
+</div>

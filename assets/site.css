@@ -1,0 +1,148 @@
+:root {
+  --bg: #f6f7f8;
+  --card: #ffffff;
+  --text: #15191d;
+  --muted: #5b6670;
+  --brand: #0f6b5c;
+  --brand-ink: #ffffff;
+  --line: #dde2e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101418;
+    --card: #1a2026;
+    --text: #f2f5f7;
+    --muted: #a3afb9;
+    --brand: #3fbf9f;
+    --brand-ink: #08201a;
+    --line: #2c353d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font: 19px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100dvh;
+}
+
+body.has-bar,
+body:not(.is-home) {
+  padding-bottom: calc(108px + env(safe-area-inset-bottom));
+}
+
+h1 {
+  font-size: 32px;
+  margin: 8px 16px 16px;
+}
+
+.brand-name {
+  margin: 16px 16px 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 16px 24px;
+}
+
+.tile,
+.choice,
+.shortcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tile {
+  aspect-ratio: 1;
+  min-height: 120px;
+}
+
+.stack,
+.shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px 24px;
+}
+
+.shortcut {
+  min-height: 64px;
+  font-size: 18px;
+  color: var(--brand);
+  border-color: var(--brand);
+}
+
+.route {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 16px 0;
+}
+
+.route a,
+.route span {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.instruction {
+  padding: 0 16px 24px;
+  font-size: 20px;
+}
+
+.instruction p {
+  margin: 0 0 16px;
+}
+
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: var(--card);
+  border-top: 1px solid var(--line);
+}
+
+.bar button {
+  min-height: 64px;
+  border-radius: 16px;
+  border: 2px solid var(--brand);
+  background: var(--card);
+  color: var(--brand);
+  font: inherit;
+  font-size: 20px;
+  font-weight: 800;
+}
