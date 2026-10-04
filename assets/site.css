@@ -456,6 +456,10 @@ h1 {
   line-height: inherit;
 }
 
+.step-body {
+  min-width: 0;
+}
+
 .bar {
   position: fixed;
   left: 50%;

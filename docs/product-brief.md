@@ -152,6 +152,8 @@ Each unit belongs to one brand. The four units are:
 
 A dash means that topic is not a button for that unit. The map decides what is allowed. A remote has no mounting topic. Mounting one is too simple to include.
 
+The title in this map is the button and the page heading. The name of the file that holds the words is not a title.
+
 Placement has two pages, with different words. [Setup Placement](#setup-placement) is where a new alarm can go. [Troubleshooting Placement](#troubleshooting-placement) is what nearby thing is setting off an alarm that is already up.
 
 | Topic | Wired alarm | Wireless alarm | RF module | Remote |
@@ -262,6 +264,24 @@ Which alarm is put into pairing mode first is the technician's choice. The page 
 Then put the chosen alarm into pairing mode, pair every other alarm to it, and open [Testing](#testing). This page owns those presses and the choice of starting alarm. [Testing](#testing) owns how to run the test and how to confirm every interconnected alarm sounds. Another topic does not repeat those presses or that test.
 
 Emerald wireless pairing uses the confirmed difference for that brand.
+
+**Wireless alarm, written**
+
+The words for one brand live in one file, `_instructions/<brand>-wireless-pairing.md`. Setup and Troubleshooting both open that file. The opening is the same on every brand and is written once. The last step opens that brand's wireless Setup Testing page. Testing still owns the test.
+
+These brands are written: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Red, Siterwell.
+
+Anka does not include the memory-clear hold from the sheet. The first Anka press is the hold until the green light has flashed 3 times.
+
+Emerald uses only the confirmed field method: press TEST 3 times quickly, within 2 seconds, on the alarm you started with, then the same press on every other alarm. The manual's 3 second window, 90 second pairing mode, and 25 second hold are not on the page.
+
+These stay on "These words are not written yet."
+
+- Brooks. The opened sheet is House Code on the radio module, not the battery wireless alarm.
+- Matelec. The opened sheet is a mains alarm. It waits for wired pairing.
+- Wired alarm pairing, Remote pairing, and any pairing that mentions an RF module.
+
+Sources, model names, add-one paths, and factory reset stay in `docs/wireless-pairing-research.md`. They are not on the phone.
 
 Do not build a general compatibility list. A note on this page is added only for a combination the owner confirms later.
 
@@ -415,7 +435,7 @@ For a remote, and only for a brand whose remote can do this. How to identify the
 - A step does not need all of those.
 - When a step names a button, it uses the name printed on the unit.
 - A clear diagram from a manual may be used when no real photo exists. Photos open with the iPhone's normal image viewing.
-- A practical note that is specific to the brand sits inside the step it belongs to, as a highlighted **Tip**. Which alarm pairing starts with is not a per-brand tip. It is on the Pairing page. The exact look of a Tip is in [Left for later](#left-for-later).
+- A practical note that is specific to the brand sits inside the step it belongs to, as a highlighted **Tip**. A Tip is a rounded inset note in the reading flow, with the same tight blue edge as a brand button. It is not a step, and it has no number. Which alarm pairing starts with is not a per-brand tip. It is on the Pairing page.
 
 ### Flashing lights
 
@@ -440,6 +460,8 @@ That wait is separate from the Cavius wait after a test. The Cavius wait does no
 
 ## Confirmed differences between brands
 
+Wireless pairing presses differ by brand. The written set, and the brands still waiting, are in [Pairing](#pairing). This section keeps the differences where the field method and a manual disagree, or where a sound is easy to misread.
+
 **Emerald wireless pairing.** The pairing used in the field starts by pressing TEST three times quickly, within 2 seconds. Emerald wireless instructions include only behaviour the owner has confirmed. They do not name a Ranger model, and they do not carry the earlier Ranger manual discussion.
 
 **Cavius, after a test.** After the technician runs a test, every Cavius alarm chirps for about 2 minutes. That chirp is normal. Wait for it to finish, then wait another 2 minutes for any further chirp. [Testing](#testing) includes this wait. One Cavius alarm chirping on its own is a low battery, and uses the [low-battery steps](#low-battery-steps).
@@ -457,6 +479,8 @@ An AI agent prepares additions and changes. Sign-ins, permissions, and upload sc
 The owner may supply manuals and field information. Look up an official manual only when the owner explicitly asks during the build. When the owner's confirmed field information disagrees with a manual, the owner's version is the one to use.
 
 Version 1 uses text, photos, and diagrams. A change appears only after the owner has approved it. That includes a change prepared by the AI agent.
+
+One topic is one file under `_instructions/`. The file names the brand, the unit, and the topic. It does not name the page. The [topic map](#topic-map) does. Setup and Troubleshooting share a file when the map says they share a page. Leave the list off the file, and both lists open it.
 
 ## Words
 
@@ -529,7 +553,6 @@ None of these block version 1. Do not invent alarm facts to fill them.
 - **Emerald wired pairing confirmation.** After pairing a wired Emerald alarm that uses an RF module, the confirmation is not known. Do not write it, and do not write that the alarm chirps.
 - **Red flash interval.** The real interval for the flashing-red meaning is not confirmed. Do not invent one.
 - **Shortcut wording.** Version 1 uses the labels under [Topic screen](#topic-screen). The final wording may change later.
-- **Tip appearance.** A Tip is a rounded inset note in the reading flow.
 - **Photo viewing.** A custom full-screen view and zoom is a possible later improvement. Version 1 uses the iPhone's own image viewing.
 - **Videos.** Not in version 1. They may be considered later.
 - **Theme switch.** No in-app theme switch. The app is dark only. It does not follow the iPhone setting.

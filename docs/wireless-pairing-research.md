@@ -1,6 +1,6 @@
 # Wireless pairing research
 
-Review document for the technician. One wireless model per brand. Sources are manuals, official pages opened during research, and your confirmed field notes. Nothing here is copied into the app until you approve a brand's steps.
+Source notes for the technician. One wireless model per brand. Sources are manuals, official pages opened during research, and your confirmed field notes. This file is not a page on the phone. The wireless steps for ten brands are in the app. Brooks and Matelec are not.
 
 Shared rules that already stand in the product brief stay as they are. Pairing does not differ by model. You pair the whole set again. You cannot add one alarm to alarms that are already up. Factory reset and clearing all pairings stay out of the app. Your field notes win if a manual disagrees.
 
@@ -8,20 +8,20 @@ Remotes, wired alarms, RF modules, and cross-brand pairing are out of this pass.
 
 ## Status
 
-| Brand | Result | Model checked |
-|---|---|---|
-| Anka | Found in a manual | AJ-765 |
-| Brooks | Found in a manual | EIB650iRF |
-| Cavius | Found in a manual | 2107 CAV10WF |
-| Clipsal | Found in a manual | 755LPSMA4 |
-| Detector Inspector | Owner field notes | Wireless alarm (no model named) |
-| Emerald | Found in a manual, field method stands | EVO10RF |
-| GT | Found in a manual | GT10RF+ |
-| Legrand | Found in a manual | 643091 |
-| Lifesaver | Found in a manual | LIF6000DCW |
-| Matelec | Found in a manual | DET-SMK/RF/AC/10 |
-| Red | Found in a manual | R10RF |
-| Siterwell | Owner field notes | Wireless alarm (no model named) |
+| Brand | Result | Model checked | In the app |
+|---|---|---|---|
+| Anka | Found in a manual | AJ-765 | Yes. The memory-clear hold is left out. The page starts at the 3-flash hold. |
+| Brooks | Found in a manual | EIB650iRF | No. The sheet is House Code on the radio module. |
+| Cavius | Found in a manual | 2107 CAV10WF | Yes |
+| Clipsal | Found in a manual | 755LPSMA4 | Yes |
+| Detector Inspector | Owner field notes | Wireless alarm (no model named) | Yes |
+| Emerald | Found in a manual, field method stands | EVO10RF | Yes. The field method only: TEST 3 times within 2 seconds. |
+| GT | Found in a manual | GT10RF+ | Yes |
+| Legrand | Found in a manual | 643091 | Yes |
+| Lifesaver | Found in a manual | LIF6000DCW | Yes |
+| Matelec | Found in a manual | DET-SMK/RF/AC/10 | No. The sheet is a mains alarm. It waits for wired pairing. |
+| Red | Found in a manual | R10RF | Yes |
+| Siterwell | Owner field notes | Wireless alarm (no model named) | Yes |
 
 ## Anka
 
@@ -269,10 +269,10 @@ Remotes, wired alarms, RF modules, and cross-brand pairing are out of this pass.
 
 **Earlier lookup.** Manufacturer and store pages were opened. No official Australian pairing sheet was found. Keep the field notes.
 
-## Notes for your review
+## Decisions
 
-1. Several manuals say you can add one alarm later. Brooks, Cavius, Clipsal, GT, Legrand, Lifesaver, and Red. Your field rule still stands. Pair the whole set again.
-2. Emerald’s manual window is 3 seconds. Your confirmed method is 2 seconds. Keep your method.
-3. Anka’s sheet clears memory before pairing. Do not put that clear step into the app unless you decide otherwise later.
-4. Matelec’s opened manual is a mains RF model. Confirm it is the right unit shape for your wireless jobs.
-5. Detector Inspector and Siterwell now have your field notes. No model name was given for either. Say if a model name should sit on those pages.
+1. Several manuals say you can add one alarm later. Brooks, Cavius, Clipsal, GT, Legrand, Lifesaver, and Red. The pages pair the whole set again. The add-one path is not on the phone.
+2. Emerald’s manual window is 3 seconds. The page uses the confirmed method, within 2 seconds.
+3. Anka’s sheet clears memory before pairing. That clear step is not in the app. The page starts at the 3-flash hold.
+4. Matelec’s opened manual is a mains alarm. It is not on the wireless page. It waits for wired pairing.
+5. Detector Inspector and Siterwell use the field notes. No model name is on those pages.

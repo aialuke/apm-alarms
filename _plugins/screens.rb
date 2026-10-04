@@ -38,7 +38,7 @@ module APM
 
         unit = units[unit_id] || {}
         lists_for(doc, unit, topic_id, lists.keys).each do |list|
-          title = doc.data["title"] || topics.dig(topic_id, "title")
+          title = topics.dig(topic_id, "title")
           data = instruction_data(brand, unit_id, unit, list, lists, topic_id, title)
           dir = File.join(brand["id"], unit_id, list, topic_id)
           html = converter.convert(render_instruction(site, doc))
@@ -177,7 +177,8 @@ module APM
 
     def render_instruction(site, doc)
       info = { registers: { site: site, page: doc } }
-      site.liquid_renderer.file(doc.path).parse(doc.content.to_s).render!(site.site_payload, info)
+      payload = site.site_payload.merge("page" => doc.to_liquid)
+      site.liquid_renderer.file(doc.path).parse(doc.content.to_s).render!(payload, info)
     end
 
     def number_steps(html)
@@ -189,7 +190,7 @@ module APM
           "<p#{attrs}>#{body}</p>"
         else
           count += 1
-          "<p#{attrs}><span class=\"step-num\">#{count}</span>#{body}</p>"
+          "<p#{attrs}><span class=\"step-num\">#{count}</span><span class=\"step-body\">#{body}</span></p>"
         end
       end
     end

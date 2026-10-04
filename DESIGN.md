@@ -176,7 +176,7 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 - **Control** (17px, weight 650): Back and Home. The placement clearances use this size at regular weight, so the points sit under the sentence.
 - **Label** (15px, weight 500): The route line. The current step of the route is Paper White and weight 650.
 
-A step number uses the body size in Reading Blue at weight 700. An inline figure, such as 300 mm, uses the body size in Figure Gold at weight 700. The number sits on the same baseline as the first line of the step.
+A step number uses the body size in Reading Blue at weight 700. An inline figure, such as 300 mm or 3 times, uses the body size in Figure Gold at weight 700. The gold figure stays inside the sentence, on the same baseline as the words around it. The blue step number is the only thing in the first column.
 
 ## Layout
 
@@ -224,7 +224,7 @@ A dark bar, 56px tall, inset from the screen edges and the home indicator, with 
 
 ### Instruction
 
-Numbered steps in a two-column rhythm: the number, then the words. A note, including a Tip, is a rounded inset in the reading flow. It has no thick coloured stripe.
+Numbered steps in a two-column rhythm: the blue number, then the words. A gold figure and a link sit inside the words. A note, including a Tip, is a rounded inset in the reading flow. It is not a step, and it has no number. It has no thick coloured stripe.
 
 ### Placement sketch
 
@@ -258,3 +258,4 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Don't** let a blue edge bloom into a wide glow. On a brand button, a note, and the Back / Home bar, it stays tight against the shape.
 - **Don't** use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.
 - **Don't** give 300 mm and 400 mm different colors.
+- **Don't** put a gold figure or a link in the step-number column. They belong in the words.

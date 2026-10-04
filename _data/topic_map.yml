@@ -1,6 +1,7 @@
 # A topic is a button only when its id is listed for that unit and list.
 # A missing id is a dash. The lists below are the button order.
 # A unit shortcut exists only as a row here. Remote and RF module have none.
+# The title under topics is the button and the page heading. A file name is not a title.
 lists:
   setup:
     label: Setup
