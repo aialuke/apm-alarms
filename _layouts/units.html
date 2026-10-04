@@ -9,16 +9,14 @@ layout: default
 </header>
 <main>
 <ul class="choices">
-  {% for item in site.pages %}
-    {% if item.layout == "choice" and item.brand == page.brand %}
-      <li>
-        <a href="{{ item.url | relative_url }}">
-          {% include row-icon.html kind=item.unit %}
-          <span class="row-label">{{ item.unit_name }}</span>
-          {% include chevron.html %}
-        </a>
-      </li>
-    {% endif %}
+  {% for unit in page.units %}
+    <li>
+      <a href="{{ unit.href | relative_url }}">
+        {% include row-icon.html kind=unit.id %}
+        <span class="row-label">{{ unit.label }}</span>
+        {% include chevron.html %}
+      </a>
+    </li>
   {% endfor %}
 </ul>
 </main>

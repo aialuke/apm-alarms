@@ -40,7 +40,21 @@ Version 1 covers these brands:
 
 Version 1 is complete only when all twelve have owner-approved content. The owner may add more brands later. That is in [Left for later](#left-for-later).
 
-The brief does not list which of the twelve brands have a remote or an RF module, except that Emerald wired alarms use an RF module when they must connect to wireless alarms. That fact is under [Fitting](#fitting).
+Every brand has a Wired alarm and a Wireless alarm. These brands also have a Remote:
+
+- Anka
+- Brooks
+- Cavius
+- Emerald
+- GT
+- Matelec
+- Red
+
+Brooks and Emerald also have an RF module. On an Emerald system, a wired alarm that must connect to wireless alarms uses that module. That fact is under [Fitting](#fitting).
+
+Clipsal, Detector Inspector, Legrand, Lifesaver, and Siterwell have the two alarms only.
+
+Locate stays off. No brand has been named whose remote can do it. Show Locate only after one is named.
 
 ## Getting around
 
@@ -125,7 +139,7 @@ Start a 15-minute timer when the app is no longer visible. That includes the pho
 
 ## Units and the topic map
 
-Which units a brand shows, and which topics a unit has, follow the [topic map](#topic-map). A button appears when the map allows that topic and the owner has approved the content. Approval alone does not add a unit or a topic the map does not allow.
+Which units a brand shows, and which topics a unit has, follow the [topic map](#topic-map). A topic button appears when the map allows that topic. When the words are not in yet, the page says the words are not written yet. Approval of the words does not add a unit or a topic the map does not allow.
 
 Each unit belongs to one brand. The four units are:
 

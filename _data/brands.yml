@@ -1,6 +1,36 @@
-- id: north
-  name: North
+- id: anka
+  name: Anka
+  units: [wired, wireless, remote]
+- id: brooks
+  name: Brooks
+  units: [wired, wireless, rf, remote]
+- id: cavius
+  name: Cavius
+  units: [wired, wireless, remote]
+- id: clipsal
+  name: Clipsal
   units: [wired, wireless]
-- id: south
-  name: South
-  units: [wired]
+- id: detector-inspector
+  name: Detector Inspector
+  units: [wired, wireless]
+- id: emerald
+  name: Emerald
+  units: [wired, wireless, rf, remote]
+- id: gt
+  name: GT
+  units: [wired, wireless, remote]
+- id: legrand
+  name: Legrand
+  units: [wired, wireless]
+- id: lifesaver
+  name: Lifesaver
+  units: [wired, wireless]
+- id: matelec
+  name: Matelec
+  units: [wired, wireless, remote]
+- id: red
+  name: Red
+  units: [wired, wireless, remote]
+- id: siterwell
+  name: Siterwell
+  units: [wired, wireless]
