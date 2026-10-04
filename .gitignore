@@ -8,3 +8,6 @@ vendor/
 .impeccable/
 .cursor/skills/impeccable/
 .cursor/agents/impeccable-*.md
+
+# Local research trail. Not a phone page.
+.audit/

@@ -19,7 +19,7 @@ Remotes, wired alarms, RF modules, and cross-brand pairing are out of this pass.
 | GT | Found in a manual | GT10RF+ | Yes |
 | Legrand | Found in a manual | 643091 | Yes |
 | Lifesaver | Found in a manual | LIF6000DCW | Yes |
-| Matelec | Found in a manual | DET-SMK/RF/AC/10 | No. The sheet is a mains alarm. It waits for wired pairing. |
+| Matelec | Found in a manual | DET-SMK/RF/AC/10 | No. The sheet is a mains alarm. The wired page uses it. |
 | Red | Found in a manual | R10RF | Yes |
 | Siterwell | Owner field notes | Wireless alarm (no model named) | Yes |
 
@@ -274,5 +274,5 @@ Remotes, wired alarms, RF modules, and cross-brand pairing are out of this pass.
 1. Several manuals say you can add one alarm later. Brooks, Cavius, Clipsal, GT, Legrand, Lifesaver, and Red. The pages pair the whole set again. The add-one path is not on the phone.
 2. Emerald’s manual window is 3 seconds. The page uses the confirmed method, within 2 seconds.
 3. Anka’s sheet clears memory before pairing. That clear step is not in the app. The page starts at the 3-flash hold.
-4. Matelec’s opened manual is a mains alarm. It is not on the wireless page. It waits for wired pairing.
+4. Matelec’s opened manual is a mains alarm. It is not on the wireless page. The wired page uses it.
 5. Detector Inspector and Siterwell use the field notes. No model name is on those pages.

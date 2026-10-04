@@ -262,9 +262,9 @@ Put that alarm into pairing mode, pair every other alarm to it, and open [Testin
 
 Emerald wireless pairing uses the confirmed difference for that brand.
 
-**Wireless alarm, written**
+The words for one brand and one unit live in one file, `_instructions/<brand>-<unit>-pairing.md`. Setup and Troubleshooting both open that file. There is no shared opening. The last step opens that brand's Setup Testing page for the same unit. Testing still owns the test.
 
-The words for one brand live in one file, `_instructions/<brand>-wireless-pairing.md`. Setup and Troubleshooting both open that file. There is no shared opening. The last step opens that brand's wireless Setup Testing page. Testing still owns the test.
+**Wireless alarm, written**
 
 These brands are written: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Red, Siterwell.
 
@@ -272,13 +272,30 @@ Anka does not include the memory-clear hold from the sheet. The first Anka press
 
 Emerald uses only the confirmed field method: press TEST 3 times quickly, within 2 seconds, on the alarm you started with, then the same press on every other alarm. The manual's 3 second window, 90 second pairing mode, and 25 second hold are not on the page.
 
+**Wired alarm, written**
+
+These brands are written: Cavius, Clipsal, Emerald, Legrand, Matelec, Siterwell.
+
+Legrand wired uses the same Network button counts as the wireless page. The wired page also says the join on each other alarm ends after 9 minutes.
+
+Matelec uses the mains sheet. Press TEST 3 times within 2 seconds. The light stays solid red for 50 seconds, and each join starts that 50 seconds again. Both alarms give 1 short chirp. Hold TEST on the first alarm until the red light turns off. The remote section of that sheet is not on the page.
+
+Emerald wired uses the mains sheet. Hold TEST for 5 seconds to turn the alarm on, then press TEST 3 times within 2 seconds. The red light flashes quickly for 90 seconds. Press TEST once to leave early. Each further alarm starts with those 3 presses on the first alarm again. The clear path is not on the page.
+
+Cavius wired is learned off the base, before mains power, with the Learn Mode switch. Hold the test button on one alarm until it beeps.
+
+Clipsal wired uses a Primary and Secondary. Press Test/Hush 3 times within 2 seconds. The Standby light stays on for 30 seconds, then blinks 3 times when a Secondary joins.
+
+Siterwell wired uses the GS519 sheet. The wireless test button is on the base. Press it 3 times within 2 seconds. The red light stays on for 2 minutes. That sheet is not hosted on an Australian site.
+
 These stay on "These words are not written yet."
 
-- Brooks. The opened sheet is House Code on the radio module, not the battery wireless alarm.
-- Matelec. The opened sheet is a mains alarm. It waits for wired pairing.
-- Wired alarm pairing, Remote pairing, and any pairing that mentions an RF module.
+- Brooks wireless. The opened sheet is House Code on the radio module, not the battery wireless alarm.
+- Matelec wireless. No battery wireless sheet was opened. The mains sheet is on the wired page.
+- Anka, Brooks, Detector Inspector, GT, Lifesaver, and Red wired. No radio learn presses were found for the mains alarm. Brooks, GT, Lifesaver, and Red only show radio through a module or a base.
+- Remote pairing, and any pairing that mentions an RF module.
 
-Sources, model names, add-one paths, and factory reset stay in `docs/wireless-pairing-research.md`. They are not on the phone.
+Sources, model names, add-one paths, and factory reset stay in `docs/wireless-pairing-research.md` and `docs/wired-pairing-research.md`. They are not on the phone.
 
 Do not build a general compatibility list. A note on this page is added only for a combination the owner confirms later.
 

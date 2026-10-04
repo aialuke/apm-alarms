@@ -81,7 +81,7 @@ The look is a dark iPhone screen. The type is the iPhone system font. The ground
 
 `docs/product-brief.md` is the version 1 specification. The owner confirmed it still stands.
 
-Wireless pairing is written for ten brands: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Red, and Siterwell. Brooks and Matelec wireless pairing are not written. Wired alarm pairing, Remote pairing, and RF module pairing are not written. The presses are in the brief. Emerald wireless pairing still uses only the confirmed field method. The Cavius chirp after a test is still a confirmed difference, and it belongs on Testing, which is not written yet.
+Wireless pairing is written for ten brands: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Red, and Siterwell. Brooks and Matelec wireless pairing are not written. Wired pairing is written for Cavius, Clipsal, Emerald, Legrand, Matelec, and Siterwell. Anka, Brooks, Detector Inspector, GT, Lifesaver, and Red wired pairing are not written. Remote pairing and RF module pairing are not written. The presses are in the brief. Emerald wireless pairing still uses only the confirmed field method. Emerald wired pairing uses the mains sheet, including the 5 second turn-on hold and the 90 second pairing mode. The Cavius chirp after a test is still a confirmed difference, and it belongs on Testing, which is not written yet.
 
 Do not fabricate testimonials, customer quotes, manuals the owner did not ask for, distances, light intervals, or other brand differences.
 
