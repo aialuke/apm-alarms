@@ -4,16 +4,22 @@ layout: default
 <header class="nav nav-large">
   <h1>Brands</h1>
 </header>
-<div class="grid">
-  {% for brand in site.data.brands %}
-    {% assign has_unit = false %}
-    {% for item in site.pages %}
-      {% if item.layout == "choice" and item.brand == brand.id %}
-        {% assign has_unit = true %}
-      {% endif %}
-    {% endfor %}
-    {% if has_unit %}
-      <a class="tile" href="{{ '/' | append: brand.id | append: '/' | relative_url }}">{{ brand.name }}</a>
-    {% endif %}
-  {% endfor %}
-</div>
+<main>
+  <nav aria-label="Brands">
+    <ul class="grid">
+      {% for brand in site.data.brands %}
+        {% assign has_unit = false %}
+        {% for item in site.pages %}
+          {% if item.layout == "choice" and item.brand == brand.id %}
+            {% assign has_unit = true %}
+          {% endif %}
+        {% endfor %}
+        {% if has_unit %}
+          <li>
+            <a class="tile" href="{{ '/' | append: brand.id | append: '/' | relative_url }}">{{ brand.name }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</main>
