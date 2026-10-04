@@ -23,6 +23,7 @@ module APM
       switches = map["switches"] || []
       docs = site.collections["instructions"]&.docs || []
       published = publish_instructions(site, brands, units, topics, lists, docs)
+      publish_missing(site, brands, units, topics, lists, published)
       publish_navigation(site, brands, units, lists, switches, published)
     end
 
@@ -37,16 +38,8 @@ module APM
 
         unit = units[unit_id] || {}
         lists_for(doc, unit, topic_id, lists.keys).each do |list|
-          data = {
-            "brand" => brand["id"],
-            "brand_name" => brand["name"],
-            "unit" => unit_id,
-            "unit_name" => unit["label"] || unit_id,
-            "list" => list,
-            "list_name" => list_label(lists, list),
-            "topic" => topic_id,
-            "title" => doc.data["title"] || topics.dig(topic_id, "title") || topic_id
-          }
+          title = doc.data["title"] || topics.dig(topic_id, "title")
+          data = instruction_data(brand, unit_id, unit, list, lists, topic_id, title)
           dir = File.join(brand["id"], unit_id, list, topic_id)
           html = converter.convert(render_instruction(site, doc))
           html = number_steps(html) unless topic_id == "placement"
@@ -57,12 +50,40 @@ module APM
       published
     end
 
+    def publish_missing(site, brands, units, topics, lists, published)
+      note = '<p class="note">These words are not written yet.</p>'
+      brands.each do |brand|
+        Array(brand["units"]).each do |unit_id|
+          unit = units[unit_id] || {}
+          lists.each_key do |list|
+            Array(unit[list]).each do |topic_id|
+              next if topic_id == "locate" && !brand["locate"]
+              next if published.any? { |row| same_topic(row, brand["id"], unit_id, list, topic_id) }
+
+              data = instruction_data(brand, unit_id, unit, list, lists, topic_id, topics.dig(topic_id, "title"))
+              dir = File.join(brand["id"], unit_id, list, topic_id)
+              site.pages << Screen.new(site, dir, "instruction", data, note)
+              published << data
+            end
+          end
+        end
+      end
+    end
+
     def publish_navigation(site, brands, units, lists, switches, published)
       brands.each do |brand|
         site.pages << Screen.new(site, brand["id"], "units", {
           "brand" => brand["id"],
           "brand_name" => brand["name"],
-          "title" => brand["name"]
+          "title" => brand["name"],
+          "units" => Array(brand["units"]).map { |unit_id|
+            unit = units[unit_id] || {}
+            {
+              "id" => unit_id,
+              "label" => unit["label"] || unit_id,
+              "href" => place_path(brand["id"], unit_id)
+            }
+          }
         })
         Array(brand["units"]).each do |unit_id|
           unit = units[unit_id] || {}
@@ -131,6 +152,23 @@ module APM
         }
       end
       found
+    end
+
+    def instruction_data(brand, unit_id, unit, list, lists, topic_id, title)
+      {
+        "brand" => brand["id"],
+        "brand_name" => brand["name"],
+        "unit" => unit_id,
+        "unit_name" => unit["label"] || unit_id,
+        "list" => list,
+        "list_name" => list_label(lists, list),
+        "topic" => topic_id,
+        "title" => title || topic_id
+      }
+    end
+
+    def same_topic(item, brand_id, unit_id, list, topic_id)
+      same_place(item, brand_id, unit_id, list) && item["topic"] == topic_id
     end
 
     def place_path(*parts)

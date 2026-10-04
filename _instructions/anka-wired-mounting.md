@@ -1,5 +1,5 @@
 ---
-brand: north
+brand: anka
 unit: wired
 topic: mounting
 lists: [setup]
