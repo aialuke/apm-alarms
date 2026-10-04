@@ -15,6 +15,8 @@ exclude:
   - vendor
   - README.md
   - PRODUCT.md
+  - DESIGN.md
+  - AGENTS.md
   - docs
   - .cursor
   - .github

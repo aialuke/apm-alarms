@@ -9,12 +9,16 @@ layout: default
   </nav>
   <h1>{{ page.unit_name }}</h1>
 </header>
-<div class="choices">
+<main>
+<ul class="choices">
   {% for list in page.lists %}
-    <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: list.id | append: '/' | relative_url }}">
-      {% include row-icon.html kind=list.id %}
-      <span class="row-label">{{ list.label }}</span>
-      {% include chevron.html %}
-    </a>
+    <li>
+      <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: list.id | append: '/' | relative_url }}">
+        {% include row-icon.html kind=list.id %}
+        <span class="row-label">{{ list.label }}</span>
+        {% include chevron.html %}
+      </a>
+    </li>
   {% endfor %}
-</div>
+</ul>
+</main>

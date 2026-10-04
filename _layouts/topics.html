@@ -11,22 +11,28 @@ layout: default
   </nav>
   <h1>{{ page.list_name }}</h1>
 </header>
-<div class="choices">
+<main>
+<ul class="choices">
   {% for topic in page.topics %}
-    <a href="{{ topic.href | relative_url }}">
-      <span class="row-label">{{ topic.title }}</span>
-      {% include chevron.html %}
-    </a>
+    <li>
+      <a href="{{ topic.href | relative_url }}">
+        <span class="row-label">{{ topic.title }}</span>
+        {% include chevron.html %}
+      </a>
+    </li>
   {% endfor %}
-</div>
+</ul>
 {% if page.shortcuts.size > 0 %}
-<div class="shortcuts">
+<ul class="shortcuts">
   {% for shortcut in page.shortcuts %}
-    <a href="{{ shortcut.href | relative_url }}">
-      {% include row-icon.html kind="switch" %}
-      <span class="row-label">{{ shortcut.label }}</span>
-      {% include chevron.html %}
-    </a>
+    <li>
+      <a href="{{ shortcut.href | relative_url }}">
+        {% include row-icon.html kind="switch" %}
+        <span class="row-label">{{ shortcut.label }}</span>
+        {% include chevron.html %}
+      </a>
+    </li>
   {% endfor %}
-</div>
+</ul>
 {% endif %}
+</main>

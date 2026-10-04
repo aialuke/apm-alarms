@@ -4,10 +4,15 @@ description: A dark iPhone cheat sheet for a smoke alarm technician on a job.
 colors:
   night-black: "#000000"
   card: "#141418"
+  card-deep: "#101014"
   paper-white: "#f5f7fb"
   paper-muted: "rgba(245, 247, 251, 0.74)"
   action-blue: "#0a63ff"
   action-blue-bright: "#2d7dff"
+  rim-ice: "#d7e8ff"
+  rim-bright: "#4d9bff"
+  rim-pale: "#8ec0ff"
+  rim-press: "#7eb6ff"
   reading-blue: "#9cc4ff"
   row-line: "rgba(245, 247, 251, 0.16)"
 typography:
@@ -50,7 +55,7 @@ components:
     rounded: "{rounded.brand}"
     padding: "8px"
   brand-button-active:
-    backgroundColor: "{colors.action-blue-bright}"
+    backgroundColor: "{colors.action-blue}"
     textColor: "{colors.paper-white}"
     rounded: "{rounded.brand}"
     padding: "8px"
@@ -100,13 +105,20 @@ The palette is a near-black field. White is for reading. A bright blue edge is w
 
 ### Primary
 
-- **Action Blue** (`#0a63ff`): The press fill of a brand button. The resting button uses a bright blue rim instead.
+- **Action Blue** (`#0a63ff`): The press fill of a brand button, and the deep stop in the tight blue edge.
+- **Rim Ice** (`#d7e8ff`): The light start of that edge.
+- **Rim Bright** (`#4d9bff`): The strong blue in the edge.
+- **Rim Pale** (`#8ec0ff`): The far stop of the edge, after Action Blue.
+- **Rim Press** (`#7eb6ff`): The pressed edge, between white and Action Blue.
 - **Reading Blue** (`#9cc4ff`): Icons on list rows, shortcut labels, step numbers, measurement callouts, and links inside an instruction.
+
+The tight edge on a brand button, a note, and the Back / Home bar runs Rim Ice, Rim Bright, Action Blue, then Rim Pale. A press fills the face with Action Blue. The pressed edge runs from white through Rim Press into Action Blue.
 
 ### Neutral
 
 - **Night Black** (`#000000`): The ground of every screen, and the theme colour of the home-screen icon.
-- **Card** (`#141418`): The face of a brand button, a note, and the Back / Home bar.
+- **Card** (`#141418`): The top of the face on a brand button, a note, and the Back / Home bar.
+- **Card Deep** (`#101014`): The bottom of that same face. The face falls from Card to Card Deep.
 - **Paper White** (`#f5f7fb`): Titles, row labels, and instruction text.
 - **Muted Paper** (`rgba(245, 247, 251, 0.74)`): The route line and secondary labels.
 - **Row Line** (`rgba(245, 247, 251, 0.16)`): The grey line between list rows.
@@ -148,7 +160,7 @@ Corners are generous on brand buttons (26px), the bottom bar (22px), and a note 
 
 ### Brand button
 
-A near-square button, three across, the brand name centred in white. No logo. The face is dark, with a tight blue edge. A press fills it Action Blue.
+A near-square button, three across, the brand name centred in white. No logo. The face falls from Card to Card Deep, with a tight blue edge. A press fills it Action Blue.
 
 ### Navigation bar
 
