@@ -4,8 +4,6 @@ unit: wireless
 topic: pairing
 ---
 
-{% include pairing-start.html %}
-
 Slide the switch on the back of each alarm to the Learn Mode position.
 
 Press the button on the top of one alarm only. The other alarms stay in Learn Mode.

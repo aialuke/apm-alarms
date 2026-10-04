@@ -4,8 +4,6 @@ unit: wireless
 topic: pairing
 ---
 
-{% include pairing-start.html %}
-
 Press the test button <span class="figure">3</span> times within <span class="figure">2</span> seconds. The red light stays on until pairing is finished.
 
 On each other alarm, press the test button <span class="figure">3</span> times within <span class="figure">2</span> seconds.

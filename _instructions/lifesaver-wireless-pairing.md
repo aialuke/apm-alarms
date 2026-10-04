@@ -4,8 +4,6 @@ unit: wireless
 topic: pairing
 ---
 
-{% include pairing-start.html %}
-
 The button on the cover is printed TEST AND HUSH.
 
 Mount the first alarm, then press that button <span class="figure">2</span> times, quickly.

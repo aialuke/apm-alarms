@@ -4,8 +4,6 @@ unit: wireless
 topic: pairing
 ---
 
-{% include pairing-start.html %}
-
 Before the mount goes on, mark one alarm MASTER and the others SLAVE.
 
 Use a flat-bladed screwdriver to switch the Master and every Slave on.

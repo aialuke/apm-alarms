@@ -4,8 +4,6 @@ unit: wireless
 topic: pairing
 ---
 
-{% include pairing-start.html %}
-
 Attach the brackets so the alarms power on.
 
 On the alarm you start with, hold the Network button and count <span class="figure">6</span> to <span class="figure">8</span> flashes of the blue light, then release. The blue light stays on. This mode ends after <span class="figure">9</span> minutes.

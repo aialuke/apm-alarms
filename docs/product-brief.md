@@ -256,18 +256,15 @@ This page does not mention the RF module.
 
 Every brand the owner has worked on is the same. You cannot add one alarm to alarms that are already up. You pair all of them again. There is no brand where only the extra alarm is paired.
 
-Which alarm is put into pairing mode first is the technician's choice. The page says that, and it says what the owner does:
+The page does not say which alarm goes into pairing mode first. The brand steps name the first alarm, the master, or the alarm you start with.
 
-- On a new setup, the owner starts with a wired alarm if there is one. If there is not, the owner starts with one near the centre of the house.
-- When adding an alarm, or pairing one that is not connected, the owner starts with that alarm. On [Not going off when other alarms go off.](#not-going-off-when-other-alarms-go-off), that alarm is the quiet one, and only when that alarm is on.
-
-Then put the chosen alarm into pairing mode, pair every other alarm to it, and open [Testing](#testing). This page owns those presses and the choice of starting alarm. [Testing](#testing) owns how to run the test and how to confirm every interconnected alarm sounds. Another topic does not repeat those presses or that test.
+Put that alarm into pairing mode, pair every other alarm to it, and open [Testing](#testing). This page owns those presses. [Testing](#testing) owns how to run the test and how to confirm every interconnected alarm sounds. Another topic does not repeat those presses or that test.
 
 Emerald wireless pairing uses the confirmed difference for that brand.
 
 **Wireless alarm, written**
 
-The words for one brand live in one file, `_instructions/<brand>-wireless-pairing.md`. Setup and Troubleshooting both open that file. The opening is the same on every brand and is written once. The last step opens that brand's wireless Setup Testing page. Testing still owns the test.
+The words for one brand live in one file, `_instructions/<brand>-wireless-pairing.md`. Setup and Troubleshooting both open that file. There is no shared opening. The last step opens that brand's wireless Setup Testing page. Testing still owns the test.
 
 These brands are written: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Red, Siterwell.
 
@@ -386,7 +383,7 @@ For a wired or wireless alarm.
 
 1. Listen for the alarms that are not going off.
 2. Make sure the quiet one is powered on. If it is not, open [Won't power on.](#wont-power-on) If that page ends at report faulty, stop. If the alarm turns on, Back returns here.
-3. If the quiet alarm is on, open [Pairing](#pairing). Do not repeat the presses, the choice of starting alarm, or the test. Pairing already says that, for this situation, the owner starts with the quiet one, and that the technician may start with another.
+3. If the quiet alarm is on, open [Pairing](#pairing). Do not repeat the presses or the test.
 
 ### Customer reports false alarms.
 
@@ -435,7 +432,7 @@ For a remote, and only for a brand whose remote can do this. How to identify the
 - A step does not need all of those.
 - When a step names a button, it uses the name printed on the unit.
 - A clear diagram from a manual may be used when no real photo exists. Photos open with the iPhone's normal image viewing.
-- A practical note that is specific to the brand sits inside the step it belongs to, as a highlighted **Tip**. A Tip is a rounded inset note in the reading flow, with the same tight blue edge as a brand button. It is not a step, and it has no number. Which alarm pairing starts with is not a per-brand tip. It is on the Pairing page.
+- A practical note that is specific to the brand sits inside the step it belongs to, as a highlighted **Tip**. A Tip is a rounded inset note in the reading flow, with the same tight blue edge as a brand button. It is not a step, and it has no number.
 
 ### Flashing lights
 

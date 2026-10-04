@@ -4,8 +4,6 @@ unit: wireless
 topic: pairing
 ---
 
-{% include pairing-start.html %}
-
 On the first alarm, press the Test/Silence button <span class="figure">4</span> times, with about <span class="figure">1</span> second between presses. The red light flashes slowly.
 
 On the next alarm, press the Test/Silence button <span class="figure">2</span> times. The red light flashes quickly.
