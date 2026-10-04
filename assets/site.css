@@ -6,6 +6,7 @@
   --ink-dim: rgba(245, 247, 251, 0.74);
   --blue: #0a63ff;
   --blue-text: #9cc4ff;
+  --figure: #f2c14d;
   --rim-ice: #d7e8ff;
   --rim-bright: #4d9bff;
   --rim-pale: #8ec0ff;
@@ -356,19 +357,28 @@ h1 {
 
 .instruction.list ul,
 .clearance {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 0 0 0 1.25em;
+  list-style: disc outside;
 }
 
 .instruction.list li,
 .clearance li {
   margin: 0;
   color: var(--ink);
+  font-size: 17px;
+  line-height: 1.45;
   text-wrap: pretty;
+}
+
+.instruction.list li + li,
+.clearance li + li {
+  margin-top: 12px;
+}
+
+.instruction.list li::marker,
+.clearance li::marker {
+  color: var(--ink);
 }
 
 .ceiling {
@@ -383,7 +393,7 @@ h1 {
 }
 
 .gap-label {
-  fill: var(--blue-text);
+  fill: var(--figure);
   font-family: var(--font);
   font-size: 24px;
   font-weight: 700;
@@ -400,12 +410,12 @@ h1 {
 }
 
 .instruction .lead {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   text-wrap: pretty;
 }
 
-.mm {
-  color: var(--blue-text);
+.figure {
+  color: var(--figure);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0;

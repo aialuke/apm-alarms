@@ -14,6 +14,7 @@ colors:
   rim-pale: "#8ec0ff"
   rim-press: "#7eb6ff"
   reading-blue: "#9cc4ff"
+  figure-gold: "#f2c14d"
   row-line: "rgba(245, 247, 251, 0.16)"
 typography:
   display:
@@ -103,6 +104,12 @@ components:
     textColor: "{colors.paper-white}"
     rounded: "{rounded.bar}"
     height: "56px"
+  figure:
+    textColor: "{colors.figure-gold}"
+    typography: "{typography.body}"
+  sketch-label:
+    textColor: "{colors.figure-gold}"
+    typography: "{typography.diagram}"
 ---
 
 # Design System: APM Alarms
@@ -122,10 +129,11 @@ The first screen is a field of large rounded brand buttons, three across. Unit, 
 - A blue icon marks a unit, Setup, Troubleshooting, and a shortcut. Topic rows stay words only.
 - Large hit targets. Brand buttons stay close to square. Rows stay tall.
 - Back on the left and Home on the right, in the same bar, on every screen after Brands.
+- Figure Gold marks the number you opened the page to get. The words around it stay white.
 
 ## Colors
 
-The palette is a near-black field. White is for reading. A bright blue edge is what makes a control stand off the page.
+The palette is a near-black field. White is for reading. A bright blue edge is what makes a control stand off the page. Figure Gold is the number you opened the page to get.
 
 ### Primary
 
@@ -134,9 +142,15 @@ The palette is a near-black field. White is for reading. A bright blue edge is w
 - **Rim Bright** (`#4d9bff`): The strong blue in the edge.
 - **Rim Pale** (`#8ec0ff`): The far stop of the edge, after Action Blue.
 - **Rim Press** (`#7eb6ff`): The pressed edge, between white and Action Blue.
-- **Reading Blue** (`#9cc4ff`): Icons on list rows, shortcut labels, step numbers, measurement callouts, and links inside an instruction.
+- **Reading Blue** (`#9cc4ff`): Icons on list rows, shortcut labels, step numbers, and links inside an instruction.
 
 The tight edge on a brand button, a note, and the Back / Home bar runs Rim Ice, Rim Bright, Action Blue, then Rim Pale. A press fills the face with Action Blue. The pressed edge runs from white through Rim Press into Action Blue.
+
+### Secondary
+
+- **Figure Gold** (`#f2c14d`): A clearance, a wait, a press count, or a confirmed flash interval. The figure only. The words around it stay Paper White.
+
+**The Figure Rule.** Figure Gold is the number you opened the page to get. On Placement that is 300 mm and 400 mm, in the list and on the ceiling sketch. The same gold is a wait, such as 2 minutes or within 2 seconds, a press count, such as three times, and a confirmed flash interval written large. 300 mm and 400 mm stay the same gold. The digits tell them apart. Step numbers, icons, shortcuts, and links stay Reading Blue. A red light on an alarm stays described as red.
 
 ### Neutral
 
@@ -156,13 +170,13 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 - **Display** (34px, weight 700): The Brands title only.
 - **Headline** (28px, weight 700, line-height 1.2): The screen title after Brands, including a topic name that wraps onto a second line.
 - **Choice** (22px, weight 650, line-height 1.25): Unit, Setup, Troubleshooting, topic, and shortcut rows.
-- **Body** (19px, weight 400, line-height 1.5, tracking 0.01em): Instruction steps, notes, and the placement list. The open leading and a little extra tracking keep light text clear on the black page. The weight stays regular so a page of steps still reads like notes.
+- **Body** (19px, weight 400, line-height 1.5, tracking 0.01em): Instruction steps, notes, and the placement sentence. The open leading and a little extra tracking keep light text clear on the black page. The weight stays regular so a page of steps still reads like notes.
 - **Brand** (19px, weight 650): The name on a brand button. The same size as the reading text, so a long name such as Detector Inspector still fits inside the button on an iPhone SE, and heavier so it reads as a label.
-- **Diagram** (24px, weight 700): The measurement on a placement sketch, in Reading Blue, with even figures.
-- **Control** (17px, weight 650): Back and Home.
+- **Diagram** (24px, weight 700): The measurement on a placement sketch, in Figure Gold, with even figures.
+- **Control** (17px, weight 650): Back and Home. The placement clearances use this size at regular weight, so the points sit under the sentence.
 - **Label** (15px, weight 500): The route line. The current step of the route is Paper White and weight 650.
 
-A step number and an inline measurement, such as 300 mm, use the body size in Reading Blue at weight 700. The number sits on the same baseline as the first line of the step.
+A step number uses the body size in Reading Blue at weight 700. An inline figure, such as 300 mm, uses the body size in Figure Gold at weight 700. The number sits on the same baseline as the first line of the step.
 
 ## Layout
 
@@ -214,7 +228,11 @@ Numbered steps in a two-column rhythm: the number, then the words. A note, inclu
 
 ### Placement sketch
 
-Line work in Muted Paper, measurement labels in Reading Blue, on the black field.
+Line work in Muted Paper, measurement labels in Figure Gold, on the black field.
+
+### Placement list
+
+The sentence stays at body size. The clearances under it are a disc list, indented, at 17px and regular weight. Each point keeps its Figure Gold measurement. The points sit closer together than two instruction paragraphs.
 
 ## Do's and Don'ts
 
@@ -225,8 +243,9 @@ Line work in Muted Paper, measurement labels in Reading Blue, on the black field
 - **Do** keep Back on the left and Home on the right, in the same places, after Brands.
 - **Do** keep Unit, Setup or Troubleshooting, and Topics as rows on the black page, with only a grey line between them.
 - **Do** keep a blue icon on unit rows, Setup, Troubleshooting, and shortcuts. Leave topic rows as words.
-- **Do** keep instruction text at 19px so it can be read at arm's length.
-- **Do** use Reading Blue for a shortcut, a step number, a measurement, an icon, and an instruction link.
+- **Do** keep the placement sentence and other instruction text at 19px so it can be read at arm's length. Set the clearances under that sentence as an indented disc list at 17px.
+- **Do** use Reading Blue for a shortcut, a step number, an icon, and an instruction link.
+- **Do** use Figure Gold for a clearance, a wait, a press count, or a confirmed flash interval. Color the figure only, at weight 700.
 
 ### Don't:
 
@@ -237,3 +256,5 @@ Line work in Muted Paper, measurement labels in Reading Blue, on the black field
 - **Don't** put a thick coloured side stripe on a Tip or a note.
 - **Don't** put a blue outline around a list of rows.
 - **Don't** let a blue edge bloom into a wide glow. On a brand button, a note, and the Back / Home bar, it stays tight against the shape.
+- **Don't** use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.
+- **Don't** give 300 mm and 400 mm different colors.
