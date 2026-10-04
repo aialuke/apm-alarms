@@ -21,18 +21,42 @@ typography:
     fontSize: "34px"
     fontWeight: 700
     lineHeight: 1.1
-    letterSpacing: "-0.022em"
+    letterSpacing: "normal"
   headline:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
     fontSize: "28px"
     fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: "-0.022em"
+    lineHeight: 1.2
+    letterSpacing: "normal"
+  choice:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "22px"
+    fontWeight: 650
+    lineHeight: 1.25
+    letterSpacing: "normal"
   body:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
     fontSize: "19px"
     fontWeight: 400
-    lineHeight: 1.45
+    lineHeight: 1.5
+    letterSpacing: "0.01em"
+  brand:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "19px"
+    fontWeight: 650
+    lineHeight: 1.2
+    letterSpacing: "normal"
+  diagram:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "24px"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "normal"
+  control:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "17px"
+    fontWeight: 650
+    lineHeight: 1.2
     letterSpacing: "normal"
   label:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
@@ -127,14 +151,18 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 
 ## Typography
 
-**The Phone Face Rule.** Type is the iPhone system font: `-apple-system`, then San Francisco, then `system-ui`. A font file is not shipped. On the technician's iPhone this is San Francisco.
+**The Phone Face Rule.** Type is the iPhone system font: `-apple-system`, then San Francisco, then `system-ui`. A font file is not shipped. On the technician's iPhone this is San Francisco. The face already tracks itself, so the screen does not add tighter tracking on top.
 
 - **Display** (34px, weight 700): The Brands title only.
-- **Headline** (28px, weight 700): The screen title after Brands, including the topic name.
-- **Body** (19px, weight 400): Instruction steps, so they stay readable at arm's length.
-- **Label** (15px, weight 500): The route line. The current step of the route is Paper White and heavier.
+- **Headline** (28px, weight 700, line-height 1.2): The screen title after Brands, including a topic name that wraps onto a second line.
+- **Choice** (22px, weight 650, line-height 1.25): Unit, Setup, Troubleshooting, topic, and shortcut rows.
+- **Body** (19px, weight 400, line-height 1.5, tracking 0.01em): Instruction steps, notes, and the placement list. The open leading and a little extra tracking keep light text clear on the black page. The weight stays regular so a page of steps still reads like notes.
+- **Brand** (19px, weight 650): The name on a brand button. The same size as the reading text, so a long name such as Detector Inspector still fits inside the button on an iPhone SE, and heavier so it reads as a label.
+- **Diagram** (24px, weight 700): The measurement on a placement sketch, in Reading Blue, with even figures.
+- **Control** (17px, weight 650): Back and Home.
+- **Label** (15px, weight 500): The route line. The current step of the route is Paper White and weight 650.
 
-Row labels are 22px and weight 650. Bottom-bar words are 17px and weight 650.
+A step number and an inline measurement, such as 300 mm, use the body size in Reading Blue at weight 700. The number sits on the same baseline as the first line of the step.
 
 ## Layout
 

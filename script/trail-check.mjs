@@ -38,6 +38,16 @@ assert(arrived.state.entries.length === 3, "the page Back opens is still on the 
 const back = trail.popBack(arrived.state, home);
 assert(back.path === topics, "Back returns to the previous page");
 
+const leftMidPage = trail.onOpen(back.state, 6000, pairing, home, "forward");
+leftMidPage.state.entries[leftMidPage.state.entries.length - 1].scroll = 640;
+const jumped = trail.onOpen(leftMidPage.state, 7000, topics, home, "forward");
+assert(jumped.state.entries[jumped.state.entries.length - 2].scroll === 640, "leaving a page keeps the line you were on");
+const returned = trail.popBack(jumped.state, home);
+assert(returned.path === pairing, "Back returns to the page the route left");
+const reopened = trail.onOpen(returned.state, 8000, pairing, home, "back");
+assert(reopened.scroll === 640, "Back returns to the line you left");
+assert(reopened.state.entries.length === returned.state.entries.length, "Back does not start a new visit");
+
 const late = trail.onOpen(hidden, 3000 + 16 * 60 * 1000, pairing, home, null);
 assert(late.redirect === home, "a return after 15 minutes opens the brand screen");
 

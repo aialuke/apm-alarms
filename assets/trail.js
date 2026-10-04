@@ -32,9 +32,10 @@
     }
     if (nav === "back") {
       var backTop = entries[entries.length - 1];
+      var same = backTop && backTop.path === path;
       return {
         redirect: null,
-        scroll: backTop ? backTop.scroll : 0,
+        scroll: same ? backTop.scroll : 0,
         state: { hiddenAt: null, entries: entries }
       };
     }
@@ -144,8 +145,8 @@
   });
 
   document.addEventListener("visibilitychange", function () {
+    if (sessionStorage.getItem(NAV)) return;
     if (document.visibilityState === "hidden") {
-      if (sessionStorage.getItem(NAV)) return;
       write(markHidden(read(), Date.now(), here(), scrollY || 0));
       return;
     }
@@ -159,10 +160,7 @@
   });
 
   window.addEventListener("pagehide", function () {
-    if (sessionStorage.getItem(NAV)) {
-      rememberScroll();
-      return;
-    }
+    if (sessionStorage.getItem(NAV)) return;
     write(markHidden(read(), Date.now(), here(), scrollY || 0));
   });
 

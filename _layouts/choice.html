@@ -5,7 +5,7 @@ layout: default
   <nav class="route" aria-label="What you picked">
     <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
-    <span>{{ page.unit_name }}</span>
+    <span aria-current="page">{{ page.unit_name }}</span>
   </nav>
   <h1>{{ page.unit_name }}</h1>
 </header>

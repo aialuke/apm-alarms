@@ -7,7 +7,7 @@ layout: default
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
     <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
-    <span>{{ page.list_name }}</span>
+    <span aria-current="page">{{ page.list_name }}</span>
   </nav>
   <h1>{{ page.list_name }}</h1>
 </header>
