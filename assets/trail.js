@@ -104,7 +104,29 @@
   }
 
   function write(state) {
-    localStorage.setItem(STORE, JSON.stringify(state));
+    try {
+      localStorage.setItem(STORE, JSON.stringify(state));
+    } catch (error) {}
+  }
+
+  function sessionGet(key) {
+    try {
+      return sessionStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function sessionSet(key, value) {
+    try {
+      sessionStorage.setItem(key, value);
+    } catch (error) {}
+  }
+
+  function sessionRemove(key) {
+    try {
+      sessionStorage.removeItem(key);
+    } catch (error) {}
   }
 
   function here() {
@@ -112,8 +134,8 @@
   }
 
   function openPage() {
-    var nav = sessionStorage.getItem(NAV);
-    sessionStorage.removeItem(NAV);
+    var nav = sessionGet(NAV);
+    sessionRemove(NAV);
     var result = onOpen(read(), Date.now(), here(), home, nav);
     write(result.state);
     if (result.redirect && norm(result.redirect) !== here()) {
@@ -135,17 +157,32 @@
     write(state);
   }
 
+  function matchNavClearance() {
+    var bar = document.querySelector(".nav");
+    if (!bar) return;
+    var apply = function () {
+      document.documentElement.style.setProperty("--nav-height", bar.offsetHeight + "px");
+    };
+    apply();
+    if (typeof ResizeObserver === "function") {
+      new ResizeObserver(apply).observe(bar);
+    } else {
+      window.addEventListener("resize", apply);
+    }
+  }
+
+  matchNavClearance();
   document.addEventListener("DOMContentLoaded", openPage);
 
   document.addEventListener("click", function (event) {
     var link = event.target.closest ? event.target.closest("a") : null;
-    if (!link || link.target || link.origin !== location.origin) return;
-    sessionStorage.setItem(NAV, "forward");
+    if (!link || link.id === "back" || link.id === "home" || link.target || link.origin !== location.origin) return;
+    sessionSet(NAV, "forward");
     rememberScroll();
   });
 
   document.addEventListener("visibilitychange", function () {
-    if (sessionStorage.getItem(NAV)) return;
+    if (sessionGet(NAV)) return;
     if (document.visibilityState === "hidden") {
       write(markHidden(read(), Date.now(), here(), scrollY || 0));
       return;
@@ -160,7 +197,7 @@
   });
 
   window.addEventListener("pagehide", function () {
-    if (sessionStorage.getItem(NAV)) return;
+    if (sessionGet(NAV)) return;
     write(markHidden(read(), Date.now(), here(), scrollY || 0));
   });
 
@@ -168,18 +205,20 @@
     var back = document.getElementById("back");
     var homeButton = document.getElementById("home");
     if (back) {
-      back.addEventListener("click", function () {
+      back.addEventListener("click", function (event) {
         var result = popBack(read(), home);
         write(result.state);
-        sessionStorage.setItem(NAV, "back");
+        sessionSet(NAV, "back");
+        if (event && event.preventDefault) event.preventDefault();
         location.assign(result.path);
       });
     }
     if (homeButton) {
-      homeButton.addEventListener("click", function () {
+      homeButton.addEventListener("click", function (event) {
         var result = goHome(home);
         write(result.state);
-        sessionStorage.setItem(NAV, "forward");
+        sessionSet(NAV, "forward");
+        if (event && event.preventDefault) event.preventDefault();
         location.assign(result.path);
       });
     }

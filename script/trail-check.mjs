@@ -57,4 +57,66 @@ const next = trail.onOpen(shown.state, 5000, topics, home, "forward");
 assert(next.redirect === null && next.state.entries[next.state.entries.length - 1].path === topics, "the next tap opens the page that was tapped");
 
 if (failed) process.exit(1);
+
+const dom = {
+  listeners: {},
+  body: { getAttribute: function () { return "/apm-alarms/"; } },
+  createElement: function () {
+    var el = {};
+    Object.defineProperty(el, "href", {
+      set: function (value) {
+        var path = String(value);
+        var slash = path.indexOf("/", path.indexOf("://") + 3);
+        if (path.indexOf("://") >= 0 && slash >= 0) path = path.slice(slash);
+        var cut = path.search(/[?#]/);
+        if (cut >= 0) path = path.slice(0, cut);
+        if (path.charAt(0) !== "/") path = "/" + path;
+        el.pathname = path;
+      }
+    });
+    el.pathname = "/";
+    return el;
+  },
+  querySelector: function () { return null; },
+  getElementById: function (id) { return dom.nodes[id]; },
+  addEventListener: function (type, fn) {
+    (dom.listeners[type] || (dom.listeners[type] = [])).push(fn);
+  },
+  nodes: {
+    back: { id: "back", addEventListener: function (type, fn) { this["on" + type] = fn; } },
+    home: { id: "home", addEventListener: function (type, fn) { this["on" + type] = fn; } }
+  }
+};
+const moves = [];
+const blocked = {
+  getItem: function () { return null; },
+  setItem: function () { throw new Error("storage blocked"); },
+  removeItem: function () { throw new Error("storage blocked"); }
+};
+const browser = {
+  document: dom,
+  localStorage: blocked,
+  sessionStorage: blocked,
+  location: {
+    pathname: "/apm-alarms/emerald/",
+    origin: "http://phone.local",
+    assign: function (path) { moves.push(path); },
+    replace: function (path) { moves.push(path); }
+  },
+  addEventListener: function () {},
+  requestAnimationFrame: function (fn) { fn(); }
+};
+browser.window = browser;
+vm.runInNewContext(code, browser);
+(dom.listeners.DOMContentLoaded || []).forEach(function (fn) {
+  try { fn(); } catch (error) { assert(false, "opening the page throws when storage is blocked"); }
+});
+var prevented = false;
+dom.nodes.back.onclick({ preventDefault: function () { prevented = true; } });
+assert(moves[moves.length - 1] === "/apm-alarms/", "Back still opens Brands when saving the trail fails");
+assert(prevented, "Back uses the trail path instead of loading twice");
+dom.nodes.home.onclick({ preventDefault: function () {} });
+assert(moves[moves.length - 1] === "/apm-alarms/", "Home still opens Brands when saving the trail fails");
+
+if (failed) process.exit(1);
 console.log("trail checks passed");

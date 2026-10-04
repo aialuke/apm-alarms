@@ -1,7 +1,16 @@
 <nav class="bar" aria-label="Navigation">
-  <button type="button" id="back">
+  {% if page.topic %}
+    {% assign back_path = '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/' %}
+  {% elsif page.list %}
+    {% assign back_path = '/' | append: page.brand | append: '/' | append: page.unit | append: '/' %}
+  {% elsif page.unit %}
+    {% assign back_path = '/' | append: page.brand | append: '/' %}
+  {% else %}
+    {% assign back_path = '/' %}
+  {% endif %}
+  <a id="back" href="{{ back_path | relative_url }}">
     {% include chevron.html %}
     <span>Back</span>
-  </button>
-  <button type="button" id="home">Home</button>
+  </a>
+  <a id="home" href="{{ '/' | relative_url }}">Home</a>
 </nav>

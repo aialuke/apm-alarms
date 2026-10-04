@@ -18,7 +18,7 @@ labels() {
 }
 
 tiles() {
-  sed -n 's/.*class="tile"[^>]*>\([^<]*\)<.*/\1/p' "$1"
+  sed -n 's/.*class="tile"[^>]*>\(.*\)<\/a>.*/\1/p' "$1" | sed 's/<[^>]*>//g'
 }
 
 expect_lines() {
@@ -72,6 +72,15 @@ if ! grep -q 'id="back"' "$note"; then
 fi
 if ! grep -q 'id="home"' "$note"; then
   echo "instruction page is missing Home" >&2
+  exit 1
+fi
+unit="$site/emerald/index.html"
+if ! grep -q 'id="back" href="/apm-alarms/"' "$unit"; then
+  echo "unit screen Back does not open Brands without the script" >&2
+  exit 1
+fi
+if ! grep -q 'id="home" href="/apm-alarms/"' "$unit"; then
+  echo "unit screen Home does not open Brands without the script" >&2
   exit 1
 fi
 echo "site checks passed"

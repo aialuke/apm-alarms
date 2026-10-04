@@ -9,7 +9,7 @@ layout: default
     <ul class="grid">
       {% for brand in site.data.brands %}
         <li>
-          <a class="tile" href="{{ '/' | append: brand.id | append: '/' | relative_url }}">{{ brand.name }}</a>
+          <a class="tile" href="{{ '/' | append: brand.id | append: '/' | relative_url }}"><span>{{ brand.name }}</span></a>
         </li>
       {% endfor %}
     </ul>

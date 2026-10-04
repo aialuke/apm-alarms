@@ -12,9 +12,18 @@
   --rim-pale: #8ec0ff;
   --rim-press: #7eb6ff;
   --row-line: rgba(245, 247, 251, 0.16);
+  --ink-faint: color-mix(in srgb, var(--ink) 45%, transparent);
+  --nav-line: color-mix(in srgb, var(--blue) 55%, transparent);
+  --nav-shade: color-mix(in srgb, var(--blue) 45%, transparent);
+  --scroll: color-mix(in srgb, var(--ink) 35%, transparent);
+  --scroll-thumb: color-mix(in srgb, var(--ink) 28%, transparent);
+  --edge-white: #ffffff;
+  --edge-highlight: color-mix(in srgb, var(--edge-white) 55%, transparent);
+  --edge-highlight-strong: color-mix(in srgb, var(--edge-white) 70%, transparent);
+  --edge-rule: color-mix(in srgb, var(--edge-white) 16%, transparent);
   --face: linear-gradient(var(--card), var(--card-deep));
   --rim: linear-gradient(160deg, var(--rim-ice), var(--rim-bright) 38%, var(--blue) 72%, var(--rim-pale));
-  --rim-active: linear-gradient(160deg, #ffffff, var(--rim-press) 40%, var(--blue));
+  --rim-active: linear-gradient(160deg, var(--edge-white), var(--rim-press) 40%, var(--blue));
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -29,9 +38,11 @@ html {
   color-scheme: dark;
   background: var(--ground);
   caret-color: var(--ink);
-  scroll-padding-top: calc(12px + env(safe-area-inset-top));
+  --nav-height: calc(28px + 44px + 10px + 33.6px + 14px + 1px + env(safe-area-inset-top));
+  /* Content links clear the sticky bar with scroll-margin. The route is inside the bar, so the page itself does not pad. */
+  scroll-padding-top: 0;
   scroll-padding-bottom: calc(108px + env(safe-area-inset-bottom));
-  scrollbar-color: rgba(245, 247, 251, 0.35) transparent;
+  scrollbar-color: var(--scroll) transparent;
 }
 
 html::-webkit-scrollbar {
@@ -40,7 +51,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: rgba(245, 247, 251, 0.28);
+  background: var(--scroll-thumb);
   border: 2px solid transparent;
   border-radius: 999px;
   background-clip: padding-box;
@@ -94,6 +105,16 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+main a,
+main button {
+  scroll-margin-top: calc(var(--nav-height) + 12px);
+}
+
+/* The ring is 3px, drawn 3px outside the words. */
+.instruction a {
+  scroll-margin-top: calc(var(--nav-height) + 12px + 3px + 3px);
+}
+
 .frame {
   width: min(100%, 430px);
   margin: 0 auto;
@@ -111,8 +132,8 @@ body.is-home .frame {
   z-index: 5;
   padding: calc(28px + env(safe-area-inset-top)) 16px 14px;
   background: var(--ground);
-  border-bottom: 1px solid rgba(10, 99, 255, 0.55);
-  box-shadow: 0 1px 2px rgba(10, 99, 255, 0.45);
+  border-bottom: 1px solid var(--nav-line);
+  box-shadow: 0 1px 2px var(--nav-shade);
 }
 
 h1 {
@@ -155,6 +176,7 @@ h1 {
   flex: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 44px;
   padding: 0 2px;
   color: var(--ink-dim);
@@ -163,6 +185,10 @@ h1 {
   line-height: 1.3;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.route a {
+  min-width: 44px;
 }
 
 .route span:not(.sep) {
@@ -175,7 +201,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   padding: 0 4px;
-  color: rgba(245, 247, 251, 0.45);
+  color: var(--ink-faint);
 }
 
 .route .sep .chevron {
@@ -197,6 +223,7 @@ h1 {
   min-width: 0;
   margin: 0;
   aspect-ratio: 1;
+  container-type: inline-size;
 }
 
 .grid .tile {
@@ -221,7 +248,7 @@ h1 {
   box-shadow:
     0 1px 2px rgba(10, 99, 255, 0.95),
     0 2px 5px rgba(10, 99, 255, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    inset 0 1px 0 var(--edge-highlight);
   color: var(--ink);
   font-size: 19px;
   font-weight: 650;
@@ -229,8 +256,24 @@ h1 {
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
-  text-wrap: balance;
   transition: transform 180ms var(--ease), background 180ms var(--ease), box-shadow 180ms var(--ease);
+}
+
+@container (max-width: 96px) {
+  .tile {
+    font-size: clamp(14px, 19cqi, 17px);
+  }
+}
+
+.tile > span {
+  display: block;
+  box-sizing: border-box;
+  width: calc(100% + 16px);
+  min-width: 0;
+  margin-inline: -8px;
+  padding-inline: 3px;
+  overflow-wrap: break-word;
+  text-wrap: wrap;
 }
 
 .tile:focus-visible {
@@ -304,7 +347,7 @@ h1 {
 .chevron {
   flex: none;
   display: block;
-  color: rgba(245, 247, 251, 0.45);
+  color: var(--ink-faint);
 }
 
 .shortcuts a,
@@ -326,12 +369,12 @@ h1 {
   box-shadow:
     0 1px 2px rgba(10, 99, 255, 1),
     0 2px 4px rgba(10, 99, 255, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    inset 0 1px 0 var(--edge-highlight);
 }
 
 .choices a:active,
 .shortcuts a:active,
-.bar button:active {
+.bar a:active {
   background: rgba(255, 255, 255, 0.14);
 }
 
@@ -481,7 +524,7 @@ h1 {
     0 2px 5px rgba(10, 99, 255, 0.55);
 }
 
-.bar button {
+.bar a {
   flex: 1;
   display: flex;
   align-items: center;
@@ -493,9 +536,10 @@ h1 {
   font-weight: 650;
   letter-spacing: normal;
   line-height: 1.2;
+  text-decoration: none;
 }
 
-.bar button:focus-visible {
+.bar a:focus-visible {
   outline-offset: -6px;
 }
 
@@ -509,8 +553,8 @@ h1 {
   transform: scaleX(-1);
 }
 
-.bar button + button {
-  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.16);
+.bar a + a {
+  box-shadow: inset 1px 0 0 var(--edge-rule);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -518,12 +562,12 @@ h1 {
     box-shadow:
       0 1px 2px rgba(10, 99, 255, 1),
       0 3px 6px rgba(10, 99, 255, 0.65),
-      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      inset 0 1px 0 var(--edge-highlight-strong);
   }
 
   .choices a:hover,
   .shortcuts a:hover,
-  .bar button:hover {
+  .bar a:hover {
     background: rgba(255, 255, 255, 0.1);
   }
 }
