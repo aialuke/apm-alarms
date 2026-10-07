@@ -12,7 +12,7 @@ layout: default
 <main>
 <ul class="choices">
   {% for topic in page.topics %}
-    <li>
+    <li{% if topic.href contains '/signal/' %} class="lookup"{% endif %}>
       <a href="{{ topic.href | relative_url }}">
         <span class="row-label">{{ topic.title }}</span>
         {% include chevron.html %}

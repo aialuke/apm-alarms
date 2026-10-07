@@ -246,7 +246,7 @@ On an instruction page the top bar does not stay. The route and page name scroll
 
 A full-width row on the black page, at least 76px tall. A grey line separates it from the next row. There is no blue outline around the list. Setup and Troubleshooting stay stacked. They are never a side-by-side pair.
 
-A blue icon sits on the left of a unit row, Setup, and Troubleshooting. Wired alarm, Wireless alarm, Remote, and RF module each have their own mark. Topic rows have no icon. The chevron stays on the right.
+A blue icon sits on the left of a unit row, Setup, and Troubleshooting. Wired alarm, Wireless alarm, Remote, and RF module each have their own mark. Topic rows have no icon. The chevron stays on the right. What's that light or sound? is a lookup, not a problem, so it sits first with a 24px gap below it and a grey line closing it, apart from the problem rows that follow. It has no icon and no colour of its own.
 
 ### Shortcut row
 

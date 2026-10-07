@@ -439,6 +439,19 @@ h1 {
   box-shadow: inset 0 1px 0 var(--row-line);
 }
 
+/* The light-and-sound lookup is its own group. A gap, not a new colour or icon, sets it apart from the symptoms. */
+.choices li.lookup {
+  margin-bottom: 24px;
+}
+
+.choices li.lookup a {
+  box-shadow: inset 0 -1px 0 var(--row-line);
+}
+
+.choices li.lookup + li a {
+  box-shadow: none;
+}
+
 .row-label {
   flex: 1;
   min-width: 0;
