@@ -16,6 +16,9 @@ colors:
   reading-blue: "#9cc4ff"
   figure-gold: "#f2c14d"
   row-line: "rgba(245, 247, 251, 0.16)"
+  lamp-green: "#32d74b"
+  lamp-red: "#ff453a"
+  lamp-amber: "#ff9f0a"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
@@ -53,6 +56,23 @@ typography:
     fontWeight: 700
     lineHeight: 1.2
     letterSpacing: "normal"
+  table-figure:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "22px"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "0"
+  table-label:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "12px"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "0.09em"
+  table-meaning:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1.4
   control:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
     fontSize: "17px"
@@ -67,6 +87,7 @@ typography:
     letterSpacing: "normal"
 rounded:
   note: "14px"
+  table: "20px"
   bar: "22px"
   brand: "26px"
 spacing:
@@ -99,6 +120,11 @@ components:
     textColor: "{colors.paper-white}"
     rounded: "{rounded.note}"
     padding: "14px 16px"
+  signal-table:
+    backgroundColor: "{colors.card}"
+    textColor: "{colors.paper-white}"
+    rounded: "{rounded.table}"
+    padding: "16px 12px"
   bottom-bar:
     backgroundColor: "{colors.card}"
     textColor: "{colors.paper-white}"
@@ -120,11 +146,11 @@ components:
 
 A technician uses this on a job, often in a dim roof space or a bright hallway, with the phone in one hand. The screen stays dark so it never flashes white. It should feel like a modern iPhone app the technician already knows how to use.
 
-The first screen is a field of large rounded brand buttons, three across. Unit, Setup or Troubleshooting, and Topics are tall rows on the black page, separated only by a grey line. An instruction page reads like Notes. Brand buttons, notes, and the Back / Home bar have a dark face and a tight blue edge. The lists do not.
+The first screen is a field of large rounded brand buttons, three across. Unit, Setup or Troubleshooting, and Topics are tall rows on the black page, separated only by a grey line. An instruction page reads like Notes. Brand buttons, notes, the signal table, and the Back / Home bar have a dark face and a tight blue edge. The lists do not.
 
 **Key Characteristics:**
 
-- Near-black ground. Brand buttons, notes, and the Back / Home bar have a tight blue edge. Lists do not.
+- Near-black ground. Brand buttons, notes, the signal table, and the Back / Home bar have a tight blue edge. Lists do not.
 - The iPhone system font, because that is the face on the technician's phone.
 - A blue icon marks a unit, Setup, Troubleshooting, and a shortcut. Topic rows stay words only.
 - Large hit targets. Brand buttons stay close to square. Rows stay tall.
@@ -173,6 +199,9 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 - **Body** (19px, weight 400, line-height 1.5, tracking 0.01em): Instruction steps, notes, and the placement sentence. The open leading and a little extra tracking keep light text clear on the black page. The weight stays regular so a page of steps still reads like notes.
 - **Brand** (19px, weight 650): The name on a brand button. The same size as the reading text, so a long name such as Detector Inspector still fits inside the button on an iPhone SE, and heavier so it reads as a label.
 - **Diagram** (24px, weight 700): The measurement on a placement sketch, in Figure Gold, with even figures.
+- **Table figure** (22px, weight 700, line-height 1): The real interval in a signal table's light or sound cell, in Figure Gold. It is a little smaller than the diagram size so "48 seconds" fits its column on a 375px iPhone.
+- **Table label** (12px, weight 700, tracking 0.09em, capitals): Light and Sound over the signal table, in Reading Blue.
+- **Table meaning** (17px, weight 400, line-height 1.4): What a signal means, centred under its row in Paper White. A figure inside it stays Figure Gold.
 - **Control** (17px, weight 650): Back and Home. The placement clearances use this size at regular weight, so the points sit under the sentence.
 - **Label** (15px, weight 500): The earlier steps of the route. The current step uses the headline.
 
@@ -192,13 +221,13 @@ Instruction text uses the width of the phone column. The page scrolls under the 
 
 ## Elevation & Depth
 
-**The Tight Edge Rule.** A control stands off the black page with a bright blue rim, a thin white highlight on the top edge, and a short blue shadow that stays against the shape. The shadow is about 2px down and 5px of blur. A press fills a brand button solid Action Blue. Instruction paragraphs sit on the flat black. The brand screen keeps a quiet blue light in the top corner only.
+**The Tight Edge Rule.** A control stands off the black page with a bright blue rim, a thin white highlight on the top edge, and a short blue shadow that stays against the shape. The shadow is about 2px down and 5px of blur. A press fills a brand button solid Action Blue. The signal table is one card with the same rim and shadow. Inside it, a lamp lights its own row with a soft wash of its colour. That wash is light inside the row, not a shadow, and it never leaves the card. Instruction paragraphs sit on the flat black. The brand screen keeps a quiet blue light in the top corner only.
 
 Motion uses `cubic-bezier(0.16, 1, 0.3, 1)` over 180ms. Reduced motion turns transitions off.
 
 ## Shapes
 
-Corners are generous on brand buttons (26px), the bottom bar (22px), and a note (14px). List rows are not boxed, so they have no corner of their own. Chevrons and row icons are drawn strokes, about 1.7px, with round caps. The Back chevron points left. Icons are blue.
+Corners are generous on brand buttons (26px), the signal table (20px), the bottom bar (22px), and a note (14px). List rows are not boxed, so they have no corner of their own. Chevrons and row icons are drawn strokes, about 1.7px, with round caps. The Back chevron points left. Icons are blue.
 
 ## Components
 
@@ -230,7 +259,9 @@ Numbered steps in a two-column rhythm: the blue number, then the words. A gold f
 
 ### Signal table
 
-What's that light or sound? is a table. Light and Sound are the header. The meaning is the full-width line under those two cells. The grid line is Faint Ink, `var(--ink-faint)`. The header face is Card. Body text stays 19px. There is no blue edge and no rounded corner.
+What's that light or sound? is a table. Light and Sound are the header, centred over their cells. The meaning is the full-width line under those two cells, centred, in Paper White at 17px. The table is one rounded card with the same tight blue edge as a Tip. The faint lines, in Faint Ink, stop short of the card edge. The header is small spaced Reading Blue labels on the card, with no filled band, and it stays pinned under the top bar while the rows scroll. Each lamp lights its own row with a soft wash of its colour, and the wash pulses with the blink. A count in the light cell is written 3x or 2x, in Figure Gold. The screen reader still hears 3 times or twice. The cell does not write every. The repeat is assumed.
+
+A confirmed colour is a small round lamp at the start of the light cell. The lamp is green `#32d74b`, red `#ff453a`, or amber `#ff9f0a`. The colour is not written again next to the lamp. It stays in the hidden label. A confirmed interval blinks that lamp one, two, or three times, then rests, on one shared clock of about two seconds. The lamp stays its own colour the whole time. The blink is a bright pulse, so a glance still sorts green from red from amber. The real interval is the gold figure in the light or sound cell, at the table figure size (22px, weight 700). A figure in the meaning line stays body size. A sound with a cue is three pale bars that brighten with the lamp. A two-second sound ticks on that real wait. A side with no cue is a Paper White dash, centred in the cell. The screen reader still hears None. Flashing red after an alarm is a steady red lamp and the words after an alarm. It does not blink, and it does not show a timing. The turn-on light is not listed. Reduced motion leaves every lamp steady and every tick still.
 
 ### Placement sketch
 
@@ -252,6 +283,7 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Do** keep the placement sentence and other instruction text at 19px so it can be read at arm's length. Set the clearances under that sentence as an indented disc list at 17px.
 - **Do** use Reading Blue for a shortcut, a step number, an icon, and an instruction link.
 - **Do** use Figure Gold for a clearance, a wait, a press count, or a confirmed flash interval. Color the figure only, at weight 700.
+- **Do** show a lamp for a confirmed signal colour, and a short blink for a confirmed interval. Write that interval large in the light or sound cell.
 - **Do** say the page name once. After Brands it is the current step of the route, at the headline size.
 
 ### Don't:
@@ -261,8 +293,9 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Don't** show Back or Home on the brand screen.
 - **Don't** replace Back and Home with a tab bar of extra sections.
 - **Don't** put a thick coloured side stripe on a Tip or a note.
-- **Don't** put a blue outline around a list of rows. The signal table uses a faint ink line, not that blue edge.
-- **Don't** let a blue edge bloom into a wide glow. On a brand button, a note, and the Back / Home bar, it stays tight against the shape.
+- **Don't** put a blue outline around a list of rows. The signal table is one card with the blue edge around the whole table, and faint lines between its rows.
+- **Don't** write the colour again next to its lamp, and don't blink an interval that is not confirmed.
+- **Don't** let a blue edge bloom into a wide glow. On a brand button, a note, the signal table, and the Back / Home bar, it stays tight against the shape.
 - **Don't** use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.
 - **Don't** give 300 mm and 400 mm different colors.
 - **Don't** put a gold figure or a link in the step-number column. They belong in the words.

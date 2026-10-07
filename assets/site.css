@@ -517,28 +517,38 @@ h1 {
 }
 
 table.signals {
+  --lamp-green: #32d74b;
+  --lamp-red: #ff453a;
+  --lamp-yellow: #ff9f0a;
+  --hairline: linear-gradient(var(--row-line), var(--row-line));
+  display: block;
   width: 100%;
   max-width: 100%;
-  margin: 0;
-  border: 1px solid var(--ink-faint);
-  border-radius: 0;
-  border-collapse: collapse;
+  margin: 0 0 18px;
+  border: 1.5px solid transparent;
+  border-radius: 20px;
   border-spacing: 0;
-  background: none;
+  overflow: clip;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 24%),
+    var(--face) padding-box,
+    var(--rim) border-box;
+  box-shadow:
+    0 1px 2px rgba(10, 99, 255, 0.95),
+    0 2px 5px rgba(10, 99, 255, 0.55);
 }
 
-table.signals,
 table.signals thead,
-table.signals tbody,
-table.signals tr {
+table.signals tbody {
   display: block;
 }
 
 table.signals tr {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 0;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
   align-items: stretch;
+  padding: 0;
 }
 
 table.signals th,
@@ -546,7 +556,7 @@ table.signals td {
   position: relative;
   min-width: 0;
   margin: 0;
-  padding: 12px;
+  padding: 0;
   border: 0;
   background: none;
   font-weight: 400;
@@ -555,34 +565,7 @@ table.signals td {
   overflow-wrap: break-word;
 }
 
-table.signals .cue {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-}
-
-table.signals thead tr {
-  position: relative;
-  padding: 0;
-}
-
-table.signals thead th {
-  color: var(--ink-dim);
-  background: var(--card);
-  border-bottom: 1px solid var(--ink-faint);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.3;
-  text-align: left;
-}
-
-table.signals thead th.light,
-table.signals td.light {
-  border-right: 1px solid var(--ink-faint);
-}
-
+table.signals .cue,
 table.signals thead .means {
   position: absolute;
   width: 1px;
@@ -591,23 +574,313 @@ table.signals thead .means {
   clip-path: inset(50%);
 }
 
+table.signals thead {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 2;
+  background:
+    var(--hairline) 14px 100% / calc(100% - 28px) 1px no-repeat,
+    color-mix(in srgb, var(--card) 82%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+table.signals thead th {
+  padding: 13px 14px 11px;
+  color: var(--blue-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 table.signals tbody tr {
-  padding: 0;
-  border-bottom: 1px solid var(--ink-faint);
+  isolation: isolate;
+  background: var(--hairline) 14px 100% / calc(100% - 28px) 1px no-repeat;
 }
 
 table.signals tbody tr:last-child {
-  border-bottom: 0;
+  background: none;
+}
+
+/* The lamp lights its own row. The wash follows the same clock as the blink. */
+table.signals tbody tr::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.55;
+  background: radial-gradient(
+    ellipse 75% 120px at 24px 30px,
+    color-mix(in srgb, var(--wash, transparent) 24%, transparent),
+    transparent 72%
+  );
+}
+
+table.signals tbody tr:has(.lamp.is-green) {
+  --wash: var(--lamp-green);
+}
+
+table.signals tbody tr:has(.lamp.is-red) {
+  --wash: var(--lamp-red);
+}
+
+table.signals tbody tr:has(.lamp.is-yellow) {
+  --wash: var(--lamp-yellow);
+}
+
+table.signals tbody tr:has(.lamp.blinks-1)::before {
+  animation: wash-1 2.2s linear infinite;
+}
+
+table.signals tbody tr:has(.lamp.blinks-2)::before {
+  animation: wash-2 2.2s linear infinite;
+}
+
+table.signals tbody tr:has(.lamp.blinks-3)::before {
+  animation: wash-3 2.2s linear infinite;
+}
+
+table.signals td.light,
+table.signals td.sound {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px 12px;
+}
+
+table.signals td.light::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 0;
+  bottom: 8px;
+  width: 1px;
+  background: var(--row-line);
+}
+
+table.signals td.is-empty {
+  justify-content: center;
+  padding-block: 15px;
+  text-align: center;
+}
+
+table.signals td.is-empty .cue-words {
+  flex: none;
+  line-height: 1;
 }
 
 table.signals td.means {
   grid-column: 1 / -1;
-  margin-top: 0;
-  border-top: 1px solid var(--ink-faint);
+  padding: 0 14px 16px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.4;
+  text-align: center;
+  text-wrap: balance;
 }
 
-table.signals td.none {
-  color: var(--ink-dim);
+table.signals td.means a {
+  display: inline-block;
+  padding: 10px 2px;
+  margin: -10px 0;
+  font-weight: 650;
+  white-space: nowrap;
+  scroll-margin-top: calc(var(--nav-height) + 64px);
+}
+
+table.signals .cue-words {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+table.signals td.light .cue-words,
+table.signals td.sound .cue-words {
+  white-space: nowrap;
+}
+
+table.signals .wait {
+  white-space: nowrap;
+}
+
+table.signals .mark-slot,
+table.signals .lamp {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+table.signals .tick {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 1px;
+}
+
+table.signals .lamp {
+  --lamp: var(--lamp-red);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 32%, rgba(255, 255, 255, 0.85), transparent 28%),
+    var(--lamp);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.55),
+    0 1px 1px rgba(0, 0, 0, 0.7),
+    0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+}
+
+table.signals .lamp.is-green {
+  --lamp: var(--lamp-green);
+}
+
+table.signals .lamp.is-red {
+  --lamp: var(--lamp-red);
+}
+
+table.signals .lamp.is-yellow {
+  --lamp: var(--lamp-yellow);
+}
+
+/* The blink clock shows the count. The gold figure is the real wait. */
+table.signals .lamp.blinks-1 {
+  animation: lamp-1 2.2s linear infinite;
+}
+
+table.signals .lamp.blinks-2 {
+  animation: lamp-2 2.2s linear infinite;
+}
+
+table.signals .lamp.blinks-3 {
+  animation: lamp-3 2.2s linear infinite;
+}
+
+table.signals .tick {
+  background:
+    linear-gradient(var(--ink), var(--ink)) 1px 8px / 3px 8px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 7px 5px / 3px 11px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) 13px 2px / 3px 14px no-repeat;
+  opacity: 0.72;
+}
+
+table.signals .tick.ticks-once {
+  animation: tick-pulse 2.2s linear infinite;
+}
+
+table.signals .tick.ticks-live {
+  animation: tick-live 2s linear infinite;
+}
+
+table.signals td.light .figure,
+table.signals td.sound .figure {
+  font-size: 22px;
+  line-height: 1;
+}
+
+@keyframes lamp-1 {
+  0%, 9% {
+    transform: scale(1.22);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.75),
+      0 1px 1px rgba(0, 0, 0, 0.7),
+      0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
+  }
+
+  20%, 100% {
+    transform: none;
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.55),
+      0 1px 1px rgba(0, 0, 0, 0.7),
+      0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+  }
+}
+
+@keyframes lamp-2 {
+  0%, 7%, 21%, 28% {
+    transform: scale(1.22);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.75),
+      0 1px 1px rgba(0, 0, 0, 0.7),
+      0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
+  }
+
+  14%, 18%, 36%, 100% {
+    transform: none;
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.55),
+      0 1px 1px rgba(0, 0, 0, 0.7),
+      0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+  }
+}
+
+@keyframes lamp-3 {
+  0%, 6%, 16%, 22%, 32%, 38% {
+    transform: scale(1.22);
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.75),
+      0 1px 1px rgba(0, 0, 0, 0.7),
+      0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
+  }
+
+  11%, 14%, 27%, 30%, 46%, 100% {
+    transform: none;
+    box-shadow:
+      inset 0 1px 1px rgba(255, 255, 255, 0.55),
+      0 1px 1px rgba(0, 0, 0, 0.7),
+      0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+  }
+}
+
+@keyframes wash-1 {
+  0%, 9% {
+    opacity: 1;
+  }
+
+  20%, 100% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes wash-2 {
+  0%, 7%, 21%, 28% {
+    opacity: 1;
+  }
+
+  14%, 18%, 36%, 100% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes wash-3 {
+  0%, 6%, 16%, 22%, 32%, 38% {
+    opacity: 1;
+  }
+
+  11%, 14%, 27%, 30%, 46%, 100% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes tick-pulse {
+  0%, 10% {
+    opacity: 1;
+  }
+
+  24%, 100% {
+    opacity: 0.34;
+  }
+}
+
+@keyframes tick-live {
+  0%, 12% {
+    opacity: 1;
+  }
+
+  28%, 100% {
+    opacity: 0.34;
+  }
 }
 
 .figure {
@@ -731,5 +1004,23 @@ table.signals td.none {
   *::after {
     transition: none;
     animation: none;
+  }
+
+  table.signals .lamp,
+  table.signals .lamp.blinks-1,
+  table.signals .lamp.blinks-2,
+  table.signals .lamp.blinks-3,
+  table.signals .tick,
+  table.signals .tick.ticks-once,
+  table.signals .tick.ticks-live {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  table.signals .tick,
+  table.signals .tick.ticks-once,
+  table.signals .tick.ticks-live {
+    opacity: 0.72;
   }
 }
