@@ -146,7 +146,7 @@ A dash means that topic is not a button for that unit. The map decides what is a
 
 The title in this map is the button and the page heading. The name of the file that holds the words is not a title.
 
-Placement has two pages, with different words. [Setup Placement](#setup-placement) is where a new alarm can go. [Troubleshooting Placement](#troubleshooting-placement) is what nearby thing is setting off an alarm that is already up.
+Placement has two pages, and both use the same diagram and instructions. [Setup Placement](#setup-placement) appears under Setup. [Troubleshooting Placement](#troubleshooting-placement) appears under Troubleshooting.
 
 | Topic | Wired alarm | Wireless alarm | RF module | Remote |
 |---|---|---|---|---|
@@ -182,7 +182,7 @@ The low-battery steps are a page for a wired or wireless alarm. They are not a b
 
 ### Setup Placement
 
-Where a new smoke alarm can go. The same instructions are used for every brand. This page does not mention a kitchen, steam, or moisture. Those are on [Troubleshooting Placement](#troubleshooting-placement).
+Where a new smoke alarm can go. Every Setup and Troubleshooting Placement page uses this same diagram and these instructions.
 
 Where practical, a smoke alarm goes on the ceiling. Do not place one:
 
@@ -382,14 +382,7 @@ Two meanings are already set:
 
 ### Troubleshooting Placement
 
-What nearby thing is setting off an alarm that is already up. The same instructions are used for every brand.
-
-Look for:
-
-- A kitchen that is too close. This is rare. Do not invent a distance.
-- Moisture or steam nearby. Do not invent a distance.
-- An air-conditioning vent closer than [Setup Placement](#setup-placement) allows.
-- Ceiling-fan blades closer than Setup Placement allows.
+The page body is the diagram and instructions in [Setup Placement](#setup-placement). It has no troubleshooting-specific text.
 
 ## Rules for every instruction
 

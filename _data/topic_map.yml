@@ -44,7 +44,7 @@ topics:
     # Same words for every brand. These includes are the pages, and a brand file for this topic is ignored.
     shared:
       setup: setup-placement.html
-      troubleshooting: troubleshooting-placement.html
+      troubleshooting: setup-placement.html
   opening:
     title: Opening
   pairing:
