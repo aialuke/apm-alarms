@@ -6,7 +6,7 @@ topic: pairing
 
 Fit the mount and turn the alarm on.
 
-On the back of the alarm you start with, press and hold the RF Pairing button for at least <span class="figure">5</span> seconds, until the red light on the front stays on.
+On the back of the alarm you start with, press and hold the RF Pairing button for at least <span class="figure">5</span> seconds, until the red light on the front stays on. That light stays on for <span class="figure">30</span> seconds.
 
 On each other alarm, press the RF Pairing button <span class="figure">2</span> times quickly. Do this within <span class="figure">2.5</span> minutes.
 

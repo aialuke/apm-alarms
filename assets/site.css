@@ -496,30 +496,11 @@ h1 {
   margin-top: 0;
 }
 
-.instruction .signals {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.instruction .signals li {
-  margin: 0;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--row-line);
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-wrap: pretty;
-}
-
-.instruction .signals li:first-child {
-  padding-top: 0;
-}
-
 table.signals {
   --lamp-green: #32d74b;
   --lamp-red: #ff453a;
   --lamp-yellow: #ff9f0a;
+  --lamp-blue: #409cff;
   --hairline: linear-gradient(var(--row-line), var(--row-line));
   display: block;
   width: 100%;
@@ -632,6 +613,10 @@ table.signals tbody tr:has(.lamp.is-yellow) {
   --wash: var(--lamp-yellow);
 }
 
+table.signals tbody tr:has(.lamp.is-blue) {
+  --wash: var(--lamp-blue);
+}
+
 table.signals tbody tr:has(.lamp.blinks-1)::before {
   animation: wash-1 2.2s linear infinite;
 }
@@ -697,9 +682,12 @@ table.signals .cue-words {
   min-width: 0;
 }
 
-table.signals td.light .cue-words,
-table.signals td.sound .cue-words {
+table.signals td.light .cue-words {
   white-space: nowrap;
+}
+
+table.signals td.sound .cue-words {
+  white-space: normal;
 }
 
 table.signals .wait {
@@ -742,6 +730,10 @@ table.signals .lamp.is-red {
 
 table.signals .lamp.is-yellow {
   --lamp: var(--lamp-yellow);
+}
+
+table.signals .lamp.is-blue {
+  --lamp: var(--lamp-blue);
 }
 
 /* The blink clock shows the count. The gold figure is the real wait. */

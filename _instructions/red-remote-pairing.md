@@ -13,3 +13,5 @@ Press the RF pairing button once to leave early.
 While that light is on, press the RF pairing button on the alarm <span class="figure">2</span> times.
 
 The red light on the alarm flashes <span class="figure">5</span> times. That alarm has joined.
+
+The orange locate light on the remote flashes <span class="figure">5</span> times. The remote has joined.

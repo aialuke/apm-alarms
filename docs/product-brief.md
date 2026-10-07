@@ -370,7 +370,7 @@ The app does not say to replace the unit, and it does not say to book an electri
 
 The full list of signals for the selected unit, in the style of a manual. Each light or sound, and what it means.
 
-The page is a table. Light and Sound sit side by side. What it means is the next line, across the width of the phone. A faint line marks each cell. The table is one rounded card with the tight blue edge. The Light and Sound labels are centred, and the meaning is centred in white under each row. The header stays pinned while the rows scroll, and each lamp lights its own row softly. Emerald wired is the first page written this way. The other signal pages still use one sentence per line until they are rewritten.
+The page is a table. Light and Sound sit side by side. What it means is the next line, across the width of the phone. A faint line marks each cell. The table is one rounded card with the tight blue edge. The Light and Sound labels are centred, and the meaning is centred in white under each row. The header stays pinned while the rows scroll, and each lamp lights its own row softly. Every signal page is written this way. A page lists its rows as `signals:` in its front matter, and `_includes/signal-table.html` draws the table, so no page writes table markup by hand. Every brand's wired, wireless, and remote page is written this way.
 
 When the colour is confirmed, the light cell draws that colour as a lamp. When the interval is confirmed, the lamp plays a short blink and the real interval is written large. The short blink is not the real wait. The cell does not write every. The repeat is assumed.
 
@@ -378,7 +378,7 @@ When a lamp shows the colour, the cell does not write that colour again. The col
 
 The sound cell gives the timing. It does not say chirp. It does not write every.
 
-A side with no cue shows a white dash, centred in the cell. The screen reader still hears None.
+When the colour is not stated, the light cell shows the count, the wait, or the short words with no lamp. A colour is never guessed. A row that carries two colours names the second in its words, because a cell draws one lamp. A side with no cue shows a white dash, centred in the cell. The screen reader still hears None. A flash count with no timing, such as the memory check, shows the count (1x, 2x, 3x) beside a steady lamp and still bars, because there is no real wait to blink. A blue light is drawn as a blue lamp. A sound cell may wrap its count and its wait onto two lines.
 
 Pairing flashes and pairing success stay on the Pairing page. They are not rows on this list.
 
@@ -391,7 +391,7 @@ A meaning can be tapped when there is a useful page to open. The action reads **
 Two meanings are already set:
 
 - **Chirping** means low battery, and opens the [low-battery steps](#low-battery-steps). On a remote, it ends at report faulty. The row's words also say that the Cavius chirp after a test the technician has just run is normal, and that wait is on [Testing](#testing). The row always offers the same action. It does not appear or disappear because a test was just run.
-- **Flashing red after an alarm** means this alarm is the one that set the others off. [Customer reports false alarms.](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). The light cell shows a steady red lamp and the words **after an alarm**. It does not play a blink and it does not show a timing. Pages still written as one sentence keep their current line until that page is rewritten as this table.
+- **Flashing red after an alarm** means this alarm is the one that set the others off. [Customer reports false alarms.](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). The light cell shows a steady red lamp and the words **after an alarm**. It does not play a blink and it does not show a timing.
 
 ### Won't power on.
 

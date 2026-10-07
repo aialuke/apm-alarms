@@ -299,7 +299,7 @@ const signal = html("emerald/wired/troubleshooting/signal/index.html");
 same(
   "emerald/wired/troubleshooting/signal/index.html",
   hrefsFor(signal, "Open Pairing"),
-  [pairing, pairing, pairing],
+  [pairing, pairing],
   "Open Pairing"
 );
 

@@ -12,6 +12,10 @@ Press the MASTER Test/Hush button <span class="figure">3</span> times in <span c
 
 While that blue light is on, press the Test/Hush button on each Slave <span class="figure">3</span> times in <span class="figure">2</span> seconds.
 
-The Slave network light flashes red or green for <span class="figure">3</span> seconds. Both network lights flash green for a further <span class="figure">3</span> seconds.
+The Slave network light flashes red or green for <span class="figure">3</span> seconds. Red is an alarm pairing for the first time. Green is an alarm that was paired before. Both network lights flash green for a further <span class="figure">3</span> seconds.
+
+After pairing, the network light on the alarm you started with is blue for <span class="figure">30</span> seconds.
+
+If the network light is green for <span class="figure">30</span> seconds or longer, the pair was unsuccessful.
 
 {% include pairing-test.html %}

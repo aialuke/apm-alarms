@@ -2,28 +2,52 @@
 brand: brooks
 unit: wired
 topic: signal
+signals:
+  - light: { lamp: green }
+    means: 'Mains power is on.'
+  - light: { lamp: green, figure: 48 }
+    means: 'On its backup battery because the mains is off.'
+  - means: 'Green light off. Both the mains and the backup battery are off.'
+  - light: { lamp: green }
+    means: 'No sound and no flash, and the only light is the power light. Standby.'
+  - light: { lamp: green, figure: 1, unit: second }
+    means: 'Flickers about every second. Test is held.'
+  - light: { lamp: red, label: 'Flashing red' }
+    means: 'Only on the alarm that is detecting the event.'
+  - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
+    means: 'This alarm set the others off.'
+  - light: { lamp: red, words: 'keeps flashing', label: 'Flashing red' }
+    means: 'Keeps flashing while the alarm still senses smoke or heat. Hush. The silence lasts <span class="figure">10</span> minutes.'
+  - light: { lamp: red, count: 2, figure: 48 }
+    means: 'For <span class="figure">24</span> hours after an alarm. That spacing is approximate.'
+  - light: { lamp: red, count: 2 }
+    means: 'While Test is held. An alarm is in memory.'
+  - light: { lamp: red, words: 'lasts 1 second' }
+    means: 'Memory has been cleared.'
+  - light: { lamp: yellow, figure: 48 }
+    sound: { tick: once, figure: 48 }
+    means: 'Backup battery is depleted.'
+    fix: low-battery
+  - sound: { tick: static }
+    means: 'Green light off at the same time as the battery chirp. Not receiving mains power. Report faulty.'
+  - light: { lamp: green, figure: 48 }
+    sound: { tick: static }
+    means: 'At the same time as the battery chirp. Not receiving mains power. Report faulty.'
+  - light: { lamp: yellow, count: 2, figure: 48 }
+    sound: { tick: once, count: 2, figure: 48 }
+    means: 'Sensor fault. Report faulty.'
+  - light: { lamp: yellow, count: 3, figure: 48 }
+    sound: { tick: once, count: 3, figure: 48 }
+    means: 'Past its tenth year. Report faulty.'
+  - light: { lamp: yellow, count: 4 }
+    sound: { tick: static, count: 4 }
+    means: 'When Test is pressed. This alarm has reached maximum dust compensation. Report faulty.'
+  - light: { lamp: yellow, figure: 8 }
+    means: 'Press Test if a fault is present, so the flashes can be counted.'
+  - light: { lamp: yellow, words: 'keeps flashing', label: 'Flashing yellow' }
+    means: 'Fault hush. The chirps stay off for <span class="figure">12</span> hours. The fault is still present.'
 ---
 
-<ul class="signals">
-<li>Steady green light. Mains power is on.</li>
-<li><span class="figure">1</span> green flash every <span class="figure">48</span> seconds. On its backup battery because the mains is off.</li>
-<li>Green light off. Both the mains and the backup battery are off.</li>
-<li>No sound and no flash, and the only light is the green power light. Standby.</li>
-<li>Green light flickers about every <span class="figure">1</span> second. Test is held.</li>
-<li>Red flash only on the alarm that is detecting the event.</li>
-<li>Flashing red light during a false alarm, or just after it. This alarm set the others off.</li>
-<li>Red light keeps flashing while the alarm still senses smoke or heat. Hush. The silence lasts <span class="figure">10</span> minutes.</li>
-<li>Red flash twice every <span class="figure">48</span> seconds for <span class="figure">24</span> hours after an alarm. That spacing is approximate.</li>
-<li>Red flash twice while Test is held. An alarm is in memory.</li>
-<li>Red flash that lasts <span class="figure">1</span> second. Memory has been cleared.</li>
-<li>Short chirp and <span class="figure">1</span> yellow flash every <span class="figure">48</span> seconds. Backup battery is depleted. <a href="#low-battery">View fix →</a></li>
-<li>Green light off at the same time as the battery chirp. Not receiving mains power. Report faulty.</li>
-<li>Green flash every <span class="figure">48</span> seconds at the same time as the battery chirp. Not receiving mains power. Report faulty.</li>
-<li><span class="figure">2</span> short chirps and <span class="figure">2</span> yellow flashes every <span class="figure">48</span> seconds. Sensor fault. Report faulty.</li>
-<li><span class="figure">3</span> short chirps and <span class="figure">3</span> yellow flashes every <span class="figure">48</span> seconds. Past its tenth year. Report faulty.</li>
-<li><span class="figure">4</span> short chirps and <span class="figure">4</span> yellow flashes when Test is pressed. This alarm has reached maximum dust compensation. Report faulty.</li>
-<li>Yellow flashes <span class="figure">8</span> seconds apart. Press Test if a fault is present, so the flashes can be counted.</li>
-<li>Yellow light keeps flashing, and the chirps stay off for <span class="figure">12</span> hours. Fault hush. The fault is still present.</li>
-</ul>
+{% include signal-table.html %}
 
 {% include low-battery.html %}

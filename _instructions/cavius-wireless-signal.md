@@ -2,21 +2,27 @@
 brand: cavius
 unit: wireless
 topic: signal
+signals:
+  - light: { figure: 48 }
+    means: 'In normal use. Alarm is working.'
+  - means: 'Only the alarm that started it flashes. That alarm can be picked out.'
+  - means: 'Other interconnected alarms sound after a short delay. The alarm that started it.'
+  - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
+    means: 'This alarm set the others off.'
+  - means: 'Press on that alarm. Alarms pause for <span class="figure">10</span> minutes.'
+  - light: { figure: 48 }
+    sound: { tick: once, figure: 48 }
+    means: 'Battery is near the end of its life. This continues for at least <span class="figure">30</span> days.'
+    fix: low-battery
+  - sound: { tick: once, figure: 8 }
+    means: 'After a test. Alarms are connected and working.'
+  - light: { figure: 8, words: 'for 2 minutes' }
+    means: 'After a test. Alarms are connected and working.'
+  - sound: { tick: once, count: 3, figure: 8 }
+    means: 'Smoke sensor fault. Report faulty.'
+
 ---
 
-<ul class="signals">
-<li>Light flash every <span class="figure">48</span> seconds in normal use. Alarm is working.</li>
-<li>Only the alarm that started it flashes. That alarm can be picked out.</li>
-<li>Other interconnected alarms sound after a short delay. The alarm that started it.</li>
-<li>Flashing red light during a false alarm, or just after it. This alarm set the others off.</li>
-<li>Press on that alarm. Alarms pause for <span class="figure">10</span> minutes.</li>
-<li>Short chirp and a light flash every <span class="figure">48</span> seconds. Battery is near the end of its life. This continues for at least <span class="figure">30</span> days. <a href="#low-battery">View fix →</a></li>
-<li><span class="figure">1</span> chirp every <span class="figure">8</span> seconds after a test. Alarms are connected and working.</li>
-<li>Light flash every <span class="figure">8</span> seconds for <span class="figure">2</span> minutes after a test. Alarms are connected and working.</li>
-<li><span class="figure">3</span> short chirps every <span class="figure">8</span> seconds. Smoke sensor fault. Report faulty.</li>
-<li>Red light flashes on the alarm you started with. Learn Mode. Sending the pairing code.</li>
-<li>Other alarms flash. Receiving the pairing code.</li>
-<li>Red flash on all of them. Connected. <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/troubleshooting/pairing/' | relative_url }}">Open Pairing</a></li>
-</ul>
+{% include signal-table.html %}
 
 {% include low-battery.html %}

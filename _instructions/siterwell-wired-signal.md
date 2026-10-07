@@ -2,23 +2,36 @@
 brand: siterwell
 unit: wired
 topic: signal
+signals:
+  - light: { lamp: green, words: 'on' }
+    means: 'The alarm is receiving mains power.'
+  - means: 'Green light stays off when mains is on. The power connection needs a check. Report faulty.'
+  - light: { lamp: red, figure: 32 }
+    means: 'Standby. The alarm is working.'
+  - light: { lamp: red, figure: 1, unit: second }
+    sound: { tick: live, words: 'until you let go' }
+    means: 'Test.'
+  - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
+    means: 'This alarm set the others off.'
+  - light: { lamp: red, figure: 8 }
+    means: 'Hush. That quiet period is about <span class="figure">8</span> minutes.'
+  - sound: { tick: live, count: 3, figure: 1.5 }
+    means: 'Short chirps, then a pause, until you let go. Test after a battery change.'
+  - light: { lamp: red, figure: 8 }
+    means: 'Hush for <span class="figure">8</span> minutes after that test.'
+  - light: { lamp: red, figure: 32 }
+    means: 'Standby after that hush.'
+  - light: { lamp: red, figure: 32 }
+    sound: { tick: once, figure: 32 }
+    means: 'At the same time as the red flash, for at least <span class="figure">30</span> days. Low battery.'
+    fix: low-battery
+  - light: { figure: 10 }
+    means: 'Base light, for at least <span class="figure">30</span> days. The base battery is low.'
+    fix: low-battery
+  - sound: { tick: once, figure: 32 }
+    means: 'With the alarm in fault. Fault. Clean the outside vents. If it keeps chirping, report faulty.'
 ---
 
-<ul class="signals">
-<li>Green light on. The alarm is receiving mains power.</li>
-<li>Green light stays off when mains is on. The power connection needs a check. Report faulty.</li>
-<li>Red flash every <span class="figure">32</span> seconds in standby. The alarm is working.</li>
-<li>Red light flashes once a second and the alarm sounds until you let go. Test.</li>
-<li>Flashing red light during a false alarm, or just after it. This alarm set the others off.</li>
-<li>Red light flashes every <span class="figure">8</span> seconds. Hush. That quiet period is about <span class="figure">8</span> minutes.</li>
-<li><span class="figure">3</span> short chirps, then a <span class="figure">1.5</span> second pause, and it repeats until you let go. Test after a battery change.</li>
-<li>Red light flashes once every <span class="figure">8</span> seconds. Hush for <span class="figure">8</span> minutes after that test.</li>
-<li>Red light flashes once every <span class="figure">32</span> seconds. Standby after that hush.</li>
-<li>Chirp at the same time as a red flash, about every <span class="figure">32</span> seconds, for at least <span class="figure">30</span> days. Low battery. <a href="#low-battery">View fix →</a></li>
-<li>Base light flashes about every <span class="figure">10</span> seconds for at least <span class="figure">30</span> days. The base battery is low. <a href="#low-battery">View fix →</a></li>
-<li>Chirp about every <span class="figure">32</span> seconds, with the alarm in fault. Fault. Clean the outside vents. If it keeps chirping, report faulty.</li>
-<li>Red light on the base stays on for <span class="figure">2</span> minutes after the wireless button is pressed <span class="figure">3</span> times within <span class="figure">2</span> seconds. Pairing has started.</li>
-<li><span class="figure">3</span> flashes of the light on the next base. That alarm has joined. <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/troubleshooting/pairing/' | relative_url }}">Open Pairing</a></li>
-</ul>
+{% include signal-table.html %}
 
 {% include low-battery.html %}

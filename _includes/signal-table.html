@@ -1,0 +1,39 @@
+{%- comment -%}
+  The What's that light or sound? table. Rows come from `signals:` in the page's front matter.
+  Row: light, sound, means, fix.
+  light:  lamp (green, red, yellow, blue; leave it out when the colour is not stated, and the cell still shows the count, wait and words), count (flashes), figure and unit (the real wait; unit is seconds unless set, and a 1 needs unit: second), words (extra words), label (screen reader words in place of the colour, such as Flashing red).
+  sound:  none, or tick (once, live, or static when there is no timing), count, figure and unit, words, label.
+  means:  the words, as HTML. fix: a link target such as low-battery, written as View fix →. open: pairing adds an Open Pairing link.
+  The writing rules are in docs/product-brief.md.
+{%- endcomment -%}
+<table class="signals">
+<thead><tr><th class="light" scope="col">Light</th><th class="sound" scope="col">Sound</th><th class="means" scope="col">Means</th></tr></thead>
+<tbody>
+{%- for row in page.signals -%}
+{%- assign light = row.light -%}
+{%- assign sound = row.sound -%}
+<tr>
+{%- comment %} Light cell {% endcomment -%}
+{%- if light and light.lamp or light.figure or light.words or light.count -%}
+{%- capture cue %}Light {{ light.label | default: light.lamp | capitalize }}{% if light.count == 1 %} once{% elsif light.count == 2 %} twice{% elsif light.count %} {{ light.count }} times{% endif %}{% endcapture -%}
+{%- assign blinks = light.count | default: 1 -%}
+{%- if blinks > 3 -%}{%- assign blinks = 0 -%}{%- endif -%}
+<td class="light"><span class="cue">{{ cue }}</span>{% if light.lamp %}<span class="lamp is-{{ light.lamp }}{% if light.figure %}{% if blinks > 0 %} blinks-{{ blinks }}{% endif %}{% else %} is-steady{% endif %}" aria-hidden="true"></span>{% else %}<span class="mark-slot" aria-hidden="true"></span>{% endif %}
+{%- if light.figure or light.words or light.count -%}
+<span class="cue-words">{% if light.count %}<span class="figure" aria-hidden="true">{{ light.count }}x</span> {% endif %}{% if light.figure %}<span class="wait"><span class="figure">{{ light.figure }}</span> {{ light.unit | default: "seconds" }}</span>{% endif %}{% if light.words %}{% if light.figure %}{{ ' ' }}{% endif %}{{ light.words }}{% endif %}</span>
+{%- endif -%}</td>
+{%- else -%}
+<td class="light is-empty"><span class="cue">Light None</span><span class="cue-words" aria-hidden="true">-</span></td>
+{%- endif -%}
+{%- comment %} Sound cell {% endcomment -%}
+{%- if sound and sound.tick -%}
+{%- capture cue %}Sound{% if sound.count == 1 %} once{% elsif sound.count == 2 %} twice{% elsif sound.count %} {{ sound.count }} times{% endif %}{% if sound.label %} {{ sound.label }}{% endif %}{% endcapture -%}
+<td class="sound"><span class="cue">{{ cue }}</span><span class="tick ticks-{{ sound.tick }}" aria-hidden="true"></span><span class="cue-words">{% if sound.count %}<span class="figure" aria-hidden="true">{{ sound.count }}x</span> {% endif %}{% if sound.figure %}<span class="wait"><span class="figure">{{ sound.figure }}</span> {{ sound.unit | default: "seconds" }}</span>{% endif %}{% if sound.words %}{% if sound.figure %}{{ ' ' }}{% endif %}{{ sound.words }}{% endif %}</span></td>
+{%- else -%}
+<td class="sound is-empty"><span class="cue">Sound None</span><span class="cue-words" aria-hidden="true">-</span></td>
+{%- endif -%}
+<td class="means"><span class="cue">Means</span> {{ row.means }}{% if row.fix %} <a href="#{{ row.fix }}">View fix →</a>{% endif %}{% if row.open == 'pairing' %} <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/pairing/' | relative_url }}">Open Pairing</a>{% endif %}</td>
+</tr>
+{%- endfor -%}
+</tbody>
+</table>

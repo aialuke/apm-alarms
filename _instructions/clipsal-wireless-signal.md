@@ -2,29 +2,39 @@
 brand: clipsal
 unit: wireless
 topic: signal
+signals:
+  - light: { lamp: red, figure: 40 }
+    means: 'No sound. Normal use.'
+  - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
+    means: 'This alarm set the others off.'
+  - light: { lamp: red, figure: 1, unit: second }
+    sound: { tick: live, count: 3, figure: 4 }
+    means: 'Until you let go of Test/Hush. Test.'
+  - light: { lamp: red, count: 2, words: 'for 5 minutes' }
+    means: 'Twice a second. Radio test.'
+  - sound: { tick: live, count: 2, figure: 1, unit: second }
+    means: 'For <span class="figure">10</span> seconds. Radio test.'
+  - light: { lamp: red, figure: 8 }
+    means: 'For <span class="figure">10</span> minutes, no sound. Hush. The alarm is not sensitive to smoke during that time.'
+  - light: { lamp: red, figure: 40 }
+    sound: { tick: once, figure: 40 }
+    means: 'Low battery.'
+    fix: low-battery
+  - light: { lamp: red, figure: 40 }
+    means: 'For <span class="figure">10</span> hours, no sound. Hushed low battery.'
+  - sound: { tick: once, figure: 40 }
+    means: 'No light flash. Fault. Report faulty.'
+  - sound: { tick: static, count: 2 }
+    means: 'Alarm fault. Report faulty.'
+  - sound: { tick: static, count: 1 }
+    means: 'No red flash. The alarm should be cleaned.'
+  - light: { lamp: red, label: 'Flashing red' }
+    means: 'This alarm can be hushed.'
+  - means: 'Flashing and sounding on more than one alarm. Each of those needs Test/Hush.'
+  - means: 'The other alarms stop within <span class="figure">5</span> to <span class="figure">10</span> seconds. After the first alarm is hushed.'
+
 ---
 
-<ul class="signals">
-<li>Red light once every <span class="figure">40</span> seconds, no sound. Normal use.</li>
-<li>Flashing red during a false alarm, or just after it. This alarm set the others off.</li>
-<li>Red light once every <span class="figure">1</span> second, <span class="figure">3</span> chirps every <span class="figure">4</span> seconds, until you let go of Test/Hush. Test.</li>
-<li>Red light twice a second for <span class="figure">5</span> minutes. Radio test.</li>
-<li><span class="figure">2</span> chirps every <span class="figure">1</span> second for <span class="figure">10</span> seconds. Radio test.</li>
-<li>Red light once every <span class="figure">8</span> seconds, no sound, for <span class="figure">10</span> minutes. Hush. The alarm is not sensitive to smoke during that time.</li>
-<li>Red light once and <span class="figure">1</span> chirp every <span class="figure">40</span> seconds. Low battery. <a href="#low-battery">View fix →</a></li>
-<li>Red light once every <span class="figure">40</span> seconds, no sound, for <span class="figure">10</span> hours. Hushed low battery.</li>
-<li>No light flash and <span class="figure">1</span> chirp every <span class="figure">40</span> seconds. Fault. Report faulty.</li>
-<li><span class="figure">2</span> chirps. Alarm fault. Report faulty.</li>
-<li><span class="figure">1</span> chirp, no red flash. The alarm should be cleaned.</li>
-<li>Flashing red light. This alarm can be hushed.</li>
-<li>Flashing and sounding on more than one alarm. Each of those needs Test/Hush.</li>
-<li>The other alarms stop within <span class="figure">5</span> to <span class="figure">10</span> seconds. After the first alarm is hushed.</li>
-<li>Network light blue for <span class="figure">30</span> seconds at most, or until pairing succeeds. The alarm you started with. <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/troubleshooting/pairing/' | relative_url }}">Open Pairing</a></li>
-<li>Network light red for <span class="figure">3</span> seconds. An alarm pairing for the first time.</li>
-<li>Network light green for <span class="figure">3</span> seconds. An alarm that was paired before.</li>
-<li>Network light green for <span class="figure">3</span> seconds. A successful pair.</li>
-<li>Network light blue for <span class="figure">30</span> seconds. After pairing, the alarm you started with.</li>
-<li>Network light green for <span class="figure">30</span> seconds or longer. An unsuccessful pair.</li>
-</ul>
+{% include signal-table.html %}
 
 {% include low-battery.html %}

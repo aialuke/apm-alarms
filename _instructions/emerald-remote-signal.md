@@ -2,12 +2,13 @@
 brand: emerald
 unit: remote
 topic: signal
+signals:
+  - sound: { tick: live, figure: 7 }
+    means: 'Test on every interconnected alarm. One silence press turns that test off.'
+  - means: 'Silence. Quiet for <span class="figure">8</span> minutes on every interconnected alarm. It can be slightly late if an alarm is part way through its sound.'
+  - light: { lamp: yellow, figure: 8 }
+    means: 'Remote battery is low. Report faulty.'
+  - means: 'No red flash on a test press. The remote did not react.'
 ---
 
-<ul class="signals">
-<li>Chirps for <span class="figure">7</span> seconds on every interconnected alarm. Test. One silence press turns that test off.</li>
-<li>Quiet for <span class="figure">8</span> minutes on every interconnected alarm. Silence. It can be slightly late if an alarm is part way through its sound.</li>
-<li>Yellow light once every <span class="figure">8</span> seconds. Remote battery is low. Report faulty.</li>
-<li>Red light and yellow light flash together. The remote is turned on and ready for pairing. <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/troubleshooting/pairing/' | relative_url }}">Open Pairing</a></li>
-<li>No red flash on a test press. The remote did not react.</li>
-</ul>
+{% include signal-table.html %}
