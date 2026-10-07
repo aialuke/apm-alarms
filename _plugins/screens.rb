@@ -41,7 +41,7 @@ module APM
           title = topics.dig(topic_id, "title")
           data = instruction_data(brand, unit_id, unit, list, lists, topic_id, title)
           dir = File.join(brand["id"], unit_id, list, topic_id)
-          html = converter.convert(render_instruction(site, doc))
+          html = converter.convert(render_instruction(site, doc, data))
           html = number_steps(html) unless topic_id == "placement"
           site.pages << Screen.new(site, dir, "instruction", data, html)
           published << data
@@ -62,7 +62,8 @@ module APM
 
               data = instruction_data(brand, unit_id, unit, list, lists, topic_id, topics.dig(topic_id, "title"))
               dir = File.join(brand["id"], unit_id, list, topic_id)
-              site.pages << Screen.new(site, dir, "instruction", data, note)
+              html = missing_html(site, list, topic_id, data, note)
+              site.pages << Screen.new(site, dir, "instruction", data, html)
               published << data
             end
           end
@@ -175,9 +176,32 @@ module APM
       "/" + parts.join("/") + "/"
     end
 
-    def render_instruction(site, doc)
-      info = { registers: { site: site, page: doc } }
-      payload = site.site_payload.merge("page" => doc.to_liquid)
+    def missing_html(site, list, topic_id, page_data, note)
+      shared = placement_include(list, topic_id)
+      return note unless shared
+
+      render_shared(site, shared, page_data)
+    end
+
+    def placement_include(list, topic_id)
+      return unless topic_id == "placement"
+      return "setup-placement.html" if list == "setup"
+      return "troubleshooting-placement.html" if list == "troubleshooting"
+    end
+
+    def render_shared(site, name, page_data)
+      path = File.join(site.source, "_includes", name)
+      info = { registers: { site: site, page: page_data } }
+      payload = site.site_payload.merge("page" => page_data)
+      site.liquid_renderer.file(path).parse(File.read(path)).render!(payload, info)
+    end
+
+    def render_instruction(site, doc, page_data)
+      page = {}
+      doc.data.each { |key, value| page[key.to_s] = value }
+      page.merge!(page_data)
+      info = { registers: { site: site, page: page } }
+      payload = site.site_payload.merge("page" => page)
       site.liquid_renderer.file(doc.path).parse(doc.content.to_s).render!(payload, info)
     end
 
@@ -186,7 +210,10 @@ module APM
       html.gsub(%r{<p\b([^>]*)>(.*?)</p>}m) do
         attrs = Regexp.last_match(1).to_s
         body = Regexp.last_match(2)
-        if attrs.include?("note")
+        if attrs.match?(/\blead\b/)
+          count = 0
+          "<p#{attrs}>#{body}</p>"
+        elsif attrs.match?(/\b(?:note|tip)\b/)
           "<p#{attrs}>#{body}</p>"
         else
           count += 1

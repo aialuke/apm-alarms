@@ -4,7 +4,7 @@ unit: wireless
 topic: pairing
 ---
 
-Press the test button <span class="figure">3</span> times on the front. Turn the alarm over. A green light on the back means it is in pairing mode. That light then changes to blue while it searches for the other alarms.
+Press the test button <span class="figure">3</span> times on the front. Turn the alarm over. A green light on the back. The light changes to blue while it searches for the other alarms.
 
 On each other alarm, press the test button <span class="figure">3</span> times.
 

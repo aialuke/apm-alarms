@@ -10,6 +10,6 @@ On the next alarm, press the Test/Silence button <span class="figure">2</span> t
 
 To bring in another alarm, put an alarm that is already connected back into the slow flash, then put the next alarm into the quick flash. Do this until the whole set is in.
 
-On the alarm that joins, the red light turns off, it beeps once, and the green light flashes and keeps flashing.
+On the alarm that joins, the red light turns off. <span class="figure">1</span> chirp. The green light flashes and keeps flashing.
 
 {% include pairing-test.html %}

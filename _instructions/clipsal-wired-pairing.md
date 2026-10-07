@@ -12,7 +12,7 @@ On the Primary, press Test/Hush <span class="figure">3</span> times within <span
 
 While that light is on, press Test/Hush on one Secondary <span class="figure">3</span> times within <span class="figure">2</span> seconds.
 
-The Standby light blinks <span class="figure">3</span> times on the Primary and on that Secondary. The Primary light then stays on for another <span class="figure">30</span> seconds.
+The Standby light blinks <span class="figure">3</span> times on the Primary and on that Secondary. The Primary light stays on for another <span class="figure">30</span> seconds.
 
 Repeat those Secondary presses for every other alarm.
 

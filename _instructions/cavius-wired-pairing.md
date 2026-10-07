@@ -10,9 +10,9 @@ Take each alarm off its base.
 
 Slide the switch on the back of each alarm to the Learn Mode position. The red light comes on.
 
-Press and hold the test button on one alarm until it beeps and the light flashes. The other alarms stay in Learn Mode.
+Press and hold the test button on one alarm until it chirps and the light flashes. The other alarms stay in Learn Mode.
 
-Each other alarm flashes its light as it receives the code.
+Each other alarm flashes its light.
 
 When every alarm is flashing the red light, they are connected. Switch them out of Learn Mode.
 

@@ -13,6 +13,6 @@ layout: default
   </nav>
   <h1>{{ page.title }}</h1>
 </header>
-<main class="instruction{% if page.topic == 'placement' %} list{% else %} sequence{% endif %}">
+<main class="instruction{% if page.topic == 'placement' %} list{% elsif page.topic == 'signal' %} signal sequence{% else %} sequence{% endif %}">
   {{ content }}
 </main>

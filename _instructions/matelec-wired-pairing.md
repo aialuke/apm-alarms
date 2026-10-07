@@ -10,7 +10,7 @@ On the alarm you start with, press TEST <span class="figure">3</span> times with
 
 While that red light is on, press TEST on the next alarm <span class="figure">3</span> times within <span class="figure">2</span> seconds.
 
-Both alarms give <span class="figure">1</span> short chirp, and the other alarm's light goes out. Do each remaining alarm the same way, one at a time.
+Both alarms give <span class="figure">1</span> short chirp. The other alarm's light goes out. Do each remaining alarm the same way, one at a time.
 
 When every alarm has joined, hold TEST on the first alarm until the red light turns off.
 

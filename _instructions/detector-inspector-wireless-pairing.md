@@ -8,6 +8,6 @@ Press the test button <span class="figure">3</span> times within <span class="fi
 
 On each other alarm, press the test button <span class="figure">3</span> times within <span class="figure">2</span> seconds.
 
-On each alarm that joins, the red light turns green with one chirp.
+On each alarm that joins, the red light turns green with <span class="figure">1</span> chirp.
 
 {% include pairing-test.html %}

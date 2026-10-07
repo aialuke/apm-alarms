@@ -6,6 +6,7 @@ vendor/
 
 # Impeccable working files. The product notes in PRODUCT.md stay in git.
 .impeccable/
+.grok/
 .cursor/skills/impeccable/
 .cursor/agents/impeccable-*.md
 

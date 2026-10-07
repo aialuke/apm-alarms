@@ -27,6 +27,8 @@ jobs:
         run: bundle exec jekyll build
       - name: Check the topic map
         run: sh script/check.sh
+      - name: Check the return trail
+        run: node script/trail-check.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

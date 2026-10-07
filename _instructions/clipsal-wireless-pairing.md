@@ -12,6 +12,6 @@ Press the MASTER Test/Hush button <span class="figure">3</span> times in <span c
 
 While that blue light is on, press the Test/Hush button on each Slave <span class="figure">3</span> times in <span class="figure">2</span> seconds.
 
-The Slave network light flashes red or green for <span class="figure">3</span> seconds. Then both network lights flash green for a further <span class="figure">3</span> seconds.
+The Slave network light flashes red or green for <span class="figure">3</span> seconds. Both network lights flash green for a further <span class="figure">3</span> seconds.
 
 {% include pairing-test.html %}
