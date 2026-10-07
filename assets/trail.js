@@ -100,7 +100,10 @@
   }
 
   function markHidden(state, now, path, scroll) {
-    state = clean(state, home);
+    var homePath = state && Array.isArray(state.entries) && state.entries[0]
+      ? state.entries[0].path
+      : "/";
+    state = clean(state, homePath);
     var entries = state.entries.slice();
     var top = entries[entries.length - 1];
     if (top && top.path === path) top.scroll = scroll;
@@ -117,7 +120,16 @@
 
   if (!root.document) return;
 
-  var home = norm(document.body.getAttribute("data-home") || "/");
+  function normalizeHome(path) {
+    var link = document.createElement("a");
+    link.href = path;
+    var value = link.pathname || "/";
+    if (value.indexOf("//") === 0) return "/";
+    if (value.length > 1 && value.charAt(value.length - 1) !== "/") value += "/";
+    return value;
+  }
+
+  var home = normalizeHome(document.body.getAttribute("data-home") || "/");
 
   function norm(path) {
     var link = document.createElement("a");

@@ -10,8 +10,6 @@ lists:
   troubleshooting:
     label: Troubleshooting
     other: setup
-    # Not buttons here. A page that opens one of these opens it under this list, so the route keeps saying Troubleshooting.
-    also: [testing]
     switch_label: Set up this alarm
 
 switches:
