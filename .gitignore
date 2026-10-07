@@ -9,6 +9,8 @@ vendor/
 .grok/
 .cursor/skills/impeccable/
 .cursor/agents/impeccable-*.md
+.cursor/hooks.json
+.claude/
 
 # Local research trail. Not a phone page.
 .audit/
