@@ -158,7 +158,7 @@ The tight edge on a brand button, a note, and the Back / Home bar runs Rim Ice, 
 - **Card** (`#141418`): The top of the face on a brand button, a note, and the Back / Home bar.
 - **Card Deep** (`#101014`): The bottom of that same face. The face falls from Card to Card Deep.
 - **Paper White** (`#f5f7fb`): Titles, row labels, and instruction text.
-- **Muted Paper** (`rgba(245, 247, 251, 0.74)`): The route line and secondary labels.
+- **Muted Paper** (`rgba(245, 247, 251, 0.74)`): The earlier steps of the route, and secondary labels.
 - **Row Line** (`rgba(245, 247, 251, 0.16)`): The grey line between list rows.
 
 The brand screen adds a soft blue light behind the title. Other screens stay flat black.
@@ -168,13 +168,15 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 **The Phone Face Rule.** Type is the iPhone system font: `-apple-system`, then San Francisco, then `system-ui`. A font file is not shipped. On the technician's iPhone this is San Francisco. The face already tracks itself, so the screen does not add tighter tracking on top.
 
 - **Display** (34px, weight 700): The Brands title only.
-- **Headline** (28px, weight 700, line-height 1.2): The screen title after Brands, including a topic name that wraps onto a second line.
+- **Headline** (28px, weight 700, line-height 1.2): The current step of the route after Brands, including a topic name that wraps onto a second line. It is the only page name.
 - **Choice** (22px, weight 650, line-height 1.25): Unit, Setup, Troubleshooting, topic, and shortcut rows.
 - **Body** (19px, weight 400, line-height 1.5, tracking 0.01em): Instruction steps, notes, and the placement sentence. The open leading and a little extra tracking keep light text clear on the black page. The weight stays regular so a page of steps still reads like notes.
 - **Brand** (19px, weight 650): The name on a brand button. The same size as the reading text, so a long name such as Detector Inspector still fits inside the button on an iPhone SE, and heavier so it reads as a label.
 - **Diagram** (24px, weight 700): The measurement on a placement sketch, in Figure Gold, with even figures.
 - **Control** (17px, weight 650): Back and Home. The placement clearances use this size at regular weight, so the points sit under the sentence.
-- **Label** (15px, weight 500): The route line. The current step of the route is Paper White and weight 650.
+- **Label** (15px, weight 500): The earlier steps of the route. The current step uses the headline.
+
+**The One Name Rule.** After Brands, the current step of the route is the only page name. It uses the headline, and a long name wraps. The earlier steps stay the label size. That name is not written again under the route. On the unit screen the brand stays visible, small, and is not a link, because that screen is already that brand's units.
 
 A step number uses the body size in Reading Blue at weight 700. An inline figure, such as 300 mm or 3 times, uses the body size in Figure Gold at weight 700. The gold figure stays inside the sentence, on the same baseline as the words around it. The blue step number is the only thing in the first column.
 
@@ -184,7 +186,7 @@ The app is a phone column. On a wide window the column is 430px wide and centred
 
 The brand screen is a three-column grid with a 10px gap and 16px side inset. Two published brands leave the third cell empty. Long names such as Detector Inspector wrap inside the button.
 
-After Brands, the route sits in the top bar. Choices are full-width rows on the black page. A grey line separates one row from the next. There is no box around the list. Shortcuts sit a little below the topics. There is more space above a title than between the title and the first row.
+After Brands, the route sits in the top bar. The earlier steps sit above the page name, and a clear gap sits between that name and the first row. Choices are full-width rows on the black page. A grey line separates one row from the next. There is no box around the list. Shortcuts sit a little below the topics.
 
 Instruction text uses the width of the phone column. The page scrolls under the top bar and the bottom bar. The last line keeps clear of the bar.
 
@@ -206,7 +208,7 @@ A near-square button, three across, the brand name centred in white. No logo. Th
 
 ### Navigation bar
 
-Sticky at the top, inside the safe area. Near-black, with a thin blue line along the bottom. Brands uses the display title and no route. Later screens use the route plus the headline.
+Sticky at the top, inside the safe area. Near-black, with a thin blue line along the bottom. Brands uses the display title and no route. Later screens use the route. The current step is the headline, and it is not repeated.
 
 ### List row
 
@@ -250,6 +252,7 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Do** keep the placement sentence and other instruction text at 19px so it can be read at arm's length. Set the clearances under that sentence as an indented disc list at 17px.
 - **Do** use Reading Blue for a shortcut, a step number, an icon, and an instruction link.
 - **Do** use Figure Gold for a clearance, a wait, a press count, or a confirmed flash interval. Color the figure only, at weight 700.
+- **Do** say the page name once. After Brands it is the current step of the route, at the headline size.
 
 ### Don't:
 
@@ -263,3 +266,4 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Don't** use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.
 - **Don't** give 300 mm and 400 mm different colors.
 - **Don't** put a gold figure or a link in the step-number column. They belong in the words.
+- **Don't** write the page name again under the route.

@@ -8,10 +8,8 @@ layout: default
     <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
     <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/' | relative_url }}">{{ page.list_name }}</a>
-    <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
-    <span aria-current="page">{{ page.title }}</span>
+    <h1 aria-current="page">{{ page.title }}</h1>
   </nav>
-  <h1>{{ page.title }}</h1>
 </header>
 <main class="instruction{% if page.topic == 'placement' %} list{% elsif page.topic == 'signal' %} signal sequence{% else %} sequence{% endif %}">
   {{ content }}

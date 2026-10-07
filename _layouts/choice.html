@@ -4,10 +4,8 @@ layout: default
 <header class="nav">
   <nav class="route" aria-label="What you picked">
     <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
-    <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
-    <span aria-current="page">{{ page.unit_name }}</span>
+    <h1 aria-current="page">{{ page.unit_name }}</h1>
   </nav>
-  <h1>{{ page.unit_name }}</h1>
 </header>
 <main>
 <ul class="choices">

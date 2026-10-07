@@ -176,6 +176,36 @@ function shortcutLabels(brand, unitId, list) {
   return found;
 }
 
+function headerOf(text) {
+  const match = text.match(/<header[\s\S]*?<\/header>/);
+  return match ? match[0] : "";
+}
+
+function pageName(header) {
+  const match = header.match(/<h1[^>]*>([^<]*)<\/h1>/);
+  return match ? match[1] : "";
+}
+
+function textNodes(header) {
+  return [...header.matchAll(/>([^<]*)</g)]
+    .map((match) => match[1].replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+}
+
+function oneName(rel, text, name) {
+  const header = headerOf(text);
+  const shown = pageName(header);
+  if (shown !== name) {
+    fail(`${rel} page name\ngot: ${shown}\nwant: ${name}`);
+    return;
+  }
+  const copies = textNodes(header).filter((node) => node === name).length;
+  if (copies !== 1) fail(`${rel} shows ${name} ${copies} times in the top bar`);
+  if (name !== "Brands" && !/<h1[^>]*aria-current="page"/.test(header)) {
+    fail(`${rel} page name is not the current step`);
+  }
+}
+
 function same(rel, got, want, message) {
   const left = Array.isArray(got) ? got.join("\n") : got;
   const right = Array.isArray(want) ? want.join("\n") : want;
@@ -187,6 +217,8 @@ const expected = new Set(["index.html"]);
 const home = `${base}/`;
 
 const brandPage = html("index.html");
+oneName("index.html", brandPage, "Brands");
+if (/<nav class="route"/.test(brandPage)) fail("index.html has a route");
 same("index.html", tiles(brandPage), brands.map((brand) => brand.name), "brand order");
 same("index.html", titleOf(brandPage), screenTitle(null, null, "Brands"), "title");
 same("index.html", hrefsFor(brandPage, "Back"), [], "Back");
@@ -196,6 +228,14 @@ for (const brand of brands) {
   const brandRel = `${brand.id}/index.html`;
   expected.add(brandRel);
   const brandHtml = html(brandRel);
+  oneName(brandRel, brandHtml, "Unit");
+  const unitHeader = headerOf(brandHtml);
+  if ((unitHeader.match(new RegExp(`>${brand.name}<`, "g")) || []).length !== 1) {
+    fail(`${brandRel} does not show ${brand.name} once`);
+  }
+  if (new RegExp(`<a[^>]*>${brand.name}</a>`).test(unitHeader)) {
+    fail(`${brandRel} links ${brand.name} from its own units`);
+  }
   same(brandRel, rowLabels(brandHtml), brand.units.map((id) => map.units[id].label), "unit rows");
   same(brandRel, titleOf(brandHtml), screenTitle(null, null, brand.name), "title");
   same(brandRel, hrefsFor(brandHtml, "Back"), [home], "Back");
@@ -207,6 +247,7 @@ for (const brand of brands) {
     expected.add(unitRel);
     const unitHtml = html(unitRel);
     const shown = Object.keys(map.lists).filter((list) => listShown(unitId, list, brand));
+    oneName(unitRel, unitHtml, unit.label);
     same(unitRel, rowLabels(unitHtml), shown.map((list) => map.lists[list].label), "list rows");
     same(unitRel, titleOf(unitHtml), screenTitle(brand.name, unit.label, unit.label), "title");
     same(unitRel, hrefsFor(unitHtml, "Back"), [`${base}/${brand.id}/`], "Back");
@@ -219,6 +260,7 @@ for (const brand of brands) {
       expected.add(listRel);
       const listHtml = html(listRel);
       const labels = topics.map((id) => map.topics[id].title).concat(shortcutLabels(brand, unitId, list));
+      oneName(listRel, listHtml, map.lists[list].label);
       same(listRel, rowLabels(listHtml), labels, "topic rows");
       same(listRel, titleOf(listHtml), screenTitle(brand.name, unit.label, map.lists[list].label), "title");
       same(listRel, hrefsFor(listHtml, "Back"), [`${base}/${brand.id}/${unitId}/`], "Back");
@@ -228,6 +270,7 @@ for (const brand of brands) {
         const rel = `${brand.id}/${unitId}/${list}/${topic}/index.html`;
         expected.add(rel);
         const page = html(rel);
+        oneName(rel, page, map.topics[topic].title);
         same(rel, titleOf(page), screenTitle(brand.name, unit.label, map.topics[topic].title), "title");
         same(rel, hrefsFor(page, "Back"), [`${base}/${brand.id}/${unitId}/${list}/`], "Back");
         same(rel, hrefsFor(page, "Home"), [home], "Home");
@@ -337,7 +380,7 @@ let locate = false;
 for (const rel of expected) {
   const text = html(rel);
   if (text.includes("MOUNTING SHOULD NOT APPEAR")) mounting = true;
-  const heading = (text.match(/<h1>([^<]*)<\/h1>/) || [])[1];
+  const heading = (text.match(/<h1[^>]*>([^<]*)<\/h1>/) || [])[1];
   if (heading === "Locate" || rowLabels(text).includes("Locate")) locate = true;
 }
 if (mounting) fail("dashed mounting page was published");

@@ -79,7 +79,7 @@ The technician picks the brand by looking at the alarm.
 
 ### Unit screen
 
-Full-width rows, one name on each row. No small picture. The brand stays visible at the top. The rows are Wired alarm, Wireless alarm, and Remote or RF module where that brand has them.
+Full-width rows, one name on each row. No small picture. The brand stays visible at the top, small, and it is not a link, because this screen is already that brand's units. Unit is the page name. It is not written a second time. The rows are Wired alarm, Wireless alarm, and Remote or RF module where that brand has them.
 
 There is no "both" choice. The technician picks the unit in hand right now.
 
@@ -104,7 +104,7 @@ Until the final wording is chosen, build these labels: **Troubleshoot this alarm
 
 The technician reads one brand, one unit, and one topic. The steps scroll on one page.
 
-A line at the top shows the route: **Brand → Unit → Setup or Troubleshooting → Topic**.
+The route sits at the top: **Brand → Unit → Setup or Troubleshooting → Topic**. The earlier steps stay small. The current step is the page name, large, and it is not written a second time.
 
 - **Brand** opens that brand's units.
 - **Unit** opens Setup or Troubleshooting for that unit.

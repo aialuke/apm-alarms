@@ -197,6 +197,31 @@ h1 {
   white-space: normal;
 }
 
+.route span.context {
+  color: var(--ink-dim);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.route h1 {
+  flex: 1 0 100%;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 4px 0 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
 .route .sep {
   display: inline-flex;
   align-items: center;
