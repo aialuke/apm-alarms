@@ -7,3 +7,4 @@
 - `docs/product-brief.md` is the master. The topic map (`_data/topic_map.yml`) and `_data/brands.yml` decide what appears. `DESIGN.md` is the look. `PRODUCT.md` is a short summary, so do not add facts there first.
 - Step cards are built in `_plugins/screens.rb`, and signal tables are drawn by `_includes/signal-table.html` from `signals:` in a page's front matter. Do not write card or table markup by hand.
 - The words, the screens and the writing rules are in the brief. The look is in `DESIGN.md`.
+- For the Impeccable layout scan, run `script/design-scan.sh`. Do not point the scanner at `_site` or the templates, because it cannot find the stylesheet there.
