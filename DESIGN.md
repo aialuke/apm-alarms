@@ -226,6 +226,10 @@ A dark bar, 56px tall, inset from the screen edges and the home indicator, with 
 
 Numbered steps in a two-column rhythm: the blue number, then the words. A gold figure and a link sit inside the words. A note, including a Tip, is a rounded inset in the reading flow. It is not a step, and it has no number. It has no thick coloured stripe.
 
+### Signal table
+
+What's that light or sound? is a table. Light and Sound are the header. The meaning is the full-width line under those two cells. The grid line is Faint Ink, `var(--ink-faint)`. The header face is Card. Body text stays 19px. There is no blue edge and no rounded corner.
+
 ### Placement sketch
 
 Line work in Muted Paper, measurement labels in Figure Gold, on the black field.
@@ -254,7 +258,7 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Don't** show Back or Home on the brand screen.
 - **Don't** replace Back and Home with a tab bar of extra sections.
 - **Don't** put a thick coloured side stripe on a Tip or a note.
-- **Don't** put a blue outline around a list of rows.
+- **Don't** put a blue outline around a list of rows. The signal table uses a faint ink line, not that blue edge.
 - **Don't** let a blue edge bloom into a wide glow. On a brand button, a note, and the Back / Home bar, it stays tight against the shape.
 - **Don't** use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.
 - **Don't** give 300 mm and 400 mm different colors.

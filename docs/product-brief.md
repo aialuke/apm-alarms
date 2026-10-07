@@ -370,6 +370,16 @@ The app does not say to replace the unit, and it does not say to book an electri
 
 The full list of signals for the selected unit, in the style of a manual. Each light or sound, and what it means.
 
+The page is a table. Light and Sound sit side by side. What it means is the next line, across the width of the phone. A faint line marks each cell. Emerald wired is the first page written this way. The other signal pages still use one sentence per line until they are rewritten.
+
+The light cell names the color. It does not repeat the word light. When the cell gives an interval, it does not say flash. A count stays in the cell, such as 3 times or twice. When there is no interval, the cell can still say flashing or comes on.
+
+The sound cell gives the timing. It does not say chirp. A sound that happens once, with the light, says when it happens. It does not gain an invented every.
+
+A side with no cue says None.
+
+Pairing flashes and pairing success stay on the Pairing page. They are not rows on this list.
+
 The list is Troubleshooting only, and it is the first topic there. Setup has no copy of the list. Setup steps still show the particular light or sound expected at that step.
 
 Each brand's wired alarm, wireless alarm, and remote has its own list. Each signal is written on that list once. The steps use that same list, so they cannot disagree.
@@ -379,7 +389,7 @@ A meaning can be tapped when there is a useful page to open. The action reads **
 Two meanings are already set:
 
 - **Chirping** means low battery, and opens the [low-battery steps](#low-battery-steps). On a remote, it ends at report faulty. The row's words also say that the Cavius chirp after a test the technician has just run is normal, and that wait is on [Testing](#testing). The row always offers the same action. It does not appear or disappear because a test was just run.
-- **Flashing red** during a false alarm, or just after it, means this alarm is the one that set the others off. [Customer reports false alarms.](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). Until then, this entry is words only. Do not show a demonstration or a timing.
+- **Flashing red after an alarm** means this alarm is the one that set the others off. [Customer reports false alarms.](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). Until then, this entry is words only. Do not show a demonstration or a timing. Pages still written as one sentence keep their current line until that page is rewritten as this table.
 
 ### Won't power on.
 
