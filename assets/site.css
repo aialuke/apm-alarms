@@ -30,6 +30,11 @@
   --lamp-red: #ff453a;
   --lamp-yellow: #ff9f0a;
   --lamp-blue: #409cff;
+  --hairline: linear-gradient(var(--row-line), var(--row-line));
+  --press: rgba(255, 255, 255, 0.14);
+  --hover: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(245, 247, 251, 0.78);
+  --line-soft: rgba(245, 247, 251, 0.45);
 }
 
 *,
@@ -335,6 +340,45 @@ h1 {
   height: 100%;
 }
 
+/* One card face: the tight blue rim, the dark face, and a faint sheen at the top. Each card sets --sheen (strength) and --sheen-reach (how far down). */
+.tile,
+table.signals,
+.instruction .note,
+.instruction .tip,
+.instruction.sequence > p.note,
+.instruction.sequence > p.tip,
+.fix,
+.bar {
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, var(--sheen, 0)), rgba(255, 255, 255, 0) var(--sheen-reach, 30%)),
+    var(--face) padding-box,
+    var(--rim) border-box;
+  box-shadow: var(--edge-shadow);
+}
+
+/* One section label: small, bold, spaced capitals in blue. */
+table.signals thead th,
+.fix-head {
+  color: var(--blue-text);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* One line-icon style for row icons and step icons. */
+.row-icon,
+.step-icon {
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .tile {
   position: relative;
   display: flex;
@@ -343,13 +387,10 @@ h1 {
   width: 100%;
   min-width: 0;
   min-height: 0;
+  --sheen: 0.16;
+  --sheen-reach: 32%;
   padding: 8px;
-  border: 1.5px solid transparent;
   border-radius: 26px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 32%),
-    var(--face) padding-box,
-    var(--rim) border-box;
   box-shadow: var(--edge-shadow), inset 0 1px 0 var(--edge-highlight);
   color: var(--ink);
   font-size: 19px;
@@ -453,11 +494,6 @@ h1 {
   width: 28px;
   height: 28px;
   color: var(--blue-text);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .chevron {
@@ -488,7 +524,7 @@ h1 {
 .choices a:active,
 .shortcuts a:active,
 .bar a:active {
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--press);
 }
 
 .instruction {
@@ -574,7 +610,7 @@ h1 {
 .part-line,
 .pin-line path {
   fill: none;
-  stroke: rgba(245, 247, 251, 0.78);
+  stroke: var(--line-strong);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -592,7 +628,7 @@ h1 {
 
 .part-dash {
   fill: none;
-  stroke: rgba(245, 247, 251, 0.45);
+  stroke: var(--line-soft);
   stroke-width: 1.5;
   stroke-dasharray: 3 4;
   stroke-linecap: round;
@@ -600,7 +636,7 @@ h1 {
 
 .part-fill {
   fill: var(--card-deep);
-  stroke: rgba(245, 247, 251, 0.78);
+  stroke: var(--line-strong);
   stroke-width: 2;
 }
 
@@ -615,7 +651,7 @@ h1 {
 .leader,
 .ring-stroke {
   fill: none;
-  stroke: rgba(245, 247, 251, 0.78);
+  stroke: var(--line-strong);
   stroke-width: 2;
   stroke-linecap: round;
 }
@@ -638,19 +674,13 @@ h1 {
 }
 
 table.signals {
-  --hairline: linear-gradient(var(--row-line), var(--row-line));
   display: block;
   width: 100%;
   max-width: 100%;
   margin: 0 0 18px;
-  border: 1.5px solid transparent;
   border-radius: 20px;
   border-spacing: 0;
   overflow: clip;
-  background:
-    var(--face) padding-box,
-    var(--rim) border-box;
-  box-shadow: var(--edge-shadow);
 }
 
 table.signals thead,
@@ -700,13 +730,7 @@ table.signals thead {
 
 table.signals thead th {
   padding: 13px 14px 11px;
-  color: var(--blue-text);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
   text-align: center;
-  text-transform: uppercase;
 }
 
 table.signals tbody tr {
@@ -847,14 +871,20 @@ table.signals .tick {
 
 table.signals .lamp {
   --lamp: var(--lamp-red);
+  /* The glow follows the lamp's own colour, so these are set here and not on :root. */
+  --lamp-rest:
+    inset 0 1px 1px rgba(255, 255, 255, 0.55),
+    0 1px 1px rgba(0, 0, 0, 0.7),
+    0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+  --lamp-lit:
+    inset 0 1px 1px rgba(255, 255, 255, 0.75),
+    0 1px 1px rgba(0, 0, 0, 0.7),
+    0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
   border-radius: 50%;
   background:
     radial-gradient(circle at 38% 32%, rgba(255, 255, 255, 0.85), transparent 28%),
     var(--lamp);
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.55),
-    0 1px 1px rgba(0, 0, 0, 0.7),
-    0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+  box-shadow: var(--lamp-rest);
 }
 
 table.signals .lamp.is-green {
@@ -926,54 +956,36 @@ table.signals td.sound .figure {
 @keyframes lamp-1 {
   0%, 9% {
     transform: scale(1.22);
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.75),
-      0 1px 1px rgba(0, 0, 0, 0.7),
-      0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
+    box-shadow: var(--lamp-lit);
   }
 
   20%, 100% {
     transform: none;
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.55),
-      0 1px 1px rgba(0, 0, 0, 0.7),
-      0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+    box-shadow: var(--lamp-rest);
   }
 }
 
 @keyframes lamp-2 {
   0%, 7%, 21%, 28% {
     transform: scale(1.22);
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.75),
-      0 1px 1px rgba(0, 0, 0, 0.7),
-      0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
+    box-shadow: var(--lamp-lit);
   }
 
   14%, 18%, 36%, 100% {
     transform: none;
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.55),
-      0 1px 1px rgba(0, 0, 0, 0.7),
-      0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+    box-shadow: var(--lamp-rest);
   }
 }
 
 @keyframes lamp-3 {
   0%, 6%, 16%, 22%, 32%, 38% {
     transform: scale(1.22);
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.75),
-      0 1px 1px rgba(0, 0, 0, 0.7),
-      0 0 10px color-mix(in srgb, var(--lamp) 90%, transparent);
+    box-shadow: var(--lamp-lit);
   }
 
   11%, 14%, 27%, 30%, 46%, 100% {
     transform: none;
-    box-shadow:
-      inset 0 1px 1px rgba(255, 255, 255, 0.55),
-      0 1px 1px rgba(0, 0, 0, 0.7),
-      0 2px 5px color-mix(in srgb, var(--lamp) 70%, transparent);
+    box-shadow: var(--lamp-rest);
   }
 }
 
@@ -1040,28 +1052,19 @@ table.signals td.sound .figure {
 .instruction.sequence > p.tip {
   display: block;
   margin: 0 0 18px;
+  --sheen: 0.1;
+  --sheen-reach: 40%;
   padding: 14px 16px;
-  border: 1.5px solid transparent;
   border-radius: 14px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 40%),
-    var(--face) padding-box,
-    var(--rim) border-box;
-  box-shadow: var(--edge-shadow);
 }
 
 /* Steps sit in a card, the same card as the signal table: one rounded face, the tight blue edge, faint lines between rows. */
 .fix {
-  --hairline: linear-gradient(var(--row-line), var(--row-line));
+  --sheen: 0.08;
+  --sheen-reach: 24%;
   margin: 0 0 18px;
-  border: 1.5px solid transparent;
   border-radius: 20px;
   overflow: clip;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 24%),
-    var(--face) padding-box,
-    var(--rim) border-box;
-  box-shadow: var(--edge-shadow);
   scroll-margin-top: calc(var(--nav-height) + 12px);
 }
 
@@ -1078,12 +1081,6 @@ table.signals td.sound .figure {
   background:
     var(--hairline) center bottom / calc(100% - 28px) 1px no-repeat,
     var(--card);
-  color: var(--blue-text);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-transform: uppercase;
 }
 
 .fix-head span {
@@ -1096,11 +1093,6 @@ table.signals td.sound .figure {
   width: 24px;
   height: 24px;
   color: var(--blue-text);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 /* Low battery is the amber row of the table. Its card carries the same lamp, so the fix reads as that row's. */
@@ -1249,7 +1241,7 @@ table.signals td.sound .figure {
 }
 
 .then.go:has(a:active) {
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--press);
 }
 
 .bar {
@@ -1263,12 +1255,7 @@ table.signals td.sound .figure {
   height: 56px;
   transform: translateX(-50%);
   overflow: hidden;
-  border: 1.5px solid transparent;
   border-radius: 22px;
-  background:
-    var(--face) padding-box,
-    var(--rim) border-box;
-  box-shadow: var(--edge-shadow);
 }
 
 .bar a {
@@ -1308,7 +1295,7 @@ table.signals td.sound .figure {
   .choices a:hover,
   .shortcuts a:hover,
   .bar a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--hover);
   }
 }
 
