@@ -11,15 +11,12 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 | Anka, wireless alarm, mounting | Not found | AJ-765 | No |
 | Anka, wireless alarm, activation | Found in a manual | AJ-765 | Yes |
 | Anka, wired alarm, opening | Not found | AJ-710MR-9 | No |
-| Anka, remote, activation | Not found | AJ-R1065 | No |
 | Brooks, wireless alarm, mounting | Found in a manual | EiB650iRF | Yes |
 | Brooks, wireless alarm, activation | Found in a manual | EiB650iRF | Yes |
 | Brooks, wired alarm, opening | Found in a manual | EIB3016 | Yes |
-| Brooks, remote, activation | Found in a manual | EIB450 | Yes |
 | Cavius, wireless alarm, mounting | Found in a manual | 2107 CAV10WF | Yes |
 | Cavius, wireless alarm, activation | Found in a manual | 2107 CAV10WF | Yes |
 | Cavius, wired alarm, opening | Found in a manual | 2203 CAVMP | Yes |
-| Cavius, remote, activation | Found in a manual | 9002 CAVSR, the Smart Remote | Yes |
 | Clipsal, wireless alarm, mounting | Found in a manual | 755LPSMA4 | Yes |
 | Clipsal, wireless alarm, activation | Found in a manual | 755LPSMA4 | Yes |
 | Clipsal, wired alarm, opening | Found in a manual | 755WSA | Yes |
@@ -33,7 +30,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 | GT, wireless alarm, mounting | Found in a manual | GT10RF+ | Yes |
 | GT, wireless alarm, activation | Found in a manual | GT10RF+ | Yes |
 | GT, wired alarm, opening | Found in a manual | GT240 | Yes |
-| GT, remote, activation | Not found | GT-REMOTE | No |
 | Legrand, wireless alarm, mounting | Found in a manual | 643091 | Yes |
 | Legrand, wireless alarm, activation | Found in a manual | 643091 | Yes |
 | Legrand, wired alarm, opening | Found in a manual | 643088 | Yes |
@@ -43,11 +39,9 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 | Matelec, wireless alarm, mounting | Found in a manual | FSA-30000 | Yes |
 | Matelec, wireless alarm, activation | Found in a manual | FSA-30000 | Yes |
 | Matelec, wired alarm, opening | Found in a manual | DET-SMK/RF/AC/10 | Yes |
-| Matelec, remote, activation | Found in a manual | FSA-90000 | Yes |
 | Red, wireless alarm, mounting | Found in a manual | R10RF | Yes |
 | Red, wireless alarm, activation | Found in a manual | R10RF | Yes |
 | Red, wired alarm, opening | Found in a manual | R240P | Yes |
-| Red, remote, activation | Found in a manual | RACP | Yes |
 | Siterwell, wireless alarm, mounting | Not found | No interconnected battery model | No |
 | Siterwell, wireless alarm, activation | Not found | No interconnected battery model | No |
 | Siterwell, wired alarm, opening | Found in a manual | GS519 | Yes |
@@ -96,22 +90,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 
 **Manual is silent on.** The page does not say how the alarm comes off the base, how it goes back on, or whether that motion is a twist or a slide.
 
-## Anka, remote, activation
-
-**Result.** Not found.
-
-**Model.** AJ-R1065. The sheet calls this a portable wireless remote for the AJ-76XSI series, with X as 0, 1, 2, 3, or 5. It does not say how a new remote turns on.
-
-**Source.** https://www.anka-security.com/wp-content/uploads/2026/05/AJ-R1065-Interconnected-Remote-Controller-Product-Manual.pdf
-
-**Sheet line.** "Two replaceable 3A batteries"
-
-**Steps.** Not found.
-
-**Manual is silent on.** The sheet does not say how to fit the batteries, which way a battery door opens, or whether a switch turns the remote on. It says the remote is wall mounted. It does not say how the remote goes on the wall.
-
-**Flag.** The sheet has a clear-pairing section for the remote and for the alarms. Those presses are not written here.
-
 ## Brooks, wireless alarm, mounting
 
 **Result.** Found in a manual.
@@ -153,22 +131,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 **Steps.** The sheet says to disconnect the mains before removal. Find the arrow on the front of the alarm. The removal slot is directly above that arrow. Put a flat-bladed screwdriver in horizontally about 10mm, into the centre of the slot. Keep the screwdriver in place, and push the lower half of the alarm away from the screwdriver, following the arrows on the cover. Hold the lower half, and take the alarm off the base by lowering it towards the floor. To put the alarm back, line it up on the base and slide it on. Mains power and battery power connect as the alarm slides onto the mounting plate. The power-up row in the indicator table is slide onto the mounting plate, with x1 under green, x1 under yellow, and x1 under red. The symbol key did not come through as words, so these notes do not say if those marks are a flash or a steady light.
 
 **Manual is silent on.** The removal section does not say to twist this alarm off. It does not describe a battery door. Wiring colours and terminal screws are left out of these notes.
-
-## Brooks, remote, activation
-
-**Result.** Found in a manual.
-
-**Model.** EIB450. The booklet is the Alarm Controller, and the cover names model EIB450.
-
-**Source.** https://www.brooks.com.au/index.cfm/_api/render/file/?method=inline&fileID=6505463F-8387-4065-880DBD6E7112367E
-
-**Sheet line.** "Turn on the system by sliding the switch to the on position & check the power up sequence."
-
-**Steps.** Slide the switch on the back to the on position. The fire, battery, and CO indicators flash. Each segment lights red. Each segment lights blue. Each segment lights green. After that sequence, all lights go off and the controller is in standby. The controller is powered for life by a lithium battery.
-
-**Manual is silent on.** The sheet does not say to fit a battery to turn the controller on. In this booklet, sliding the controller onto the wall plate comes after house coding, so that slide is not the turn-on step.
-
-**Flag.** The booklet says that if alarms are moved, return them to the factory settings and house code the system again. It points to each alarm manual for that reset. Those presses are not written here.
 
 ## Cavius, wireless alarm, mounting
 
@@ -217,22 +179,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 **Manual is silent on.** The sheet does not say the alarm beeps when it clicks on. It does not say to press a release button. It does not name a second direction for the twist back on.
 
 **Flag.** Learn mode is on the back of the alarm and is for connecting alarms. That switch is not how the alarm comes off the base or goes back on.
-
-## Cavius, remote, activation
-
-**Result.** Found in a manual.
-
-**Model.** 9002 CAVSR, the Smart Remote. The sheet prints model number 9002-001 and product code CAVSR. The Australian support download is a one page how to use quick guide. That page names the end cap and three AAA batteries. It does not say to open the end and insert the batteries. The steps below are from the Cavius New Zealand user guide for this same remote.
-
-**Source.** Cavius wireless smart remote user guide, How to connect smart remote with wireless family alarms, step 1, and Batteries replacement. https://onpointdistribution.co.nz/wp-content/uploads/9002-_CAVSR_WEB-1.pdf
-
-**Sheet line.** "Open the end of the remote, insert batteries, then close."
-
-**Steps.** Open the end of the remote, insert the batteries, then close. The remote uses 3 replaceable AAA alkaline batteries. The sheet says Duracell or Panasonic batteries are required. To reach the batteries later, remove the end cap.
-
-**Manual is silent on.** The sheet does not give a separate on button after the batteries are in. It does not say the remote beeps or lights when the batteries first go in. It does not say which way the cells face.
-
-**Flag.** The next steps on that page slide the switch to learn mode and hold the test button so the remote becomes the master. That is pairing. It is not how a new remote turns on.
 
 ## Clipsal, wireless alarm, mounting
 
@@ -436,20 +382,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 
 **Flag.** The sheet says the warranty is void if the alarm is interconnected to any other brand or make of alarm.
 
-## GT, remote, activation
-
-**Result.** Not found.
-
-**Model.** GT-REMOTE. The maker product page names that model. No manual for it was opened.
-
-**Source.** https://gtsmokealarms.com.au/product/gt-remote/ has no manual link. https://gtsmokealarms.com.au/installation-manuals/ lists manuals for other GT models and does not list GT-REMOTE. https://gtsmokealarms.com.au/technical-data-sheets/ does not list GT-REMOTE.
-
-**Sheet line.** No line extracted.
-
-**Steps.** Not found.
-
-**Manual is silent on.** Not found.
-
 ## Legrand, wireless alarm, mounting
 
 **Result.** Found in a manual.
@@ -592,22 +524,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 
 **Flag.** The sheet has a factory reset after the unhinge line. Those reset presses are not part of taking the head off or putting it back.
 
-## Matelec, remote, activation
-
-**Result.** Found in a manual.
-
-**Model.** FSA-90000. The wired alarm manual names this remote. A separate remote page on manuals.plus did not open, so it was not used.
-
-**Source.** MATelec user manual, Pairing wireless remote. https://cdn.sanity.io/files/1uk9rgzk/production/afb1ace1b2e24c23157a940dddca07893ef1a391.pdf The blocked page was https://manuals.plus/matelec/fsa-90000-smoke-detector-remote-controller-manual
-
-**Sheet line.** "Energise the wireless remote (FSA-90000) by removing the battery isolation tab."
-
-**Steps.** Turn the new remote on by pulling out the battery isolation tab.
-
-**Manual is silent on.** The sheet does not say the remote beeps when the tab comes out. It does not say a light comes on from the tab alone. It does not say to fit a battery by hand. The next lines are a pairing check. They are not the turn-on.
-
-**Flag.** The remote drawing on that page names a Locate button. These notes do not turn that button on.
-
 ## Red, wireless alarm, mounting
 
 **Result.** Found in a manual.
@@ -655,22 +571,6 @@ Mounting is how a wireless alarm goes on its plate. Activation is how a new wire
 **Manual is silent on.** A twist to take the alarm off. A counted slide.
 
 **Flag.** The sheet also says how to clear pairing memory. Press the RF pairing button 5 times. The red LED flashes 10 times and the alarm leaves the network.
-
-## Red, remote, activation
-
-**Result.** Found in a manual.
-
-**Model.** RACP. This is the Professional Wireless Smoke Alarm Controller named for this job.
-
-**Source.** https://redsmokealarms.com.au/wp-content/uploads/2025/05/RACP-Manual_20250619.pdf Step 1 is headed Activation.
-
-**Sheet line.** "all LEDs will flash once to indicate battery activation."
-
-**Steps.** The sheet says to pull the small plastic tab out of the back of the battery door. All the LEDs flash once. That flash means the battery is on. The sheet then says to use a tool and hold the RF pairing button for at least 5 seconds, until the orange locate LED stays on. The sheet says that hold turns the controller on.
-
-**Manual is silent on.** A beep when the tab comes out. A wait after the one flash.
-
-**Flag.** The same 5 second hold is also how the sheet starts Master Pairing Mode. The orange locate LED then stays on for 150 seconds. Clearing the network is a different action. Press the RF pairing button 5 times. The orange locate LED flashes 10 times.
 
 ## Siterwell, wireless alarm, mounting
 

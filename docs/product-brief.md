@@ -60,7 +60,7 @@ The path is:
 After the unit, the technician picks Setup or Troubleshooting.
 
 - **Setup** is for putting in a new alarm. The topics are the jobs, such as Pairing. A remote and an RF module have no Setup list. See Remote and RF module below.
-- **Troubleshooting** is for an alarm that is already up. The topics are What's that light or sound?, Placement, and Pairing. It is a lookup. The technician opens the problem that matches what is in front of them. Inside that topic, the steps are in order. The app does not force a path through every topic, track progress, or ask them to name the alarm inside the app before it will help.
+- **Troubleshooting** is for an alarm that is already up. The topics are Lights & Sounds, Placement, and Pairing. It is a lookup. The technician opens the problem that matches what is in front of them. Inside that topic, the steps are in order. The app does not force a path through every topic, track progress, or ask them to name the alarm inside the app before it will help.
 
 ### Brand screen
 
@@ -157,7 +157,7 @@ Placement has two pages, and both use the same diagram and instructions. [Setup 
 | Fitting | — | — | RF module page | — |
 | Pairing | Setup and Troubleshooting, one shared page | Setup and Troubleshooting, one shared page | — | Remote page |
 | Testing | Setup. Troubleshooting pages open it under Troubleshooting | Setup. Other pages open it | — | — |
-| What's that light or sound? | Troubleshooting, shown first | Troubleshooting, shown first | — | — |
+| Lights & Sounds | Troubleshooting, shown first | Troubleshooting, shown first | — | — |
 | Use | — | — | — | Remote page |
 
 The map decides whether a topic exists. The lists below only give the order.
@@ -171,8 +171,8 @@ The map decides whether a topic exists. The lists below only give the order.
 
 **Troubleshooting**
 
-- Wired alarm: What's that light or sound?, Placement, Pairing
-- Wireless alarm: What's that light or sound?, Placement, Pairing
+- Wired alarm: Lights & Sounds, Placement, Pairing
+- Wireless alarm: Lights & Sounds, Placement, Pairing
 
 The lists above are the topic buttons, in that order. The table does not set the order.
 
@@ -310,7 +310,7 @@ Not its own screen. The page that needs it shows these steps. The battery cannot
 
 ### Low-battery steps
 
-Not a topic button. [What's that light or sound?](#whats-that-light-or-sound) opens these steps from Chirping.
+Not a topic button. [Lights & Sounds](#lights--sounds) opens these steps from Chirping.
 
 A Cavius alarm chirping on its own uses these steps. The Cavius chirp after a test the technician has just run does not. That wait is on [Testing](#testing).
 
@@ -353,7 +353,7 @@ The app does not say to replace the unit, and it does not say to book an electri
 
 ## Troubleshooting pages
 
-### What's that light or sound?
+### Lights & Sounds
 
 The full list of signals for the selected unit, in the style of a manual. Each light or sound, and what it means.
 
@@ -397,7 +397,7 @@ The page body is the diagram and instructions in [Setup Placement](#setup-placem
 
 ### Flashing lights
 
-Wherever a flashing light with a confirmed interval is shown, including on a step and in What's that light or sound?, show a short visual demonstration and write the real interval in large text. Do not make the technician wait through a long cycle. A 40-second or 48-second flash is an example of a long cycle, not a stored interval for a brand.
+Wherever a flashing light with a confirmed interval is shown, including on a step and in Lights & Sounds, show a short visual demonstration and write the real interval in large text. Do not make the technician wait through a long cycle. A 40-second or 48-second flash is an example of a long cycle, not a stored interval for a brand.
 
 ### Chirp waits
 
@@ -497,7 +497,7 @@ Each word below means one thing in the app. The "Not" column lists names the app
 | Fitting | Putting an RF module into a wired alarm, the right way round. | Installing |
 | Testing | Setting an alarm off and checking that the interconnected alarms sound too. | |
 | Use | What a remote's controls do and how to use them. | |
-| What's that light or sound? | The full list of signals for one unit. | |
+| Lights & Sounds | The full list of signals for one unit. | |
 | report faulty | The last step when the fix is not the technician's to do. | |
 
 ### Lights and sounds

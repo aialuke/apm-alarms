@@ -16,13 +16,10 @@ Factory reset and clearing a network stay in Flag. They are not signals to put o
 |---|---|---|---|---|
 | Anka | Wired | Not found | AJ-710MR-9 | No |
 | Anka | Wireless | Found in a manual | AJ-765 | Yes |
-| Anka | Remote | Found in a manual | AJ-R1065 | Yes |
 | Brooks | Wired | Found in a manual | EIB3016 | Yes |
 | Brooks | Wireless | Found in a manual | EIB650iRF | Yes |
-| Brooks | Remote | Found in a manual | EIB450 | Yes |
 | Cavius | Wired | Found in a manual | 2203 CAVMP | Yes |
 | Cavius | Wireless | Found in a manual | 2107 CAV10WF | Yes |
-| Cavius | Remote | Found in a manual | 9002 CAVSR | Yes |
 | Clipsal | Wired | Found in a manual | 755WSA | Yes |
 | Clipsal | Wireless | Found in a manual | 755LPSMA4 | Yes |
 | Detector Inspector | Wired | Found in a manual | Generic mains sheet | Yes |
@@ -32,17 +29,14 @@ Factory reset and clearing a network stay in Flag. They are not signals to put o
 | Emerald | Remote | Found in a manual | EP-SA-CONT-RF | Yes |
 | GT | Wired | Found in a manual | GT240 | Yes |
 | GT | Wireless | Found in a manual | GT10RF+ | Yes |
-| GT | Remote | Not found | GT-REMOTE, no manual | No |
 | Legrand | Wired | Found in a manual | 643088 | Yes |
 | Legrand | Wireless | Found in a manual | 643091 | Yes |
 | Lifesaver | Wired | Found in a manual | LIF6800 | Yes |
 | Lifesaver | Wireless | Found in a manual | LIF6000DCW | Yes |
 | Matelec | Wired | Found in a manual | DET-SMK/RF/AC/10 | Yes |
 | Matelec | Wireless | Found in a manual | FSA-30000 | Yes |
-| Matelec | Remote | Found in a manual | FSA-90000 | Yes |
 | Red | Wired | Found in a manual | R240P | Yes |
 | Red | Wireless | Found in a manual | R10RF | Yes |
-| Red | Remote | Found in a manual | RACP | Yes |
 | Siterwell | Wired | Found in a manual | GS519 | Yes |
 | Siterwell | Wireless | Not found | No interconnected battery model | No |
 
@@ -107,20 +101,6 @@ Factory reset and clearing a network stay in Flag. They are not signals to put o
 **Manual is silent on.** The manual tells you to hold the test button until the blue light comes on when the alarms use RF modules, and it does not say what that blue light means. It also does not give a spacing for the red flash during hush.
 
 **Flag.** Unconfirmed against the brief. Do not treat this as the interval to show.
-
-## Brooks, remote
-
-**Result.** Found in a manual.
-
-**Model.** EIB450. This is the wall mount test, locate, silence, and memory control on the Brooks manuals page.
-
-**Source.** https://www.brooks.com.au/index.cfm/_api/render/file/?method=inline&fileID=6505463F-8387-4065-880DBD6E7112367E
-
-**Sheet line.** "Fire Indicator Indicates that a Fire Alarm has been activated"
-
-**Signals.** The fire indicator means a fire alarm has been activated. The CO indicator means a CO alarm has been activated. The low battery indicator means the controller battery has reached the end of its life. On power up the fire, battery, and CO indicators flash, then each segment lights red, then blue, then green, and then every light goes off, which means standby. In house code the number of blue flashes equals the number of RadioLINK alarms and devices, and that pattern repeats every 5 to 10 seconds. The test segment lighting blue means a RadioLINK test signal has been activated. The test segment flashing blue means the test has been completed. The locate segment changes from red to blue when locate is used, and after 10 to 40 seconds every alarm stops except the source alarm. The silence segment flashes red while the source alarm can still be silenced, and it then turns blue. All segments flashing green for a moment means the controller is back in standby. If an alarm starts and then returns to standby, the fire icon or the CO icon flashes rapidly for two minutes. After a CO alarm, the CO icon then flashes once every 60 seconds for 24 hours. In diagnostic mode a green flash on the memory segment, with the fire or CO indicator also flashing, means an alarm memory is set. The test segment flashing blue during the two minute diagnostic test means a refresh signal is being sent. All segments flashing green means that diagnostic test is finished.
-
-**Manual is silent on.** The manual does not say what the low battery indicator looks like, and it does not call the two minute fire or CO icon flash red.
 
 ## Cavius, wired alarm
 

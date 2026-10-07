@@ -352,8 +352,7 @@ for (const heading of ["Activation", "Pairing", "Use"]) {
   if (!remotePage.includes(`<span>${heading}</span></h2>`)) fail(`${remoteRel} has no ${heading} card`);
 }
 if (remotePage.includes('<table class="signals">')) fail(`${remoteRel} still has a light and sound table`);
-if (html("brooks/remote/index.html").includes('<table class="signals">')) fail("brooks remote still has a light and sound table");
-for (const id of ["anka", "cavius", "gt", "matelec", "red"]) {
+for (const id of ["anka", "brooks", "cavius", "clipsal", "detector-inspector", "gt", "legrand", "lifesaver", "matelec", "red", "siterwell"]) {
   if (fs.existsSync(path.join(siteDir, id, "remote"))) fail(`${id} still has a remote page`);
 }
 if (/Troubleshoot|Setup/.test(remotePage.split("<main")[1] || "")) fail(`${remoteRel} still offers Setup or Troubleshooting`);
@@ -385,17 +384,26 @@ if (placement.includes("These words are not written yet.")) {
   fail("clipsal wired setup placement shows the unwritten note");
 }
 
-const troublePlacement = html("clipsal/wired/troubleshooting/placement/index.html");
-if (!troublePlacement.includes("A kitchen that is too close.")) {
-  fail("clipsal wired troubleshooting placement is missing the kitchen line");
+const sharedPlacement = fs.readFileSync(path.join(root, "_includes/setup-placement.html"), "utf8").trim();
+const placementPages = [];
+const findPlacement = (dir) => {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const next = path.join(dir, entry.name);
+    if (entry.name === "placement" && fs.existsSync(path.join(next, "index.html"))) placementPages.push(next);
+    else findPlacement(next);
+  }
+};
+findPlacement(siteDir);
+if (placementPages.length === 0) fail("no placement pages were built");
+for (const dir of placementPages) {
+  const rel = path.relative(siteDir, path.join(dir, "index.html"));
+  const page = html(rel);
+  const squash = (s) => s.replace(/\s+/g, " ");
+  if (!squash(page).includes(squash(sharedPlacement))) fail(`${rel} does not use the shared placement diagram and instructions`);
+  if (!page.includes('class="fix fix-plain"')) fail(`${rel} is not in a plain card`);
+  if (page.includes('class="step-num"')) fail(`${rel} has a step number`);
 }
-same(
-  "clipsal/wired/troubleshooting/placement/index.html",
-  hrefsFor(troublePlacement, "Setup Placement"),
-  ["/apm-alarms/clipsal/wired/setup/placement/", "/apm-alarms/clipsal/wired/setup/placement/"],
-  "Setup Placement"
-);
-if (troublePlacement.includes('class="step-num"')) fail("clipsal wired troubleshooting placement has a step number");
 
 for (const gone of ["power", "quiet", "false-alarms"]) {
   if (fs.existsSync(path.join(siteDir, "clipsal/wired/troubleshooting", gone, "index.html"))) {
