@@ -12,7 +12,7 @@ signals:
   - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
     means: 'This alarm set the others off.'
   - sound: { tick: once, figure: 48 }
-    means: 'For <span class="figure">30</span> days. Backup battery is nearing the end of its life. Only the alarm with the low battery chirps.'
+    means: 'Low battery.'
     fix: low-battery
   - sound: { tick: once, figure: 8 }
     means: 'After a test. Alarms are connected and working.'
@@ -20,7 +20,6 @@ signals:
     means: 'After a test. Alarms are connected and working.'
   - sound: { tick: once, count: 3, figure: 8 }
     means: 'Smoke sensor fault. Report faulty.'
-
 ---
 
 {% include signal-table.html %}

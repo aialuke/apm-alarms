@@ -9,9 +9,6 @@ signals:
     means: 'Green light stays on. Mains is on. The alarm and the backup battery are standing by.'
   - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
     means: 'This alarm set the others off.'
-  - light: { lamp: red, words: 'quickly' }
-    sound: { tick: live, words: 'quick, in time with the light' }
-    means: 'Test. Both stop when you let go.'
   - light: { lamp: red, count: 1, figure: 48 }
     sound: { tick: once, count: 1, figure: 48 }
     means: 'Low battery. Short chirp in time with the flash.'

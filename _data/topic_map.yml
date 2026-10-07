@@ -24,19 +24,19 @@ units:
   wired:
     label: Wired alarm
     setup: [placement, opening, pairing, testing]
-    troubleshooting: [signal, power, quiet, false-alarms, placement, pairing]
+    troubleshooting: [signal, placement, pairing]
   wireless:
     label: Wireless alarm
     setup: [placement, mounting, activation, pairing, testing]
-    troubleshooting: [signal, power, quiet, false-alarms, placement, pairing]
+    troubleshooting: [signal, placement, pairing]
   rf:
     label: RF module
-    setup: [fitting]
-    troubleshooting: []
+    # One page, no lists. It is just the fitting diagram.
+    combine: [fitting]
   remote:
     label: Remote
-    setup: [activation, pairing, use]
-    troubleshooting: [signal, remote-dead, pairing, locate]
+    # One page, no lists. These are its sections, in order.
+    combine: [activation, pairing, use]
 
 topics:
   placement:
@@ -51,19 +51,7 @@ topics:
     title: Mounting
   activation:
     title: Activation
-  fitting:
-    title: Fitting
   use:
     title: Use
   signal:
     title: What's that light or sound?
-  power:
-    title: Won't power on
-  quiet:
-    title: Not going off when other alarms go off
-  false-alarms:
-    title: Customer reports false alarms
-  remote-dead:
-    title: Remote won't work
-  locate:
-    title: Locate

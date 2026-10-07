@@ -4,7 +4,7 @@ unit: wireless
 topic: testing
 ---
 
-Press and hold the test button.
+Hold test button for <span class="figure">3</span> cycles of the alarm sound.
 
 This alarm sounds if the electronics and the battery are working.
 

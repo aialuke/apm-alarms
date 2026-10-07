@@ -4,7 +4,7 @@ unit: wired
 topic: testing
 ---
 
-Press and hold the test button on any alarm for at least <span class="figure">10</span> seconds.
+Hold test button on any alarm for <span class="figure">3</span> cycles of the alarm sound.
 
 The alarms then give a short chirp, and the light flashes every <span class="figure">8</span> seconds for <span class="figure">2</span> minutes.
 

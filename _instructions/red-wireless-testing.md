@@ -6,7 +6,7 @@ topic: testing
 
 Stand at arm's length.
 
-Firmly press the test button. Use only Test/Hush.
+Hold Test/Hush for <span class="figure">3</span> cycles of the alarm sound.
 
 The alarm sounds a loud chirp. It stops when you let go. If it does not sound, press the test button again.
 

@@ -12,7 +12,7 @@ signals:
   - means: 'Press on that alarm. Alarms pause for <span class="figure">10</span> minutes.'
   - light: { figure: 48 }
     sound: { tick: once, figure: 48 }
-    means: 'Battery is near the end of its life. This continues for at least <span class="figure">30</span> days.'
+    means: 'Low battery.'
     fix: low-battery
   - sound: { tick: once, figure: 8 }
     means: 'After a test. Alarms are connected and working.'
@@ -20,7 +20,6 @@ signals:
     means: 'After a test. Alarms are connected and working.'
   - sound: { tick: once, count: 3, figure: 8 }
     means: 'Smoke sensor fault. Report faulty.'
-
 ---
 
 {% include signal-table.html %}

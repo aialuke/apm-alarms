@@ -1,6 +1,6 @@
 # Lights and sounds research
 
-Source notes for the technician. One model per unit. Sources are manuals and official pages opened during this pass. This file is not a page on the phone. The signal list is not in the app.
+Source notes for the technician. One model per unit. Sources are manuals and official pages opened during this pass. This file is not a page on the phone. The phone shows the wired and wireless tables. A remote has no table, so the remote notes here are for reference only.
 
 The phone writes each signal as the table in `docs/product-brief.md`. This file keeps what the sheet said.
 
@@ -76,20 +76,6 @@ Factory reset and clearing a network stay in Flag. They are not signals to put o
 
 **Flag.** Unconfirmed against the brief. Do not treat this as the interval to show.
 
-## Anka, remote
-
-**Result.** Found in a manual.
-
-**Model.** AJ-R1065. The AJ-765 sheet names an AJ-R106 remote, and the AJ-R106 product page does not say what any light means. This section uses the maker manual for the AJ-R1065. That manual says the remote is for the AJ-76XSI series, with X as 0, 1, 2, 3, or 5.
-
-**Source.** https://www.anka-security.com/wp-content/uploads/2026/05/AJ-R1065-Interconnected-Remote-Controller-Product-Manual.pdf
-
-**Sheet line.** "only the first activated alarm will keep beeping, other alarms are silenced."
-
-**Signals.** After the third green flash on the remote, the red light keeps flashing for about 1 minute while it is the main device for pairing. A device that pairs beeps once and shows a long green light. A device already in another group beeps quickly and flashes green, which asks whether to join the current group. A beep after one green flash means that device has joined the current group. When group pairing is finished, the other device beeps once and the green light turns off. After the locate button is pressed, only the first alarm that activated keeps beeping, and the other alarms are silenced. The first smoke alarm that activated has a memory function of 3 beeps a minute. Pressing hush after an alarm mutes all of the devices. A test makes the alarm sound for 10 to 15 seconds, and then the alarm stops.
-
-**Manual is silent on.** The remote manual does not describe a light on the remote for fire, fault, or a low battery.
-
 ## Brooks, wired alarm
 
 **Result.** Found in a manual.
@@ -163,20 +149,6 @@ Factory reset and clearing a network stay in Flag. They are not signals to put o
 **Signals.** In normal mode the LED flashes every 48 seconds to show the alarm is functioning. When smoke is detected the alarm sounds the alarm signal and the LED flashes, and only the source alarm's LED flashes so that alarm can be picked out. The other connected alarms sound the alarm signal after a short delay. A fire alarm is a series of repeated tones, and the minimum sound level is 85 dB at 3 metres. The front page says the alarm sound pattern follows ISO 8201. The originating alarm is the one with the flashing LED, and a press on that alarm pauses the alarms for 10 minutes. The source alarm keeps sounding until it is hushed. A short beep and an LED flash every 48 seconds mean the battery is near the end of its life, and this continues for a minimum of 30 days. After a test signal, one beep every 8 seconds means the alarms are connected and functioning. Three short beeps every 8 seconds mean a smoke sensor fault. During that test the alarms also give a short beep and the LED flashes every 8 seconds for 2 minutes. In learn mode the master red LED flashes while it sends the house code, the other alarms flash the LED as they receive that code, and a red LED flash on all of them means they are connected.
 
 **Manual is silent on.** The colour of the LED in normal mode, in alarm mode, in a test, and on a low battery. How fast the LED flashes in alarm mode. Whether the other alarms flash when they sound.
-
-## Cavius, remote
-
-**Result.** Found in a manual.
-
-**Model.** The guide title is CAVIUS Smart Remote. The guide does not print a model number. The Cavius support page names it the 9002 Wireless Family Smart Remote, and the same page lists 9002 CAVSR (9002-001). https://www.cavius.com.au/support/
-
-**Source.** Alarm mode, hush, and low battery in the Smart Remote how to use quick guide. https://www.cavius.com.au/wp-content/uploads/2026/02/Smart-Remote-How-to-Use-Quick-Guide.pdf
-
-**Sheet line.** "When the smoke alarms start to sound, the Smart Remote will vibrate and the LED torch will flash rapidly (stroboscopic)."
-
-**Signals.** When the smoke alarms start to sound, the Smart Remote vibrates and the LED torch flashes rapidly, as a strobe. A press of the black side button changes that torch from a strobe to a steady light. In the first 30 seconds of an alarm, one press of the red test and hush button stops the remote sounding and stops the vibration, and the LED keeps flashing. The remote then waits and sends the hush signal by itself within 30 seconds. After 30 seconds of an alarm, one press sends a hush signal for 13 seconds. The guide says the remote can stop the alarmed device only after 30 seconds in alarm mode. The alarm that first sensed the smoke is the only one that is flashing. A low battery gives a short beep every 48 seconds. The guide calls this a 30 day low battery warning. Only the Smart Remote beeps for that warning, and the smoke alarms do not beep. The torch turns off by itself after 5 minutes.
-
-**Manual is silent on.** The colour of the remote LED during an alarm. A timed rate for that flash, beyond the words rapidly and stroboscopic. The sound the remote makes while the alarms are sounding. The guide says a press stops the remote sounding, and it does not describe that sound.
 
 ## Clipsal, wired alarm
 
@@ -479,28 +451,6 @@ The flash rate on the other alarms, beyond the red alarm light named in the indi
 
 **Flag.** Unconfirmed against the brief. Do not treat this as the interval to show.
 
-## GT, remote
-
-**Result.** Not found.
-
-**Model.** GT-REMOTE. The maker lists it as the wireless interconnected alarm controller. The installation manuals page does not link a GT-REMOTE manual, and the site media list has no manual PDF for it.
-
-**Source.** Product page. https://gtsmokealarms.com.au/product/gt-remote/ Installation manuals page. https://gtsmokealarms.com.au/installation-manuals/ Product picture. https://gtsmokealarms.com.au/wp-content/uploads/2026/04/GT-REMOTE.png The GT240 and GT10RF+ sheets opened above describe an infrared remote on the alarm. They do not describe this controller.
-
-**Sheet line.** "Individual fire, CO and fault indicators"
-
-**Signals.** Not found.
-The product page names separate fire, CO, and fault indicators.
-The product picture prints Fire, CO, and Fault on the face, and Test and Locate on the lower face.
-The page does not say the colour, the flash, or a sound for any of them.
-
-**Manual is silent on.** The colour and the flash of the fire, CO, and fault indicators.
-Any sound from the remote.
-What Test, Locate, and Silence do to those lights.
-The page says Locate silences every interlinked alarm except the one that started the alarm.
-The page says Silence mutes all interlinked alarms.
-The page says Test tests all interlinked alarms from this one unit.
-
 ## Legrand, wired alarm
 
 **Result.** Found in a manual.
@@ -661,20 +611,6 @@ This sheet does not.
 
 **Manual is silent on.** An end of life light or chirp. A green light on the front in normal use. A yellow light.
 
-## Matelec, remote
-
-**Result.** Found in a manual.
-
-**Model.** FSA-90000. The maker product page PDF is a features sheet and does not give these light timings. The notes use the user manual PDF, which names the same code and the MATelec address.
-
-**Source.** MATelec Smoke Detector Remote Controller user manual, Controller Function Overview and Troubleshooting. https://www.sprintintercom.com.au/content/products/MTLFSA-90000/attachments/MTLFSA-90000_ds_1.pdf The features sheet that was also opened is https://cdn.sanity.io/files/1uk9rgzk/production/0786e9547587809166b4141c672430128eee56eb.pdf
-
-**Sheet line.** "The LED indicator will remain on for 30 seconds, indicating it's in pairing mode."
-
-**Signals.** In standby the LED flashes once every 40 seconds. In pairing mode the LED stays on for 30 seconds. A successful pair makes the LED flash briefly and then stay on. The red LED turning off means pairing mode has ended. After a test press the LED flashes for 8 seconds while the alarms activate, and the smoke alarms sound for 10 seconds. The LED then flashes for 5 minutes when that test worked. Hush makes the LED flash for 10 seconds, and the smoke alarms then stay quiet for 10 minutes. SOS makes the LED flash, and the smoke alarms then sound for 5 minutes. The LED turns off when locate is used to stop SOS. If the LED does not flash when test is pressed, the battery is in the wrong way or it is used up.
-
-**Manual is silent on.** A beep from the remote. A light on the remote for locate. The colour of the standby flash. How fast the test, hush, and SOS flashes are.
-
 ## Red, wired alarm
 
 **Result.** Found in a manual.
@@ -723,34 +659,6 @@ A weekly test sounds a loud beep while the test button is held. The beep stops w
 **Manual is silent on.** A counted rate for the rapid red flash while smoke is present. Why standby says once a minute while the low battery lines also speak of a 48 second flash. What the other alarms show during a weekly test.
 
 **Flag.** The sheet prints a red flash every 10 seconds during hush after the alarm has sounded. Unconfirmed against the brief. Do not treat this as the interval to show. The sheet also says how to clear pairing memory. Press the RF pairing button 5 times. The red light flashes 10 times and the alarm leaves the network.
-
-## Red, remote
-
-**Result.** Found in a manual.
-
-**Model.** RACP. This is the wireless controller on the maker site. The older RAC was not used.
-
-**Source.** https://redsmokealarms.com.au/wp-content/uploads/2025/05/RACP-Manual_20250619.pdf
-
-**Sheet line.** "the red alarm LED on the controller will flash continuously, along with the orange locate LED."
-
-**Signals.** All lights flash once when the battery tab is removed. That means the controller has turned on.
-A solid orange locate light means master pairing mode. That light stays on for 150 seconds.
-Five flashes of the orange locate light mean the controller has joined a master.
-A solid green light means test mode. The test signal runs for about 150 seconds, and the paired alarms sound.
-A green light that flashes once every 4 seconds means the controller battery is low.
-The red alarm light and the orange locate light flash rapidly when a paired wireless smoke alarm detects smoke.
-In locate mode the red alarm light and the orange locate light stay on. Only the alarm that detected the smoke keeps sounding. The other alarms stop. Locate mode lasts about 120 seconds.
-After 20 seconds in locate mode the orange hush light starts flashing.
-In hush the orange hush light stays on, the orange locate light goes off, and the red alarm light stays on. The triggered alarms stay quiet for 10 minutes.
-If no smoke is detected after 48 seconds, all lights go off.
-A solid orange hush light in silence mode means a paired alarm's single beep or double beep is quiet for 10 hours.
-A solid orange Memory D light means Memory D mode, and it stays on for 150 seconds. A paired alarm with no past event makes no sound. One D sound means low battery. Two D sounds mean a fault. Three D sounds mean an alarm was triggered.
-An orange Memory D light that flashes once every 4 seconds for 72 hours means a paired alarm has reported a low battery, a fault, or an alarm.
-
-**Manual is silent on.** A counted rate for the rapid red flash during a fire. A sound made by the controller itself.
-
-**Flag.** The sheet also says how to clear pairing memory. Press the RF pairing button 5 times. The orange locate light flashes 10 times and the controller leaves the network.
 
 ## Siterwell, wired alarm
 

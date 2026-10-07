@@ -21,12 +21,9 @@ signals:
     means: 'No sound. Hush for up to <span class="figure">9</span> minutes. Dense smoke overrides hush and the alarm sounds the whole time.'
   - light: { lamp: red, count: 3, figure: 40 }
     means: 'After an alarm, this alarm started it.'
-  - light: { lamp: red, words: 'while Test held' }
-    sound: { tick: static, words: 'quick chirp' }
-    means: 'While Test is held on the alarm that started it. Letting go clears the memory. The other alarms only go into a normal test.'
   - light: { lamp: red, figure: 5, unit: minutes }
     sound: { tick: once, figure: 40 }
-    means: 'Low battery for at least <span class="figure">30</span> days. The chirp is about every <span class="figure">40</span> seconds.'
+    means: 'Low battery.'
     fix: low-battery
   - sound: { tick: once, figure: 40 }
     means: 'About every <span class="figure">40</span> seconds, with mains still on. The battery is missing.'

@@ -12,10 +12,8 @@ signals:
   - sound: { tick: static, count: 2, words: 'at the end of hush' }
     means: 'Short chirps. The alarm returns to normal.'
   - sound: { tick: once, figure: 48 }
-    means: 'The battery is at the end of its life. That warning lasts at least <span class="figure">30</span> days.'
+    means: 'Low battery.'
     fix: low-battery
-  - sound: { tick: live, words: 'loud, while held' }
-    means: 'Test. The chirp stops when you let go.'
 ---
 
 {% include signal-table.html %}

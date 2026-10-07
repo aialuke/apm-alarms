@@ -6,7 +6,7 @@ topic: testing
 
 Stand about <span class="figure">1</span> metre away.
 
-Push the button on the cover and hold it for at least <span class="figure">3</span> seconds, or until the alarm sounds. The first sound is quieter. Hold for up to <span class="figure">5</span> seconds. Holding longer than <span class="figure">5</span> seconds gives the full sound.
+Hold the button on the cover for <span class="figure">3</span> cycles of the alarm sound.
 
 The red light flashes every <span class="figure">0.5</span> seconds. The sound is <span class="figure">2</span> sets of <span class="figure">3</span> long chirps.
 

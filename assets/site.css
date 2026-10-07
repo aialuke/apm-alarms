@@ -26,6 +26,10 @@
   --rim-active: linear-gradient(160deg, var(--edge-white), var(--rim-press) 40%, var(--blue));
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --lamp-green: #32d74b;
+  --lamp-red: #ff453a;
+  --lamp-yellow: #ff9f0a;
+  --lamp-blue: #409cff;
 }
 
 *,
@@ -80,33 +84,20 @@ body.is-home .frame {
     var(--ground);
 }
 
-button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
 
-button {
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
-a:focus,
-button:focus {
+a:focus {
   outline: none;
 }
 
-a:focus-visible,
-button:focus-visible {
+a:focus-visible {
   outline: 3px solid var(--ink);
   outline-offset: 3px;
 }
 
-main a,
-main button {
+main a {
   scroll-margin-top: calc(var(--nav-height) + 12px);
 }
 
@@ -583,6 +574,47 @@ h1 {
   letter-spacing: normal;
 }
 
+.part-line,
+.pin-line path {
+  fill: none;
+  stroke: rgba(245, 247, 251, 0.78);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.detail-line rect,
+.detail-line circle,
+.detail-line path {
+  fill: none;
+  stroke: rgba(245, 247, 251, 0.42);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.part-dash {
+  fill: none;
+  stroke: rgba(245, 247, 251, 0.45);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+  stroke-linecap: round;
+}
+
+.part-fill {
+  fill: var(--card-deep);
+  stroke: rgba(245, 247, 251, 0.78);
+  stroke-width: 2;
+}
+
+.sketch-arrow {
+  fill: none;
+  stroke: var(--blue-text);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .leader,
 .ring-stroke {
   fill: none;
@@ -591,8 +623,7 @@ h1 {
   stroke-linecap: round;
 }
 
-.instruction .lead,
-.instruction.sequence > p.lead {
+.instruction .lead {
   display: block;
   margin: 28px 0 10px;
   padding: 0;
@@ -605,16 +636,7 @@ h1 {
   text-wrap: pretty;
 }
 
-.instruction > .lead:first-child,
-.instruction.sequence > p.lead:first-child {
-  margin-top: 0;
-}
-
 table.signals {
-  --lamp-green: #32d74b;
-  --lamp-red: #ff453a;
-  --lamp-yellow: #ff9f0a;
-  --lamp-blue: #409cff;
   --hairline: linear-gradient(var(--row-line), var(--row-line));
   display: block;
   width: 100%;
@@ -625,7 +647,6 @@ table.signals {
   border-spacing: 0;
   overflow: clip;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 24%),
     var(--face) padding-box,
     var(--rim) border-box;
   box-shadow:
@@ -641,7 +662,7 @@ table.signals tbody {
 table.signals tr {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   align-items: stretch;
   padding: 0;
 }
@@ -749,6 +770,11 @@ table.signals td.sound {
   padding: 18px 12px 12px;
 }
 
+table.signals td.sound {
+  gap: 6px;
+  padding-inline: 8px;
+}
+
 table.signals td.light::after {
   content: "";
   position: absolute;
@@ -799,7 +825,7 @@ table.signals td.light .cue-words {
 }
 
 table.signals td.sound .cue-words {
-  white-space: normal;
+  white-space: nowrap;
 }
 
 table.signals .wait {
@@ -881,6 +907,21 @@ table.signals td.light .figure,
 table.signals td.sound .figure {
   font-size: 22px;
   line-height: 1;
+}
+
+@media (max-width: 400px) {
+  table.signals td.sound .figure {
+    font-size: 20px;
+  }
+
+  table.signals td.light .cue-words,
+  table.signals td.sound .cue-words {
+    font-size: 17px;
+  }
+
+  table.signals td.light {
+    padding-inline: 10px;
+  }
 }
 
 @keyframes lamp-1 {
@@ -994,14 +1035,6 @@ table.signals td.sound .figure {
   letter-spacing: 0;
 }
 
-.instruction.sequence > p {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  column-gap: 12px;
-  align-items: baseline;
-  margin: 0 0 18px;
-}
-
 .instruction .note,
 .instruction .tip,
 .instruction.sequence > p.note,
@@ -1020,17 +1053,253 @@ table.signals td.sound .figure {
     0 2px 5px rgba(10, 99, 255, 0.55);
 }
 
-.step-num {
+/* Steps sit in a card, the same card as the signal table: one rounded face, the tight blue edge, faint lines between rows. */
+.fix {
+  --hairline: linear-gradient(var(--row-line), var(--row-line));
+  position: relative;
+  margin: 0 0 18px;
+  border: 1.5px solid transparent;
+  border-radius: 20px;
+  overflow: clip;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 24%),
+    var(--face) padding-box,
+    var(--rim) border-box;
+  box-shadow:
+    0 1px 2px rgba(10, 99, 255, 0.95),
+    0 2px 5px rgba(10, 99, 255, 0.55);
+  scroll-margin-top: calc(var(--nav-height) + 12px);
+}
+
+/* The section name stays under the top bar while its steps scroll, like the table header. A solid Card panel, nothing shows through it. */
+.fix-head {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 14px 16px 12px;
+  background:
+    var(--hairline) center bottom / calc(100% - 28px) 1px no-repeat,
+    var(--card);
   color: var(--blue-text);
-  font-size: 1em;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.fix-head span {
+  min-width: 0;
+  text-wrap: balance;
+}
+
+.step-icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  color: var(--blue-text);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Low battery is the amber row of the table. Its card carries the same lamp, so the fix reads as that row's. */
+.fix[data-tone="amber"] .fix-head {
+  background:
+    var(--hairline) center bottom / calc(100% - 28px) 1px no-repeat,
+    radial-gradient(90% 140% at 8% 0%, color-mix(in srgb, var(--lamp-yellow) 24%, transparent), transparent 70%),
+    var(--card);
+}
+
+.fix[data-tone="amber"] .fix-head::after {
+  content: "";
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--lamp-yellow);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--lamp-yellow) 70%, transparent);
+}
+
+.fix-steps {
+  padding: 4px 0;
+}
+
+.fix-plain {
+  padding: 16px;
+}
+
+.fix-plain .ceiling {
+  margin-top: 4px;
+}
+
+.fix-plain > :last-child,
+.fix-plain .placement > :last-child {
+  margin-bottom: 0;
+}
+
+.fix-steps > p {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 14px;
+  align-items: start;
+  margin: 0;
+  padding: 13px 16px;
+}
+
+.fix-steps > p + p::before,
+.then + .then::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 16px;
+  left: 16px;
+  height: 1px;
+  background: var(--row-line);
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--blue) 20%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rim-bright) 55%, transparent);
+  color: var(--blue-text);
+  font-size: 16px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0;
-  line-height: inherit;
+  line-height: 1;
 }
 
 .step-body {
   min-width: 0;
+}
+
+.fix .figure {
+  font-size: 1.08em;
+  line-height: 1;
+}
+
+/* A Tip inside a card is a tinted row across the card. It is not a second card. */
+.instruction.sequence .fix-steps > p.tip,
+.instruction.sequence .fix-steps > p.note {
+  display: grid;
+  margin: 6px 0;
+  padding: 14px 16px;
+  border: 0;
+  border-block: 1px solid color-mix(in srgb, var(--rim-bright) 32%, transparent);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--blue) 12%, var(--card-deep));
+  box-shadow: none;
+}
+
+.fix-steps > p.tip::before {
+  display: none;
+}
+
+.fix-steps > p.tip .step-icon {
+  margin-top: 2px;
+  justify-self: center;
+}
+
+/* Where a card ends: what to do next. Each line opens its link across the whole row. */
+.fix-then {
+  border-top: 1px solid var(--row-line);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.instruction .then {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 17px;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.then-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.then .chevron {
+  flex: none;
+  width: 8px;
+  height: 14px;
+  color: var(--blue-text);
+}
+
+.instruction .then a {
+  position: static;
+}
+
+.instruction .then a::after {
+  inset: 0;
+}
+
+.then.go {
+  transition: background-color 180ms var(--ease);
+}
+
+.then.go:has(a:active) {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Arriving from "View fix": one wash of the lamp colour that fades inside the card. */
+.fix.is-arrived::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(120% 90px at 10% 0, color-mix(in srgb, var(--lamp-yellow) 38%, transparent), transparent 75%);
+  animation: arrive 1.3s var(--ease) both;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Rows ease up into place as they reach the screen, where the browser can tie motion to scrolling. Without it they are simply there. */
+@supports (animation-timeline: view()) {
+  @keyframes row-in {
+    from {
+      opacity: 0.2;
+      transform: translateY(12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .fix-steps > p,
+  .then {
+    animation: row-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 70%;
+  }
 }
 
 .bar {

@@ -9,11 +9,6 @@ signals:
     means: 'Standby light, no alarm sound. Normal use.'
   - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
     means: 'This alarm set the others off.'
-  - light: { figure: 1, unit: second }
-    sound: { tick: live, count: 3, figure: 4 }
-    means: 'Standby light once, until you let go of Test/Hush. Test.'
-  - sound: { tick: live, count: 3, figure: 4 }
-    means: 'For <span class="figure">25</span> seconds. Standby light off. Radio interconnection test.'
   - light: { figure: 8 }
     means: 'For <span class="figure">10</span> minutes. Standby light, no alarm sound. Hush. Smoke sensing is paused. On a standby hush, heat sensing stays active.'
   - light: { figure: 48 }
@@ -31,7 +26,6 @@ signals:
     means: 'For <span class="figure">10</span> hours. Standby light, no sound. Hushed alarm memory.'
   - light: { figure: 2 }
     means: 'For <span class="figure">72</span> hours. Standby light. After the alarm has stopped, on the alarm that started it. A short press of Test/Hush hushes that blink for <span class="figure">10</span> hours.'
-
 ---
 
 {% include signal-table.html %}

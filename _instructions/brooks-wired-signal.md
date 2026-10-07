@@ -10,8 +10,6 @@ signals:
   - means: 'Green light off. Both the mains and the backup battery are off.'
   - light: { lamp: green }
     means: 'No sound and no flash, and the only light is the power light. Standby.'
-  - light: { lamp: green, figure: 1, unit: second }
-    means: 'Flickers about every second. Test is held.'
   - light: { lamp: red, label: 'Flashing red' }
     means: 'Only on the alarm that is detecting the event.'
   - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
@@ -20,10 +18,6 @@ signals:
     means: 'Keeps flashing while the alarm still senses smoke or heat. Hush. The silence lasts <span class="figure">10</span> minutes.'
   - light: { lamp: red, count: 2, figure: 48 }
     means: 'For <span class="figure">24</span> hours after an alarm. That spacing is approximate.'
-  - light: { lamp: red, count: 2 }
-    means: 'While Test is held. An alarm is in memory.'
-  - light: { lamp: red, words: 'lasts 1 second' }
-    means: 'Memory has been cleared.'
   - light: { lamp: yellow, figure: 48 }
     sound: { tick: once, figure: 48 }
     means: 'Backup battery is depleted.'

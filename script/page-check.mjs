@@ -23,7 +23,7 @@ function parseBrands(text) {
   for (const line of text.split("\n")) {
     const id = line.match(/^- id: (\S+)/);
     if (id) {
-      cur = { id: id[1], units: [], locate: false };
+      cur = { id: id[1], units: [] };
       brands.push(cur);
       continue;
     }
@@ -32,8 +32,6 @@ function parseBrands(text) {
     if (name) cur.name = name[1];
     const units = line.match(/^  units: \[(.*)\]/);
     if (units) cur.units = units[1].split(",").map((part) => part.trim()).filter(Boolean);
-    const locate = line.match(/^  locate: (\S+)/);
-    if (locate) cur.locate = locate[1] === "true";
   }
   return brands;
 }
@@ -154,23 +152,22 @@ function screenTitle(brandName, unitName, pageTitle) {
   return siteTitle;
 }
 
-function topicsFor(unitId, list, brand) {
-  const ids = (map.units[unitId] && map.units[unitId][list]) || [];
-  return ids.filter((id) => id !== "locate" || brand.locate);
+function topicsFor(unitId, list) {
+  return (map.units[unitId] && map.units[unitId][list]) || [];
 }
 
-function listShown(unitId, list, brand) {
-  return topicsFor(unitId, list, brand).length > 0;
+function listShown(unitId, list) {
+  return topicsFor(unitId, list).length > 0;
 }
 
 function shortcutLabels(brand, unitId, list) {
   const found = [];
   const spec = map.lists[list];
-  if (spec.other && listShown(unitId, spec.other, brand)) found.push(spec.switch_label);
+  if (spec.other && listShown(unitId, spec.other)) found.push(spec.switch_label);
   for (const row of map.switches) {
     if (row.from !== unitId) continue;
     if (!brand.units.includes(row.to)) continue;
-    if (!listShown(row.to, list, brand)) continue;
+    if (!listShown(row.to, list)) continue;
     found.push(row.label);
   }
   return found;
@@ -246,7 +243,7 @@ for (const brand of brands) {
     const unitRel = `${brand.id}/${unitId}/index.html`;
     expected.add(unitRel);
     const unitHtml = html(unitRel);
-    const shown = Object.keys(map.lists).filter((list) => listShown(unitId, list, brand));
+    const shown = Object.keys(map.lists).filter((list) => listShown(unitId, list));
     oneName(unitRel, unitHtml, unit.label);
     same(unitRel, rowLabels(unitHtml), shown.map((list) => map.lists[list].label), "list rows");
     same(unitRel, titleOf(unitHtml), screenTitle(brand.name, unit.label, unit.label), "title");
@@ -254,7 +251,7 @@ for (const brand of brands) {
     same(unitRel, hrefsFor(unitHtml, "Home"), [home], "Home");
 
     for (const list of Object.keys(map.lists)) {
-      const topics = topicsFor(unitId, list, brand);
+      const topics = topicsFor(unitId, list);
       const listRel = `${brand.id}/${unitId}/${list}/index.html`;
       if (!topics.length) continue;
       expected.add(listRel);
@@ -299,7 +296,7 @@ const signal = html("emerald/wired/troubleshooting/signal/index.html");
 same(
   "emerald/wired/troubleshooting/signal/index.html",
   hrefsFor(signal, "Open Pairing"),
-  [pairing, pairing],
+  [pairing],
   "Open Pairing"
 );
 
@@ -307,7 +304,7 @@ const brooks = html("brooks/wireless/troubleshooting/signal/index.html");
 same(
   "brooks/wireless/troubleshooting/signal/index.html",
   hrefsFor(brooks, "Open Testing"),
-  ["/apm-alarms/brooks/wireless/setup/testing/", "/apm-alarms/brooks/wireless/setup/testing/"],
+  ["/apm-alarms/brooks/wireless/setup/testing/"],
   "Open Testing"
 );
 same("brooks/wireless/troubleshooting/signal/index.html", hrefsFor(brooks, "Open Pairing"), [], "Open Pairing");
@@ -349,7 +346,37 @@ same(
   "steps"
 );
 
+const remoteRel = "emerald/remote/index.html";
+const remotePage = html(remoteRel);
+for (const heading of ["Activation", "Pairing", "Use"]) {
+  if (!remotePage.includes(`<span>${heading}</span></h2>`)) fail(`${remoteRel} has no ${heading} card`);
+}
+if (remotePage.includes('<table class="signals">')) fail(`${remoteRel} still has a light and sound table`);
+if (html("brooks/remote/index.html").includes('<table class="signals">')) fail("brooks remote still has a light and sound table");
+for (const id of ["anka", "cavius", "gt", "matelec", "red"]) {
+  if (fs.existsSync(path.join(siteDir, id, "remote"))) fail(`${id} still has a remote page`);
+}
+if (/Troubleshoot|Setup/.test(remotePage.split("<main")[1] || "")) fail(`${remoteRel} still offers Setup or Troubleshooting`);
+for (const gone of ["setup", "troubleshooting"]) {
+  if (fs.existsSync(path.join(siteDir, "emerald/remote", gone))) fail(`emerald remote still has a ${gone} list`);
+}
+
+const fixRel = "emerald/wired/troubleshooting/signal/index.html";
+const fixPage = html(fixRel).split("</table>")[1] || "";
+const fixCards = fixPage.split('<section class="fix"').length - 1;
+if (fixCards !== 3) fail(`${fixRel} has ${fixCards} step cards, not 3`);
+if (!fixPage.includes('id="low-battery" data-tone="amber"')) fail(`${fixRel} low battery card is not the amber card`);
+if (!fixPage.includes('<h2 class="fix-head">')) fail(`${fixRel} step card has no heading`);
+if ([...fixPage.matchAll(/<p class="then[^"]*">.*?<\/p>/gs)].some((row) => row[0].includes("step-num"))) fail(`${fixRel} outcome row has a step number`);
+const fixSteps = (fixPage.match(/class="step-num">1</g) || []).length;
+if (fixSteps !== 3) fail(`${fixRel} numbers do not restart in each card`);
+if (!fixPage.includes('<p class="then go">')) fail(`${fixRel} has no linked outcome row`);
+
+const openingCard = openingMain.includes('<section class="fix"');
+if (!openingCard) fail("red wired setup opening steps are not in a card");
+
 const placement = html("clipsal/wired/setup/placement/index.html");
+if (!placement.includes('class="fix fix-plain"')) fail("clipsal wired setup placement is not in a plain card");
 if (placement.includes('class="step-num"')) fail("clipsal wired setup placement has a step number");
 if (!placement.includes("300 mm") || !placement.includes("400 mm")) {
   fail("clipsal wired setup placement is missing a clearance");
@@ -370,21 +397,11 @@ same(
 );
 if (troublePlacement.includes('class="step-num"')) fail("clipsal wired troubleshooting placement has a step number");
 
-const power = html("clipsal/wired/troubleshooting/power/index.html");
-if (!power.includes("These words are not written yet.")) {
-  fail("clipsal wired troubleshooting power is missing the unwritten note");
+for (const gone of ["power", "quiet", "false-alarms"]) {
+  if (fs.existsSync(path.join(siteDir, "clipsal/wired/troubleshooting", gone, "index.html"))) {
+    fail(`clipsal wired troubleshooting ${gone} is still published`);
+  }
 }
-
-let mounting = false;
-let locate = false;
-for (const rel of expected) {
-  const text = html(rel);
-  if (text.includes("MOUNTING SHOULD NOT APPEAR")) mounting = true;
-  const heading = (text.match(/<h1[^>]*>([^<]*)<\/h1>/) || [])[1];
-  if (heading === "Locate" || rowLabels(text).includes("Locate")) locate = true;
-}
-if (mounting) fail("dashed mounting page was published");
-if (locate) fail("Locate is shown before a brand is named");
 
 if (failed) {
   console.error(`FAIL ${failed}`);

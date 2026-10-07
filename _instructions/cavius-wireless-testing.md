@@ -6,7 +6,7 @@ topic: testing
 
 The alarm has to be on its mount before this test. After it clicks on, wait <span class="figure">5</span> seconds.
 
-Press and hold the test button on any alarm for at least <span class="figure">6.5</span> seconds. Count <span class="figure">2</span> sets of <span class="figure">3</span> sound sweeps.
+Hold test button on any alarm for <span class="figure">3</span> cycles of the alarm sound.
 
 The alarms then give a short chirp, and the light flashes every <span class="figure">8</span> seconds for <span class="figure">2</span> minutes.
 

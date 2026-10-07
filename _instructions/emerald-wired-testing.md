@@ -4,7 +4,7 @@ unit: wired
 topic: testing
 ---
 
-Press and hold the test button on the cover for <span class="figure">5</span> seconds.
+Hold test button on the cover for <span class="figure">3</span> cycles of the alarm sound.
 
 This alarm sounds if the alarm, the electronics, and the battery are working. That hold also tests all the interconnected alarms.
 

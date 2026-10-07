@@ -4,7 +4,7 @@ unit: wireless
 topic: testing
 ---
 
-Press the test button for less than <span class="figure">1</span> second.
+Hold test button for <span class="figure">3</span> cycles of the alarm sound.
 
 The sounder should start.
 

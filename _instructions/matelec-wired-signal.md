@@ -20,13 +20,6 @@ signals:
     means: 'For <span class="figure">7</span> days. This alarm started it. Taking the battery out pauses that memory and does not delete it.'
   - light: { lamp: red, figure: 8 }
     means: 'Hush for <span class="figure">10</span> minutes. It works only on the alarm that was triggered.'
-  - light: { lamp: red, figure: 1, unit: second }
-    sound: { tick: live, words: 'alarm sounding' }
-    means: 'Test on this alarm, until you let go.'
-  - sound: { tick: live, figure: 10, words: 'after a short delay' }
-    means: 'Other paired alarms in that test. When you let go they stop.'
-  - light: { lamp: red, words: 'for 3 minutes' }
-    means: 'After you let go of that test.'
   - light: { lamp: red, figure: 48 }
     sound: { tick: once, figure: 48 }
     means: 'Low battery.'

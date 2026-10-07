@@ -42,19 +42,13 @@ Version 1 is complete only when all twelve have owner-approved content. The owne
 
 Every brand has a Wired alarm and a Wireless alarm. These brands also have a Remote:
 
-- Anka
 - Brooks
-- Cavius
 - Emerald
-- GT
-- Matelec
-- Red
 
 Brooks and Emerald also have an RF module. On an Emerald system, a wired alarm that must connect to wireless alarms uses that module. That fact is under [Fitting](#fitting).
 
-Clipsal, Detector Inspector, Legrand, Lifesaver, and Siterwell have the two alarms only.
+Anka, Cavius, Clipsal, Detector Inspector, GT, Legrand, Lifesaver, Matelec, Red, and Siterwell have the two alarms only. The owner never meets a remote on those brands, so none is shown.
 
-Locate stays off. No brand has been named whose remote can do it. Show Locate only after one is named.
 
 ## Getting around
 
@@ -68,8 +62,8 @@ The path is:
 
 After the unit, the technician picks Setup or Troubleshooting.
 
-- **Setup** is for putting in a new alarm, remote, or RF module. The topics are the jobs, such as Pairing.
-- **Troubleshooting** is for an alarm or remote that is already up. The topics are the problems, such as Won't power on. It is a lookup. The technician opens the problem that matches what is in front of them. Inside that topic, the steps are in order. The app does not force a path through every topic, track progress, or ask them to name the alarm inside the app before it will help.
+- **Setup** is for putting in a new alarm. The topics are the jobs, such as Pairing. A remote and an RF module have no Setup list. See Remote and RF module below.
+- **Troubleshooting** is for an alarm that is already up. The topics are What's that light or sound?, Placement, and Pairing. It is a lookup. The technician opens the problem that matches what is in front of them. Inside that topic, the steps are in order. The app does not force a path through every topic, track progress, or ask them to name the alarm inside the app before it will help.
 
 ### Brand screen
 
@@ -85,7 +79,7 @@ There is no "both" choice. The technician picks the unit in hand right now.
 
 ### Setup or Troubleshooting screen
 
-Full-width rows, not a side-by-side pair. An RF module has no Troubleshooting. This screen shows Setup only. The path is Brand, then RF module, then Setup, then Fitting.
+Full-width rows, not a side-by-side pair. A Remote and an RF module skip this screen. Each opens its own one page straight from the units.
 
 ### Topic screen
 
@@ -144,10 +138,10 @@ Which units a brand shows, and which topics a unit has, follow the [topic map](#
 
 Each unit belongs to one brand. The four units are:
 
-- **Wired alarm.** An alarm on mains power, with a backup battery. Some newer wired alarms have a sealed battery. Others have a battery that comes out. The technician can see which, on the unit.
+- **Wired alarm.** An alarm on mains power, with a backup battery. Some newer wired alarms have a sealed battery. Others have a removable battery. The technician can see which, on the unit.
 - **Wireless alarm.** An alarm that runs on its own battery, with no mains wires, and interconnects by radio. The battery is sealed.
-- **RF module.** A radio unit that slots into a wired alarm. Show this choice only for a brand that uses a separate module. Fitting one is rare.
-- **Remote.** Show this choice only for a brand that has a remote.
+- **RF module.** A radio unit that slots into a wired alarm. Show this choice only for a brand that uses a separate module. Fitting one is rare. Tapping it opens one page that is only the fitting diagram, with no Setup choice and no list. Back goes to the brand's units.
+- **Remote.** Show this choice only for a brand that has a remote. Tapping it opens one page, with no Setup or Troubleshooting choice and no list of topics. That page has a card for Activation, a card for Pairing, and a card for Use. Each is a few short steps. A remote has no light and sound table and no Troubleshooting. A section with no written words shows a card that says "These words are not written yet." Back goes to the brand's units.
 
 ### Topic map
 
@@ -162,17 +156,12 @@ Placement has two pages, with different words. [Setup Placement](#setup-placemen
 | Placement | Setup and Troubleshooting, separate pages | Setup and Troubleshooting, separate pages | — | — |
 | Opening | Setup | — | — | — |
 | Mounting | — | Setup | — | — |
-| Activation | — | Setup | — | Setup |
-| Fitting | — | — | Setup | — |
-| Pairing | Setup and Troubleshooting, one shared page | Setup and Troubleshooting, one shared page | — | Setup and Troubleshooting, one shared page |
+| Activation | — | Setup | — | Remote page |
+| Fitting | — | — | RF module page | — |
+| Pairing | Setup and Troubleshooting, one shared page | Setup and Troubleshooting, one shared page | — | Remote page |
 | Testing | Setup. Other pages open it | Setup. Other pages open it | — | — |
-| What's that light or sound? | Troubleshooting, shown first | Troubleshooting, shown first | — | Troubleshooting, shown first |
-| Won't power on | Troubleshooting | Troubleshooting | — | — |
-| Not going off when other alarms go off | Troubleshooting | Troubleshooting | — | — |
-| Customer reports false alarms | Troubleshooting | Troubleshooting | — | — |
-| Remote won't work | — | — | — | Troubleshooting |
-| Use | — | — | — | Setup |
-| Locate | — | — | — | Troubleshooting, where the brand supports it |
+| What's that light or sound? | Troubleshooting, shown first | Troubleshooting, shown first | — | — |
+| Use | — | — | — | Remote page |
 
 The map decides whether a topic exists. The lists below only give the order.
 
@@ -180,14 +169,13 @@ The map decides whether a topic exists. The lists below only give the order.
 
 - Wired alarm: Placement, Opening, Pairing, Testing
 - Wireless alarm: Placement, Mounting, Activation, Pairing, Testing
-- RF module: Fitting
-- Remote: Activation, Pairing, Use
+- RF module: no list. One page, the fitting diagram
+- Remote: no list. One page, in this order: Activation, Pairing, Use
 
 **Troubleshooting**
 
-- Wired alarm: What's that light or sound?, Won't power on, Not going off when other alarms go off, Customer reports false alarms, Placement, Pairing
-- Wireless alarm: What's that light or sound?, Won't power on, Not going off when other alarms go off, Customer reports false alarms, Placement, Pairing
-- Remote: What's that light or sound?, Remote won't work, Pairing, then Locate where the brand supports it
+- Wired alarm: What's that light or sound?, Placement, Pairing
+- Wireless alarm: What's that light or sound?, Placement, Pairing
 
 The lists above are the topic buttons, in that order. The table does not set the order.
 
@@ -227,11 +215,11 @@ Getting a new unit ready.
 - **Wireless alarm.** Turning it on for the first time. When attaching the alarm to its mount is what switches it on, this page opens [Mounting](#mounting) instead of repeating those steps.
 - **Remote.** Getting a new or replacement remote ready to pair.
 
-Activation is for a unit that has never been turned on. An alarm that is already up and will not turn on is [Won't power on](#wont-power-on).
+Activation is for a unit that has never been turned on.
 
 ### Fitting
 
-How to fit an RF module, and which way round it goes.
+How to fit an RF module, and which way round it goes. The page is one diagram on the black page, with no card around it, no steps and no words. It is redrawn from the manual pictures: the back of the alarm, the module bay, the module with its pins on the end that meets the connector, and an arrow for the way it goes in. Brooks also shows its flexible antenna going into the hole at the rim first. Emerald shows the antenna standing up.
 
 On an Emerald system, a wired alarm that must connect to wireless alarms uses an RF module. Most of those modules are already fitted. The confirmation after that pairing is not known. It is in [Left for later](#left-for-later).
 
@@ -239,7 +227,7 @@ On an Emerald system, a wired alarm that must connect to wireless alarms uses an
 
 What a remote's controls do and how to use them.
 
-The meanings of the remote's lights and sounds are in [What's that light or sound?](#whats-that-light-or-sound). They are not on this page.
+A remote has no light and sound table.
 
 ## Pages opened from more than one place
 
@@ -249,7 +237,7 @@ Some pages are opened from more than one place. The steps are written once. Two 
 
 ### Pairing
 
-Connecting units by radio. One page for the selected brand and unit. Setup and Troubleshooting both open it. The button presses are the same in both. They differ by brand and by unit: Wired alarm, Wireless alarm, or Remote. They do not differ by model.
+Connecting units by radio. One page for the selected brand and unit. Setup and Troubleshooting both open it. A remote's Pairing is a section of its Remote page. The button presses are the same in both. They differ by brand and by unit: Wired alarm, Wireless alarm, or Remote. They do not differ by model.
 
 This page does not mention the RF module.
 
@@ -261,7 +249,7 @@ The page does not say which alarm goes into pairing mode first. The brand steps 
 
 Put that alarm into pairing mode, pair every other alarm to it, and open [Testing](#testing). This page owns those presses. [Testing](#testing) owns how to run the test and how to confirm every interconnected alarm sounds. Another topic does not repeat those presses or that test.
 
-Emerald wireless pairing uses the confirmed difference for that brand.
+Emerald wired and wireless pairing use the same owner-confirmed method, written once and identical on both pages.
 
 The words for one brand and one unit live in one file, `_instructions/<brand>-<unit>-pairing.md`. Setup and Troubleshooting both open that file. There is no shared opening. The last step opens that brand's Setup Testing page for the same unit. Testing still owns the test.
 
@@ -271,7 +259,7 @@ These brands are written: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT
 
 Anka does not include the memory-clear hold from the sheet. The first Anka press is the hold until the green light has flashed 3 times.
 
-Emerald uses only the confirmed field method: press TEST 3 times quickly, within 2 seconds, on the alarm you started with, then the same press on every other alarm. The manual's 3 second window, 90 second pairing mode, and 25 second hold are not on the page.
+Emerald, wired and wireless, uses the owner's field method: make sure all alarms are on. Press TEST 3 times within 2 seconds on the master alarm, and the red light flashes quickly for 90 seconds. Then press TEST 3 times within 2 seconds on every other alarm. A red flash and a chirp show it has paired. The manual's 3 second window and 25 second hold are not on the page.
 
 **Wired alarm, written**
 
@@ -281,7 +269,7 @@ Legrand wired uses the same Network button counts as the wireless page. The wire
 
 Matelec uses the mains sheet. Press TEST 3 times within 2 seconds. The light stays solid red for 50 seconds, and each join starts that 50 seconds again. Both alarms give 1 short chirp. Hold TEST on the first alarm until the red light turns off. The remote section of that sheet is not on the page.
 
-Emerald wired uses the mains sheet. Hold TEST for 5 seconds to turn the alarm on, then press TEST 3 times within 2 seconds. The red light flashes quickly for 90 seconds. Press TEST once to leave early. Each further alarm starts with those 3 presses on the first alarm again. The clear path is not on the page.
+Emerald wired uses the same field method as Emerald wireless, above. The mains sheet's 5 second turn-on hold, leave-early press and further-alarm repeat are not on the page.
 
 Cavius wired is learned off the base, before mains power, with the Learn Mode switch. Hold the test button on one alarm until it beeps.
 
@@ -308,6 +296,8 @@ The presses for that brand's remote. This page does not open Testing.
 
 How to run the test for the selected brand and unit, and how to confirm during the test that every interconnected alarm sounds. Include the sounds and the waiting periods that belong to that brand.
 
+Every test on every brand is the same hold: "Hold test button for 3 cycles of the alarm sound." The 3 is gold. The brand's own button name replaces "test button" where the unit prints a different one, such as Test/Hush. This is the owner's field rule and wins over a manual's hold time. The sounds and results after the hold stay as the manual gives them.
+
 One page for a wired or wireless alarm. It is a Setup topic. Troubleshooting pages open it and do not list it as their own button. A remote never opens it. Pairing is not a button on this page.
 
 This page includes the Cavius wait in [Confirmed differences between brands](#confirmed-differences-between-brands), including when another page opened Testing.
@@ -316,39 +306,38 @@ This page includes the Cavius wait in [Confirmed differences between brands](#co
 
 Not its own screen. The page that needs it shows these steps. The battery cannot be tested with a meter, and it cannot be changed. The page that shows the steps says what to do with the result.
 
-1. Turn it off. On a wireless alarm, many power on as they twist onto the mount, so off means off the mount. On a sealed wired alarm, the brief does not add another off or on method.
-2. Hold the test button to drain any power left in it.
+1. Turn it off. A wired alarm says only "Turn it off." A wireless alarm adds "Off means off the mount." The Emerald wireless alarm is the exception: it adds "Press test button 6 times." (the 6 is gold), because that is how it turns off.
+2. Hold test button to discharge remaining power.
 3. Turn it back on.
 4. Wait 2 to 3 minutes.
 
 ### Low-battery steps
 
-Not a topic button. [What's that light or sound?](#whats-that-light-or-sound) opens these steps from Chirping. [Customer reports false alarms](#customer-reports-false-alarms) opens them when the customer heard a chirp.
+Not a topic button. [What's that light or sound?](#whats-that-light-or-sound) opens these steps from Chirping.
 
 A Cavius alarm chirping on its own uses these steps. The Cavius chirp after a test the technician has just run does not. That wait is on [Testing](#testing).
 
-Both blocks below are on this one page. There is no extra choice. The technician follows the block that matches the battery they can see on the unit.
+A wireless alarm shows only the first block, because no wireless alarm has a removable battery. A wired alarm shows both blocks on this one page. There is no extra choice. The technician follows the block that matches the battery they can see on the unit.
 
-Clean first, using the [cleaning method](#cleaning-method). If a wireless alarm was taken off its mount to clean it, put it back before the power check or the test. Then check the power or the battery, as below.
+The first card is Low battery: "Vacuum or blow the outside vents." Then check the power or the battery, as below.
 
 **Wireless alarm, or a wired alarm with a sealed battery**
 
-Show the [sealed power check](#sealed-power-check) on this page. If it chirps, or it does not turn back on, end at [report faulty](#report-faulty). If it turns on and stays quiet, open [Testing](#testing). If that test shows an alarm was taken down, switched off, or put into pairing mode, Back returns to this page, and this page then opens [Pairing](#pairing).
+Show the [sealed power check](#sealed-power-check) on this page. If it chirps, or won't turn back on, end at [report faulty](#report-faulty). If it turns on and stays quiet, open [Testing](#testing). This card has no Pairing line.
 
-**Wired alarm whose battery comes out**
+**Wired alarm with a removable battery**
 
 The power is on.
 
 1. Take the alarm off its base.
-2. Test the battery with a battery tester.
-3. Press the test button while the battery is out, to drain any power left in it.
-4. If the tester says the battery is flat, put a new battery in. If it is not flat, put the same battery back.
-5. Put the alarm back on its base.
-6. Wait the same 2 to 3 minutes as the sealed power check.
-7. If it chirps, end at [report faulty](#report-faulty).
-8. If it stays quiet, use the same Testing and Pairing return as the sealed block above.
+2. Test the battery.
+3. Hold test button with battery removed to discharge remaining power.
+4. Put the alarm back on its base.
+5. Wait the same 2 to 3 minutes as the sealed power check.
+6. If it chirps, end at [report faulty](#report-faulty).
+7. If it stays quiet, open [Testing](#testing). If an alarm doesn't activate with the others during the test, open [Pairing](#pairing). That line shows only where the brand and unit have a Pairing page written.
 
-A remote has no battery steps. A low-battery meaning on a remote ends at report faulty.
+A remote has no battery steps and no light and sound table.
 
 ### Cleaning method
 
@@ -385,49 +374,14 @@ Pairing flashes and pairing success stay on the Pairing page. They are not rows 
 
 The list is Troubleshooting only, and it is the first topic there. Setup has no copy of the list. Setup steps still show the particular light or sound expected at that step.
 
-Each brand's wired alarm, wireless alarm, and remote has its own list. Each signal is written on that list once. The steps use that same list, so they cannot disagree.
+Each brand's wired alarm and wireless alarm has its own list. Each signal is written on that list once. The steps use that same list, so they cannot disagree.
 
 A meaning can be tapped when there is a useful page to open. The action reads **View fix →**. When there is no useful page to open, the entry is plain text.
 
 Two meanings are already set:
 
-- **Chirping** means low battery, and opens the [low-battery steps](#low-battery-steps). On a remote, it ends at report faulty. The row's words also say that the Cavius chirp after a test the technician has just run is normal, and that wait is on [Testing](#testing). The row always offers the same action. It does not appear or disappear because a test was just run.
-- **Flashing red after an alarm** means this alarm is the one that set the others off. [Customer reports false alarms](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). The light cell shows a steady red lamp and the words **after an alarm**. It does not play a blink and it does not show a timing.
-
-### Won't power on
-
-**Wireless alarm**
-
-1. Check that the alarm is clicked onto its mount. If clicking it on makes it turn on, these steps are done.
-2. If it still will not turn on, show the [sealed power check](#sealed-power-check) on this page.
-3. If it still will not turn on, or it chirps, end at report faulty. If it turns on and stays quiet, these steps are done. Back returns to the page that opened this one only when the alarm turns on and stays quiet.
-
-**Wired alarm**
-
-1. Check that the alarm is connected correctly to its base. If it is not, connect it, using the steps on [Opening](#opening). If connecting it makes it turn on, these steps are done. If it still will not turn on after it is connected, end at report faulty.
-2. If it was already connected correctly, and the power is on, and it still will not turn on, end at report faulty.
-
-### Not going off when other alarms go off
-
-For a wired or wireless alarm.
-
-1. Listen for the alarms that are not going off.
-2. Make sure the quiet one is powered on. If it is not, open [Won't power on](#wont-power-on). If that page ends at report faulty, stop. If the alarm turns on, Back returns here.
-3. If the quiet alarm is on, open [Pairing](#pairing). Do not repeat the presses or the test.
-
-### Customer reports false alarms
-
-For a wired or wireless alarm. This page does not use Locate.
-
-1. Ask the customer whether it was an alarm sound or a chirp.
-2. If it was a chirp, open the [low-battery steps](#low-battery-steps). A customer does not cause the Cavius chirp that follows a test, because customers do not test the alarms.
-3. If it was an alarm sound, ask whether they know which alarm set the others off.
-4. If they know, check that alarm first, then every alarm. If they do not know, check every alarm. Either way, look for dust buildup and insect activity, and clean with the [cleaning method](#cleaning-method). Open [Troubleshooting Placement](#troubleshooting-placement). When those steps are done, Back returns here. Then open Testing.
-5. If they did not know which alarm it was, tell the customer what to watch for next time. Use the flashing-red wording in [What's that light or sound?](#whats-that-light-or-sound) The technician does not hunt for that flash on arrival. Arriving while it is still flashing is rare. Do not add that hunt to the path where the customer already knows which alarm it was.
-
-Telling the customer about that flash is a step on this page. It is not the household advice left out under [Leave out](#leave-out).
-
-Testing stays available on this page. It is not hidden until Placement is finished.
+- **Chirping** means low battery, and opens the [low-battery steps](#low-battery-steps). The row's words also say that the Cavius chirp after a test the technician has just run is normal, and that wait is on [Testing](#testing). The row always offers the same action. It does not appear or disappear because a test was just run.
+- **Flashing red after an alarm** means this alarm is the one that set the others off. The interval is not confirmed. It is in [Left for later](#left-for-later). The light cell shows a steady red lamp and the words **after an alarm**. It does not play a blink and it does not show a timing.
 
 ### Troubleshooting Placement
 
@@ -440,25 +394,12 @@ Look for:
 - An air-conditioning vent closer than [Setup Placement](#setup-placement) allows.
 - Ceiling-fan blades closer than Setup Placement allows.
 
-The dust, insect, and clean steps stay on [Customer reports false alarms](#customer-reports-false-alarms). They are not copied here.
-
-### Remote won't work
-
-The technician picks which of these is true. The app does not add a test for it.
-
-1. The remote has lost its connection. Open [Pairing](#pairing).
-2. The remote itself is faulty. End at report faulty.
-
-### Locate
-
-For a remote, and only for a brand whose remote can do this. How to identify the alarm that triggered.
-
 ## Rules for every instruction
 
 ### Steps, photos, and tips
 
 - All steps for a topic sit on one scrolling page.
-- Each step is a large step number with the words. Not a card. Add the light or sound to expect, a tip, and a photo or diagram only when that step has one.
+- Each step is a blue step number with the words, in a row of a card. A section heading starts a card, and a page with no heading is one card. Numbers restart in each card. Add the light or sound to expect, a tip, and a photo or diagram only when that step has one.
 - A step does not need all of those.
 - When a step names a button, it uses the name printed on the unit.
 - A clear diagram from a manual may be used when no real photo exists. Photos open with the iPhone's normal image viewing.
@@ -476,20 +417,20 @@ That wait is separate from the Cavius wait after a test. The Cavius wait does no
 
 ### Leave out
 
-- Basic consumer advice, and how often a household should test an alarm. The red-flash sentence on [Customer reports false alarms](#customer-reports-false-alarms) stays.
+- Basic consumer advice, and how often a household should test an alarm.
 - Factory reset.
 - Clearing all pairings.
 - Battery replacement as its own topic. The only battery steps in the app are the ones in the [low-battery steps](#low-battery-steps).
 - Remote battery replacement.
 - A power-outage visit.
-- The names Power Cycle, Reset, factory reset, and restart for the drain steps.
+- The names Power Cycle, Reset, factory reset, and restart for the discharge steps.
 - Anything in [Left for later](#left-for-later).
 
 ## Confirmed differences between brands
 
 Wireless pairing presses differ by brand. The written set, and the brands still waiting, are in [Pairing](#pairing). This section keeps the differences where the field method and a manual disagree, or where a sound is easy to misread.
 
-**Emerald wireless pairing.** The pairing used in the field starts by pressing TEST three times quickly, within 2 seconds. Emerald wireless instructions include only behaviour the owner has confirmed. They do not name a Ranger model, and they do not carry the earlier Ranger manual discussion.
+**Emerald pairing.** The pairing used in the field is: all alarms on, TEST three times within 2 seconds on the master alarm, then the same on every other alarm. It is identical for wired and wireless. Emerald instructions include only behaviour the owner has confirmed. They do not name a Ranger model, and they do not carry the earlier Ranger manual discussion.
 
 **Cavius, after a test.** After the technician runs a test, every Cavius alarm chirps for about 2 minutes. That chirp is normal. Wait for it to finish, then wait another 2 minutes for any further chirp. [Testing](#testing) includes this wait. One Cavius alarm chirping on its own is a low battery, and uses the [low-battery steps](#low-battery-steps).
 
@@ -538,8 +479,8 @@ Each word below means one thing in the app. The "Not" column lists names the app
 
 | Word | Means | Not |
 |---|---|---|
-| Setup | The choice for putting in a new alarm, remote, or RF module. | Installing, installation |
-| Troubleshooting | The choice for a problem on an alarm or remote that is already up. | |
+| Setup | The choice for putting in a new alarm. | Installing, installation |
+| Troubleshooting | The choice for a problem on an alarm that is already up. | |
 | Topic | One item under Setup or Troubleshooting. | Job, option |
 | Instruction page | The page for one brand, one unit, and one topic. | |
 | Step | One instruction on that page. | |
@@ -557,12 +498,7 @@ Each word below means one thing in the app. The "Not" column lists names the app
 | Fitting | Putting an RF module into a wired alarm, the right way round. | Installing |
 | Testing | Setting an alarm off and checking that the interconnected alarms sound too. | |
 | Use | What a remote's controls do and how to use them. | |
-| Locate | Using a remote to identify the alarm that triggered. | Finding the false alarm |
 | What's that light or sound? | The full list of signals for one unit. | |
-| Won't power on | The alarm will not turn on. | |
-| Not going off when other alarms go off | One or more alarms stay quiet when the others sound. | |
-| Customer reports false alarms | The customer reports an alarm sound or a chirp when there was no fire. | Finding the false alarm |
-| Remote won't work | The remote is not doing its job. | |
 | report faulty | The last step when the fix is not the technician's to do. | |
 
 ### Lights and sounds

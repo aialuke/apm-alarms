@@ -6,7 +6,7 @@ topic: testing
 
 The alarm must already be turned on.
 
-Press and hold HUSH/TEST.
+Hold HUSH/TEST for <span class="figure">3</span> cycles of the alarm sound.
 
 The red light flashes and the alarm chirps quickly, together. That shows the electronics and the siren are working. Let go and the red light and the chirping stop.
 

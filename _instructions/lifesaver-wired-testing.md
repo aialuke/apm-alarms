@@ -6,15 +6,15 @@ topic: testing
 
 Check the green light next to Test/Hush is on. The alarm has mains power. Stand at arm's length.
 
-Press and hold Test/Hush for at least <span class="figure">5</span> seconds.
+Hold Test/Hush for <span class="figure">3</span> cycles of the alarm sound.
 
 The alarm sounds <span class="figure">3</span> long chirps, pauses, then sounds another <span class="figure">3</span> long chirps. That pattern repeats. The sound keeps going for up to <span class="figure">10</span> seconds after you let go.
 
-If the alarms are interconnected, every alarm should sound within <span class="figure">3</span> seconds of the press.
+If the alarms are interconnected, every alarm should sound within <span class="figure">3</span> seconds of starting the hold.
 
 <p class="lead">Backup battery</p>
 
-Switch the mains off. Press Test for a few seconds. The alarm should sound.
+Switch the mains off. Hold Test/Hush for <span class="figure">3</span> cycles of the alarm sound. The alarm should sound.
 
 Watch the red light for about <span class="figure">5</span> minutes. It should flash at least once. Turn the mains back on after that. The green light then comes on.
 

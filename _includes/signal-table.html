@@ -18,7 +18,7 @@
 {%- capture cue %}Light {{ light.label | default: light.lamp | capitalize }}{% if light.count == 1 %} once{% elsif light.count == 2 %} twice{% elsif light.count %} {{ light.count }} times{% endif %}{% endcapture -%}
 {%- assign blinks = light.count | default: 1 -%}
 {%- if blinks > 3 -%}{%- assign blinks = 0 -%}{%- endif -%}
-<td class="light"><span class="cue">{{ cue }}</span>{% if light.lamp %}<span class="lamp is-{{ light.lamp }}{% if light.figure %}{% if blinks > 0 %} blinks-{{ blinks }}{% endif %}{% else %} is-steady{% endif %}" aria-hidden="true"></span>{% else %}<span class="mark-slot" aria-hidden="true"></span>{% endif %}
+<td class="light"><span class="cue">{{ cue }}</span>{% if light.lamp %}<span class="lamp is-{{ light.lamp }}{% if light.figure %}{% if blinks > 0 %} blinks-{{ blinks }}{% endif %}{% endif %}" aria-hidden="true"></span>{% else %}<span class="mark-slot" aria-hidden="true"></span>{% endif %}
 {%- if light.figure or light.words or light.count -%}
 <span class="cue-words">{% if light.count %}<span class="figure" aria-hidden="true">{{ light.count }}x</span> {% endif %}{% if light.figure %}<span class="wait"><span class="figure">{{ light.figure }}</span> {{ light.unit | default: "seconds" }}</span>{% endif %}{% if light.words %}{% if light.figure %}{{ ' ' }}{% endif %}{{ light.words }}{% endif %}</span>
 {%- endif -%}</td>
@@ -28,7 +28,7 @@
 {%- comment %} Sound cell {% endcomment -%}
 {%- if sound and sound.tick -%}
 {%- capture cue %}Sound{% if sound.count == 1 %} once{% elsif sound.count == 2 %} twice{% elsif sound.count %} {{ sound.count }} times{% endif %}{% if sound.label %} {{ sound.label }}{% endif %}{% endcapture -%}
-<td class="sound"><span class="cue">{{ cue }}</span><span class="tick ticks-{{ sound.tick }}" aria-hidden="true"></span><span class="cue-words">{% if sound.count %}<span class="figure" aria-hidden="true">{{ sound.count }}x</span> {% endif %}{% if sound.figure %}<span class="wait"><span class="figure">{{ sound.figure }}</span> {{ sound.unit | default: "seconds" }}</span>{% endif %}{% if sound.words %}{% if sound.figure %}{{ ' ' }}{% endif %}{{ sound.words }}{% endif %}</span></td>
+<td class="sound"><span class="cue">{{ cue }}</span><span class="tick{% unless sound.tick == "static" %} ticks-{{ sound.tick }}{% endunless %}" aria-hidden="true"></span><span class="cue-words">{% if sound.count %}<span class="figure" aria-hidden="true">{{ sound.count }}x</span> {% endif %}{% if sound.figure %}<span class="wait"><span class="figure">{{ sound.figure }}</span> {{ sound.unit | default: "seconds" }}</span>{% endif %}{% if sound.words %}{% if sound.figure %}{{ ' ' }}{% endif %}{{ sound.words }}{% endif %}</span></td>
 {%- else -%}
 <td class="sound is-empty"><span class="cue">Sound None</span><span class="cue-words" aria-hidden="true">-</span></td>
 {%- endif -%}

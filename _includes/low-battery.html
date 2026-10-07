@@ -1,18 +1,24 @@
 <p class="lead" id="low-battery">Low battery</p>
 
-Vacuum or blow the outside vents first.
+Vacuum or blow the outside vents.
 
 <p class="lead">Sealed battery</p>
 
-Turn it off. On a wireless alarm, off means off the mount. On a sealed wired alarm, this page does not add another way to turn it off.
+{% if page.unit == "wired" %}
+Turn it off.
+{% elsif page.brand == "emerald" %}
+Turn it off. Press test button <span class="figure">6</span> times.
+{% else %}
+Turn it off. Off means off the mount.
+{% endif %}
 
-Hold the test button to drain any power left in it.
+Hold test button to discharge remaining power.
 
 Turn it back on.
 
 Wait <span class="figure">2</span> to <span class="figure">3</span> minutes.
 
-If it chirps, or it does not turn back on, report faulty.
+If it chirps, or won't turn back on, report faulty.
 
 {% assign testing_doc = site.instructions | where: "brand", page.brand | where: "unit", page.unit | where: "topic", "testing" | first %}
 {% assign pairing_doc = site.instructions | where: "brand", page.brand | where: "unit", page.unit | where: "topic", "pairing" | first %}
@@ -22,21 +28,16 @@ If it turns on and stays quiet, <a href="{{ '/' | append: page.brand | append: '
 If it turns on and stays quiet, these testing words are not written yet.
 {% endif %}
 
-{% if pairing_doc %}
-If that test shows an alarm was taken down, switched off, or put into pairing mode, come back to this page, then <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/pairing/' | relative_url }}">Open Pairing</a>.
-{% endif %}
-
-<p class="lead">Battery that comes out</p>
+{% if page.unit == "wired" %}
+<p class="lead">Removable battery</p>
 
 The power is on.
 
 Take the alarm off its base.
 
-Test the battery with a battery tester.
+Test the battery.
 
-Press the test button while the battery is out, to drain any power left in it.
-
-If the tester says the battery is flat, put a new battery in. If it is not flat, put the same battery back.
+Hold test button with battery removed to discharge remaining power.
 
 Put the alarm back on its base.
 
@@ -51,5 +52,6 @@ If it stays quiet, these testing words are not written yet.
 {% endif %}
 
 {% if pairing_doc %}
-If that test shows an alarm was taken down, switched off, or put into pairing mode, come back to this page, then <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/pairing/' | relative_url }}">Open Pairing</a>.
+If an alarm doesn't activate with the others during the test, <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/pairing/' | relative_url }}">Open Pairing</a>.
+{% endif %}
 {% endif %}

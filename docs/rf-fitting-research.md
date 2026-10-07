@@ -1,6 +1,6 @@
 # RF fitting research
 
-Source notes for the technician. Brooks and Emerald only. Sources are manuals and official pages opened during this pass. This file is not a page on the phone. Fitting is not in the app.
+Source notes for the technician. Brooks and Emerald only. Sources are manuals and official pages opened during this pass. This file is not a page on the phone. The phone shows only a redrawn diagram of this, with no words.
 
 This note is how the module goes into the alarm, and which way round it goes. It is not a pairing page. The confirmation after pairing is not known. Do not write that the alarm chirps.
 

@@ -8,13 +8,13 @@ The alarm must be on mains power, and the green light must be on.
 
 <p class="lead">One alarm</p>
 
-Push Hush/Test for <span class="figure">2</span> to <span class="figure">3</span> seconds.
+Hold Hush/Test for <span class="figure">3</span> cycles of the alarm sound.
 
 This alarm gives <span class="figure">3</span> chirps in <span class="figure">4</span> seconds, and the red light flashes <span class="figure">3</span> times every <span class="figure">4</span> seconds. Both repeat until you let go.
 
 <p class="lead">This alarm and the others</p>
 
-Push Hush/Test for <span class="figure">10</span> seconds. The horn on this alarm keeps sounding until you let go.
+Hold Hush/Test for <span class="figure">3</span> cycles of the alarm sound. The horn on this alarm keeps sounding until you let go.
 
 This alarm gives <span class="figure">3</span> chirps in <span class="figure">4</span> seconds, and the red light flashes <span class="figure">3</span> times every <span class="figure">4</span> seconds. Both repeat until you let go.
 

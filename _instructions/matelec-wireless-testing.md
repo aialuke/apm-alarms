@@ -4,7 +4,7 @@ unit: wireless
 topic: testing
 ---
 
-Press and hold CONTROL on any alarm for at least <span class="figure">2</span> seconds.
+Hold CONTROL on any alarm for <span class="figure">3</span> cycles of the alarm sound.
 
 While CONTROL is held on this alarm, the light flashes once and the alarm chirps once. The alarm can also sound <span class="figure">3</span> short chirps, then a <span class="figure">1.5</span> second pause, and repeat until you let go.
 

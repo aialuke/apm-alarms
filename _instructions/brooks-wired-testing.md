@@ -6,7 +6,7 @@ topic: testing
 
 Check the green light is on all the time. Mains power is on.
 
-Hold the test button for up to <span class="figure">10</span> seconds. On interconnected alarms, hold it for <span class="figure">10</span> seconds.
+Hold test button for <span class="figure">3</span> cycles of the alarm sound.
 
 This alarm sounds. While the button is held, the green light flickers about every <span class="figure">1</span> second. This alarm stops when you let go.
 

@@ -11,12 +11,9 @@ signals:
   - light: { figure: 10 }
     means: 'No sound. Hush for up to <span class="figure">10</span> minutes. Dense smoke overrides hush and the alarm sounds the whole time.'
   - means: 'No sound on every alarm except the one that started the event. Hush on an alarm that did not start it, for <span class="figure">2</span> minutes.'
-  - light: { figure: 0.5 }
-    sound: { tick: static, words: '2 sets of 3 long chirps' }
-    means: 'Test. The first pattern is quieter. Holding longer than <span class="figure">5</span> seconds gives the full sound. The other alarms can take up to <span class="figure">20</span> seconds to start. If nothing sounds, report faulty.'
   - light: { figure: 30 }
     sound: { tick: once, figure: 60 }
-    means: 'Low battery for at least <span class="figure">30</span> days. The button can silence that chirp for <span class="figure">24</span> hours, for up to <span class="figure">7</span> days.'
+    means: 'Low battery.'
     fix: low-battery
   - light: { count: 2, figure: 30 }
     means: 'No chirp. Before the end of life.'
@@ -51,7 +48,6 @@ signals:
   - light: { lamp: red, figure: 1, unit: second }
     sound: { tick: static, count: 1 }
     means: 'The red light is <span class="figure">1</span> second on and <span class="figure">1</span> second off, after the chirp. Turning on.'
-
 ---
 
 {% include signal-table.html %}

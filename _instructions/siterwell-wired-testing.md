@@ -6,7 +6,7 @@ topic: testing
 
 Stand an arm's length away.
 
-Press and hold Test for at least <span class="figure">5</span> seconds.
+Hold Test for <span class="figure">3</span> cycles of the alarm sound.
 
 The alarm sounds <span class="figure">3</span> short chirps, then a <span class="figure">1.5</span> second pause, and repeats until you let go. The electronics, the horn, and the battery are working.
 

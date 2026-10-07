@@ -5,9 +5,6 @@ topic: signal
 signals:
   - means: '<span class="figure">1</span> yellow flash, <span class="figure">1</span> red flash, and <span class="figure">1</span> sound. Power up.'
   - means: 'No sound and no flash. Standby.'
-  - light: { lamp: red, figure: 0.5 }
-    sound: { tick: live }
-    means: 'During a test.'
   - light: { lamp: red, label: 'Flashing red' }
     means: 'Only on the alarm that is detecting the event.'
   - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
@@ -33,8 +30,6 @@ signals:
     means: 'Fault hush. The chirps return after <span class="figure">12</span> hours. The fault is still present.'
   - light: { lamp: red, count: 2, figure: 48 }
     means: 'For <span class="figure">24</span> hours after an alarm.'
-  - light: { lamp: red, count: 2, figure: 8 }
-    means: 'While Test is held. After those <span class="figure">24</span> hours, an older alarm is in memory.'
 ---
 
 {% include signal-table.html %}

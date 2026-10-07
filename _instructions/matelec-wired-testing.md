@@ -6,7 +6,7 @@ topic: testing
 
 Check the green light is on all the time. Mains power is on.
 
-Press and hold TEST on the face for at least <span class="figure">5</span> seconds. Do this on each alarm.
+Hold TEST on the face for <span class="figure">3</span> cycles of the alarm sound. Do this on each alarm.
 
 The alarm you are holding sounds, and its red light flashes once every <span class="figure">1</span> second, until you let go. It does not sound at the same time as the alarms that answer.
 

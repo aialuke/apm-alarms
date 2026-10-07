@@ -7,13 +7,6 @@ signals:
     means: 'No sound. Normal use.'
   - light: { lamp: red, words: 'after an alarm', label: 'Flashing red' }
     means: 'This alarm set the others off.'
-  - light: { lamp: red, figure: 1, unit: second }
-    sound: { tick: live, count: 3, figure: 4 }
-    means: 'Until you let go of Test/Hush. Test.'
-  - light: { lamp: red, count: 2, words: 'for 5 minutes' }
-    means: 'Twice a second. Radio test.'
-  - sound: { tick: live, count: 2, figure: 1, unit: second }
-    means: 'For <span class="figure">10</span> seconds. Radio test.'
   - light: { lamp: red, figure: 8 }
     means: 'For <span class="figure">10</span> minutes, no sound. Hush. The alarm is not sensitive to smoke during that time.'
   - light: { lamp: red, figure: 40 }
@@ -32,7 +25,6 @@ signals:
     means: 'This alarm can be hushed.'
   - means: 'Flashing and sounding on more than one alarm. Each of those needs Test/Hush.'
   - means: 'The other alarms stop within <span class="figure">5</span> to <span class="figure">10</span> seconds. After the first alarm is hushed.'
-
 ---
 
 {% include signal-table.html %}

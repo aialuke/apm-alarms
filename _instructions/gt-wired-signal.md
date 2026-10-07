@@ -24,14 +24,6 @@ signals:
     sound: { tick: once, figure: 60 }
     means: 'Low battery until the battery is depleted.'
     fix: low-battery
-  - light: { lamp: red, count: 3 }
-    sound: { tick: static, count: 3 }
-    means: 'Red light once with a short chirp first, then this, for <span class="figure">2</span> cycles. Single test.'
-  - light: { lamp: red, label: 'Flashing red' }
-    sound: { tick: static, words: 'the whole time' }
-    means: 'The alarm you hold, on an interconnected test.'
-  - sound: { tick: static }
-    means: 'The lights flash red and yellow in turn. The other alarms, on an interconnected test.'
   - sound: { tick: static, words: 'on and off' }
     means: 'Clean the outside vents.'
 ---

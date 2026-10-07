@@ -1,12 +1,12 @@
 - id: anka
   name: Anka
-  units: [wired, wireless, remote]
+  units: [wired, wireless]
 - id: brooks
   name: Brooks
   units: [wired, wireless, rf, remote]
 - id: cavius
   name: Cavius
-  units: [wired, wireless, remote]
+  units: [wired, wireless]
 - id: clipsal
   name: Clipsal
   units: [wired, wireless]
@@ -18,7 +18,7 @@
   units: [wired, wireless, rf, remote]
 - id: gt
   name: GT
-  units: [wired, wireless, remote]
+  units: [wired, wireless]
 - id: legrand
   name: Legrand
   units: [wired, wireless]
@@ -27,10 +27,10 @@
   units: [wired, wireless]
 - id: matelec
   name: Matelec
-  units: [wired, wireless, remote]
+  units: [wired, wireless]
 - id: red
   name: Red
-  units: [wired, wireless, remote]
+  units: [wired, wireless]
 - id: siterwell
   name: Siterwell
   units: [wired, wireless]

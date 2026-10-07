@@ -1,6 +1,6 @@
 # Testing research
 
-Source notes for the technician. One wired model and one wireless model per brand. Sources are manuals and official pages opened during this pass. This file is not a page on the phone. Testing is not in the app.
+Source notes for the technician. One wired model and one wireless model per brand. Sources are manuals and official pages opened during this pass. This file is not a page on the phone. The field rule on every phone page is "Hold test button for 3 cycles of the alarm sound." (see the Testing section of the product brief). It wins over every hold time recorded below, which are manual facts only.
 
 The test here is the button test. It shows that the alarm sounds, and that the interconnected alarms sound. A smoke spray test is included only when the sheet ties it to that button test. Factory reset and clearing a network stay in Flag. They are not test steps.
 
