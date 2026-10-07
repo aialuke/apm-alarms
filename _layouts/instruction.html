@@ -8,17 +8,17 @@ layout: default
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
     <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
-    <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/' | relative_url }}">{{ page.list_name }}</a>
+    <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/' | relative_url }}">{{ page.list_name | escape }}</a>
     {%- endunless %}
-    <h1 aria-current="page">{{ page.title }}</h1>
+    <h1 aria-current="page">{{ page.title | escape }}</h1>
   </nav>
 </header>
 <main class="instruction{% if page.topic == 'placement' %} list{% else %} sequence{% endif %}">
   {{ content }}
 </main>
 <div class="mini" aria-hidden="true">
-  <span class="mini-list">{% if page.combined %}{{ page.brand_name }}{% else %}{{ page.list_name }}{% endif %}</span>
+  <span class="mini-list">{% if page.combined %}{{ page.brand_name }}{% else %}{{ page.list_name | escape }}{% endif %}</span>
   <span class="mini-sep">{% include chevron.html %}</span>
-  <span class="mini-title">{{ page.title }}</span>
+  <span class="mini-title">{{ page.title | escape }}</span>
 </div>
 <script src="{{ '/assets/compact.js' | relative_url }}" defer></script>

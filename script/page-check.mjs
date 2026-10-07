@@ -114,13 +114,18 @@ function html(rel) {
   return fs.readFileSync(file, "utf8");
 }
 
+// The pages escape & as &amp;. The checks compare the words a person reads.
+function unescape(text) {
+  return text.replace(/&amp;/g, "&");
+}
+
 function titleOf(text) {
   const match = text.match(/<title>([^<]*)<\/title>/);
-  return match ? match[1] : "";
+  return match ? unescape(match[1]) : "";
 }
 
 function rowLabels(text) {
-  return [...text.matchAll(/class="row-label">([^<]*)</g)].map((match) => match[1]);
+  return [...text.matchAll(/class="row-label">([^<]*)</g)].map((match) => unescape(match[1]));
 }
 
 function tiles(text) {
@@ -180,12 +185,12 @@ function headerOf(text) {
 
 function pageName(header) {
   const match = header.match(/<h1[^>]*>([^<]*)<\/h1>/);
-  return match ? match[1] : "";
+  return match ? unescape(match[1]) : "";
 }
 
 function textNodes(header) {
   return [...header.matchAll(/>([^<]*)</g)]
-    .map((match) => match[1].replace(/\s+/g, " ").trim())
+    .map((match) => unescape(match[1]).replace(/\s+/g, " ").trim())
     .filter(Boolean);
 }
 

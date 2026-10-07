@@ -6,7 +6,7 @@ layout: default
     <a href="{{ '/' | append: page.brand | append: '/' | relative_url }}">{{ page.brand_name }}</a>
     <span class="sep" aria-hidden="true">{% include chevron.html %}</span>
     <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | relative_url }}">{{ page.unit_name }}</a>
-    <h1 aria-current="page">{{ page.list_name }}</h1>
+    <h1 aria-current="page">{{ page.list_name | escape }}</h1>
   </nav>
 </header>
 <main>
@@ -14,7 +14,7 @@ layout: default
   {% for topic in page.topics %}
     <li{% if topic.href contains '/signal/' %} class="lookup"{% endif %}>
       <a href="{{ topic.href | relative_url }}">
-        <span class="row-label">{{ topic.title }}</span>
+        <span class="row-label">{{ topic.title | escape }}</span>
         {% include chevron.html %}
       </a>
     </li>
