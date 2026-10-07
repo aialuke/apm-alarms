@@ -24,29 +24,3 @@
     );
   }
 })();
-
-/* "View fix": glide to the card, wash it once, and stay on this page. */
-(function () {
-  var main = document.querySelector("main");
-  if (!main) return;
-  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  main.addEventListener("click", function (event) {
-    var link = event.target.closest ? event.target.closest('a[href^="#"]') : null;
-    var card = link && document.getElementById(link.getAttribute("href").slice(1));
-    if (!card || !card.classList.contains("fix")) return;
-    event.preventDefault();
-    event.stopPropagation();
-    card.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" });
-    card.classList.remove("is-arrived");
-    void card.offsetWidth;
-    card.classList.add("is-arrived");
-    card.addEventListener(
-      "animationend",
-      function () {
-        card.classList.remove("is-arrived");
-      },
-      { once: true }
-    );
-  });
-})();

@@ -1,4 +1,4 @@
-# APM Alarms
+# APM Alarms (apm-alarms)
 
 A quick-reference website for a smoke alarm technician, saved to the iPhone home screen.
 

@@ -188,7 +188,7 @@ The palette is a near-black field. White is for reading. A bright blue edge is w
 - **Rim Press** (`#7eb6ff`): The pressed edge, between white and Action Blue.
 - **Reading Blue** (`#9cc4ff`): Icons on list rows, shortcut labels, step numbers, and links inside an instruction.
 
-The tight edge on a brand button, a note, and the Back / Home bar runs Rim Ice, Rim Bright, Action Blue, then Rim Pale. A press fills the face with Action Blue. The pressed edge runs from white through Rim Press into Action Blue.
+The tight edge on a brand button, a note, and the Back / Home bar runs Rim Ice, Rim Bright, Action Blue, then Rim Pale. One short blue shadow anchors the edge. A press fills the face with Action Blue. The pressed edge runs from white through Rim Press into Action Blue.
 
 ### Secondary
 
@@ -239,9 +239,9 @@ Instruction text uses the width of the phone column. Step cards sit in the 16px 
 
 ## Elevation & Depth
 
-**The Tight Edge Rule.** A control stands off the black page with a bright blue rim, a thin white highlight on the top edge, and a short blue shadow that stays against the shape. The shadow is about 2px down and 5px of blur. A press fills a brand button solid Action Blue. The signal table is one card with the same rim and shadow. Inside it, a lamp lights its own row with a soft wash of its colour. That wash is light inside the row, not a shadow, and it never leaves the card. Steps sit in a card with the same rim and shadow, faint lines between rows, and the section name pinned under the top bar. A Tip inside a card is a tinted row across it, not a second card. The last "If ..." lines of a card are outcome rows (17px, 14px of space above and below, text centred on the row) with a blue icon and, when they link, a chevron. The Low battery card carries the table's amber lamp as a soft wash that stays inside the card, and a View fix jump washes it once. Rows ease in as they reach the screen where the browser can do it, and reduced motion turns it all off. The brand screen keeps a quiet blue light in the top corner only.
+**The Tight Edge Rule.** A control stands off the black page with a bright blue rim, a thin white highlight on the top edge, and one short blue shadow that stays against the shape. A press fills a brand button solid Action Blue. The signal table is one card with the same rim and shadow. Inside it, a lamp lights its own row with a soft wash of its colour. That wash is light inside the row, not a shadow, and it never leaves the card. Steps sit in a card with the same rim and shadow, faint lines between rows, and the section name pinned under the top bar. A Tip inside a card is a tinted row across it, not a second card. The last "If ..." lines of a card are outcome rows (17px, 14px of space above and below, text centred on the row) with a blue icon and, when they link, a chevron. The Low battery card carries the table's amber lamp as a soft wash that stays inside the card. View fix scrolls directly to it. Instruction rows stay still as they enter view. The brand screen keeps a quiet blue light in the top corner only.
 
-Motion uses `cubic-bezier(0.16, 1, 0.3, 1)` over 180ms. Reduced motion turns transitions off.
+Motion is reserved for control feedback, the long-page title strip, and confirmed signal cues. Reduced motion turns transitions and signal animation off.
 
 ## Shapes
 
@@ -251,7 +251,7 @@ Corners are generous on brand buttons (26px), the signal table (20px), the botto
 
 ### Brand button
 
-A near-square button, three across, the brand name centred in white. No logo. The face falls from Card to Card Deep, with a tight blue edge. A press fills it Action Blue.
+A near-square button, three across, the brand name centred in white. No logo. The face falls from Card to Card Deep, with a tight blue edge and one short blue shadow. A press fills it Action Blue.
 
 ### Navigation bar
 
@@ -279,7 +279,7 @@ Numbered steps sit in a step card, in a two-column rhythm: a blue number in a sm
 
 ### Step card
 
-Steps sit in one rounded card (20px, the same tight blue edge as the signal table). A section heading starts a card, and a page with no heading is one card. The heading is a small spaced Reading Blue label with a drawn blue icon, a solid Card panel pinned under the top bar while its steps scroll, with a faint line under it. Steps are rows with faint lines that stop short of the card edge. The number is Reading Blue in a 28px round badge with a thin blue ring, and numbers restart in each card. A Tip is a tinted row across the card. The last "If ..." lines are outcome rows under a line: a blue icon, the words at 17px, and a chevron when the row links. The whole row opens its link. The Low battery card is the amber row of the table's fix, so its heading carries a soft amber wash and a small amber lamp dot, and a View fix jump glides to it and washes it once. Rows ease up as they reach the screen where the browser ties motion to scrolling, and reduced motion turns it all off. Placement keeps its sketch and list inside a plain card with no heading. A Remote is one page of step cards, Activation, Pairing and Use with their own icons, and has no light and sound table. There is no Setup or Troubleshooting choice and no topic list before it. A section with no written words shows a card with the note "These words are not written yet."
+Steps sit in one rounded card (20px, the same tight blue edge as the signal table). A section heading starts a card, and a page with no heading is one card. The heading is a small spaced Reading Blue label with a drawn blue icon, a solid Card panel pinned under the top bar while its steps scroll, with a faint line under it. Steps are rows with faint lines that stop short of the card edge. The number is Reading Blue in a 28px round badge with a thin blue ring, and numbers restart in each card. A Tip is a tinted row across the card. The last "If ..." lines are outcome rows under a line: a blue icon, the words at 17px, and a chevron when the row links. The whole row opens its link. The Low battery card is the amber row of the table's fix, so its heading carries a soft amber wash and a small amber lamp dot. View fix scrolls directly to it. Instruction rows stay still as they enter view. Placement keeps its sketch and list inside a plain card with no heading. A Remote is one page of step cards, Activation, Pairing and Use with their own icons, and has no light and sound table. There is no Setup or Troubleshooting choice and no topic list before it. A section with no written words shows a card with the note "These words are not written yet."
 
 ### Home-screen icon
 A smoke alarm seen from below, drawn on Night Black. A tight blue rim ring in the same blue gradient as the buttons, a dark Card face, one thin inner ring, a small centre test button, and one small pale lamp dot at the top right. There are no words, no gold, and no brand logos. It is square and full-bleed; the iPhone rounds the corners. It ships at 180px for the iPhone and 192px and 512px for the manifest.
