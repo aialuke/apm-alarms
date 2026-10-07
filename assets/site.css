@@ -40,6 +40,8 @@
 
 html {
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background: var(--ground);
   caret-color: var(--ink);
   --nav-height: calc(28px + 44px + 10px + 33.6px + 14px + 1px + env(safe-area-inset-top));
@@ -372,7 +374,7 @@ h1 {
   min-width: 0;
   margin-inline: -8px;
   padding-inline: 3px;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   text-wrap: wrap;
 }
 
@@ -419,6 +421,7 @@ h1 {
   line-height: 1.25;
   text-align: left;
   text-decoration: none;
+  overflow-wrap: anywhere;
   transition: background 180ms var(--ease);
 }
 
@@ -628,6 +631,10 @@ h1 {
   font-weight: 650;
   scroll-margin-top: calc(var(--nav-height) + 12px);
   text-wrap: pretty;
+}
+
+.instruction {
+  overflow-wrap: anywhere;
 }
 
 table.signals {
@@ -1333,5 +1340,16 @@ table.signals td.sound .figure {
   table.signals .tick.ticks-once,
   table.signals .tick.ticks-live {
     opacity: 0.72;
+  }
+}
+
+@media (forced-colors: active) {
+  a:focus-visible {
+    outline-color: LinkText;
+  }
+
+  .tile,
+  .bar {
+    border-color: LinkText;
   }
 }
