@@ -10,6 +10,8 @@
   <meta name="apple-mobile-web-app-title" content="APM Alarms">
   <title>{% if page.brand_name and page.unit_name %}{{ page.brand_name }} · {{ page.unit_name }}{% unless page.title == page.unit_name %} · {{ page.title }}{% endunless %} · {% elsif page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/icon-180.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/icon-192.png' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 </head>
 <body class="{% if page.hide_bar %}is-home{% endif %}" data-home="{{ '/' | relative_url }}">

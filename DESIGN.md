@@ -65,10 +65,10 @@ typography:
     letterSpacing: "0"
   table-label:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
-    fontSize: "12px"
+    fontSize: "14px"
     fontWeight: 700
     lineHeight: 1.2
-    letterSpacing: "0.09em"
+    letterSpacing: "0.08em"
   table-meaning:
     fontFamily: "-apple-system, BlinkMacSystemFont, \"SF Pro Text\", \"SF Pro Display\", system-ui, sans-serif"
     fontSize: "17px"
@@ -201,7 +201,7 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 - **Brand** (19px, weight 650): The name on a brand button. The same size as the reading text, so a long name such as Detector Inspector still fits inside the button on an iPhone SE, and heavier so it reads as a label.
 - **Diagram** (24px, weight 700): The measurement on a placement sketch, in Figure Gold, with even figures.
 - **Table figure** (22px, weight 700, line-height 1): The real interval in a signal table's light or sound cell, in Figure Gold. It is a little smaller than the diagram size so "48 seconds" fits its column on a 375px iPhone.
-- **Table label** (12px, weight 700, tracking 0.09em, capitals): Light and Sound over the signal table, in Reading Blue.
+- **Table label** (14px, weight 700, tracking 0.08em, capitals): Light and Sound over the signal table, in Reading Blue.
 - **Table meaning** (17px, weight 400, line-height 1.4): What a signal means, centred under its row in Paper White. A figure inside it stays Figure Gold.
 - **Control** (17px, weight 650): Back and Home. The placement clearances use this size at regular weight, so the points sit under the sentence.
 - **Label** (15px, weight 500): The earlier steps of the route. The current step uses the headline.
@@ -258,9 +258,12 @@ A dark bar, 56px tall, inset from the screen edges and the home indicator, with 
 
 Numbered steps in a two-column rhythm: the blue number, then the words. A gold figure and a link sit inside the words. A note, including a Tip, is a rounded inset in the reading flow. It is not a step, and it has no number. It has no thick coloured stripe.
 
+### Home-screen icon
+A smoke alarm seen from below, drawn on Night Black. A tight blue rim ring in the same blue gradient as the buttons, a dark Card face, one thin inner ring, a small centre test button, and one small pale lamp dot at the top right. There are no words, no gold, and no brand logos. It is square and full-bleed; the iPhone rounds the corners. It ships at 180px for the iPhone and 192px and 512px for the manifest.
+
 ### Signal table
 
-What's that light or sound? is a table. Light and Sound are the header, centred over their cells. The meaning is the full-width line under those two cells, centred, in Paper White at 17px. The table is one rounded card with the same tight blue edge as a Tip. The faint lines, in Faint Ink, stop short of the card edge. The header is small spaced Reading Blue labels on the card, with no filled band, and it stays pinned under the top bar while the rows scroll. Each lamp lights its own row with a soft wash of its colour, and the wash pulses with the blink. A count in the light cell is written 3x or 2x, in Figure Gold. The screen reader still hears 3 times or twice. The cell does not write every. The repeat is assumed.
+What's that light or sound? is a table. Light and Sound are the header, centred over their cells. The meaning is the full-width line under those two cells, centred, in Paper White at 17px. The table is one rounded card with the same tight blue edge as a Tip. The faint lines, in Faint Ink, stop short of the card edge. The header is small spaced Reading Blue labels on the card, with no filled band, and it stays pinned under the top bar while the rows scroll. The pinned header is a solid Card panel. It has no blur and nothing shows through it, so rows slide cleanly underneath. Each lamp lights its own row with a soft wash of its colour, and the wash pulses with the blink. A count in the light cell is written 3x or 2x, in Figure Gold. The screen reader still hears 3 times or twice. The cell does not write every. The repeat is assumed.
 
 A confirmed colour is a small round lamp at the start of the light cell. The lamp is green `#32d74b`, red `#ff453a`, amber `#ff9f0a`, or blue `#409cff`. The colour is not written again next to the lamp. It stays in the hidden label. A confirmed interval blinks that lamp one, two, or three times, then rests, on one shared clock of about two seconds. The lamp stays its own colour the whole time. The blink is a bright pulse, so a glance still sorts green from red from amber. The real interval is the gold figure in the light or sound cell, at the table figure size (22px, weight 700). A figure in the meaning line stays body size. A sound with a cue is three pale bars that brighten with the lamp. A two-second sound ticks on that real wait. A flash count with no confirmed timing is the count in Figure Gold (1x, 2x, 3x) beside a steady lamp and still bars. A sound cell may wrap its count and its wait onto two lines. When a colour is not stated, the light cell shows its count, wait, or words with no lamp, and the text lines up with the lamp rows. A side with no cue is a Paper White dash, centred in the cell. The screen reader still hears None. Flashing red after an alarm is a steady red lamp and the words after an alarm. It does not blink, and it does not show a timing. The turn-on light is not listed. Reduced motion leaves every lamp steady and every tick still.
 
@@ -296,6 +299,7 @@ The sentence stays at body size. The clearances under it are a disc list, indent
 - **Don't** put a thick coloured side stripe on a Tip or a note.
 - **Don't** put a blue outline around a list of rows. The signal table is one card with the blue edge around the whole table, and faint lines between its rows.
 - **Don't** write the colour again next to its lamp, and don't blink an interval that is not confirmed.
+- **Don't** blur or see through the pinned table header. It is a solid Card panel.
 - **Don't** let a blue edge bloom into a wide glow. On a brand button, a note, the signal table, and the Back / Home bar, it stays tight against the shape.
 - **Don't** use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.
 - **Don't** give 300 mm and 400 mm different colors.

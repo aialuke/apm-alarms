@@ -12,7 +12,7 @@
   --rim-pale: #8ec0ff;
   --rim-press: #7eb6ff;
   --row-line: rgba(245, 247, 251, 0.16);
-  --ink-faint: color-mix(in srgb, var(--ink) 45%, transparent);
+  --ink-faint: color-mix(in srgb, var(--ink) 60%, transparent);
   --nav-line: color-mix(in srgb, var(--blue) 55%, transparent);
   --nav-shade: color-mix(in srgb, var(--blue) 45%, transparent);
   --scroll: color-mix(in srgb, var(--ink) 35%, transparent);
@@ -561,17 +561,15 @@ table.signals thead {
   z-index: 2;
   background:
     var(--hairline) 14px 100% / calc(100% - 28px) 1px no-repeat,
-    color-mix(in srgb, var(--card) 82%, transparent);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+    var(--card);
 }
 
 table.signals thead th {
   padding: 13px 14px 11px;
   color: var(--blue-text);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;

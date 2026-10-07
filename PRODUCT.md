@@ -52,8 +52,6 @@ Units: Wired alarm, Wireless alarm, RF module (only for a brand that uses a sepa
 
 The app does not include site records, site types, job tracking, completion checklists, booking, a model or series picker, sources or manual links, or editing inside the app. It also leaves out factory reset, clearing all pairings, battery replacement as its own topic, remote battery replacement, a power-outage visit, videos, a theme switch, and diagnosing a faulty RF module.
 
-On the first opening with a connection, show the approved content straight away and download every approved page and image in the background. Do not put a download or a setup screen in front of the first use. Once a complete copy is on the phone, keep using it while a later version downloads. Switch only after every required page and image has downloaded. Do not show a "Ready offline" status. If a page has not been saved yet and there is no connection, say that a connection is needed for that page.
-
 An AI agent prepares additions and changes. A change appears only after the owner has approved it. Look up an official manual only when the owner explicitly asks. Do not invent alarm facts.
 
 The full topic map, page rules, and word list are in `docs/product-brief.md`. That brief still stands.
