@@ -231,6 +231,8 @@ A step number is 16px in Reading Blue at weight 700, inside a 28px round badge. 
 
 The app is a phone column. On a wide window the column is 430px wide and centred. On a phone it is the full width.
 
+Every screen shares one 16px side edge. The breadcrumb, the page title, list row words, row chevrons and cards all sit on it. A group of rows is set apart by a 24px gap, such as Lights & Sounds from the problem rows, and the shortcut rows from the topics.
+
 The brand screen is a three-column grid with a 10px gap and 16px side inset. Two published brands leave the third cell empty. Long names such as Detector Inspector wrap inside the button.
 
 After Brands, the route sits in the top bar. The earlier steps sit above the page name, and a clear gap sits between that name and the first row. Choices are full-width rows on the black page. A grey line separates one row from the next. There is no box around the list. Shortcuts sit a little below the topics.

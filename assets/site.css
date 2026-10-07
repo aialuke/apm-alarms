@@ -276,6 +276,11 @@ h1 {
   min-width: 44px;
 }
 
+/* The first link's own padding would push its words 2px in from the title below. */
+.route > :first-child {
+  margin-inline-start: -2px;
+}
+
 .route span:not(.sep) {
   color: var(--ink);
   font-weight: 650;
@@ -443,7 +448,7 @@ table.signals thead th,
 }
 
 .shortcuts {
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .choices a,
@@ -454,7 +459,7 @@ table.signals thead th,
   gap: 14px;
   width: 100%;
   min-height: 76px;
-  padding: 12px 20px;
+  padding: 12px 16px;
   color: var(--ink);
   font-size: 22px;
   font-weight: 650;
