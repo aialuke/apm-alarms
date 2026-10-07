@@ -2,97 +2,44 @@
 
 <!-- impeccable:product-schema 1 -->
 
+`docs/product-brief.md` is the version 1 specification and the master document. This file is a short summary for tools. If the two disagree, the brief wins, and `_data/topic_map.yml` and `_data/brands.yml` decide which units and topics appear.
+
 ## Platform
 
 web
 
 ## Users
 
-The primary user is a smoke alarm technician in Queensland, Australia, on a job. One person first: the owner. It should be easy to share with other technicians later. Work phones are iPhones.
-
-The job inside the app is to answer a question about the brand and the unit in the technician's hand. The alarms are interconnected. Pairing and testing matter. The app does not model the whole network of alarms.
-
-On a job the technician needs two outcomes: every alarm works, and testing shows that every alarm is interconnected. Their existing work system records that the job is done. This app does not.
+A smoke alarm technician in Queensland, Australia, on a job, using an iPhone. One person first: the owner. It should be easy to share with other technicians later.
 
 ## Product Purpose
 
-A personal quick-reference cheat sheet. It is not about the property, and it is not about the job.
-
-It is a website saved to the iPhone home screen. It opens like an app, with no sign-in and no welcome screen.
-
-Version 1 is complete only when all twelve brands have owner-approved content. The owner may add more brands later.
+A personal quick-reference cheat sheet for the brand and unit in the technician's hand. It is a website saved to the iPhone home screen, with no sign-in and no welcome screen. It is not about the property or the job.
 
 ## Positioning
 
-The technician looks at the alarm, picks that brand, then picks the unit in hand right now. There is no "both" choice and no way to pick a model or a series.
-
-A fixed topic map decides which units and topics a brand may show. Owner approval of the words does not add a unit or a topic the map does not allow.
-
-When the owner's confirmed field information disagrees with a manual, the owner's version is the one to use. Pairing does not differ by model. You cannot add one alarm to alarms that are already up. You pair all of them again.
+Brand, then Unit, then Setup or Troubleshooting, then Topic, then one scrolling page. The owner's confirmed field knowledge wins over a manual. Do not invent alarm facts.
 
 ## Operating Context
 
-Used on a job, one-handed, from the iPhone home screen. The technician picks the brand by looking at the alarm.
-
-The path is Brand, then Unit, then Setup or Troubleshooting, then Topic, then one scrolling instruction page. A Remote and an RF module skip Setup, Troubleshooting and Topic. Their unit opens one page.
-
-Setup is for putting in a new alarm. An RF module is one page that is only the fitting diagram, opened straight from the units. Troubleshooting is for an alarm that is already up. A remote is one page, with Activation, Pairing, and Use as cards, opened straight from the units. It has no light and sound table. It is a lookup. The app does not force a path through every topic, track progress, or ask the technician to name the alarm before it will help.
-
-The app has its own Back and Home. Saved to the home screen, the iPhone hides Safari's back button, and swiping back is not reliable. Back returns to the previous page and the scroll position the technician left. Home returns to the brand screen.
-
-Leaving the app, including the phone locking or switching apps, starts a 15-minute timer. Coming back within 15 minutes restores the same page. Coming back after 15 minutes opens the brand screen. Moving between pages inside the app does not start the timer.
-
-Installing a wired base is electrician work, so the app does not include it. When the fix is not the technician's to do, the page ends at "report faulty" and stops. The app does not say to replace the unit or book an electrician. That organising stays in the existing work system.
+Used one-handed on a job. See the brief for the screens, Back and Home, and what happens when the technician leaves and comes back.
 
 ## Capabilities and Constraints
 
-Version 1 brands: Anka, Brooks, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Matelec, Red, Siterwell.
-
-Units: Wired alarm, Wireless alarm, RF module (only for a brand that uses a separate module), Remote (only Brooks and Emerald have one on the phone).
-
-The app does not include site records, site types, job tracking, completion checklists, booking, a model or series picker, sources or manual links, or editing inside the app. It also leaves out factory reset, clearing all pairings, battery replacement as its own topic, remote battery replacement, a power-outage visit, videos, a theme switch, and diagnosing a faulty RF module.
-
-An AI agent prepares additions and changes. A change appears only after the owner has approved it. Look up an official manual only when the owner explicitly asks. Do not invent alarm facts.
-
-The full topic map, page rules, and word list are in `docs/product-brief.md`. That brief still stands.
-
-Still open. Do not invent answers for these:
-
-- Emerald wired pairing confirmation after an RF module is fitted
-- The real interval for the flashing-red meaning
-- Final wording of the topic-screen shortcuts (version 1 uses the labels in the brief)
-- Any cross-brand pairing combination
-- Brands beyond the twelve
-- Editing inside the app, and only if many technicians later want to add their own tips regularly
+The brands, units, topics and what is left out are in the brief and the topic map. An AI agent prepares changes and the owner approves the words before they appear.
 
 ## Brand Commitments
 
-The name is APM Alarms.
-
-Each word in the brief's word list means one thing. Do not use the names in its "Not" column for that thing. Examples the app must not substitute: Detector, Device, Hard-wired, LED, Installing.
-
-The app is dark only. It does not follow the phone's light or dark setting. There is no theme switch. The brand screen has no logos.
-
-The look is a dark iPhone screen. The type is the iPhone system font. The ground is near-black. Brand names are large rounded buttons, three across, big enough to hit with one hand. Each button has a dark face, a white name, and a tight blue edge. The top of each screen is a navigation bar. After Brands, Back and Home sit in a bar at the bottom, Back on the left and Home on the right, with the same tight blue edge. Unit, Setup or Troubleshooting, and topic choices are tall rows on the black page, with only a grey line between them. A blue icon marks each unit, Setup, Troubleshooting, and each shortcut. Topic rows have no icon. An instruction page is a stack of step cards with the same tight blue edge. A Tip is a rounded inset note with the same tight blue edge as a brand button, and so is the signal table. A clearance, a wait, a press count, or a confirmed flash interval is gold. The words around that number stay white.
-
-## Evidence on Hand
-
-`docs/product-brief.md` is the version 1 specification. The owner confirmed it still stands.
-
-Wireless pairing is written for ten brands: Anka, Cavius, Clipsal, Detector Inspector, Emerald, GT, Legrand, Lifesaver, Red, and Siterwell. Brooks and Matelec wireless pairing are not written. Wired pairing is written for Cavius, Clipsal, Emerald, Legrand, Matelec, and Siterwell. Anka, Brooks, Detector Inspector, GT, Lifesaver, and Red wired pairing are not written. Emerald pairing, wired and wireless, uses one owner-confirmed field method on both pages: all alarms on, then TEST 3 times within 2 seconds on the master alarm and on every other alarm, with the 90 second red flash and the red flash and chirp that show it has paired. The Cavius chirp after a test is on Testing.
-
-Testing, lights and sounds, mounting, activation, opening, remote pairing, remote use, and the RF module fitting diagram are on the phone where the matching note found the steps. A note that did not find the steps stays on "These words are not written yet." That includes Anka wired testing and lights, Detector Inspector wireless testing and lights, Siterwell wireless testing and lights, the Emerald and Detector Inspector wired opening notes, which name a manual but give no steps. Locate stays off. Setup Placement is the ceiling diagram, and Troubleshooting Placement is the nearby-thing list, on every wired and wireless alarm. Troubleshooting is What's that light or sound?, Placement, and Pairing. Won't power on, quiet alarms, false alarms, and a dead remote are not topics, because the light and sound table covers them.
-
-Do not fabricate testimonials, customer quotes, manuals the owner did not ask for, distances, light intervals, or other brand differences.
+The name is APM Alarms. The app is dark only. The brief's word list says what each word means and which names not to use. The look is in `DESIGN.md`.
 
 ## Product Principles
 
 1. Answer the unit in the technician's hand. Leave the property and the job to the existing work system.
-2. The topic map decides what can appear. Owner approval decides the words. Neither one invents the other.
+2. The topic map decides what can appear. Owner approval decides the words. Neither invents the other.
 3. The owner's confirmed field knowledge wins over a manual.
-4. One topic is one scrolling page. Do not track progress or force a path through every topic.
-5. When the fix is not the technician's, stop at report faulty. Do not tell them to replace the unit or book an electrician.
+4. One topic is one scrolling page. Do not track progress or force a path.
+5. When the fix is not the technician's, stop at report faulty.
 
 ## Accessibility & Inclusion
 
-Tap targets are sized for one-handed use on an iPhone SE (3rd generation). Text must be readable at arm's length. Leave clear space between buttons. Technicians do not wear gloves, so there are no glove-specific requirements. Use the iPhone's normal screen locking and its normal image viewing.
+Sized for one-handed use on an iPhone SE (3rd generation) and readable at arm's length. Details are in the brief.

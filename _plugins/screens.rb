@@ -76,7 +76,9 @@ module APM
         next unless brand && Array(brand["units"]).include?(unit_id)
 
         unit = units[unit_id] || {}
-        lists.keys.select { |list| Array(unit[list]).include?(topic_id) }.each do |list|
+        next if topics.dig(topic_id, "shared")
+
+        lists.keys.select { |list| reachable(unit, lists, list).include?(topic_id) }.each do |list|
           title = topics.dig(topic_id, "title")
           data = instruction_data(brand, unit_id, unit, list, lists, topic_id, title)
           dir = File.join(brand["id"], unit_id, list, topic_id)
@@ -94,18 +96,26 @@ module APM
       published
     end
 
+    # The topics a list opens: its buttons, then the extra topics the map says it may open.
+    def reachable(unit, lists, list)
+      buttons = Array(unit[list])
+      return buttons if buttons.empty?
+
+      buttons + Array(lists.dig(list, "also")).select { |topic_id| Array(unit["setup"]).include?(topic_id) }
+    end
+
     def publish_missing(site, brands, units, topics, lists, published)
       note = '<p class="note">These words are not written yet.</p>'
       brands.each do |brand|
         Array(brand["units"]).each do |unit_id|
           unit = units[unit_id] || {}
           lists.each_key do |list|
-            Array(unit[list]).each do |topic_id|
+            reachable(unit, lists, list).each do |topic_id|
               next if published.any? { |row| same_topic(row, brand["id"], unit_id, list, topic_id) }
 
               data = instruction_data(brand, unit_id, unit, list, lists, topic_id, topics.dig(topic_id, "title"))
               dir = File.join(brand["id"], unit_id, list, topic_id)
-              html = missing_html(site, list, topic_id, data, note)
+              html = missing_html(site, topics, list, topic_id, data, note)
               site.pages << Screen.new(site, dir, "instruction", data, html)
               published << data
             end
@@ -266,17 +276,11 @@ module APM
       "/" + parts.join("/") + "/"
     end
 
-    def missing_html(site, list, topic_id, page_data, note)
-      shared = placement_include(list, topic_id)
+    def missing_html(site, topics, list, topic_id, page_data, note)
+      shared = topics.dig(topic_id, "shared", list)
       return note unless shared
 
       wrap_placement(render_shared(site, shared, page_data))
-    end
-
-    def placement_include(list, topic_id)
-      return unless topic_id == "placement"
-      return "setup-placement.html" if list == "setup"
-      return "troubleshooting-placement.html" if list == "troubleshooting"
     end
 
     def render_shared(site, name, page_data)

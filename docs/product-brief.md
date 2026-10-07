@@ -40,14 +40,11 @@ Version 1 covers these brands:
 
 Version 1 is complete only when all twelve have owner-approved content. The owner may add more brands later. That is in [Left for later](#left-for-later).
 
-Every brand has a Wired alarm and a Wireless alarm. These brands also have a Remote:
+Every brand has a Wired alarm and a Wireless alarm. Only Emerald has a Remote.
 
-- Brooks
-- Emerald
+Brooks and Emerald have an RF module. On an Emerald system, a wired alarm that must connect to wireless alarms uses that module. That fact is under [Fitting](#fitting).
 
-Brooks and Emerald also have an RF module. On an Emerald system, a wired alarm that must connect to wireless alarms uses that module. That fact is under [Fitting](#fitting).
-
-Anka, Cavius, Clipsal, Detector Inspector, GT, Legrand, Lifesaver, Matelec, Red, and Siterwell have the two alarms only. The owner never meets a remote on those brands, so none is shown.
+Anka, Cavius, Clipsal, Detector Inspector, GT, Legrand, Lifesaver, Matelec, Red, and Siterwell have the two alarms only. Brooks has the two alarms and an RF module. The owner never meets a remote on any brand but Emerald, so none is shown.
 
 
 ## Getting around
@@ -105,7 +102,7 @@ The route sits at the top: **Brand → Unit → Setup or Troubleshooting → Top
 - **Setup or Troubleshooting** opens that topic list.
 - **Topic** is the name of the current page. It is not a button.
 
-The third label is the path taken, including when a page is opened from the other list. A Setup topic opened from Troubleshooting still shows Troubleshooting. Opening and Testing are both that case. A page that is not a list button, such as the low-battery steps, uses its own name in the Topic place.
+The third label is the path taken, including when a page is opened from the other list. A Setup topic opened from Troubleshooting still shows Troubleshooting. Testing is that case: the topic map lists it as also reachable from Troubleshooting, so a Troubleshooting page that opens Testing opens it under Troubleshooting. A page that is not a list button, such as the low-battery steps, uses its own name in the Topic place.
 
 Instruction pages do not have buttons that jump to the same topic for another unit.
 
@@ -159,7 +156,7 @@ Placement has two pages, with different words. [Setup Placement](#setup-placemen
 | Activation | — | Setup | — | Remote page |
 | Fitting | — | — | RF module page | — |
 | Pairing | Setup and Troubleshooting, one shared page | Setup and Troubleshooting, one shared page | — | Remote page |
-| Testing | Setup. Other pages open it | Setup. Other pages open it | — | — |
+| Testing | Setup. Troubleshooting pages open it under Troubleshooting | Setup. Other pages open it | — | — |
 | What's that light or sound? | Troubleshooting, shown first | Troubleshooting, shown first | — | — |
 | Use | — | — | — | Remote page |
 
@@ -282,7 +279,7 @@ These stay on "These words are not written yet."
 - Brooks wireless. The opened sheet is House Code on the radio module, not the battery wireless alarm.
 - Matelec wireless. No battery wireless sheet was opened. The mains sheet is on the wired page.
 - Anka, Brooks, Detector Inspector, GT, Lifesaver, and Red wired. No radio learn presses were found for the mains alarm. Brooks, GT, Lifesaver, and Red only show radio through a module or a base.
-- Remote pairing, and any pairing that mentions an RF module.
+- Any pairing that mentions an RF module.
 
 Sources, model names, add-one paths, and factory reset stay in `docs/wireless-pairing-research.md` and `docs/wired-pairing-research.md`. They are not on the phone.
 
@@ -360,7 +357,7 @@ The app does not say to replace the unit, and it does not say to book an electri
 
 The full list of signals for the selected unit, in the style of a manual. Each light or sound, and what it means.
 
-The page is a table. Light and Sound sit side by side. What it means is the next line, across the width of the phone. A faint line marks each cell. The table is one rounded card with the tight blue edge. The Light and Sound labels are centred, and the meaning is centred in white under each row. The header stays pinned while the rows scroll, and each lamp lights its own row softly. Every signal page is written this way. A page lists its rows as `signals:` in its front matter, and `_includes/signal-table.html` draws the table, so no page writes table markup by hand. Every brand's wired, wireless, and remote page is written this way.
+The page is a table. Light and Sound sit side by side. What it means is the next line, across the width of the phone. A faint line marks each cell. The table is one rounded card with the tight blue edge. The Light and Sound labels are centred, and the meaning is centred in white under each row. The header stays pinned while the rows scroll, and each lamp lights its own row softly. Every signal page is written this way. A page lists its rows as `signals:` in its front matter, and `_includes/signal-table.html` draws the table, so no page writes table markup by hand. Every written wired, wireless, and remote signal page is written this way. A unit with no signal words yet shows the note "These words are not written yet."
 
 When the colour is confirmed, the light cell draws that colour as a lamp. When the interval is confirmed, the lamp plays a short blink and the real interval is written large. The short blink is not the real wait. The cell does not write every. The repeat is assumed.
 
@@ -415,6 +412,14 @@ The 2 to 3 minute wait is the one in the [sealed power check](#sealed-power-chec
 
 That wait is separate from the Cavius wait after a test. The Cavius wait does not replace it or add to it. Do not run both as two extra waits stacked on the end of the low-battery steps.
 
+### Not topics
+
+Won't power on, quiet alarms, false alarms, and a dead remote are not topics, because the light and sound table covers them. Locate stays off.
+
+### Words not written yet
+
+A page the map allows but that has no file in `_instructions/` shows "These words are not written yet." The files in `_instructions/` are the record of what is written. Do not keep a second list of them in another document. Do not fabricate testimonials, customer quotes, manuals the owner did not ask for, distances, light intervals, or other brand differences.
+
 ### Leave out
 
 - Basic consumer advice, and how often a household should test an alarm.
@@ -439,6 +444,7 @@ Wireless pairing presses differ by brand. The written set, and the brands still 
 - Use the iPhone's normal screen locking. Do not keep the screen awake.
 - The app is dark only. It does not follow the iPhone’s light or dark setting.
 - Use the iPhone's normal image viewing.
+- Tap targets are sized for one-handed use on an iPhone SE (3rd generation). Text is readable at arm's length, with clear space between buttons. There are no glove-specific requirements.
 
 ## How content is added
 

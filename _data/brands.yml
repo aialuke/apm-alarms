@@ -3,7 +3,7 @@
   units: [wired, wireless]
 - id: brooks
   name: Brooks
-  units: [wired, wireless, rf, remote]
+  units: [wired, wireless, rf]
 - id: cavius
   name: Cavius
   units: [wired, wireless]

@@ -10,6 +10,8 @@ lists:
   troubleshooting:
     label: Troubleshooting
     other: setup
+    # Not buttons here. A page that opens one of these opens it under this list, so the route keeps saying Troubleshooting.
+    also: [testing]
     switch_label: Set up this alarm
 
 switches:
@@ -41,6 +43,10 @@ units:
 topics:
   placement:
     title: Placement
+    # Same words for every brand. These includes are the pages, and a brand file for this topic is ignored.
+    shared:
+      setup: setup-placement.html
+      troubleshooting: troubleshooting-placement.html
   opening:
     title: Opening
   pairing:
@@ -53,5 +59,7 @@ topics:
     title: Activation
   use:
     title: Use
+  fitting:
+    title: Fitting
   signal:
     title: What's that light or sound?
