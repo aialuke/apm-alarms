@@ -55,6 +55,14 @@ const shown = trail.onOpen(hidden, 4000, pairing, home, null);
 const next = trail.onOpen(shown.state, 5000, topics, home, "forward");
 assert(next.redirect === null && next.state.entries[next.state.entries.length - 1].path === topics, "the next tap opens the page that was tapped");
 
+const linked = trail.onOpen(hidden, 3000 + 4 * 60 * 1000, topics, home, null, true);
+assert(linked.redirect === null, "a link opened on purpose is not sent to the saved page");
+assert(linked.state.entries[linked.state.entries.length - 1].path === topics && linked.state.hiddenAt === null, "a link opened on purpose becomes the page, and stops the timer");
+const linkedLate = trail.onOpen(hidden, 3000 + 40 * 60 * 1000, topics, home, null, true);
+assert(linkedLate.redirect === null && linkedLate.state.entries[0].path === home && linkedLate.state.entries[1].path === topics, "a link opened after 15 minutes still opens, with Home behind it");
+const startedAtHome = trail.onOpen(hidden, 3000 + 4 * 60 * 1000, home, home, null, true);
+assert(startedAtHome.redirect === pairing, "starting the app from the home screen still returns to the saved page");
+
 const boundary = trail.onOpen(hidden, 3000 + trail.LIMIT, pairing, home, null);
 assert(boundary.redirect === home, "a return at 15 minutes opens the brand screen");
 

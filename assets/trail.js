@@ -7,11 +7,22 @@
     return { hiddenAt: null, entries: [{ path: home, scroll: 0 }] };
   }
 
-  function onOpen(state, now, path, home, nav) {
+  // `link` is true when someone opened this page on purpose from outside the app: a bookmark, a shared link, a typed address.
+  function onOpen(state, now, path, home, nav, link) {
     var entries = (state.entries || []).map(function (entry) {
       return { path: entry.path, scroll: entry.scroll || 0 };
     });
     var expired = state.hiddenAt && now - state.hiddenAt >= LIMIT;
+    if (link && path !== home) {
+      var kept = expired ? fresh(home).entries : entries;
+      var last = kept[kept.length - 1];
+      if (!last || last.path !== path) kept.push({ path: path, scroll: 0 });
+      return {
+        redirect: null,
+        scroll: 0,
+        state: { hiddenAt: null, entries: kept }
+      };
+    }
     if (expired) {
       return {
         redirect: path === home ? null : home,
@@ -133,10 +144,21 @@
     return norm(location.pathname);
   }
 
+  function openedByLink(nav) {
+    if (nav) return false;
+    try {
+      var entry = performance.getEntriesByType("navigation")[0];
+      if (!entry || entry.type !== "navigate") return false;
+      return !document.referrer || new URL(document.referrer).origin !== location.origin;
+    } catch (error) {
+      return false;
+    }
+  }
+
   function openPage() {
     var nav = sessionGet(NAV);
     sessionRemove(NAV);
-    var result = onOpen(read(), Date.now(), here(), home, nav);
+    var result = onOpen(read(), Date.now(), here(), home, nav, openedByLink(nav));
     write(result.state);
     if (result.redirect && norm(result.redirect) !== here()) {
       location.replace(result.redirect);
@@ -158,7 +180,7 @@
   }
 
   function matchNavClearance() {
-    var bar = document.querySelector(".nav");
+    var bar = document.querySelector(".mini") || document.querySelector(".nav");
     if (!bar) return;
     var apply = function () {
       document.documentElement.style.setProperty("--nav-height", bar.offsetHeight + "px");

@@ -240,6 +240,8 @@ A near-square button, three across, the brand name centred in white. No logo. Th
 
 Sticky at the top, inside the safe area. Near-black, with a thin blue line along the bottom. Brands uses the display title and no route. Later screens use the route. The current step is the headline, and it is not repeated.
 
+On an instruction page the top bar does not stay. The route and page name scroll away with the page. Once they are out of view, a one-line strip takes their place under the status bar: the list name, a chevron, then the page name, cut short with an ellipsis if it is long. The strip is 44px tall, has the same thin blue line along the bottom, and slides in. It cannot be tapped. With reduced motion it appears without sliding. Other screens keep the top bar in place.
+
 ### List row
 
 A full-width row on the black page, at least 76px tall. A grey line separates it from the next row. There is no blue outline around the list. Setup and Troubleshooting stay stacked. They are never a side-by-side pair.
@@ -252,18 +254,18 @@ The same kind of row, set in Reading Blue, with a blue swap icon. It sits below 
 
 ### Bottom bar
 
-A dark bar, 56px tall, inset from the screen edges and the home indicator, with the same tight blue edge as a brand button. Back is the left half. Home is the right half. Both words stay written out. The bar is hidden on Brands.
+A dark bar, 56px tall, inset from the screen edges and the home indicator, with the same tight blue edge as a brand button. Back is the left half. Home is the right half. Both words stay written out. The bar is hidden on Brands. Above it, the page fades to black over about 40px, so rows slide under the bar through a fade and not a hard edge. The fade is not tappable.
 
 ### Instruction
 
-Numbered steps in a two-column rhythm: the blue number, then the words. A gold figure and a link sit inside the words. A note, including a Tip, is a rounded inset in the reading flow. It is not a step, and it has no number. It has no thick coloured stripe.
+Numbered steps in a two-column rhythm: the blue number, then the words. A gold figure and a link sit inside the words. A link in a sentence keeps the size of its words. Its tap area reaches 44px tall, and the focus ring stays on the words. A note, including a Tip, is a rounded inset in the reading flow. It is not a step, and it has no number. It has no thick coloured stripe.
 
 ### Home-screen icon
 A smoke alarm seen from below, drawn on Night Black. A tight blue rim ring in the same blue gradient as the buttons, a dark Card face, one thin inner ring, a small centre test button, and one small pale lamp dot at the top right. There are no words, no gold, and no brand logos. It is square and full-bleed; the iPhone rounds the corners. It ships at 180px for the iPhone and 192px and 512px for the manifest.
 
 ### Signal table
 
-What's that light or sound? is a table. Light and Sound are the header, centred over their cells. The meaning is the full-width line under those two cells, centred, in Paper White at 17px. The table is one rounded card with the same tight blue edge as a Tip. The faint lines, in Faint Ink, stop short of the card edge. The header is small spaced Reading Blue labels on the card, with no filled band, and it stays pinned under the top bar while the rows scroll. The pinned header is a solid Card panel. It has no blur and nothing shows through it, so rows slide cleanly underneath. Each lamp lights its own row with a soft wash of its colour, and the wash pulses with the blink. A count in the light cell is written 3x or 2x, in Figure Gold. The screen reader still hears 3 times or twice. The cell does not write every. The repeat is assumed.
+What's that light or sound? is a table. Light and Sound are the header, centred over their cells. The meaning is the full-width line under those two cells, centred, in Paper White at 17px. The table is one rounded card with the same tight blue edge as a Tip. The faint lines, in Faint Ink, stop short of the card edge. The header is small spaced Reading Blue labels on the card, with no filled band, and it stays pinned under the top bar, or under the one-line strip on a long page, while the rows scroll. The pinned header is a solid Card panel. It has no blur and nothing shows through it, so rows slide cleanly underneath. Each lamp lights its own row with a soft wash of its colour, and the wash pulses with the blink. A count in the light cell is written 3x or 2x, in Figure Gold. The screen reader still hears 3 times or twice. The cell does not write every. The repeat is assumed.
 
 A confirmed colour is a small round lamp at the start of the light cell. The lamp is green `#32d74b`, red `#ff453a`, amber `#ff9f0a`, or blue `#409cff`. The colour is not written again next to the lamp. It stays in the hidden label. A confirmed interval blinks that lamp one, two, or three times, then rests, on one shared clock of about two seconds. The lamp stays its own colour the whole time. The blink is a bright pulse, so a glance still sorts green from red from amber. The real interval is the gold figure in the light or sound cell, at the table figure size (22px, weight 700). A figure in the meaning line stays body size. A sound with a cue is three pale bars that brighten with the lamp. A two-second sound ticks on that real wait. A flash count with no confirmed timing is the count in Figure Gold (1x, 2x, 3x) beside a steady lamp and still bars. A sound cell may wrap its count and its wait onto two lines. When a colour is not stated, the light cell shows its count, wait, or words with no lamp, and the text lines up with the lamp rows. A side with no cue is a Paper White dash, centred in the cell. The screen reader still hears None. Flashing red after an alarm is a steady red lamp and the words after an alarm. It does not blink, and it does not show a timing. The turn-on light is not listed. Reduced motion leaves every lamp steady and every tick still.
 

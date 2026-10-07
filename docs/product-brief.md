@@ -136,6 +136,7 @@ Start a 15-minute timer when the app is no longer visible. That includes the pho
 - Leaving again starts a fresh 15-minute timer.
 - Coming back after 15 minutes opens the brand screen.
 - The first time the app is opened, there is nothing to restore, so it opens the brand screen.
+- A link opened on purpose from outside the app, such as a bookmark, a shared link, or a typed address, opens the page it points to. It is not sent to the saved page or the brand screen. Back from it goes to the page before, or Home.
 
 ## Units and the topic map
 
@@ -166,10 +167,10 @@ Placement has two pages, with different words. [Setup Placement](#setup-placemen
 | Pairing | Setup and Troubleshooting, one shared page | Setup and Troubleshooting, one shared page | — | Setup and Troubleshooting, one shared page |
 | Testing | Setup. Other pages open it | Setup. Other pages open it | — | — |
 | What's that light or sound? | Troubleshooting, shown first | Troubleshooting, shown first | — | Troubleshooting, shown first |
-| Won't power on. | Troubleshooting | Troubleshooting | — | — |
-| Not going off when other alarms go off. | Troubleshooting | Troubleshooting | — | — |
-| Customer reports false alarms. | Troubleshooting | Troubleshooting | — | — |
-| Remote won't work. | — | — | — | Troubleshooting |
+| Won't power on | Troubleshooting | Troubleshooting | — | — |
+| Not going off when other alarms go off | Troubleshooting | Troubleshooting | — | — |
+| Customer reports false alarms | Troubleshooting | Troubleshooting | — | — |
+| Remote won't work | — | — | — | Troubleshooting |
 | Use | — | — | — | Setup |
 | Locate | — | — | — | Troubleshooting, where the brand supports it |
 
@@ -184,9 +185,9 @@ The map decides whether a topic exists. The lists below only give the order.
 
 **Troubleshooting**
 
-- Wired alarm: What's that light or sound?, Won't power on., Not going off when other alarms go off., Customer reports false alarms., Placement, Pairing
-- Wireless alarm: What's that light or sound?, Won't power on., Not going off when other alarms go off., Customer reports false alarms., Placement, Pairing
-- Remote: What's that light or sound?, Remote won't work., Pairing, then Locate where the brand supports it
+- Wired alarm: What's that light or sound?, Won't power on, Not going off when other alarms go off, Customer reports false alarms, Placement, Pairing
+- Wireless alarm: What's that light or sound?, Won't power on, Not going off when other alarms go off, Customer reports false alarms, Placement, Pairing
+- Remote: What's that light or sound?, Remote won't work, Pairing, then Locate where the brand supports it
 
 The lists above are the topic buttons, in that order. The table does not set the order.
 
@@ -226,7 +227,7 @@ Getting a new unit ready.
 - **Wireless alarm.** Turning it on for the first time. When attaching the alarm to its mount is what switches it on, this page opens [Mounting](#mounting) instead of repeating those steps.
 - **Remote.** Getting a new or replacement remote ready to pair.
 
-Activation is for a unit that has never been turned on. An alarm that is already up and will not turn on is [Won't power on.](#wont-power-on)
+Activation is for a unit that has never been turned on. An alarm that is already up and will not turn on is [Won't power on](#wont-power-on).
 
 ### Fitting
 
@@ -322,7 +323,7 @@ Not its own screen. The page that needs it shows these steps. The battery cannot
 
 ### Low-battery steps
 
-Not a topic button. [What's that light or sound?](#whats-that-light-or-sound) opens these steps from Chirping. [Customer reports false alarms.](#customer-reports-false-alarms) opens them when the customer heard a chirp.
+Not a topic button. [What's that light or sound?](#whats-that-light-or-sound) opens these steps from Chirping. [Customer reports false alarms](#customer-reports-false-alarms) opens them when the customer heard a chirp.
 
 A Cavius alarm chirping on its own uses these steps. The Cavius chirp after a test the technician has just run does not. That wait is on [Testing](#testing).
 
@@ -391,9 +392,9 @@ A meaning can be tapped when there is a useful page to open. The action reads **
 Two meanings are already set:
 
 - **Chirping** means low battery, and opens the [low-battery steps](#low-battery-steps). On a remote, it ends at report faulty. The row's words also say that the Cavius chirp after a test the technician has just run is normal, and that wait is on [Testing](#testing). The row always offers the same action. It does not appear or disappear because a test was just run.
-- **Flashing red after an alarm** means this alarm is the one that set the others off. [Customer reports false alarms.](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). The light cell shows a steady red lamp and the words **after an alarm**. It does not play a blink and it does not show a timing.
+- **Flashing red after an alarm** means this alarm is the one that set the others off. [Customer reports false alarms](#customer-reports-false-alarms) uses these same words. The interval is not confirmed. It is in [Left for later](#left-for-later). The light cell shows a steady red lamp and the words **after an alarm**. It does not play a blink and it does not show a timing.
 
-### Won't power on.
+### Won't power on
 
 **Wireless alarm**
 
@@ -406,15 +407,15 @@ Two meanings are already set:
 1. Check that the alarm is connected correctly to its base. If it is not, connect it, using the steps on [Opening](#opening). If connecting it makes it turn on, these steps are done. If it still will not turn on after it is connected, end at report faulty.
 2. If it was already connected correctly, and the power is on, and it still will not turn on, end at report faulty.
 
-### Not going off when other alarms go off.
+### Not going off when other alarms go off
 
 For a wired or wireless alarm.
 
 1. Listen for the alarms that are not going off.
-2. Make sure the quiet one is powered on. If it is not, open [Won't power on.](#wont-power-on) If that page ends at report faulty, stop. If the alarm turns on, Back returns here.
+2. Make sure the quiet one is powered on. If it is not, open [Won't power on](#wont-power-on). If that page ends at report faulty, stop. If the alarm turns on, Back returns here.
 3. If the quiet alarm is on, open [Pairing](#pairing). Do not repeat the presses or the test.
 
-### Customer reports false alarms.
+### Customer reports false alarms
 
 For a wired or wireless alarm. This page does not use Locate.
 
@@ -439,9 +440,9 @@ Look for:
 - An air-conditioning vent closer than [Setup Placement](#setup-placement) allows.
 - Ceiling-fan blades closer than Setup Placement allows.
 
-The dust, insect, and clean steps stay on [Customer reports false alarms.](#customer-reports-false-alarms). They are not copied here.
+The dust, insect, and clean steps stay on [Customer reports false alarms](#customer-reports-false-alarms). They are not copied here.
 
-### Remote won't work.
+### Remote won't work
 
 The technician picks which of these is true. The app does not add a test for it.
 
@@ -475,7 +476,7 @@ That wait is separate from the Cavius wait after a test. The Cavius wait does no
 
 ### Leave out
 
-- Basic consumer advice, and how often a household should test an alarm. The red-flash sentence on [Customer reports false alarms.](#customer-reports-false-alarms) stays.
+- Basic consumer advice, and how often a household should test an alarm. The red-flash sentence on [Customer reports false alarms](#customer-reports-false-alarms) stays.
 - Factory reset.
 - Clearing all pairings.
 - Battery replacement as its own topic. The only battery steps in the app are the ones in the [low-battery steps](#low-battery-steps).
@@ -558,10 +559,10 @@ Each word below means one thing in the app. The "Not" column lists names the app
 | Use | What a remote's controls do and how to use them. | |
 | Locate | Using a remote to identify the alarm that triggered. | Finding the false alarm |
 | What's that light or sound? | The full list of signals for one unit. | |
-| Won't power on. | The alarm will not turn on. | |
-| Not going off when other alarms go off. | One or more alarms stay quiet when the others sound. | |
-| Customer reports false alarms. | The customer reports an alarm sound or a chirp when there was no fire. | Finding the false alarm |
-| Remote won't work. | The remote is not doing its job. | |
+| Won't power on | The alarm will not turn on. | |
+| Not going off when other alarms go off | One or more alarms stay quiet when the others sound. | |
+| Customer reports false alarms | The customer reports an alarm sound or a chirp when there was no fire. | Finding the false alarm |
+| Remote won't work | The remote is not doing its job. | |
 | report faulty | The last step when the fix is not the technician's to do. | |
 
 ### Lights and sounds

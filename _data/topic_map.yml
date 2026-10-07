@@ -58,12 +58,12 @@ topics:
   signal:
     title: What's that light or sound?
   power:
-    title: Won't power on.
+    title: Won't power on
   quiet:
-    title: Not going off when other alarms go off.
+    title: Not going off when other alarms go off
   false-alarms:
-    title: Customer reports false alarms.
+    title: Customer reports false alarms
   remote-dead:
-    title: Remote won't work.
+    title: Remote won't work
   locate:
     title: Locate
