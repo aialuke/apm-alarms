@@ -1,20 +1,20 @@
 ---
 name: verify-apm-alarms
-description: "Verify apm-alarms checkout identity, and look at the local phone page with computer-use. Use when proving changes in apm-alarms, running doctor on this repo, confirming the Cloud Agent landed on the right checkout, or seeing and clicking the phone page."
+description: "Verify apm-alarms checkout identity, and look at the local phone page with computer-use. Use when proving changes in apm-alarms, running doctor on this repo, confirming the checkout is the right one, or seeing and clicking the phone page."
 ---
 
 # Verify apm-alarms
 
 Project-local verification skill for **apm-alarms**. Written for agents reading this cold mid-task.
 
-**Current surface (2026-10-04):** the phone site is the Jekyll pages styled by `assets/site.css` (dark only). The live doc is `docs/product-brief.md`. The repo also holds `README.md` (`# apm-alarms`), `AGENTS.md`, and the pstack skills, agents and model rule under `.cursor/`. The mapped feature is still checkout identity only. Seeing the phone page is a separate look, written below. When user paths are added to the feature map, re-run `/create-verification-skill` (or extend this skill + feature map) and replace the bootstrap feature with those paths.
+**Current surface (2026-10-08):** the phone site is the Jekyll pages styled by `assets/site.css` (dark only). The live doc is `docs/product-brief.md`. The repo also holds `README.md` (`# apm-alarms`), `AGENTS.md`, and the pstack skills, agents and model rule under `.cursor/`. The mapped feature is still checkout identity only. Seeing the phone page is a separate look, written below. When user paths are added to the feature map, re-run `/create-verification-skill` (or extend this skill + feature map) and replace the bootstrap feature with those paths.
 
 ## Launch
 
 An identity check starts no process.
 
 - **Ready signal:** `git -C <checkout> rev-parse --is-inside-work-tree` prints `true`, and `origin` resolves to `github.com/aialuke/apm-alarms`.
-- **Checkout path on this Cloud Agent image:** `/workspace` (not `/agent` — that path does not exist here).
+- **Checkout path:** wherever the repo is cloned. On this Mac it is `/Users/lukemckenzie/apm-alarms`. On a Cloud Agent it is `/workspace` (not `/agent`).
 - **Teardown:** none for identity checks. An identity check does not start Jekyll.
 
 The phone-page look below is the start command. Keep that server on `127.0.0.1:4000` for this checkout. Record its PID at launch and kill only that PID at the end. If something else already owns the port, stop and say so.
@@ -40,7 +40,7 @@ If doctor fails, stop. Do not claim verification against a wrong or broken check
 
 ## Seeing the phone page
 
-Use computer-use (`cua_repl`) to inspect and click the local phone page. An unavailable Chrome DevTools MCP plugin is not a blocker. Leave browser-use for websites this repo does not serve.
+Use computer-use (`cua_repl`) to inspect and click the local phone page. In Claude Code, use Claude in Chrome (`mcp__claude-in-chrome__*`) first instead, because cmux-cua does not start there; fall back to computer-use only if the owner asks. An unavailable Chrome DevTools MCP plugin is not a blocker. Leave browser-use for websites this repo does not serve.
 
 1. Run doctor.
 2. From the checkout root, start the site if port 4000 is free. Record the PID.

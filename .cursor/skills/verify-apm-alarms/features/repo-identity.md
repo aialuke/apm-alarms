@@ -11,14 +11,14 @@ Repo identity lets an agent confirm it is operating on the real `aialuke/apm-ala
 
 ## How to get to it (user POV)
 
-- Open the apm-alarms Cloud Agent workspace and inspect the git remote / README.
+- Open the apm-alarms checkout and inspect the git remote / README.
 - Ask an agent to "verify the checkout" or "run apm-alarms doctor".
 
 ## Driving it with shell+git
 
 Preconditions:
 
-- Shell cwd is inside the apm-alarms work tree (typically `/workspace`).
+- Shell cwd is inside the apm-alarms work tree (`/workspace` on a Cloud Agent, the local clone otherwise).
 - `git` is available.
 - No application process is required.
 
@@ -29,7 +29,7 @@ Preconditions:
 
 ## Gotchas
 
-- Cloud Agent checkout path is `/workspace`, not `/agent`. A missing `/agent` is expected here and is not a doctor failure.
+- On a Cloud Agent the checkout path is `/workspace`, not `/agent`. A missing `/agent` is expected here and is not a doctor failure.
 - Remotes may embed `x-access-token` credentials; always sanitize before logging or committing evidence.
 - `GH_TOKEN` may be unset while `gh` / git still authenticate via Cursor-injected credentials — do not fail identity solely because `GH_TOKEN` is empty.
 - Passing doctor does **not** prove product behavior. Re-run `/create-verification-skill` when an app surface lands.

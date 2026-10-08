@@ -106,7 +106,7 @@ rounded:
 spacing:
   inset: "16px"
   after-title: "12px"
-  between-groups: "22px"
+  between-groups: "24px"
 components:
   brand-button:
     backgroundColor: "{colors.card}"

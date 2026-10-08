@@ -4,7 +4,7 @@ This directory is the maintained source for verifying user-facing behavior of ap
 
 ## Baseline preconditions
 
-- Work from the Cloud Agent checkout (`/workspace` on current images).
+- Work from the apm-alarms checkout (`/workspace` on a Cloud Agent, the local clone otherwise).
 - `origin` must be `github.com/aialuke/apm-alarms`.
 - Run `.cursor/skills/verify-apm-alarms/scripts/doctor.sh` and require exit `0`.
 - There is **no** application server yet — do not invent one.
