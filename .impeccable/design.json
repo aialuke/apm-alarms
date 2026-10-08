@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T23:44:34Z",
+  "generatedAt": "2026-10-08T07:24:50Z",
   "title": "Design System: APM Alarms",
   "extensions": {
     "colorMeta": {
@@ -256,7 +256,7 @@
       },
       "choice": {
         "displayName": "Choice",
-        "purpose": "Unit, Setup, Troubleshooting, topic, and shortcut rows."
+        "purpose": "Unit, Setup, Troubleshooting, and topic rows. A shortcut row is a step smaller (19px, weight 600)."
       },
       "body": {
         "displayName": "Body",
@@ -347,17 +347,17 @@
       "name": "Choice row",
       "kind": "custom",
       "refersTo": "choice-row",
-      "description": "A tall settings-style row with a chevron.",
-      "html": "<a class=\"ds-row\">Wired alarm <svg viewBox=\"0 0 8 14\" width=\"8\" height=\"14\" aria-hidden=\"true\"><path d=\"M1.2 1.4 6.6 7 1.2 12.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-row{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 20px;background:transparent;color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif;font-size:22px;font-weight:650;text-decoration:none;box-shadow:inset 0 1px 0 rgba(245,247,251,.16)}.ds-row svg.mark{width:28px;height:28px;color:#9cc4ff}"
+      "description": "A tall settings-style row with a chevron. A unit row, or a topic with no words yet, carries one short muted line under the name.",
+      "html": "<a class=\"ds-row\"><span class=\"ds-label\">Wired alarm<span class=\"ds-hint\">On mains power, with a backup battery</span></span><svg viewBox=\"0 0 8 14\" width=\"8\" height=\"14\" aria-hidden=\"true\"><path d=\"M1.2 1.4 6.6 7 1.2 12.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-row{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 20px;background:transparent;color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif;font-size:22px;font-weight:650;text-decoration:none;box-shadow:inset 0 1px 0 rgba(245,247,251,.16)}.ds-row svg.mark{width:28px;height:28px;color:#9cc4ff}.ds-label{flex:1;min-width:0}.ds-hint{display:block;margin-top:4px;color:rgba(245,247,251,.74);font-size:15px;font-weight:400;line-height:1.3}"
     },
     {
       "name": "Shortcut row",
       "kind": "custom",
       "refersTo": "shortcut-row",
-      "description": "A switch to the other list or the other alarm, in reading blue.",
+      "description": "A switch to the other list or the other alarm, in reading blue. A step smaller than a topic row so the topics read first.",
       "html": "<a class=\"ds-shortcut\">Troubleshoot this alarm</a>",
-      "css": ".ds-shortcut{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 20px;background:transparent;color:#9cc4ff;font-family:-apple-system,system-ui,sans-serif;font-size:22px;font-weight:650;text-decoration:none}"
+      "css": ".ds-shortcut{display:flex;align-items:center;gap:14px;min-height:64px;padding:12px 20px;background:transparent;color:#9cc4ff;font-family:-apple-system,system-ui,sans-serif;font-size:19px;font-weight:600;text-decoration:none}"
     },
     {
       "name": "Bottom bar",
@@ -374,6 +374,13 @@
       "description": "A Tip or other note, as a rounded inset in the reading.",
       "html": "<p class=\"ds-note\">The same words open from Setup and from Troubleshooting.</p>",
       "css": ".ds-note{margin:0;padding:14px 16px;border-radius:14px;border:1.5px solid transparent;background:linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box;color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif;font-size:19px;line-height:1.45;box-shadow:0 1px 2px rgba(10,99,255,.95),0 2px 5px rgba(10,99,255,.55)}"
+    },
+    {
+      "name": "Unwritten note",
+      "kind": "custom",
+      "description": "The line on a page with no words yet. Plain and muted, with no blue edge, so it cannot be taken for a Tip.",
+      "html": "<p class=\"ds-unwritten\">These words are not written yet.</p>",
+      "css": ".ds-unwritten{margin:0;padding:14px 16px;border-block:1px solid rgba(245,247,251,.16);color:rgba(245,247,251,.74);font-family:-apple-system,system-ui,sans-serif;font-size:19px;line-height:1.45}"
     },
     {
       "name": "Route",

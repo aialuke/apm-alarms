@@ -70,7 +70,7 @@ The technician picks the brand by looking at the alarm.
 
 ### Unit screen
 
-Full-width rows, one name on each row. No small picture. The brand stays visible at the top, small, and it is not a link, because this screen is already that brand's units. Unit is the page name. It is not written a second time. The rows are Wired alarm, Wireless alarm, and Remote or RF module where that brand has them.
+Full-width rows, one name on each row, with one short grey line under the name that says what the unit is. The lines come from the word list: Wired alarm "On mains power, with a backup battery", Wireless alarm "Battery only, no mains wires. Links by radio", RF module "Radio unit that slots into a wired alarm", Remote "Wall-mounted unit used with the brand's alarms". No small picture. The brand stays visible at the top, small, and it is not a link, because this screen is already that brand's units. Unit is the page name. It is not written a second time. The rows are Wired alarm, Wireless alarm, and Remote or RF module where that brand has them.
 
 There is no "both" choice. The technician picks the unit in hand right now.
 
@@ -411,7 +411,7 @@ Won't power on, quiet alarms, false alarms, and a dead remote are not topics, be
 
 ### Words not written yet
 
-A page the map allows but that has no file in `_instructions/` shows "These words are not written yet." The files in `_instructions/` are the record of what is written. Do not keep a second list of them in another document. Do not fabricate testimonials, customer quotes, manuals the owner did not ask for, distances, light intervals, or other brand differences.
+A page the map allows but that has no file in `_instructions/` shows "These words are not written yet." as a plain muted line, with no blue edge, so it cannot be taken for a Tip. Its row in the topic list carries a small muted "Not written yet" under the name. The files in `_instructions/` are the record of what is written. Do not keep a second list of them in another document. Do not fabricate testimonials, customer quotes, manuals the owner did not ask for, distances, light intervals, or other brand differences.
 
 ### Leave out
 

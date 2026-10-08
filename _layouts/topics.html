@@ -14,7 +14,7 @@ layout: default
   {% for topic in page.topics %}
     <li{% if topic.href contains '/signal/' %} class="lookup"{% endif %}>
       <a href="{{ topic.href | relative_url }}">
-        <span class="row-label">{{ topic.title | escape }}</span>
+        <span class="row-label">{{ topic.title | escape }}{% if topic.unwritten %} <span class="row-hint">Not written yet</span>{% endif %}</span>
         {% include chevron.html %}
       </a>
     </li>

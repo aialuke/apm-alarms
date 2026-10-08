@@ -127,7 +127,7 @@ components:
     backgroundColor: "{colors.night-black}"
     textColor: "{colors.reading-blue}"
     padding: "12px 20px"
-    height: "76px"
+    height: "64px"
   note:
     backgroundColor: "{colors.card}"
     textColor: "{colors.paper-white}"
@@ -213,7 +213,7 @@ The brand screen adds a soft blue light behind the title. Other screens stay fla
 
 - **Display** (34px, weight 700): The Brands title only.
 - **Headline** (28px, weight 700, line-height 1.2): The current step of the route after Brands, including a topic name that wraps onto a second line. It is the only page name.
-- **Choice** (22px, weight 650, line-height 1.25): Unit, Setup, Troubleshooting, topic, and shortcut rows.
+- **Choice** (22px, weight 650, line-height 1.25): Unit, Setup, Troubleshooting, and topic rows. A shortcut row is a step smaller (19px, weight 600).
 - **Body** (19px, weight 400, line-height 1.5, tracking 0.01em): Instruction steps, notes, and the placement sentence. The open leading and a little extra tracking keep light text clear on the black page. The weight stays regular so a card of steps still reads easily.
 - **Brand** (19px, weight 650): The name on a brand button. The same size as the reading text, so a long name such as Detector Inspector still fits inside the button on an iPhone SE, and heavier so it reads as a label.
 - **Diagram** (24px, weight 700): The measurement on a placement sketch, in Figure Gold, with even figures.
@@ -265,11 +265,11 @@ On an instruction page the top bar does not stay. The route and page name scroll
 
 A full-width row on the black page, at least 76px tall. A grey line separates it from the next row. There is no blue outline around the list. Setup and Troubleshooting stay stacked. They are never a side-by-side pair.
 
-A blue icon sits on the left of a unit row, Setup, and Troubleshooting. Wired alarm, Wireless alarm, Remote, and RF module each have their own mark. A Remote or an RF module row opens its one page directly, with no Setup or Troubleshooting row after it. Topic rows have no icon. The chevron stays on the right. Lights & Sounds is a lookup, not a problem, so it sits first with a 24px gap below it and a grey line closing it, apart from the problem rows that follow. It has no icon and no colour of its own.
+A unit row carries one short line under its name in Muted Paper at 15px, saying what the unit is. A topic with no words written carries a small "Not written yet" in the same place. A blue icon sits on the left of a unit row, Setup, and Troubleshooting. Wired alarm, Wireless alarm, Remote, and RF module each have their own mark. A Remote or an RF module row opens its one page directly, with no Setup or Troubleshooting row after it. Topic rows have no icon. The chevron stays on the right. Lights & Sounds is a lookup, not a problem, so it sits first with a 24px gap below it and a grey line closing it, apart from the problem rows that follow. It has no icon and no colour of its own.
 
 ### Shortcut row
 
-The same kind of row, set in Reading Blue, with a blue swap icon. It sits below the topics with a gap. It switches list or unit. It is not another topic.
+The same kind of row, a step smaller than a topic (at least 64px tall, 19px, weight 600, 24px icon), set in Reading Blue with a blue swap icon, so the topics read first. It sits below the topics with a gap. It switches list or unit. It is not another topic.
 
 ### Bottom bar
 

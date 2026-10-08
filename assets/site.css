@@ -499,6 +499,17 @@ table.signals thead th,
   min-width: 0;
 }
 
+/* The small line under a row name: what the unit is, or that a topic has no words yet. */
+.row-hint {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink-dim);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.3;
+}
+
 .row-icon {
   flex: none;
   width: 28px;
@@ -515,6 +526,18 @@ table.signals thead th,
 .shortcuts a,
 .shortcuts .chevron {
   color: var(--blue-text);
+}
+
+/* A shortcut switches list or unit. It is a step smaller than a topic so the topics read first. */
+.shortcuts a {
+  min-height: 64px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.shortcuts .row-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .choices a:focus-visible,
@@ -1198,6 +1221,18 @@ table.signals td.sound .figure {
   border-radius: 0;
   background: color-mix(in srgb, var(--blue) 12%, var(--card-deep));
   box-shadow: none;
+}
+
+/* An unwritten page is a plain muted line, so it cannot be taken for a Tip or for guidance. */
+.instruction .note.unwritten,
+.instruction.sequence > p.note.unwritten,
+.instruction.sequence .fix-steps > p.note.unwritten {
+  border: 0;
+  border-block: 1px solid var(--row-line);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--ink-dim);
 }
 
 .fix-steps > p.tip::before {

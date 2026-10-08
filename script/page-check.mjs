@@ -127,7 +127,7 @@ function titleOf(text) {
 }
 
 function rowLabels(text) {
-  return [...text.matchAll(/class="row-label">([^<]*)</g)].map((match) => unescape(match[1]));
+  return [...text.matchAll(/class="row-label">([^<]*)</g)].map((match) => unescape(match[1]).trim());
 }
 
 function tiles(text) {

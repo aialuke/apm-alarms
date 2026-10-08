@@ -35,6 +35,8 @@ module APM
       "tip" => '<circle cx="12" cy="12" r="7.5"/><path d="M12 11.2v4.6"/><path d="M12 8.2v.1"/>'
     }.freeze
 
+    UNWRITTEN = "These words are not written yet.".freeze
+
     CARD_ICONS_BY_TITLE = {
       "low battery" => "battery",
       "backup battery" => "battery",
@@ -105,7 +107,7 @@ module APM
     end
 
     def publish_missing(site, brands, units, topics, lists, published)
-      note = '<p class="note">These words are not written yet.</p>'
+      note = "<p class=\"note unwritten\">#{UNWRITTEN}</p>"
       brands.each do |brand|
         Array(brand["units"]).each do |unit_id|
           unit = units[unit_id] || {}
@@ -115,6 +117,7 @@ module APM
 
               data = instruction_data(brand, unit_id, unit, list, lists, topic_id, topics.dig(topic_id, "title"))
               dir = File.join(brand["id"], unit_id, list, topic_id)
+              data["unwritten"] = true unless topics.dig(topic_id, "shared", list)
               html = missing_html(site, topics, list, topic_id, data, note)
               site.pages << Screen.new(site, dir, "instruction", data, html)
               published << data
@@ -168,7 +171,7 @@ module APM
     def missing_card(title)
       kind = CARD_ICONS_BY_TITLE[title.downcase]
       "<section class=\"fix\"><h2 class=\"fix-head\">#{kind ? step_icon(kind) : ''}<span>#{title}</span></h2>" \
-        "<div class=\"fix-steps\"><p class=\"note\">These words are not written yet.</p></div></section>\n"
+        "<div class=\"fix-steps\"><p class=\"note unwritten\">#{UNWRITTEN}</p></div></section>\n"
     end
 
     def publish_navigation(site, brands, units, lists, switches, published)
@@ -182,6 +185,7 @@ module APM
             {
               "id" => unit_id,
               "label" => unit["label"] || unit_id,
+              "hint" => unit["hint"],
               "href" => place_path(brand["id"], unit_id)
             }
           }
@@ -227,6 +231,7 @@ module APM
 
         {
           "title" => item["title"],
+          "unwritten" => item["unwritten"],
           "href" => place_path(brand_id, unit_id, list, topic_id)
         }
       end

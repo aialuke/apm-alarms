@@ -25,18 +25,22 @@ switches:
 units:
   wired:
     label: Wired alarm
+    hint: On mains power, with a backup battery
     setup: [placement, opening, pairing, testing]
     troubleshooting: [signal, placement, pairing]
   wireless:
     label: Wireless alarm
+    hint: Battery only, no mains wires. Links by radio
     setup: [placement, mounting, activation, pairing, testing]
     troubleshooting: [signal, placement, pairing]
   rf:
     label: RF module
+    hint: Radio unit that slots into a wired alarm
     # One page, no lists. It is just the fitting diagram.
     combine: [fitting]
   remote:
     label: Remote
+    hint: Wall-mounted unit used with the brand's alarms
     # One page, no lists. These are its sections, in order.
     combine: [activation, pairing, use]
 

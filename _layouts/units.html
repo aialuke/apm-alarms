@@ -13,7 +13,7 @@ layout: default
     <li>
       <a href="{{ unit.href | relative_url }}">
         {% include row-icon.html kind=unit.id %}
-        <span class="row-label">{{ unit.label }}</span>
+        <span class="row-label">{{ unit.label }}{% if unit.hint %} <span class="row-hint">{{ unit.hint | escape }}</span>{% endif %}</span>
         {% include chevron.html %}
       </a>
     </li>
