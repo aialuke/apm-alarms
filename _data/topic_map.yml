@@ -9,6 +9,8 @@ lists:
     switch_label: Troubleshoot this alarm
   troubleshooting:
     label: Troubleshooting
+    # Testing is not a button here, but Troubleshooting pages open it, and it must show Troubleshooting.
+    also: [testing]
     other: setup
     switch_label: Set up this alarm
 
