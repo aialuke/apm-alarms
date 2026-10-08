@@ -416,6 +416,10 @@ for (const gone of ["power", "quiet", "false-alarms"]) {
   }
 }
 
+for (const notes of ["SKILLS.md", "AGENTS.md", ".agents", ".claude", ".codex", ".grok", ".cursor"]) {
+  if (fs.existsSync(path.join(siteDir, notes))) fail(`${notes} is published on the site`);
+}
+
 if (failed) {
   console.error(`FAIL ${failed}`);
   process.exit(1);

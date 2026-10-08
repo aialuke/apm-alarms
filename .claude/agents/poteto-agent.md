@@ -1,0 +1,1 @@
+../../.cursor/agents/poteto-agent.md
