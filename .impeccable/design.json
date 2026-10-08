@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T23:44:34Z",
+  "title": "Design System: APM Alarms",
+  "extensions": {
+    "colorMeta": {
+      "card": {
+        "role": "neutral",
+        "displayName": "Card",
+        "canonical": "#141418",
+        "tonalRamp": [
+          "#000000",
+          "#08080a",
+          "#101014",
+          "#141418",
+          "#2c2c30",
+          "#5c5c62",
+          "#aeaeb2",
+          "#f5f7fb"
+        ]
+      },
+      "card-deep": {
+        "role": "neutral",
+        "displayName": "Card Deep",
+        "canonical": "#101014",
+        "tonalRamp": [
+          "#000000",
+          "#060608",
+          "#101014",
+          "#1a1a1e",
+          "#323236",
+          "#6a6a70",
+          "#b4b4b8",
+          "#f5f7fb"
+        ]
+      },
+      "rim-ice": {
+        "role": "primary",
+        "displayName": "Rim Ice",
+        "canonical": "#d7e8ff",
+        "tonalRamp": [
+          "#1a3358",
+          "#2d4f80",
+          "#4d73ad",
+          "#7aa0d4",
+          "#a8c6ec",
+          "#d7e8ff",
+          "#eaf3ff",
+          "#f7fbff"
+        ]
+      },
+      "rim-bright": {
+        "role": "primary",
+        "displayName": "Rim Bright",
+        "canonical": "#4d9bff",
+        "tonalRamp": [
+          "#0c2348",
+          "#16386e",
+          "#1f4f99",
+          "#2d7dff",
+          "#4d9bff",
+          "#7eb6ff",
+          "#b3d4ff",
+          "#e7f2ff"
+        ]
+      },
+      "rim-pale": {
+        "role": "primary",
+        "displayName": "Rim Pale",
+        "canonical": "#8ec0ff",
+        "tonalRamp": [
+          "#163056",
+          "#244878",
+          "#3d6eaa",
+          "#5c92d0",
+          "#8ec0ff",
+          "#b7d6ff",
+          "#dcecff",
+          "#f5f9ff"
+        ]
+      },
+      "rim-press": {
+        "role": "primary",
+        "displayName": "Rim Press",
+        "canonical": "#7eb6ff",
+        "tonalRamp": [
+          "#122848",
+          "#1c3d6e",
+          "#2d5c9e",
+          "#4d84d4",
+          "#7eb6ff",
+          "#a8ceff",
+          "#d4e7ff",
+          "#f3f8ff"
+        ]
+      },
+      "night-black": {
+        "role": "neutral",
+        "displayName": "Night Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#0a0a0c",
+          "#141418",
+          "#1c1c1e",
+          "#2c2c2e",
+          "#636366",
+          "#aeaeb2",
+          "#f5f7fb"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#f5f7fb",
+        "tonalRamp": [
+          "#1c1c1e",
+          "#3a3a3c",
+          "#5c5c60",
+          "#8b8b90",
+          "#c5c5c8",
+          "#e4e4e6",
+          "#f5f7fb",
+          "#ffffff"
+        ]
+      },
+      "paper-muted": {
+        "role": "neutral",
+        "displayName": "Muted Paper",
+        "canonical": "rgba(245, 247, 251, 0.74)",
+        "tonalRamp": [
+          "rgba(245, 247, 251, 0.16)",
+          "rgba(245, 247, 251, 0.28)",
+          "rgba(245, 247, 251, 0.4)",
+          "rgba(245, 247, 251, 0.52)",
+          "rgba(245, 247, 251, 0.64)",
+          "rgba(245, 247, 251, 0.74)",
+          "rgba(245, 247, 251, 0.88)",
+          "rgba(245, 247, 251, 1)"
+        ]
+      },
+      "row-line": {
+        "role": "neutral",
+        "displayName": "Row Line",
+        "canonical": "rgba(245, 247, 251, 0.16)",
+        "tonalRamp": [
+          "rgba(245, 247, 251, 0.06)",
+          "rgba(245, 247, 251, 0.1)",
+          "rgba(245, 247, 251, 0.16)",
+          "rgba(245, 247, 251, 0.24)",
+          "rgba(245, 247, 251, 0.36)",
+          "rgba(245, 247, 251, 0.5)",
+          "rgba(245, 247, 251, 0.7)",
+          "rgba(245, 247, 251, 0.9)"
+        ]
+      },
+      "action-blue": {
+        "role": "primary",
+        "displayName": "Action Blue",
+        "canonical": "#0a63ff",
+        "tonalRamp": [
+          "#041433",
+          "#082a66",
+          "#0a63ff",
+          "#2d7dff",
+          "#5c9bff",
+          "#9cc4ff",
+          "#d3e6ff",
+          "#f3f8ff"
+        ]
+      },
+      "action-blue-bright": {
+        "role": "primary",
+        "displayName": "Action Blue Bright",
+        "canonical": "#2d7dff",
+        "tonalRamp": [
+          "#041433",
+          "#082a66",
+          "#0a63ff",
+          "#2d7dff",
+          "#5c9bff",
+          "#9cc4ff",
+          "#d3e6ff",
+          "#f3f8ff"
+        ]
+      },
+      "reading-blue": {
+        "role": "primary",
+        "displayName": "Reading Blue",
+        "canonical": "#9cc4ff",
+        "tonalRamp": [
+          "#10203d",
+          "#1d3d73",
+          "#2d7dff",
+          "#5c9bff",
+          "#9cc4ff",
+          "#c5ddff",
+          "#e7f1ff",
+          "#f7fbff"
+        ]
+      },
+      "figure-gold": {
+        "role": "secondary",
+        "displayName": "Figure Gold",
+        "canonical": "#f2c14d",
+        "tonalRamp": [
+          "#3d1c00",
+          "#6a3d00",
+          "#966900",
+          "#c49212",
+          "#e0b038",
+          "#f2c14d",
+          "#fcd172",
+          "#ffefb6"
+        ]
+      },
+      "lamp-green": {
+        "role": "secondary",
+        "displayName": "Lamp Green",
+        "canonical": "#32d74b",
+        "tonalRamp": []
+      },
+      "lamp-red": {
+        "role": "secondary",
+        "displayName": "Lamp Red",
+        "canonical": "#ff453a",
+        "tonalRamp": []
+      },
+      "lamp-amber": {
+        "role": "secondary",
+        "displayName": "Lamp Amber",
+        "canonical": "#ff9f0a",
+        "tonalRamp": []
+      },
+      "lamp-blue": {
+        "role": "secondary",
+        "displayName": "Lamp Blue",
+        "canonical": "#409cff",
+        "tonalRamp": []
+      },
+      "lamp-amber-wash": {
+        "role": "secondary",
+        "displayName": "Lamp Amber Wash",
+        "canonical": "#ff9f0a at 24% over Card",
+        "tonalRamp": []
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The Brands title only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The current step of the route after Brands, including a topic name that wraps onto a second line. It is the only page name."
+      },
+      "choice": {
+        "displayName": "Choice",
+        "purpose": "Unit, Setup, Troubleshooting, topic, and shortcut rows."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Instruction steps, notes, and the placement sentence."
+      },
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "The name on a brand button."
+      },
+      "diagram": {
+        "displayName": "Diagram",
+        "purpose": "The measurement on a placement sketch, in Figure Gold, with even figures."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Back and Home."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The earlier steps of the route. The current step uses the headline."
+      },
+      "table-figure": {
+        "displayName": "Table figure",
+        "purpose": "The real interval in a signal table cell, Figure Gold, 22px."
+      },
+      "table-figure-compact": {
+        "displayName": "Table figure, compact",
+        "purpose": "The sound figure on a phone 400px wide or narrower, 20px, so 2x 48 seconds fits at 375px."
+      },
+      "table-label": {
+        "displayName": "Table label",
+        "purpose": "Light and Sound over the signal table, and the heading of a step card. 14px capitals, Reading Blue."
+      },
+      "table-meaning": {
+        "displayName": "Table meaning",
+        "purpose": "What a signal means, centred under its row. 17px."
+      },
+      "step-number": {
+        "displayName": "Step number",
+        "purpose": "The number in a step card's round badge. 16px, weight 700, Reading Blue."
+      },
+      "outcome": {
+        "displayName": "Outcome row",
+        "purpose": "The last 'If ...' lines of a step card. 17px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tight-edge",
+        "value": "0 1px 2px rgba(10, 99, 255, 0.95), 0 2px 5px rgba(10, 99, 255, 0.55)",
+        "purpose": "The short blue shadow that stays against a control."
+      },
+      {
+        "name": "top-highlight",
+        "value": "inset 0 1px 0 rgba(255, 255, 255, 0.55)",
+        "purpose": "The thin light along the top edge of a control."
+      }
+    ],
+    "motion": [
+      {
+        "name": "press",
+        "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Brand-button press and row highlight."
+      },
+      {
+        "name": "arrive",
+        "value": "1.3s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "One amber wash across a card heading after a View fix jump, fading inside the card."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone-column",
+        "value": "430px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Brand button",
+      "kind": "button",
+      "refersTo": "brand-button",
+      "description": "A large rounded brand name, three across.",
+      "html": "<a class=\"ds-brand\">North</a>",
+      "css": ".ds-brand{display:flex;align-items:center;justify-content:center;width:112px;height:112px;padding:8px;border-radius:26px;border:1.5px solid transparent;background:linear-gradient(180deg,rgba(255,255,255,.16),transparent 32%),linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box;color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif;font-size:17px;font-weight:650;text-align:center;text-decoration:none;box-shadow:0 1px 2px rgba(10,99,255,.95),0 2px 5px rgba(10,99,255,.55),inset 0 1px 0 rgba(255,255,255,.55)}"
+    },
+    {
+      "name": "Choice row",
+      "kind": "custom",
+      "refersTo": "choice-row",
+      "description": "A tall settings-style row with a chevron.",
+      "html": "<a class=\"ds-row\">Wired alarm <svg viewBox=\"0 0 8 14\" width=\"8\" height=\"14\" aria-hidden=\"true\"><path d=\"M1.2 1.4 6.6 7 1.2 12.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-row{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 20px;background:transparent;color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif;font-size:22px;font-weight:650;text-decoration:none;box-shadow:inset 0 1px 0 rgba(245,247,251,.16)}.ds-row svg.mark{width:28px;height:28px;color:#9cc4ff}"
+    },
+    {
+      "name": "Shortcut row",
+      "kind": "custom",
+      "refersTo": "shortcut-row",
+      "description": "A switch to the other list or the other alarm, in reading blue.",
+      "html": "<a class=\"ds-shortcut\">Troubleshoot this alarm</a>",
+      "css": ".ds-shortcut{display:flex;align-items:center;gap:14px;min-height:76px;padding:12px 20px;background:transparent;color:#9cc4ff;font-family:-apple-system,system-ui,sans-serif;font-size:22px;font-weight:650;text-decoration:none}"
+    },
+    {
+      "name": "Bottom bar",
+      "kind": "nav",
+      "refersTo": "bottom-bar",
+      "description": "Back on the left, Home on the right.",
+      "html": "<nav class=\"ds-bar\"><button type=\"button\">Back</button><button type=\"button\">Home</button></nav>",
+      "css": ".ds-bar{display:flex;width:360px;height:56px;border-radius:22px;overflow:hidden;border:1.5px solid transparent;background:linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box;box-shadow:0 1px 2px rgba(10,99,255,.95),0 2px 5px rgba(10,99,255,.55)}.ds-bar button{flex:1;color:#f5f7fb;background:transparent;border:0;font-family:-apple-system,system-ui,sans-serif;font-size:17px;font-weight:650}.ds-bar button+button{box-shadow:inset 1px 0 0 rgba(255,255,255,.16)}"
+    },
+    {
+      "name": "Note",
+      "kind": "card",
+      "refersTo": "note",
+      "description": "A Tip or other note, as a rounded inset in the reading.",
+      "html": "<p class=\"ds-note\">The same words open from Setup and from Troubleshooting.</p>",
+      "css": ".ds-note{margin:0;padding:14px 16px;border-radius:14px;border:1.5px solid transparent;background:linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box;color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif;font-size:19px;line-height:1.45;box-shadow:0 1px 2px rgba(10,99,255,.95),0 2px 5px rgba(10,99,255,.55)}"
+    },
+    {
+      "name": "Route",
+      "kind": "nav",
+      "refersTo": "headline",
+      "description": "The earlier steps stay small. The current step is the only page name.",
+      "html": "<nav class=\"ds-route\" aria-label=\"What you picked\"><a href=\"#\">Emerald</a><span class=\"ds-sep\" aria-hidden=\"true\"><svg viewBox=\"0 0 8 14\" width=\"8\" height=\"14\"><path d=\"M1.2 1.4 6.6 7 1.2 12.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><a href=\"#\">Wired alarm</a><span class=\"ds-sep\" aria-hidden=\"true\"><svg viewBox=\"0 0 8 14\" width=\"8\" height=\"14\"><path d=\"M1.2 1.4 6.6 7 1.2 12.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><a href=\"#\">Troubleshooting</a><h1 aria-current=\"page\">Lights &amp; Sounds</h1></nav>",
+      "css": ".ds-route{display:flex;flex-wrap:wrap;align-items:center;width:358px;margin:0;color:rgba(245,247,251,.74);font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",system-ui,sans-serif;font-size:15px;font-weight:500;line-height:1.3;background:#000}.ds-route a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px;color:rgba(245,247,251,.74);font-weight:500;text-decoration:none}.ds-route a:focus-visible{outline:3px solid #f5f7fb;outline-offset:3px}.ds-sep{display:inline-flex;align-items:center;padding:0 4px;color:rgba(245,247,251,.45)}.ds-route h1{flex:1 0 100%;width:100%;min-width:0;margin:4px 0 0;color:#f5f7fb;font-size:28px;font-weight:700;line-height:1.2;text-wrap:balance}"
+    },
+    {
+      "name": "Figure",
+      "kind": "custom",
+      "refersTo": "figure",
+      "description": "The number you opened the page to get, in Figure Gold.",
+      "html": "<p class=\"ds-line\">within <span>300 mm</span> of a light fitting</p>",
+      "css": ".ds-line{margin:0;color:#f5f7fb;background:#000;font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",system-ui,sans-serif;font-size:19px;font-weight:400;line-height:1.5}.ds-line span{color:#f2c14d;font-weight:700;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Signal table",
+      "kind": "custom",
+      "refersTo": "signal-table",
+      "description": "One rounded card with the tight blue edge. Centred header labels, inset faint lines, a lamp that lights its row, and a centred white meaning.",
+      "html": "<div class=\"ds-signals\"><div class=\"ds-head\"><span>Light</span><span>Sound</span></div><div class=\"ds-row\"><span class=\"ds-cell\"><i class=\"ds-lamp\"></i><b>48</b> seconds</span><span class=\"ds-cell\">-</span><p>Alarm is active.</p></div></div>",
+      "css": ".ds-signals{width:340px;border:1.5px solid transparent;border-radius:20px;overflow:hidden;background:linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box;box-shadow:0 1px 2px rgba(10,99,255,.95),0 2px 5px rgba(10,99,255,.55);color:#f5f7fb;font-family:-apple-system,system-ui,sans-serif}.ds-head,.ds-row{display:grid;grid-template-columns:1.22fr 1fr}.ds-head span{padding:13px 14px 11px;color:#9cc4ff;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:center}.ds-row{background:radial-gradient(ellipse 75% 120px at 24px 30px,rgba(255,69,58,.24),transparent 72%)}.ds-cell{display:flex;align-items:center;justify-content:center;gap:8px;padding:18px 12px 12px}.ds-lamp{width:20px;height:20px;border-radius:50%;background:#ff453a}.ds-cell b{color:#f2c14d;font-size:22px}.ds-row p{grid-column:1/-1;margin:0;padding:0 14px 16px;text-align:center;font-size:17px;line-height:1.4}"
+    },
+    {
+      "name": "Step card",
+      "kind": "card",
+      "refersTo": "step-card",
+      "description": "One rounded card of numbered steps with a pinned section label, an icon, faint row lines, a Tip as a tinted row, and outcome rows at the end.",
+      "html": "<section class=\"ds-fix\"><h2 class=\"ds-fix-head\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4.5\" y=\"8.5\" width=\"13\" height=\"7\" rx=\"1.8\"/><path d=\"M20 11v2\"/><path d=\"M7.5 12h2\"/></svg><span>Low battery</span></h2><p class=\"ds-step\"><b>1</b><span>Wait <i>2</i> to <i>3</i> minutes.</span></p><p class=\"ds-then\">If it chirps, report faulty.</p></section>",
+      "css": ".ds-fix{border:1.5px solid transparent;border-radius:20px;overflow:hidden;background:linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box;box-shadow:0 1px 2px rgba(10,99,255,.95),0 2px 5px rgba(10,99,255,.55);color:#f5f7fb;font:19px/1.5 -apple-system,system-ui,sans-serif;width:320px}.ds-fix-head{display:flex;align-items:center;gap:10px;margin:0;padding:14px 16px 12px;color:#9cc4ff;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:radial-gradient(90% 140% at 8% 0,rgba(255,159,10,.24),transparent 70%),#141418}.ds-step{display:grid;grid-template-columns:28px 1fr;gap:14px;margin:0;padding:13px 16px;border-top:1px solid rgba(245,247,251,.16)}.ds-step b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(10,99,255,.2);box-shadow:inset 0 0 0 1px rgba(77,155,255,.55);color:#9cc4ff;font-size:16px}.ds-step i{color:#f2c14d;font-style:normal;font-weight:700}.ds-then{margin:0;padding:14px 16px;font-size:17px;border-top:1px solid rgba(245,247,251,.16);background:rgba(255,255,255,.035)}"
+    },
+    {
+      "name": "Route strip",
+      "kind": "nav",
+      "description": "On a long instruction page, a 44px one-line strip replaces the route once it scrolls away: list name, chevron, page name, cut short with an ellipsis. Thin blue line along the bottom. Not tappable.",
+      "html": "<div class=\"ds-strip\"><span>Troubleshooting</span><svg viewBox=\"0 0 8 14\" width=\"8\" height=\"14\" aria-hidden=\"true\"><path d=\"M1.2 1.4 6.6 7 1.2 12.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><b>Lights &amp; Sounds</b></div>",
+      "css": ".ds-strip{display:flex;align-items:center;gap:8px;width:358px;height:44px;padding:0 16px;background:#000;border-bottom:1px solid #4d9bff;color:rgba(245,247,251,.74);font-family:-apple-system,system-ui,sans-serif;font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden}.ds-strip b{color:#f5f7fb;font-weight:500;overflow:hidden;text-overflow:ellipsis}"
+    },
+    {
+      "name": "Home-screen icon",
+      "kind": "custom",
+      "description": "A smoke alarm seen from below on Night Black, with a tight blue rim and one pale lamp dot. No words, no gold.",
+      "html": "<div class=\"ds-icon\"><span class=\"ds-icon-ring\"></span><span class=\"ds-icon-lamp\"></span></div>",
+      "css": ".ds-icon{position:relative;width:120px;height:120px;background:#000}.ds-icon-ring{position:absolute;inset:14px;border-radius:50%;border:5px solid transparent;background:linear-gradient(#141418,#101014) padding-box,linear-gradient(160deg,#d7e8ff,#4d9bff 38%,#0a63ff 72%,#8ec0ff) border-box}.ds-icon-lamp{position:absolute;top:30px;right:30px;width:8px;height:8px;border-radius:50%;background:#d7e8ff}"
+    },
+    {
+      "name": "RF fitting diagram",
+      "kind": "custom",
+      "description": "The whole RF module page: line work of the back of the alarm, the module above its bay, pins over the connector, and one Reading Blue arrow. No card, no words.",
+      "html": "<svg class=\"ds-rf\" viewBox=\"76 0 194 262\"><circle cx=\"173\" cy=\"174\" r=\"86\"/><rect x=\"134\" y=\"100\" width=\"78\" height=\"36\" rx=\"5\"/><rect class=\"ds-mod\" x=\"130\" y=\"34\" width=\"86\" height=\"30\" rx=\"5\"/><path class=\"ds-arrow\" d=\"M164 72v24M154 86l10 11 10-11\"/></svg>",
+      "css": ".ds-rf{display:block;width:270px;background:#000}.ds-rf circle,.ds-rf rect{fill:none;stroke:rgba(245,247,251,.78);stroke-width:2}.ds-rf .ds-mod{fill:#101014}.ds-rf .ds-arrow{fill:none;stroke:#9cc4ff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The night-job phone",
+    "overview": "A technician uses this on a job, often in a dim roof space or a bright hallway, with the phone in one hand. The screen stays dark so it never flashes white. It should feel like a modern iPhone app the technician already knows how to use. The first screen is a field of large rounded brand buttons, three across. Unit, Setup or Troubleshooting, and Topics are tall rows on the black page, separated only by a grey line. An instruction page is a stack of step cards under the route. Brand buttons, step cards, notes, the signal table, and the Back / Home bar have a dark face and a tight blue edge. The lists do not.",
+    "keyCharacteristics": [
+      "Near-black ground. Brand buttons, step cards, notes, the signal table, and the Back / Home bar have a tight blue edge. Lists do not.",
+      "The iPhone system font, because that is the face on the technician's phone.",
+      "A blue icon marks a unit, Setup, Troubleshooting, and a shortcut. Topic rows stay words only.",
+      "Large hit targets. Brand buttons stay close to square. Rows stay tall.",
+      "Back on the left and Home on the right, in the same bar, on every screen after Brands.",
+      "Figure Gold marks the number you opened the page to get. The words around it stay white."
+    ],
+    "rules": [
+      {
+        "name": "The Figure Rule",
+        "body": "Figure Gold is the number you opened the page to get. On Placement that is 300 mm and 400 mm, in the list and on the ceiling sketch. The same gold is a wait, such as 2 minutes or within 2 seconds, a press count, such as three times, and a confirmed flash interval written large. 300 mm and 400 mm stay the same gold. The digits tell them apart. Step numbers, icons, shortcuts, and links stay Reading Blue. A red light on an alarm stays described as red.",
+        "section": "colors"
+      },
+      {
+        "name": "The Phone Face Rule",
+        "body": "Type is the iPhone system font: `-apple-system`, then San Francisco, then `system-ui`. A font file is not shipped. On the technician's iPhone this is San Francisco. The face already tracks itself, so the screen does not add tighter tracking on top.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Name Rule",
+        "body": "After Brands, the current step of the route is the only page name. It uses the headline, and a long name wraps. The earlier steps stay the label size. That name is not written again under the route. On the unit screen the brand stays visible, small, and is not a link, because that screen is already that brand's units.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight Edge Rule",
+        "body": "A control stands off the black page with a bright blue rim, a thin white highlight on the top edge, and one short blue shadow that stays against the shape. A press fills a brand button solid Action Blue. The signal table is one card with the same rim and shadow. Inside it, a lamp lights its own row with a soft wash of its colour. That wash is light inside the row, not a shadow, and it never leaves the card. Steps sit in a card with the same rim and shadow, faint lines between rows, and the section name pinned under the top bar. A Tip inside a card is a tinted row across it, not a second card. The last \"If ...\" lines of a card are outcome rows (17px, 14px of space above and below, text centred on the row) with a blue icon and, when they link, a chevron. The Low battery card carries the table's amber lamp as a soft wash that stays inside the card. View fix scrolls directly to it. Instruction rows stay still as they enter view. The brand screen keeps a quiet blue light in the top corner only.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the screen near-black, including the home-screen theme colour `#000000`.",
+      "Do keep brand names as large rounded buttons, three across, with a tight blue edge.",
+      "Do keep Back on the left and Home on the right, in the same places, after Brands.",
+      "Do keep Unit, Setup or Troubleshooting, and Topics as rows on the black page, with only a grey line between them.",
+      "Do keep a blue icon on unit rows, Setup, Troubleshooting, and shortcuts. Leave topic rows as words.",
+      "Do keep the placement sentence and other instruction text at 19px so it can be read at arm's length. Set the clearances under that sentence as an indented disc list at 17px.",
+      "Do use Reading Blue for a shortcut, a step number, an icon, and an instruction link.",
+      "Do use Figure Gold for a clearance, a wait, a press count, or a confirmed flash interval. Color the figure only, at weight 700.",
+      "Do say the page name once. After Brands it is the current step of the route, at the headline size.",
+      "Do show a lamp for a confirmed signal colour, and a short blink for a confirmed interval. Write that interval large in the light or sound cell.",
+      "Do put steps in a card with the tight blue edge, and keep the step number Reading Blue and the figure gold."
+    ],
+    "donts": [
+      "Don't follow the iPhone light setting or add a theme switch.",
+      "Don't turn the brand screen into a list, or put logos on the brand buttons.",
+      "Don't show Back or Home on the brand screen.",
+      "Don't replace Back and Home with a tab bar of extra sections.",
+      "Don't put a thick coloured side stripe on a Tip or a note.",
+      "Don't put a blue outline around a list of rows. The signal table is one card with the blue edge around the whole table, and faint lines between its rows.",
+      "Don't let a blue edge bloom into a wide glow. On a brand button, a note, the signal table, and the Back / Home bar, it stays tight against the shape.",
+      "Don't use Figure Gold on a button, an icon, a step number, a shortcut, a link, a Tip, or the words report faulty.",
+      "Don't give 300 mm and 400 mm different colors.",
+      "Don't put a gold figure or a link in the step-number column. They belong in the words.",
+      "Don't write the page name again under the route.",
+      "Don't write the colour again next to its lamp, and don't blink an interval that is not confirmed.",
+      "Don't blur or see through the pinned table header. It is a solid Card panel.",
+      "Don't put a card inside a step card. A Tip in a card is a tinted row."
+    ]
+  }
+}
