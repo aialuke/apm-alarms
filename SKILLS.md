@@ -1,8 +1,8 @@
 # Which skill to use
 
-A skill is a written guide an agent follows. In Claude Code and Cursor, type its name with a slash, such as `/bro`. In Codex or Grok, say it in words, such as "use the bro skill".
+A skill is a written guide an agent follows. In Claude Code, Cursor and Grok, type its name with a slash, such as `/impeccable`. In Codex, say it in words, such as "use the impeccable skill".
 
-Every skill in this project is listed here with when to reach for it, plus two from your account. `/poteto-mode` calls many of them for you when its steps need them, so you rarely have to name them. `sh script/skills-check.sh` fails if a skill is added and not listed here.
+This project keeps two skills of its own: `impeccable` (the look) and `verify-apm-alarms` (checking and seeing the page). Everything else is on your account, not in this project. `sh script/skills-check.sh` fails if a skill is added and not listed here.
 
 The skills live in `.agents/skills/`. `AGENTS.md` says where each tool finds them.
 
@@ -11,18 +11,17 @@ The skills live in `.agents/skills/`. `AGENTS.md` says where each tool finds the
 | Job | Use | Why |
 | --- | --- | --- |
 | Add or change a brand, unit or topic | Add a brand or unit in `_data/brands.yml`, or a topic in `_data/topic_map.yml`. Put the words in `_instructions/<brand>-<unit>-<topic>.md`. Show the owner and wait for approval. Then run `/verify-apm-alarms`. | A change appears only after the owner approves it. A topic with no words yet shows "These words are not written yet", which is not a bug. The brief explains how in "Units and the topic map" and "How content is added". |
-| Change the wording | The brief, then `/unslop` | `docs/product-brief.md` has the words, the screens and the writing rules. `/unslop` tidies the writing afterwards. If they disagree, the brief wins. |
+| Change the wording | The brief: `docs/product-brief.md` | It has the words, the screens and the writing rules. |
 | Change the look | `/impeccable` (see "Impeccable" below), then `sh script/design-scan.sh` | Spacing, type, colour, tables, layout, tap targets, how a page feels on the phone. `DESIGN.md` is the look it must match. |
 | See the phone page, or prove a change works | `/verify-apm-alarms` | Checks it is the right project folder, runs the site checks, and opens the page. It names the browser tool for each agent. |
-| Get a second opinion before publishing | Claude Code: ask for a Codex or Grok review (`codex-delegation`, `grok-delegation`, which live on your account and are not in this project). Cursor: `/interrogate`. Codex and Grok: ask the owner to get a review from another tool. | One reviewer per tool. On a machine without those two account skills, ask the owner for a second tool instead. |
-| Plain words, no jargon | `/bro` | Restates the last message in everyday language. |
+| Get a second opinion before publishing | Claude Code: ask for a Codex or Grok review (`codex-delegation`, `grok-delegation`, which live on your account and are not in this project). Codex and Grok: ask the owner to get a review from another tool. | One reviewer per tool. |
 | Save or publish a change | Ask the agent to commit it | A change goes live when it reaches `main` on GitHub. The publishing step runs the same checks first, and stops if one fails. |
 
 ## Impeccable
 
 Impeccable is the design skill for how the site looks and feels on the phone. It has one copy, in `.agents/skills/impeccable`, and every tool links to it. Type `/impeccable` in Claude Code, Cursor and Grok, and `$impeccable` in Codex. Do not install its plugin or run its installer in this project, because that makes second copies.
 
-**Reach for it when** a page feels off, or you want to change spacing, type, colour, a table or a layout. **Do not use it for** the alarm words (the brief and `/poteto-mode` own those), or for a one-word fix. `/impeccable doctor` checks its setup is healthy.
+**Reach for it when** a page feels off, or you want to change spacing, type, colour, a table or a layout. **Do not use it for** the alarm words (the brief owns those), or for a one-word fix. `/impeccable doctor` checks its setup is healthy.
 
 **The routine we use for a change to one page.** Impeccable itself does not set an order. This one works well:
 1. `/impeccable critique <page>` tells you what is wrong without changing anything. Run a fresh one if the page has changed a lot since the last, because polish only uses a critique while the page is unchanged since.
@@ -76,80 +75,6 @@ Grok also reads the Claude and Cursor hook files, so the check can be asked to r
 4. From the project folder, run `.agents/skills/impeccable/scripts/impeccable hooks on`.
 5. Run `sh script/skills-check.sh` and `.agents/skills/impeccable/scripts/impeccable doctor`.
 
-## Bigger or riskier work
-
-These were built for Cursor, and run in other tools only in part.
-
-| Situation | Use | Why |
-| --- | --- | --- |
-| Start a careful task | `/poteto-mode` | Picks the right steps for the task and runs the other skills as needed. |
-| Not sure which skill fits | `/poteto-help` | Answers "which skill for this?" in more detail than this page. |
-| A big change with many steps | `/figure-it-out`, with `/show-me-your-work` | Plans it, then keeps a log of each decision for you to review. |
-| Ask what else a change could break | `/blast-radius` | Looks for damage outside the lines that changed, and proves why it is safe. |
-| Try one job several ways | `/arena` | Cursor only. Tries it several ways at once and keeps the best parts. |
-| The same mistake keeps coming back | `/correct` | Changes the project so the mistake cannot happen again. |
-
-## Understand something
-
-These work best in Cursor.
-
-| Question | Use |
-| --- | --- |
-| How does this part work? | `/how` |
-| Why was it done this way? | `/why` |
-| Explain it to me properly | `/teach` |
-
-## Skills used inside bigger tasks
-
-You rarely type these. `/poteto-mode` or the agent reaches for them. Name one yourself when you want exactly that.
-
-| Skill | Reach for it when |
-| --- | --- |
-| `/technical-writing` | Writing or checking documents, READMEs, commit messages or pull request text. Not for the words on the phone pages: the brief wins there. |
-| `/tdd` | Fixing a bug test-first, only when you ask or when there is a quick check to run. This project has no test suite, so it is rare. |
-| `/architect` | Planning what goes where in a bigger change, before any of it is written. |
-| `/swarm` | Splitting a big job across several helper agents at once and getting one report back. Costs more, and was built for Cursor. |
-| `/no-comments` | Before a review: strips code comments using a reviewer who did not write them. This project's code has almost none, so it is rarely needed. |
-| `/benchmark-checklist` | Before you trust or report a speed measurement. Only needed if you start measuring speed. |
-| `/create-verification-skill` | Setting up a way to prove a feature works. `/verify-apm-alarms` already exists, so this is for extending it as the project grows. |
-
-## Principles
-
-Short rules that `/poteto-mode` cites in its answers. Name one to apply it, for example "apply prove it works". You have already called these by name: `/principle-model-the-domain`, `/principle-experience-first`, `/principle-attack-the-premise`, `/principle-subtract-before-you-add` and `/principle-test-behavior-not-implementation`.
-
-| Principle | Reach for it when |
-| --- | --- |
-| `/principle-prove-it-works` | A task is finished and you are about to say it is done. Check the real result, not a stand-in. |
-| `/principle-fix-root-causes` | Debugging. Reproduce first, then keep asking why until you reach the real cause. |
-| `/principle-attack-the-premise` | Two fixes in a row have failed for the same reason. Question the assumption before a third try. |
-| `/principle-experience-first` | Choosing between what is easier to build and what is better for the person using it. Pick the person. |
-| `/principle-subtract-before-you-add` | Before adding or reworking something. Remove dead weight first. |
-| `/principle-laziness-protocol` | Tempted to add layers or extras. Make the smallest change that solves it. |
-| `/principle-minimize-reader-load` | Code or pages that are hard to follow. Cut layers and hidden state. |
-| `/principle-model-the-domain` | Logic that branches a lot or repeats the same assumption in many files. Put the rules in one clear structure, such as a table. The topic map and brands data are examples. |
-| `/principle-foundational-thinking` | Before writing logic. Decide the core data first, and what is shared. |
-| `/principle-redesign-from-first-principles` | Fitting a new requirement into an existing design. Redesign as if it had been there from the start. |
-| `/principle-outcome-oriented-execution` | A planned rewrite in phases. Aim at the end result and do not keep throwaway in-between states. |
-| `/principle-exhaust-the-design-space` | A new kind of interaction with nothing to copy. Build two or three rival versions and compare. |
-| `/principle-build-the-lever` | Any non-trivial work. Build a script or tool that does or proves it, instead of doing it by hand, like `script/check.sh`. |
-| `/principle-encode-lessons-in-structure` | You are about to write the same instruction a second time. Turn it into a check or script instead. |
-| `/principle-sequence-verifiable-units` | Multi-step work. Take small steps that each end in a check, and verify each before the next. |
-| `/principle-guard-the-context-window` | The conversation is filling up. Send bulk reading to helper agents and keep only summaries. |
-| `/principle-never-block-on-the-human` | Tempted to ask "should I?" on work that can be undone. Do it, show the result, and let them correct it. |
-| `/principle-test-behavior-not-implementation` | Writing or keeping a test. Use it the way a person would and check the real result against a fixed expected answer. |
-| `/principle-explain-the-number` | Before trusting a measured number. Find what limits it and check it measured the right thing. |
-| `/principle-boundary-discipline` | Adding checks and error handling. Guard the edges of the system, trust what is inside, keep the main logic plain. |
-| `/principle-make-operations-idempotent` | Commands or loops that may be run twice or crash halfway. Make them end in the same state however often they run. |
-| `/principle-migrate-callers-then-delete-legacy-apis` | A new internal interface while old users of the old one remain. Move them all and delete the old one in one go. |
-| `/principle-separate-before-serializing-shared-state` | Several agents might write the same file or branch. Stop the sharing first, and use locks only if you must. |
-
 ## Keep this list true
 
-| Job | Use |
-| --- | --- |
-| After a session, turn what went wrong into skill fixes (Cursor only) | `/reflect` |
-| Check the verify skill still matches the project | `/maintain-verification-skill` |
-| Change which models Cursor uses for these skills (keep Claude and GPT out) | `/setup-pstack` |
-| Check this list and the skill links | `sh script/skills-check.sh` |
-
-Other skills on your account (`cmux`, `second-chair`) live in `~/.claude/skills/`, not in this project.
+Check this list and the skill links with `sh script/skills-check.sh`. Other skills on your account (`cmux`, `second-chair`, `codex-delegation`, `grok-delegation`) live in `~/.claude/skills/`, not in this project.
