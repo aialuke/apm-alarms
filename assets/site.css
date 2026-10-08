@@ -231,7 +231,9 @@ h1 {
   text-wrap: balance;
 }
 
+/* Nothing sits behind the Brands title, so it scrolls away instead of printing over the tiles. */
 .nav-large {
+  position: static;
   background: transparent;
   border-bottom-color: transparent;
   box-shadow: none;
