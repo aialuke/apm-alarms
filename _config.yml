@@ -17,7 +17,12 @@ exclude:
   - PRODUCT.md
   - DESIGN.md
   - AGENTS.md
+  - SKILLS.md
   - docs
   - .cursor
   - .github
   - .impeccable
+  - .agents
+  - .claude
+  - .codex
+  - .grok
