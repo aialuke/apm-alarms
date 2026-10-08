@@ -23,7 +23,7 @@ If it chirps, or won't turn back on, report faulty.
 {% assign testing_doc = site.instructions | where: "brand", page.brand | where: "unit", page.unit | where: "topic", "testing" | first %}
 {% assign pairing_doc = site.instructions | where: "brand", page.brand | where: "unit", page.unit | where: "topic", "pairing" | first %}
 {% if testing_doc %}
-If it turns on and stays quiet, <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/setup/testing/' | relative_url }}">Open Testing</a>.
+If it turns on and stays quiet, <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/testing/' | relative_url }}">Open Testing</a>.
 {% else %}
 If it turns on and stays quiet, these testing words are not written yet.
 {% endif %}
@@ -46,7 +46,7 @@ Wait <span class="figure">2</span> to <span class="figure">3</span> minutes.
 If it chirps, report faulty.
 
 {% if testing_doc %}
-If it stays quiet, <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/setup/testing/' | relative_url }}">Open Testing</a>.
+If it stays quiet, <a href="{{ '/' | append: page.brand | append: '/' | append: page.unit | append: '/' | append: page.list | append: '/testing/' | relative_url }}">Open Testing</a>.
 {% else %}
 If it stays quiet, these testing words are not written yet.
 {% endif %}

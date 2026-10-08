@@ -59,6 +59,8 @@ function parseMap(text) {
       }
       const prop = line.match(/^    (label|other|switch_label): (.+)$/);
       if (prop && cur) lists[cur][prop[1]] = prop[2];
+      const also = line.match(/^    also: \[(.*)\]/);
+      if (also && cur) lists[cur].also = also[1].split(",").map((part) => part.trim()).filter(Boolean);
     } else if (section === "switches") {
       if (line.startsWith("  - ")) {
         switchRow = {};
@@ -277,6 +279,16 @@ for (const brand of brands) {
         same(rel, hrefsFor(page, "Back"), [`${base}/${brand.id}/${unitId}/${list}/`], "Back");
         same(rel, hrefsFor(page, "Home"), [home], "Home");
       }
+
+      // Pages a list opens without a button, such as Testing under Troubleshooting.
+      for (const topic of (map.lists[list].also || []).filter((id) => (unit.setup || []).includes(id))) {
+        const rel = `${brand.id}/${unitId}/${list}/${topic}/index.html`;
+        expected.add(rel);
+        const page = html(rel);
+        same(rel, titleOf(page), screenTitle(brand.name, unit.label, map.topics[topic].title), "title");
+        same(rel, hrefsFor(page, "Back"), [`${base}/${brand.id}/${unitId}/${list}/`], "Back");
+        same(rel, hrefsFor(page, "Home"), [home], "Home");
+      }
     }
   }
 }
@@ -309,7 +321,7 @@ const brooks = html("brooks/wireless/troubleshooting/signal/index.html");
 same(
   "brooks/wireless/troubleshooting/signal/index.html",
   hrefsFor(brooks, "Open Testing"),
-  ["/apm-alarms/brooks/wireless/setup/testing/"],
+  ["/apm-alarms/brooks/wireless/troubleshooting/testing/"],
   "Open Testing"
 );
 same("brooks/wireless/troubleshooting/signal/index.html", hrefsFor(brooks, "Open Pairing"), [], "Open Pairing");
@@ -323,9 +335,9 @@ function stepBodies(rel) {
 const setupPairing = "emerald/wireless/setup/pairing/index.html";
 const troublePairing = "emerald/wireless/troubleshooting/pairing/index.html";
 same(troublePairing, stepBodies(troublePairing), stepBodies(setupPairing), "pairing steps");
-const testing = "/apm-alarms/emerald/wireless/setup/testing/";
-same(setupPairing, hrefsFor(html(setupPairing), "Open Testing"), [testing], "Open Testing");
-same(troublePairing, hrefsFor(html(troublePairing), "Open Testing"), [testing], "Open Testing");
+// Testing opens under the list the technician came from, so the route line keeps showing it.
+same(setupPairing, hrefsFor(html(setupPairing), "Open Testing"), ["/apm-alarms/emerald/wireless/setup/testing/"], "Open Testing");
+same(troublePairing, hrefsFor(html(troublePairing), "Open Testing"), ["/apm-alarms/emerald/wireless/troubleshooting/testing/"], "Open Testing");
 
 const opening = html("red/wired/setup/opening/index.html");
 const openingMain = opening.split("<main")[1].split("</main>")[0];

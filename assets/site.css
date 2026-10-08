@@ -281,6 +281,11 @@ h1 {
   margin-inline-start: -2px;
 }
 
+/* The link's 44px tap width would centre a short name like GT, 12px right of the plain-text version on the page before. */
+.route > a:first-child {
+  justify-content: flex-start;
+}
+
 .route span:not(.sep) {
   color: var(--ink);
   font-weight: 650;
